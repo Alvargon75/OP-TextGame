@@ -4,16 +4,16 @@
 }
 @font-face {
 	font-family: Robot;
-	src: url(.\recursos\fonts\robotoregular.ttf);
+	src: url(recursos\fonts\robotoregular.ttf);
 }
 @font-face {
 	font-family: Robot;
-	src: url(.\recursos\fonts\robotobold.ttf);
+	src: url(recursos\fonts\robotobold.ttf);
 	font-weight: bold;
 }
 @font-face {
 	font-family: Robot;
-	src: url(.\recursos\fonts\robotoitalic.ttf);
+	src: url(recursos\fonts\robotoitalic.ttf);
 	font-style: italic;
 }
 .hidden {

@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <link text="text/css" rel="stylesheet" href=".\css\master.css">
   <link rel="shortcut icon" href=".\recursos\img\icon.png" type="image/png">
-  <script src=".\js\functions.js"></script>
-  <script src=".\js\pirata.js"></script>
-  <script src=".\js\marine.js"></script>
-  <script src=".\js\stats.js"></script>
+  <script src="js\functions.js"></script>
+  <script src="js\pirata.js"></script>
+  <script src="js\marine.js"></script>
+  <script src="js\stats.js"></script>
   <title>One Piece | JS Game</title>
  </head>
  <!--
@@ -37,21 +37,24 @@
 	<p id=""></p>
 	<p id=""></p>
    </div>
-   <div id="ilustraciones">
-	
-   </div>
    <div id="controls">
 	<!-- Intro - Decisiones Importantes -->
     <button type="button" id="inicio" class="" onclick="start()">Inicio</button>
-	<button type="button" id="d1_a" class="hidden" onclick="marine()">El Barco Pirata</button>
-	<button type="button" id="d1_b" class="hidden" onclick="pirata()">La Armada</button>
+	<button type="button" id="d1_a" class="hidden" onclick="pirata()">El Barco Pirata</button>
+	<button type="button" id="d1_b" class="hidden" onclick="marine()">La Armada</button>
 	<button type="button" id="d2m_a" class="hidden" onclick="alistarse()">Me Alisto</button>
 	<button type="button" id="d2m_b" class="hidden" onclick="villa()">Llévame a esa villa</button>
 	<button type="button" id="d2p_a" class="hidden" onclick="luchaAlvida()">Luchar</button>
 	<button type="button" id="d2p_b" class="hidden" onclick="rendirse()">Morir</button>
 	<!-- Marine -->
-	<button type="button" id="m1_op" class="hidden" onclick="fullbodyContinua()"></button>
+	<button type="button" id="m1_op" class="hidden" onclick="fullbodyContinua()">Continuar</button>
 	<!-- Pirata -->
+   </div>
+   <div id="ilustraciones">
+	
+   </div>
+   <div id="stats">
+   
    </div>
   </div>
  </body>
