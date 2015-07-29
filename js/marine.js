@@ -10,18 +10,20 @@ Cosas que copiar comunes:
 
 */
 var villa = function(){
-	document.getElementById("d2").innerHTML = "Vas a la Villa y vives feliz.<span>FIN</span>";
+	document.getElementById("d2").innerHTML = "Vas a la Villa y vives feliz.<br/><span>FIN</span>";
 	document.getElementById("d2m_a").classList.add('hidden');
 	document.getElementById("d2m_b").classList.add('hidden');
 }
 var alistarse = function(){
+	document.getElementById("d2m_a").classList.add('hidden');
+	document.getElementById("d2m_b").classList.add('hidden');
 	var valorLucha = prompt("¿Cómo de bueno eres luchando del 1 al 10?");
 	if(valorLucha <= 10){
 		document.getElementById("d2").innerHTML = "No eres lo bastante bueno, adiós.<span>FIN</span>";
 	}
 	else if(valorLucha > 10){
 		document.getElementById("d2").innerHTML = "Me gustas chaval, serás mi primero de abordo- dijo Fullbody-.";
-		document.getElementById("")
+		document.getElementById("m1_op").classList.remove('hidden');
 	}
 	else {
 		var retraso = confirm("¿Eres tonto?");
@@ -34,5 +36,6 @@ var alistarse = function(){
 	}
 }
 var fullbodyContinua = function(){
-	document.getElementById("d3").innerHTML = "Fullbody te mató. <span>FIN</span>"
+	document.getElementById("d3").innerHTML = "Fullbody te mató.<br/> <span>FIN</span>";
+	document.getElementById("m1_op").classList.add('hidden');
 }
