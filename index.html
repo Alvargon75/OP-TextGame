@@ -21,6 +21,7 @@
  <body>
   <header><h1>One Piece</h1></header>
   <div id="game">
+   <div id="izq">
    <div id="text-box">
     <p>Este juego está hecho por <a href="http://www.taringa.net/Alvargon75">Alvargon75</a>
 	Pulsa "Inicio" para empezar</p>
@@ -37,19 +38,23 @@
 	<p id=""></p>
 	<p id=""></p>
    </div>
-   <div id="controls">
-	<!-- Intro - Decisiones Importantes -->
-    <button type="button" id="inicio" class="" onclick="start()">Inicio</button>
-	<button type="button" id="d1_a" class="hidden" onclick="pirata()">El Barco Pirata</button>
-	<button type="button" id="d1_b" class="hidden" onclick="marine()">La Armada</button>
-	<button type="button" id="d2m_a" class="hidden" onclick="alistarse()">Me Alisto</button>
-	<button type="button" id="d2m_b" class="hidden" onclick="villa()">Llévame a esa villa</button>
-	<button type="button" id="d2p_a" class="hidden" onclick="luchaAlvida()">Luchar</button>
-	<button type="button" id="d2p_b" class="hidden" onclick="rendirse()">Morir</button>
-	<!-- Marine -->
-	<button type="button" id="m1_op" class="hidden" onclick="fullbodyContinua()">Continuar</button>
-	<!-- Pirata -->
+    <div id="controls_container">
+    <div id="controls">
+	 <!-- Intro - Decisiones Importantes -->
+     <button type="button" id="inicio" class="" onclick="start()">Inicio</button>
+	 <button type="button" id="d1_a" class="hidden" onclick="pirata()">El Barco Pirata</button>
+	 <button type="button" id="d1_b" class="hidden" onclick="marine()">La Armada</button>
+	 <button type="button" id="d2m_a" class="hidden" onclick="alistarse()">Me Alisto</button>
+	 <button type="button" id="d2m_b" class="hidden" onclick="villa()">Llévame a esa villa</button>
+	 <button type="button" id="d2p_a" class="hidden" onclick="luchaAlvida()">Luchar</button>
+	 <button type="button" id="d2p_b" class="hidden" onclick="rendirse()">Morir</button>
+	 <!-- Marine -->
+	 <button type="button" id="m1_op" class="hidden" onclick="fullbodyContinua()">Continuar</button>
+	 <!-- Pirata -->
+    </div>
    </div>
+   </div>
+   <div id="drch">
    <div id="ilustraciones">
 	
    </div>
@@ -58,10 +63,11 @@
 	 <li class="stats_list">Vida: <span id="vida" class="green">400/400</span></li>
 	 <li class="stats_list">Ataque: <span id="ataque" class="red">5</span></li>
 	 <!-- <li class="stats_list">Defensa: <span id="defensa" class="azul"></span></li> -->
-	 <li class="stats_list">Nivel: <span id="nivel_exp" class=""</li>
-	 <li class="stats_list">Experiencia:</li>
+	 <li class="stats_list">Nivel: <span id="nivel_exp">1</span></li>
+	 <li class="stats_list">Experiencia: <span id="exp">0</span></li>
 	</ul>
    </div>
+  </div>
   </div>
  </body>
 </html>
