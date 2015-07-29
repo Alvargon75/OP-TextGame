@@ -40,12 +40,13 @@ header h1 {
 	position: relative;
 	top: 15px;
 	margin-left: 20px;
+	height: 80%;
 }
 #controls {
 	
 }
 #controls button {
-	
+	background-image: url("recursos/img/icon.png");
 }
 a {
 	text-decoration: none;
