@@ -1,9 +1,25 @@
+/*Fonts and Universals*/
 * {
-	font-family: Roboto, sans-serif;
+	font-family: Robot, Roboto, sans-serif;
+}
+@font-face {
+	font-family: Robot;
+	src: url(.\recursos\fonts\robotoregular.ttf);
+}
+@font-face {
+	font-family: Robot;
+	src: url(.\recursos\fonts\robotobold.ttf);
+	font-weight: bold;
+}
+@font-face {
+	font-family: Robot;
+	src: url(.\recursos\fonts\robotoitalic.ttf);
+	font-style: italic;
 }
 .hidden {
 	display: none;
 }
+/*CSS*/
 header{
 	width: 60%;
 	margin-top: -25px;
@@ -13,4 +29,28 @@ header{
 header h1 {
 	text-align: center;
 	font-size: 3.3em;
+}
+#game {
+	background-color: whitesmoke;
+	width: 100%;
+	min-height: 25em;
+	max-height: 40em;
+}
+#text-box {
+	position: relative;
+	top: 15px;
+	margin-left: 20px;
+}
+#controls {
+	
+}
+#controls button {
+	
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	color: grey
 }
