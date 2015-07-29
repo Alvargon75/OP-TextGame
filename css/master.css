@@ -53,5 +53,9 @@ a {
 	color: inherit;
 }
 a:hover {
-	color: grey
+	color: grey;
+}
+#text-box p span {
+	font-size: 2em;
+	font-weight: bold;
 }
