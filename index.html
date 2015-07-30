@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <link text="text/css" rel="stylesheet" href=".\css\master.css">
   <link rel="shortcut icon" href=".\recursos\img\icon.png" type="image/png">
-  <script src="js\stats.js"></script>
-  <script src="js\functions.js"></script>
-  <script src="js\pirata.js"></script>
-  <script src="js\marine.js"></script>
+  <script src="js\main.js"></script>
   <title>One Piece | JS Game</title>
  </head>
  <!--
@@ -48,7 +45,7 @@
 	 <button type="button" id="d2m_a" class="hidden" onclick="alistarse()">Me Alisto</button>
 	 <button type="button" id="d2m_b" class="hidden" onclick="villa()">Llévame a esa villa</button>
 	 <button type="button" id="d2p_a" class="hidden" onclick="luchaAlvida()">Luchar</button>
-	 <button type="button" id="d2p_b" class="hidden" onclick="rendirse()">Morir</button>
+	 <button type="button" id="d2p_b" class="hidden" onclick="rendirseAlv()">Morir</button>
 	 <!-- Marine -->
 	 <button type="button" id="m1_op" class="hidden" onclick="fullbodyContinua()">Continuar</button>
 	 <!-- Pirata -->
@@ -61,7 +58,7 @@
    </div>
    <div id="stats">
     <ul>
-	 <li class="stats_list">Vida: <span id="vida" class="green"></span></li>
+	 <li class="stats_list">Vida: <span id="vida" class="green"></span><span class="green">/500</span></li>
 	 <li class="stats_list">Ataque: <span id="ataque" class="red"></span></li>
 	 <!-- <li class="stats_list">Defensa: <span id="defensa" class="azul"></span></li> -->
 	 <li class="stats_list">Nivel: <span id="nivel_exp"></span></li>
