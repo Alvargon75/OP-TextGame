@@ -10,9 +10,10 @@ Cosas que copiar comunes:
 
 */
 /*HISTORIA*/
+
+//ALVIDA
 var luchaAlvida = function(){
 	var AlVida = 100;
-	var dañoGolpeLuffy;
-	var dañoGolpeAlvida;
-	
+	var dañoGolpeLuffy = ataqueL(5, 1);
+	var dañoGolpeAlvida = ataqueEstandar(2, 1, luffyVida);
 }
