@@ -1,21 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
  <head>
   <meta charset="UTF-8">
   <link text="text/css" rel="stylesheet" href=".\css\master.css">
   <link rel="shortcut icon" href=".\recursos\img\icon.png" type="image/png">
-  <script src=".\js\functions.js"></script>
+  <script src="js\stats.js"></script>
+  <script src="js\functions.js"></script>
+  <script src="js\pirata.js"></script>
+  <script src="js\marine.js"></script>
   <title>One Piece | JS Game</title>
  </head>
+ <!--
+	Cosas que se copian a menudo:
+	
+	<button type="button" id="" class="" onclick=""></button>
+	<button type="button" id="" class="hidden" onclick=""></button>
+	<p id=""></p>
+	<img id="" class="hidden" src=""></img>
+ -->
  <body>
   <header><h1>One Piece</h1></header>
   <div id="game">
+   <div id="izq">
    <div id="text-box">
-   
+    <p>Este juego está hecho por <a href="http://www.taringa.net/Alvargon75">Alvargon75</a>
+	Pulsa "Inicio" para empezar</p>
+	<p id="intro"></p>
+	<p id="pirata_marine"></p>
+	<p id="d2"></p>
+	<p id="d3"></p>
+	<p id=""></p>
+	<p id=""></p>
+	<p id=""></p>
+	<p id=""></p>
+	<p id=""></p>
+	<p id=""></p>
+	<p id=""></p>
+	<p id=""></p>
+	<p id="fin"></p>
    </div>
-   <div id="controls">
-   
+    <div id="controls_container">
+    <div id="controls">
+	 <!-- Intro - Decisiones Importantes -->
+     <button type="button" id="inicio" class="" onclick="start()">Inicio</button>
+	 <button type="button" id="d1_a" class="hidden" onclick="pirata()">El Barco Pirata</button>
+	 <button type="button" id="d1_b" class="hidden" onclick="marine()">La Armada</button>
+	 <button type="button" id="d2m_a" class="hidden" onclick="alistarse()">Me Alisto</button>
+	 <button type="button" id="d2m_b" class="hidden" onclick="villa()">Llévame a esa villa</button>
+	 <button type="button" id="d2p_a" class="hidden" onclick="luchaAlvida()">Luchar</button>
+	 <button type="button" id="d2p_b" class="hidden" onclick="rendirse()">Morir</button>
+	 <!-- Marine -->
+	 <button type="button" id="m1_op" class="hidden" onclick="fullbodyContinua()">Continuar</button>
+	 <!-- Pirata -->
+    </div>
    </div>
+   </div>
+   <div id="drch">
+   <div id="ilustraciones">
+	
+   </div>
+   <div id="stats">
+    <ul>
+	 <li class="stats_list">Vida: <span id="vida" class="green"></span></li>
+	 <li class="stats_list">Ataque: <span id="ataque" class="red"></span></li>
+	 <!-- <li class="stats_list">Defensa: <span id="defensa" class="azul"></span></li> -->
+	 <li class="stats_list">Nivel: <span id="nivel_exp"></span></li>
+	 <li class="stats_list">Experiencia: <span id="exp"></span></li>
+	</ul>
+   </div>
+  </div>
   </div>
  </body>
 </html>

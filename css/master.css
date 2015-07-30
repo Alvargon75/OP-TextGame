@@ -1,9 +1,25 @@
+﻿/*Fonts and Universals*/
 * {
-	font-family: Roboto, sans-serif;
+	font-family: Robot, Roboto, sans-serif;
+}
+@font-face {
+	font-family: Robot;
+	src: url(recursos/fonts/robotoregular.ttf);
+}
+@font-face {
+	font-family: Robot;
+	src: url(recursos/fonts/robotobold.ttf);
+	font-weight: bold;
+}
+@font-face {
+	font-family: Robot;
+	src: url(recursos/fonts/robotoitalic.ttf);
+	font-style: italic;
 }
 .hidden {
 	display: none;
 }
+/*CSS*/
 header{
 	width: 60%;
 	margin-top: -25px;
@@ -14,3 +30,58 @@ header h1 {
 	text-align: center;
 	font-size: 3.3em;
 }
+#game {
+	background-color: whitesmoke;
+	width: 100%;
+	min-height: 25em;
+	max-height: 40em;
+}
+#text-box {
+	position: relative;
+	top: 15px;
+	margin-left: 20px;
+	height: 80%;
+}
+#controls {
+	
+}
+#controls button {
+	background-image: url(recursos/img/icon.png);
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	color: grey;
+}
+#text-box p span {
+	font-size: 2em;
+	font-weight: bold;
+}
+.green {
+	color: green;
+}
+.red {
+	color: red;
+}
+.azul {
+	color: darkblue;
+}
+#stats {
+	position: absolute;
+	margin-left: 1400px;
+	margin-top: -50px;
+	padding-right: 35px;
+	background-color: white;
+	background-image: url(recursos/img/icon.png);
+	background-position: center;
+}
+#stats ul {
+	list-style-type: none;
+}
+/*#controls_container {
+	position: relative;
+	left: 20px;
+	top: 100px
+}*/
