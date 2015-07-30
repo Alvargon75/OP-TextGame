@@ -16,9 +16,33 @@ var expPoints = 1;
 var luffyVida = 500;
 var danoL = 5;
 
+// START
+
+var start = function(){
+	console.log("Game Started");
+	document.getElementById("intro").innerHTML = "Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?";
+	document.getElementById("inicio").classList.add('hidden');
+	document.getElementById("d1_a").classList.remove('hidden');
+	document.getElementById("d1_b").classList.remove('hidden');
+	checkHUD();
+	if(randomName == true){
+		nameNumber = Math.floor(Math.random() * 7);
+	}else{
+		nameNumber = 0;
+	};
+};
+
+// RANDOM NAME
+
+var randomName = false;
+var nameChange = function(){
+	randomName = true;
+}
+var nameNumber;
+var names = ["Luffy","Sanji","Álvaro", "Alice", "Nacho", "Aksu", "David", "Alex", "Mario", "Guillermo", "Gamba"];
 // RECUPERACIÓN
 
-var recuperar = function(vida,dVida){
+var recuperar = function(vida, dVida){
 	if(vida == dVida){
 		console.log("Fail");
 	} else {
@@ -40,16 +64,15 @@ var checkHUD = function(){
 
 var expChecking = false;
 
-// VILLANOS
+// ATAQUES
 
-var ataqueEstandar = function(danoV, multi, objetivoV){
-	dProvocadoV = Math.floor(Math.random * multi + danoV);
-	objetivoV -= dProvocadoV;
+var ataqueEstandar = function(danoV, multi, objetivoH){
+	dProvocadoV = Math.floor(Math.random() * multi) + danoV;
+	objetivoH -= dProvocadoV;
 };
 
-// LUFFY
-var ataqueL = function(dano,multi){
-	dProvocadoH = Math.floor(Math.random * multi + danoL);
+var ataqueL = function(danoL, multi){
+	dProvocadoH = Math.floor(Math.random() * multi) + danoL;
 };
 
 /*
@@ -69,15 +92,6 @@ var ataqueL = function(dano,multi){
 	|__| |__| \__| |__|  \______||__|  \______/ 
 	Inicio
 */
-
-var start = function(){
-	console.log("Game Started");
-	document.getElementById("intro").innerHTML = "Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?";
-	document.getElementById("inicio").classList.add('hidden');
-	document.getElementById("d1_a").classList.remove('hidden');
-	document.getElementById("d1_b").classList.remove('hidden');
-	checkHUD();
-}
 var marine = function(){
 	document.getElementById("pirata_marine").innerHTML = "Decides ir con el barco de los marines. Allí encuentras al Teniente Fullbody que te recibe amablemente. Te invita a ir con el hasta la Villa de las Conchas o unirte a la Marina. <br /> ¿Qué eliges?";
 	document.getElementById("d1_a").classList.add('hidden');
@@ -140,6 +154,12 @@ var luchaAlvida = function(){
 	var AlVida = 100;
 	var danoGolpeLuffy = ataqueL(5, 1);
 	var danoGolpeAlvida = ataqueEstandar(2, 1, luffyVida);
+	var atacar = true;
+	while(atacar){
+		if(AlVida = 0)	
+	}
+	AlVida -= danoGolpeLuffy;
+	luffyVida -= danoGolpeAlvida;
 }
 
 var rendirseAlv = function(){
