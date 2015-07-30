@@ -35,7 +35,7 @@ var checkHUD = function(){
 	document.getElementById("ataque").innerHTML = danoL;
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
-	console.log("HUD revisado")
+	console.log("HUD revisado");
 };
 
 var expChecking = false;
