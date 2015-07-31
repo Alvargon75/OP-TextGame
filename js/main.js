@@ -20,18 +20,19 @@ var danoL = 5;
 
 var start = function(){
 	console.log("Game Started");
-	document.getElementById("intro").innerHTML = "Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?";
-	document.getElementById("inicio").classList.add('hidden');
-	document.getElementById("d1_a").classList.remove('hidden');
-	document.getElementById("d1_b").classList.remove('hidden');
+	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
+	hide("inicio");
+	show("d1_a");
+	show("d1_b");
 	checkHUD();
 	if(randomName == true){
-		nameNumber = Math.floor(Math.random() * 4);
+		nameNumber = randomizer(4);
 		console.log("Name:" + " " + names[nameNumber]);
 	}else{
 		nameNumber = 0;
 		console.log("Name:" + " " + names[nameNumber]);
 	};
+	hide("nameChange");
 };
 
 var clear = function(){
@@ -50,6 +51,23 @@ var clear = function(){
 	document.getElementById("fin").innerHTML = " ";
 }
 
+// SAVING TIME
+
+var writer = function(id,text){
+	document.getElementById(id).innerHTML = text;
+}
+
+var hide = function(id){
+	document.getElementById(id).classList.add('hidden');
+}
+
+var show = function(id){
+	document.getElementById(id).classList.remove('hidden');
+}
+
+var randomizer = function(multi){
+	Math.floor(Math.random() * multi);
+}
 // RANDOM NAME
 
 var randomName = false;
