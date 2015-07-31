@@ -16,7 +16,7 @@ var expPoints = 1;
 var luffyVida = 500;
 var danoL = 5;
 
-// START
+// START AND CLEAR
 
 var start = function(){
 	console.log("Game Started");
@@ -26,11 +26,29 @@ var start = function(){
 	document.getElementById("d1_b").classList.remove('hidden');
 	checkHUD();
 	if(randomName == true){
-		nameNumber = Math.floor(Math.random() * 7);
+		nameNumber = Math.floor(Math.random() * 4);
+		console.log("Name:" + " " + names[nameNumber]);
 	}else{
 		nameNumber = 0;
+		console.log("Name:" + " " + names[nameNumber]);
 	};
 };
+
+var clear = function(){
+	document.getElementById("intro").innerHTML = " ";
+	document.getElementById("a1").innerHTML = " ";
+	document.getElementById("a2").innerHTML = " ";
+	document.getElementById("a3").innerHTML = " ";
+	document.getElementById("a4").innerHTML = " ";
+	document.getElementById("b1").innerHTML = " ";
+	document.getElementById("b2").innerHTML = " ";
+	document.getElementById("b3").innerHTML = " ";
+	document.getElementById("b4").innerHTML = " ";
+	document.getElementById("c1").innerHTML = " ";
+	document.getElementById("c2").innerHTML = " ";
+	document.getElementById("c3").innerHTML = " ";
+	document.getElementById("fin").innerHTML = " ";
+}
 
 // RANDOM NAME
 
@@ -39,7 +57,10 @@ var nameChange = function(){
 	randomName = true;
 }
 var nameNumber;
-var names = ["Luffy","Sanji", "Zorro", "Usopp", "Chopper", "Nami", "Robin", "Franky", "Brook", "Shanks"];
+var names = ["Luffy","Sanji", "Zorro", "Ace"];
+
+// CUSTOM ATTACKS (POR HACER)
+
 // RECUPERACIÓN
 
 var recuperar = function(vida, dVida){
@@ -93,14 +114,14 @@ var ataqueL = function(danoL, multi){
 	Inicio
 */
 var marine = function(){
-	document.getElementById("pirata_marine").innerHTML = "Decides ir con el barco de los marines. Allí encuentras al Teniente Fullbody que te recibe amablemente. Te invita a ir con el hasta la Villa de las Conchas o unirte a la Marina. <br /> ¿Qué eliges?";
+	document.getElementById("a1").innerHTML = "Decides ir con el barco de los marines. Allí encuentras al Teniente Fullbody que te recibe amablemente. Te invita a ir con el hasta la Villa de las Conchas o unirte a la Marina. <br /> ¿Qué eliges?";
 	document.getElementById("d1_a").classList.add('hidden');
 	document.getElementById("d1_b").classList.add('hidden');
 	document.getElementById("d2m_a").classList.remove('hidden');
 	document.getElementById("d2m_b").classList.remove('hidden');
 }	
 var pirata = function(){
-	document.getElementById("pirata_marine").innerHTML = "No sabes por qué pero no quieres ir con los marines, prefieres ir con los piratas. Remas el barril hasta el barco pirata y escalas hasta arriba. <br /> Allí ves a la capitana que te quiere ejecutar. <br /> ¿Vas a morir o a luchar?";
+	document.getElementById("a1").innerHTML = "No sabes por qué pero no quieres ir con los marines, prefieres ir con los piratas. Remas el barril hasta el barco pirata y escalas hasta arriba. <br /> Allí ves a la capitana que te quiere ejecutar. <br /> ¿Vas a morir o a luchar?";
 	document.getElementById("d1_a").classList.add('hidden');
 	document.getElementById("d1_b").classList.add('hidden');
 	document.getElementById("d2p_a").classList.remove('hidden');
@@ -156,7 +177,12 @@ var luchaAlvida = function(){
 	var danoGolpeAlvida = ataqueEstandar(2, 1, luffyVida);
 	var atacar = true;
 	while(atacar){
-		if(AlVida = 0)	
+		if(AlVida = 0){
+			console.log("CHP: Alvida murió.");
+			document.getElementById("").innerHTML = "";
+		}else{
+			
+		}
 	}
 	AlVida -= danoGolpeLuffy;
 	luffyVida -= danoGolpeAlvida;

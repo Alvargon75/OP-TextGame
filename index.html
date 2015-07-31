@@ -22,23 +22,24 @@
     <p>Este juego está hecho por <a href="http://www.taringa.net/Alvargon75">Alvargon75</a>
 	Pulsa "Inicio" para empezar</p>
 	<p id="intro"></p>
-	<p id="pirata_marine"></p>
-	<p id="d2"></p>
-	<p id="d3"></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
+	<p id="a1"></p>
+	<p id="a2"></p>
+	<p id="a3"></p>
+	<p id="a4"></p>
+	<p id="b1"></p>
+	<p id="b2"></p>
+	<p id="b3"></p>
+	<p id="b4"></p>
+	<p id="c1"></p>
+	<p id="c2"></p>
+	<p id="c3"></p>
 	<p id="fin"></p>
    </div>
     <div id="controls_container">
     <div id="controls">
 	 <!-- Intro - Decisiones Importantes -->
      <button type="button" id="inicio" class="" onclick="start()">Inicio</button>
+	 <button type="button" id="nameChange" class="" onclick="nameChange()">Nombre Aleatorio</button>
 	 <button type="button" id="d1_a" class="hidden" onclick="pirata()">El Barco Pirata</button>
 	 <button type="button" id="d1_b" class="hidden" onclick="marine()">La Armada</button>
 	 <button type="button" id="d2m_a" class="hidden" onclick="alistarse()">Me Alisto</button>
@@ -52,9 +53,6 @@
    </div>
   </div>
   <div id="drch">
-   <div id="ilustraciones">
-	
-   </div>
    <div id="stats">
     <ul>
 	 <li class="stats_list">Vida: <span id="vida" class="green"></span><span class="green">/500</span></li>
@@ -63,6 +61,9 @@
 	 <li class="stats_list">Nivel: <span id="nivel_exp"></span></li>
 	 <li class="stats_list">Experiencia: <span id="exp"></span></li>
 	</ul>
+   </div>
+   <div id="ilustraciones">
+	<img id="i_intro" class="" src="recursos/ilustrations/logo.png">
    </div>
   </div>
  </body>
