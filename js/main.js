@@ -39,7 +39,7 @@ var nameChange = function(){
 	randomName = true;
 }
 var nameNumber;
-var names = ["Luffy","Sanji","Álvaro", "Alice", "Nacho", "Aksu", "David", "Alex", "Mario", "Guillermo", "Gamba"];
+var names = ["Luffy","Sanji", "Zorro", "Usopp", "Chopper", "Nami", "Robin", "Franky", "Brook", "Shanks"];
 // RECUPERACIÓN
 
 var recuperar = function(vida, dVida){
