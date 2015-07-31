@@ -198,6 +198,7 @@ var luchaAlvida = function(){
 		if(AlVida = 0){
 			console.log("CHP: Alvida murió.");
 			document.getElementById("").innerHTML = "";
+			atacar = false;
 		}else{
 			
 		}
@@ -209,7 +210,7 @@ var luchaAlvida = function(){
 var rendirseAlv = function(){
 	document.getElementById("d2p_a").classList.add('hidden');
 	document.getElementById("d2p_b").classList.add('hidden');
-	document.getElementById("d3").innerHTML = "Aceptaste tu destino y Alvida te mató.<br/><span>FIN</span>"
+	document.getElementById("a3").innerHTML = "Aceptaste tu destino y Alvida te mató.<br/><span>FIN</span>";
 }
 /*
 	.______    __    __    _______   ___________    ____ 
