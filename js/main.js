@@ -106,12 +106,12 @@ var expChecking = false;
 // ATAQUES
 
 var ataqueEstandar = function(danoV, multi, objetivoH){
-	dProvocadoV = Math.floor(Math.random() * multi) + danoV;
+	dProvocadoV = Math.floor(Math.random() * multi + danoV);
 	objetivoH -= dProvocadoV;
 };
 
 var ataqueL = function(danoL, multi){
-	dProvocadoH = Math.floor(Math.random() * multi) + danoL;
+	dProvocadoH = Math.floor(Math.random() * multi + danoL);
 };
 
 /*
@@ -167,15 +167,15 @@ var alistarse = function(){
 	else {
 		var retraso = confirm("¿Eres tonto?");
 		if(confirm == true){
-			document.getElementById("d3").innerHTML = "Ya lo decía yo.";
+			document.getElementById("a3").innerHTML = "Ya lo decía yo.";
 		}
 		else {
-			document.getElementById("d3").innerHTML = "No me mientas.";
+			document.getElementById("a3").innerHTML = "No me mientas.";
 		}
 	}
 }
 var fullbodyContinua = function(){
-	document.getElementById("d3").innerHTML = "Fullbody te mató.<br/> <span>FIN</span>";
+	document.getElementById("a3").innerHTML = "Fullbody te mató.<br/> <span>FIN</span>";
 	document.getElementById("m1_op").classList.add('hidden');
 }
 
@@ -190,22 +190,28 @@ var fullbodyContinua = function(){
 */
 
 var luchaAlvida = function(){
-	var AlVida = 100;
-	var danoGolpeLuffy = ataqueL(5, 1);
-	var danoGolpeAlvida = ataqueEstandar(2, 1, luffyVida);
 	var atacar = true;
-	while(atacar){
-		if(AlVida = 0){
+	var danoGolpeLuffy;
+	var danoGolpeAlvida;
+	var danoTotalL = 0;
+	var danoTotalA = 0;
+	while(atacar === true){
+		if(danoTotalL >= 100){
 			console.log("CHP: Alvida murió.");
-			document.getElementById("").innerHTML = "";
+			writer("a4","");
+			atacar = false;
+		}else if(luffyVida === 0){
+			writer("a4","Perdiste contra Alvida.<br/> <span>FIN</span>");
 			atacar = false;
 		}else{
-			
-		}
-	}
-	AlVida -= danoGolpeLuffy;
-	luffyVida -= danoGolpeAlvida;
-}
+			var danoGolpeLuffy = ataqueL(5, 1);
+			var danoGolpeAlvida = ataqueEstandar(2, 1, luffyVida);
+			AlVida -= danoGolpeLuffy;
+			luffyVida -= danoGolpeAlvida;
+			checkHUD();
+		};
+	};
+};
 
 var rendirseAlv = function(){
 	document.getElementById("d2p_a").classList.add('hidden');
