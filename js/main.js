@@ -68,6 +68,16 @@ var show = function(id){
 var randomizer = function(multi){
 	Math.floor(Math.random() * multi);
 }
+
+var audioPlayer_play = function(id){
+	var aud = document.getElementById(id);
+	aud.play();
+}
+
+var audioPlayer_pause = function(id){
+	var aud = document.getElementById(id);
+	aud.pause();
+}
 // RANDOM NAME
 
 var randomName = false;
