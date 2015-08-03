@@ -105,13 +105,13 @@ var expChecking = false;
 
 // ATAQUES
 
-var ataqueEstandar = function(danoV, multi, objetivoH){
+/*var ataqueEstandar = function(danoV, multi, objetivoH){
 	dProvocadoV = Math.floor(Math.random() * multi + danoV);
 	objetivoH -= dProvocadoV;
-};
+};*/
 
-var ataqueL = function(danoL, multi){
-	dProvocadoH = Math.floor(Math.random() * multi + danoL);
+var ataque = function(dano, multi){
+	dProvocadoH = Math.floor(Math.random() * multi + dano);
 };
 
 /*
@@ -189,7 +189,7 @@ var fullbodyContinua = function(){
 	Alvida
 */
 
-var luchaAlvida = function(){
+/*var luchaAlvida = function(){
 	var atacar = true;
 	var danoGolpeLuffy;
 	var danoGolpeAlvida;
@@ -211,7 +211,31 @@ var luchaAlvida = function(){
 			checkHUD();
 		};
 	};
-};
+};*/
+
+var luchaAlv = function(){
+	var atacar = true;
+	var acertar = true;
+	var danoRound = ataque(5, 1);
+	var danoAlv = ataque(2, 1);
+	var danoTotal = 0;
+	
+	//Pelea
+	while(atacar){
+		writer("a4", "Pegaste a Alvida");
+		danoTotal += danoRound;
+		if(danoTotal >= 100){
+			writer("b1", "Tiraste a Alvida al mar de un puñetazo.");
+			show("");
+			hide("d2p_a");
+			hide("d2p_b");
+			atacar = false;
+		}else if(luffyVida <= 0){
+			writer("b1", "Alvida te pudoy en un golpe de suerte te tiró al mar.");
+			atacar = false;
+		}
+	}
+}
 
 var rendirseAlv = function(){
 	document.getElementById("d2p_a").classList.add('hidden');
@@ -279,12 +303,12 @@ var rendirseAlv = function(){
 */
 
 /*
-	_______. __  ___ ____    ____ .______    _______     ___      
-    /       ||  |/  / \   \  /   / |   _  \  |   ____|   /   \     
-	|   (----`|  '  /   \   \/   /  |  |_)  | |  |__     /  ^  \    
-    \   \    |    <     \_    _/   |   ___/  |   __|   /  /_\  \   
-	.----)   |   |  .  \      |  |     |  |      |  |____ /  _____  \  
-	|_______/    |__|\__\     |__|     | _|      |_______/__/     \__\ 
+	   _______. __  ___ ____    ____ .______    _______     ___      
+      /       ||  |/  / \   \  /   / |   _  \  |   ____|   /   \     
+     |   (----`|  '  /   \   \/   /  |  |_)  | |  |__     /  ^  \    
+     \   \    |    <     \_    _/   |   ___/  |   __|   /  /_\  \   
+     .----)   |   |  .  \      |  |     |  |      |  |____ /  _____  \  
+   |_______/    |__|\__\     |__|     | _|      |_______/__/     \__\ 
 	Skypea	
 */
 
@@ -301,16 +325,16 @@ var rendirseAlv = function(){
 /*
 	____    __    ____  ___   .___________. _______ .______          ______  
 	\   \  /  \  /   / /   \  |           ||   ____||   _  \        |____  | 
-	\   \/    \/   / /  ^  \ `---|  |----`|  |__   |  |_)  |           / /  
-	\            / /  /_\  \    |  |     |   __|  |      /           / /   
-	\    /\    / /  _____  \   |  |     |  |____ |  |\  \----.     / /    
-    \__/  \__/ /__/     \__\  |__|     |_______|| _| `._____|    /_/     
+	 \   \/    \/   / /  ^  \ `---|  |----`|  |__   |  |_)  |           / /  
+	  \            / /  /_\  \    |  |     |   __|  |      /           / /   
+	   \    /\    / /  _____  \   |  |     |  |____ |  |\  \----.     / /    
+        \__/  \__/ /__/     \__\  |__|     |_______|| _| `._____|    /_/     
 	Water /
 */
 
 
 /*
-	█████╗ ██╗   ██╗██╗   ██╗██████╗  █████╗ ███████╗
+	 █████╗ ██╗   ██╗██╗   ██╗██████╗  █████╗ ███████╗
 	██╔══██╗╚██╗ ██╔╝██║   ██║██╔══██╗██╔══██╗██╔════╝
 	███████║ ╚████╔╝ ██║   ██║██║  ██║███████║███████╗
 	██╔══██║  ╚██╔╝  ██║   ██║██║  ██║██╔══██║╚════██║
