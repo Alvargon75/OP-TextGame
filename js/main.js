@@ -26,8 +26,9 @@ var start = function(){
 	show("d1_b");
 	checkHUD();
 	if(randomName == true){
-		nameNumber = randomizer(4);
+		nameNumber = Math.floor(Math.random() * 3);
 		console.log("Name:" + " " + names[nameNumber]);
+		write("")
 	}else{
 		nameNumber = 0;
 		console.log("Name:" + " " + names[nameNumber]);
@@ -49,6 +50,9 @@ var clear = function(){
 	document.getElementById("c2").innerHTML = " ";
 	document.getElementById("c3").innerHTML = " ";
 	document.getElementById("fin").innerHTML = " ";
+}
+var showCombatUI = function(){
+	document.getElementById("combatUI").classList.add("combatUI-active");
 }
 // SAVING TIME
 
@@ -84,12 +88,12 @@ var nameChange = function(){
 	randomName = true;
 }
 var nameNumber;
-var names = ["Luffy","Sanji", "Zorro", "Gold D. Roger"];
-var at1 = ["Estira el brazo, puñetazo", "Patada Pierna Negra", "Sablazo", ""];
-var at2 = ["Galleta galleta, metralleta", "Disparo de Venado", "Estilo de Tres Espadas", ""];
-var at3 = ["Retuérce el tornillo, molinillo", "Patada Escalope", "Corte del Demonio", ""];
-var at4 = ["Estira el cuello mazo, cabezazo", "Espectro del Pan Frito", "Espiral del Dragón", ""];
-var at5 = ["Haki del Rey", "Pierna del Diablo", "Tatsumaki", ""];
+var names = ["Luffy","Sanji", "Zorro"];
+var at1 = ["Estira el brazo, puñetazo", "Patada Pierna Negra", "Sablazo"];
+var at2 = ["Galleta galleta, metralleta", "Disparo de Venado", "Estilo de Tres Espadas"];
+var at3 = ["Retuérce el tornillo, molinillo", "Patada Escalope", "Corte del Demonio"];
+var at4 = ["Estira el cuello mazo, cabezazo", "Espectro del Pan Frito", "Espiral del Dragón"];
+var at5 = ["Haki del Rey", "Pierna del Diablo", "Tatsumaki"];
 
 // RECUPERACIÓN
 
