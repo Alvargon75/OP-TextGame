@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <link text="text/css" rel="stylesheet" href=".\css\master.css">
   <link rel="shortcut icon" href=".\recursos\img\icon.png" type="image/png">
-  <script src="js\stats.js"></script>
-  <script src="js\functions.js"></script>
-  <script src="js\pirata.js"></script>
-  <script src="js\marine.js"></script>
+  <script src="js\main.js"></script>
   <title>One Piece | JS Game</title>
  </head>
  <!--
@@ -20,55 +17,73 @@
  -->
  <body>
   <header><h1>One Piece</h1></header>
-  <div id="game">
-   <div id="izq">
+  <div id="izq">
    <div id="text-box">
     <p>Este juego está hecho por <a href="http://www.taringa.net/Alvargon75">Alvargon75</a>
 	Pulsa "Inicio" para empezar</p>
 	<p id="intro"></p>
-	<p id="pirata_marine"></p>
-	<p id="d2"></p>
-	<p id="d3"></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
-	<p id=""></p>
+	<p id="a1"></p>
+	<p id="a2"></p>
+	<p id="a3"></p>
+	<p id="a4"></p>
+	<p id="b1"></p>
+	<p id="b2"></p>
+	<p id="b3"></p>
+	<p id="b4"></p>
+	<p id="c1"></p>
+	<p id="c2"></p>
+	<p id="c3"></p>
 	<p id="fin"></p>
    </div>
     <div id="controls_container">
     <div id="controls">
 	 <!-- Intro - Decisiones Importantes -->
      <button type="button" id="inicio" class="" onclick="start()">Inicio</button>
+	 <button type="button" id="nameChange" class="" onclick="nameChange()">Nombre Aleatorio</button>
 	 <button type="button" id="d1_a" class="hidden" onclick="pirata()">El Barco Pirata</button>
 	 <button type="button" id="d1_b" class="hidden" onclick="marine()">La Armada</button>
 	 <button type="button" id="d2m_a" class="hidden" onclick="alistarse()">Me Alisto</button>
 	 <button type="button" id="d2m_b" class="hidden" onclick="villa()">Llévame a esa villa</button>
-	 <button type="button" id="d2p_a" class="hidden" onclick="luchaAlvida()">Luchar</button>
-	 <button type="button" id="d2p_b" class="hidden" onclick="rendirse()">Morir</button>
+	 <button type="button" id="d2p_a" class="hidden" onclick="luchaAlv()">Luchar</button>
+	 <button type="button" id="d2p_b" class="hidden" onclick="rendirseAlv()">Morir</button>
 	 <!-- Marine -->
 	 <button type="button" id="m1_op" class="hidden" onclick="fullbodyContinua()">Continuar</button>
 	 <!-- Pirata -->
     </div>
    </div>
-   </div>
-   <div id="drch">
-   <div id="ilustraciones">
-	
-   </div>
+  </div>
+  <div id="drch">
    <div id="stats">
     <ul>
-	 <li class="stats_list">Vida: <span id="vida" class="green"></span></li>
+	 <li class="stats_list">Vida: <span id="vida" class="green"></span><span class="green">/500</span></li>
 	 <li class="stats_list">Ataque: <span id="ataque" class="red"></span></li>
 	 <!-- <li class="stats_list">Defensa: <span id="defensa" class="azul"></span></li> -->
 	 <li class="stats_list">Nivel: <span id="nivel_exp"></span></li>
 	 <li class="stats_list">Experiencia: <span id="exp"></span></li>
 	</ul>
    </div>
+   <div id="ilustraciones">
+	<img id="i_intro" class="" src="recursos/ilustrations/logo.png">
+   </div>
+   <div id="combat-log">
+	<p id="log1"></p>
+	<p id="log2"></p>
+	<p id="log3"></p>
+	<p id="log4"></p>
+	<p id="log5"></p>
+	<p id="log6"></p>
+	<p id="log7"></p>
+	<p id="log8"></p>
+	<p id="log9"></p>
+   </div>
   </div>
+  <div id="audio_container" class="hidden">
+   <audio>
+	<source src="recursos/music/the_strongest.mp3" type="audio/mpeg" id="music_strongest">
+   </audio>
+   <audio>
+	<source src="recursos/music/overtaken.mp3" type="audio/mpeg" id="music_overtaken">
+   </audio>
   </div>
  </body>
 </html>
