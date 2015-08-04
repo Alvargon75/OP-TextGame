@@ -51,6 +51,19 @@ var clear = function(){
 	document.getElementById("fin").innerHTML = " ";
 }
 
+var clearLog = function(){
+	writer("log1","");
+	writer("log2","");
+	writer("log3","");
+	writer("log4","");
+	writer("log5","");
+	writer("log6","");
+	writer("log7","");
+	writer("log8","");
+	writer("log9","");
+	writer("log10","");
+}
+
 // SAVING TIME
 
 var writer = function(id,text){
@@ -121,7 +134,7 @@ var expChecking = false;
 };*/
 
 var ataque = function(dano, multi){
-	dProvocadoH = Math.floor(Math.random() * multi + dano);
+	return Math.floor(Math.random() * multi + dano);
 };
 
 /*
@@ -234,15 +247,22 @@ var luchaAlv = function(){
 	while(atacar){
 		writer("a4", "Pegaste a Alvida");
 		danoTotal += danoRound;
-		if(danoTotal >= 100){
+		luffyVida -= danoAlv;
+		if(danoTotal >= 100){ //Ganas
 			writer("b1", "Tiraste a Alvida al mar de un puñetazo.");
 			show("");
 			hide("d2p_a");
 			hide("d2p_b");
 			atacar = false;
-		}else if(luffyVida <= 0){
-			writer("b1", "Alvida te pudoy en un golpe de suerte te tiró al mar.");
+			checkHUD;
+		}else if(luffyVida <= 0){ //Pierdes
+			writer("b1", "Alvida te pudo y en un golpe de suerte te tiró al mar.");
 			atacar = false;
+			checkHUD;
+		}else{ //Continua
+			console.log("Luffy:" + " " + luffyVida);
+			console.log("AlVida:" + " " + danoTotal);
+			checkHUD;
 		}
 	}
 }
