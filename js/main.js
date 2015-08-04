@@ -28,10 +28,19 @@ var start = function(){
 	if(randomName == true){
 		nameNumber = Math.floor(Math.random() * 3);
 		console.log("Name:" + " " + names[nameNumber]);
-		write("")
+		write("at1", at1[nameNumber]);
+		write("at2", at2[nameNumber]);
+		write("at3", at3[nameNumber]);
+		write("at4", at4[nameNumber]);
+		write("at5", at5[nameNumber]);
 	}else{
 		nameNumber = 0;
 		console.log("Name:" + " " + names[nameNumber]);
+		write("at1", at1[nameNumber]);
+		write("at2", at2[nameNumber]);
+		write("at3", at3[nameNumber]);
+		write("at4", at4[nameNumber]);
+		write("at5", at5[nameNumber]);
 	};
 	hide("nameChange");
 };
