@@ -50,20 +50,6 @@ var clear = function(){
 	document.getElementById("c3").innerHTML = " ";
 	document.getElementById("fin").innerHTML = " ";
 }
-
-var clearLog = function(){
-	writer("log1","");
-	writer("log2","");
-	writer("log3","");
-	writer("log4","");
-	writer("log5","");
-	writer("log6","");
-	writer("log7","");
-	writer("log8","");
-	writer("log9","");
-	writer("log10","");
-}
-
 // SAVING TIME
 
 var writer = function(id,text){
@@ -91,16 +77,19 @@ var audioPlayer_pause = function(id){
 	var aud = document.getElementById(id);
 	aud.pause();
 }
-// RANDOM NAME
+// CHARACTERS
 
 var randomName = false;
 var nameChange = function(){
 	randomName = true;
 }
 var nameNumber;
-var names = ["Luffy","Sanji", "Zorro", "Ace"];
-
-// CUSTOM ATTACKS (POR HACER)
+var names = ["Luffy","Sanji", "Zorro", "Gold D. Roger"];
+var at1 = ["Estira el brazo, puñetazo", "Patada Pierna Negra", "Sablazo", ""];
+var at2 = ["Galleta galleta, metralleta", "Disparo de Venado", "Estilo de Tres Espadas", ""];
+var at3 = ["Retuérce el tornillo, molinillo", "Patada Escalope", "Corte del Demonio", ""];
+var at4 = ["Estira el cuello mazo, cabezazo", "Espectro del Pan Frito", "Espiral del Dragón", ""];
+var at5 = ["Haki del Rey", "Pierna del Diablo", "Tatsumaki", ""];
 
 // RECUPERACIÓN
 
