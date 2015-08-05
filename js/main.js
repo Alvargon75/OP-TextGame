@@ -6,15 +6,11 @@
 ██║ ╚═╝ ██║███████╗╚██████╗██║  ██║██║ ╚████║██║███████║██║ ╚═╝ ██║╚██████╔╝███████║
 ╚═╝     ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝
 */
-// PELEA GENERAL
+// VARIABLES
 
-var dTurno;
-var dProvocadoV;
-var dProvocadoH;
 var nivelExp = 1;
 var expPoints = 1;
 var luffyVida = 500;
-var danoL = 5;
 
 // START AND CLEAR
 
@@ -130,11 +126,6 @@ var expChecking = false;
 
 // ATAQUES
 
-/*var ataqueEstandar = function(danoV, multi, objetivoH){
-	dProvocadoV = Math.floor(Math.random() * multi + danoV);
-	objetivoH -= dProvocadoV;
-};*/
-
 var ataque = function(dano, multi){
 	return Math.floor(Math.random() * multi + dano);
 };
@@ -213,30 +204,6 @@ var fullbodyContinua = function(){
 	/__/     \__\ |_______|    \__/     |__| |_______/ /__/     \__\
 	Alvida
 */
-
-/*var luchaAlvida = function(){
-	var atacar = true;
-	var danoGolpeLuffy;
-	var danoGolpeAlvida;
-	var danoTotalL = 0;
-	var danoTotalA = 0;
-	while(atacar === true){
-		if(danoTotalL >= 100){
-			console.log("CHP: Alvida murió.");
-			writer("a4","");
-			atacar = false;
-		}else if(luffyVida === 0){
-			writer("a4","Perdiste contra Alvida.<br/> <span>FIN</span>");
-			atacar = false;
-		}else{
-			var danoGolpeLuffy = ataqueL(5, 1);
-			var danoGolpeAlvida = ataqueEstandar(2, 1, luffyVida);
-			AlVida -= danoGolpeLuffy;
-			luffyVida -= danoGolpeAlvida;
-			checkHUD();
-		};
-	};
-};*/
 
 var luchaAlv = function(){
 	var atacar = true;
