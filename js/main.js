@@ -11,54 +11,8 @@
 var nivelExp = 1;
 var expPoints = 1;
 var luffyVida = 500;
+var grado = 1;
 
-// START AND CLEAR
-
-var start = function(){
-	console.log("Game Started");
-	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
-	hide("inicio");
-	show("d1_a");
-	show("d1_b");
-	checkHUD();
-	if(randomName == true){
-		nameNumber = Math.floor(Math.random() * 3);
-		console.log("Name:" + " " + names[nameNumber]);
-		write("at1", at1[nameNumber]);
-		write("at2", at2[nameNumber]);
-		write("at3", at3[nameNumber]);
-		write("at4", at4[nameNumber]);
-		write("at5", at5[nameNumber]);
-	}else{
-		nameNumber = 0;
-		console.log("Name:" + " " + names[nameNumber]);
-		write("at1", at1[nameNumber]);
-		write("at2", at2[nameNumber]);
-		write("at3", at3[nameNumber]);
-		write("at4", at4[nameNumber]);
-		write("at5", at5[nameNumber]);
-	};
-	hide("nameChange");
-};
-
-var clear = function(){
-	document.getElementById("intro").innerHTML = " ";
-	document.getElementById("a1").innerHTML = " ";
-	document.getElementById("a2").innerHTML = " ";
-	document.getElementById("a3").innerHTML = " ";
-	document.getElementById("a4").innerHTML = " ";
-	document.getElementById("b1").innerHTML = " ";
-	document.getElementById("b2").innerHTML = " ";
-	document.getElementById("b3").innerHTML = " ";
-	document.getElementById("b4").innerHTML = " ";
-	document.getElementById("c1").innerHTML = " ";
-	document.getElementById("c2").innerHTML = " ";
-	document.getElementById("c3").innerHTML = " ";
-	document.getElementById("fin").innerHTML = " ";
-}
-var showCombatUI = function(){
-	document.getElementById("combatUI").classList.add("combatUI-active");
-}
 // SAVING TIME
 
 var writer = function(id,text){
@@ -86,11 +40,74 @@ var audioPlayer_pause = function(id){
 	var aud = document.getElementById(id);
 	aud.pause();
 }
+
+// START AND CLEAR
+
+var start = function(){
+	console.log("Game Started");
+	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
+	hide("inicio");
+	hide("nameChange");
+	show("d1_a");
+	show("d1_b");
+	checkHUD();
+	if(randomName == true){
+		nameNumber = Math.floor(Math.random() * 3);
+		console.log("Name:" + " " + names[nameNumber]);
+		writer("at1", at1[nameNumber]);
+		writer("at2", at2[nameNumber]);
+		writer("at3", at3[nameNumber]);
+		writer("at4", at4[nameNumber]);
+		writer("at5", at5[nameNumber]);
+		if(names[nameNumber] === "Zorro"){
+			writer("name", "Zorro Ronoa");
+		}else if(names[nameNumber] === "Sanji"){
+			writer("name", "Sanji Pierna Negra");
+		}else{
+			writer("name", "Monkey D. Luffy");
+		}
+	}else{
+		nameNumber = 0;
+		console.log("Name:" + " " + names[nameNumber]);
+		writer("at1", at1[nameNumber]);
+		writer("at2", at2[nameNumber]);
+		writer("at3", at3[nameNumber]);
+		writer("at4", at4[nameNumber]);
+		writer("at5", at5[nameNumber]);
+		writer("name", "Monkey D. Luffy");
+	};
+};
+
+var clear = function(){
+	document.getElementById("intro").innerHTML = " ";
+	document.getElementById("a1").innerHTML = " ";
+	document.getElementById("a2").innerHTML = " ";
+	document.getElementById("a3").innerHTML = " ";
+	document.getElementById("a4").innerHTML = " ";
+	document.getElementById("b1").innerHTML = " ";
+	document.getElementById("b2").innerHTML = " ";
+	document.getElementById("b3").innerHTML = " ";
+	document.getElementById("b4").innerHTML = " ";
+	document.getElementById("c1").innerHTML = " ";
+	document.getElementById("c2").innerHTML = " ";
+	document.getElementById("c3").innerHTML = " ";
+	document.getElementById("fin").innerHTML = " ";
+}
+var fightSetUp = function(enemyName){ 
+	document.getElementById("combatUI").classList.add('combatUI-active');
+	writer("vs_title", names[nameNumber] + " " + enemyName);
+	writer("at1", at1[nameNumber]);
+	writer("at2", at1[nameNumber]);
+	writer("at3", at1[nameNumber]);
+	writer("at4", at1[nameNumber]);
+	writer("at5", at1[nameNumber]);
+}
 // CHARACTERS
 
 var randomName = false;
 var nameChange = function(){
 	randomName = true;
+	hide("nameChange");
 }
 var nameNumber;
 var names = ["Luffy","Sanji", "Zorro"];
@@ -116,7 +133,7 @@ var recuperar = function(vida, dVida){
 
 var checkHUD = function(){
 	document.getElementById("vida").innerHTML = luffyVida;
-	document.getElementById("ataque").innerHTML = danoL;
+	document.getElementById("ataque").innerHTML = grado;
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
 	console.log("HUD revisado");

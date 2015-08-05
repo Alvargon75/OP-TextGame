@@ -68,14 +68,14 @@ a:hover {
 .azul {
 	color: darkblue;
 }
-#stats {
+#drch #stats {
 	margin-top: -15px;
 	padding-right: 35px;
 	background-color: white;
 	background-image: url(recursos/img/icon.png);
 	background-position: center;
 }
-#stats ul {
+#drch #stats ul {
 	list-style-type: none;
 }
 /*#controls_container {
@@ -83,8 +83,6 @@ a:hover {
 	left: 20px;
 	top: 100px
 }*/
-
-/*SIN REVISAR*/
 #izq {
 	float: left;
 	clear: left;
@@ -116,4 +114,9 @@ a:hover {
 	position: fixed !important;
 	z-index: 999 !important;
 	display: initial !important;
+	background-color: white;
+}
+/* VERSION MOVIL */
+@media only screen and (max-width: 768px){
+	
 }
