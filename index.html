@@ -14,6 +14,7 @@
 	<button type="button" id="" class="hidden" onclick=""></button>
 	<p id=""></p>
 	<img id="" class="hidden" src=""></img>
+	
  -->
  <body>
   <header><h1>One Piece</h1></header>
@@ -35,7 +36,7 @@
 	<p id="c3"></p>
 	<p id="fin"></p>
    </div>
-    <div id="controls_container">
+   <div id="controls_container">
     <div id="controls">
 	 <!-- Intro - Decisiones Importantes -->
      <button type="button" id="inicio" class="" onclick="start()">Inicio</button>
@@ -54,27 +55,16 @@
   </div>
   <div id="drch">
    <div id="stats">
+    <h1 id="name"></h1>
     <ul>
 	 <li class="stats_list">Vida: <span id="vida" class="green"></span><span class="green">/500</span></li>
-	 <li class="stats_list">Ataque: <span id="ataque" class="red"></span></li>
-	 <!-- <li class="stats_list">Defensa: <span id="defensa" class="azul"></span></li> -->
+	 <li class="stats_list">Grado: <span id="ataque" class="red"></span></li>
 	 <li class="stats_list">Nivel: <span id="nivel_exp"></span></li>
 	 <li class="stats_list">Experiencia: <span id="exp"></span></li>
 	</ul>
    </div>
    <div id="ilustraciones">
 	<img id="i_intro" class="" src="recursos/ilustrations/logo.png">
-   </div>
-   <div id="combat-log">
-	<p id="log1"></p>
-	<p id="log2"></p>
-	<p id="log3"></p>
-	<p id="log4"></p>
-	<p id="log5"></p>
-	<p id="log6"></p>
-	<p id="log7"></p>
-	<p id="log8"></p>
-	<p id="log9"></p>
    </div>
   </div>
   <div id="audio_container" class="hidden">
@@ -84,6 +74,36 @@
    <audio>
 	<source src="recursos/music/overtaken.mp3" type="audio/mpeg" id="music_overtaken">
    </audio>
+  </div>
+  <div id="combatUI" class="">
+   <div id="header_cont">
+	<h1 id="vs_title"></h1>
+   </div>
+   <div id="visual">
+	<div id="enemigo">
+	 <div id="sprite">
+	  <img src=""></img>
+	 </div>
+	 <div id="stats">
+	  
+	 </div>
+	</div>
+	<div id="personaje">
+	 <div id="sprite">
+	  <img src=""></img>
+	 </div>
+	 <div id="stats">
+	 
+	 </div>
+	</div>
+   </div>
+   <div id="ataques" class="">
+	<button type="button" id="at1" onclick=""></button>
+	<button type="button" id="at2" onclick=""></button>
+	<button type="button" id="at3" onclick=""></button>
+	<button type="button" id="at4" onclick=""></button>
+	<button type="button" id="at5" onclick=""></button>
+   </div>
   </div>
  </body>
 </html>

@@ -6,50 +6,12 @@
 ██║ ╚═╝ ██║███████╗╚██████╗██║  ██║██║ ╚████║██║███████║██║ ╚═╝ ██║╚██████╔╝███████║
 ╚═╝     ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝
 */
-// PELEA GENERAL
+// VARIABLES
 
-var dTurno;
-var dProvocadoV;
-var dProvocadoH;
 var nivelExp = 1;
 var expPoints = 1;
 var luffyVida = 500;
-var danoL = 5;
-
-// START AND CLEAR
-
-var start = function(){
-	console.log("Game Started");
-	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
-	hide("inicio");
-	show("d1_a");
-	show("d1_b");
-	checkHUD();
-	if(randomName == true){
-		nameNumber = randomizer(4);
-		console.log("Name:" + " " + names[nameNumber]);
-	}else{
-		nameNumber = 0;
-		console.log("Name:" + " " + names[nameNumber]);
-	};
-	hide("nameChange");
-};
-
-var clear = function(){
-	document.getElementById("intro").innerHTML = " ";
-	document.getElementById("a1").innerHTML = " ";
-	document.getElementById("a2").innerHTML = " ";
-	document.getElementById("a3").innerHTML = " ";
-	document.getElementById("a4").innerHTML = " ";
-	document.getElementById("b1").innerHTML = " ";
-	document.getElementById("b2").innerHTML = " ";
-	document.getElementById("b3").innerHTML = " ";
-	document.getElementById("b4").innerHTML = " ";
-	document.getElementById("c1").innerHTML = " ";
-	document.getElementById("c2").innerHTML = " ";
-	document.getElementById("c3").innerHTML = " ";
-	document.getElementById("fin").innerHTML = " ";
-}
+var grado = 1;
 
 // SAVING TIME
 
@@ -78,16 +40,82 @@ var audioPlayer_pause = function(id){
 	var aud = document.getElementById(id);
 	aud.pause();
 }
-// RANDOM NAME
+
+// START AND CLEAR
+
+var start = function(){
+	console.log("Game Started");
+	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
+	hide("inicio");
+	hide("nameChange");
+	show("d1_a");
+	show("d1_b");
+	checkHUD();
+	if(randomName == true){
+		nameNumber = Math.floor(Math.random() * 3);
+		console.log("Name:" + " " + names[nameNumber]);
+		writer("at1", at1[nameNumber]);
+		writer("at2", at2[nameNumber]);
+		writer("at3", at3[nameNumber]);
+		writer("at4", at4[nameNumber]);
+		writer("at5", at5[nameNumber]);
+		if(names[nameNumber] === "Zorro"){
+			writer("name", "Zorro Ronoa");
+		}else if(names[nameNumber] === "Sanji"){
+			writer("name", "Sanji Pierna Negra");
+		}else{
+			writer("name", "Monkey D. Luffy");
+		}
+	}else{
+		nameNumber = 0;
+		console.log("Name:" + " " + names[nameNumber]);
+		writer("at1", at1[nameNumber]);
+		writer("at2", at2[nameNumber]);
+		writer("at3", at3[nameNumber]);
+		writer("at4", at4[nameNumber]);
+		writer("at5", at5[nameNumber]);
+		writer("name", "Monkey D. Luffy");
+	};
+};
+
+var clear = function(){
+	document.getElementById("intro").innerHTML = " ";
+	document.getElementById("a1").innerHTML = " ";
+	document.getElementById("a2").innerHTML = " ";
+	document.getElementById("a3").innerHTML = " ";
+	document.getElementById("a4").innerHTML = " ";
+	document.getElementById("b1").innerHTML = " ";
+	document.getElementById("b2").innerHTML = " ";
+	document.getElementById("b3").innerHTML = " ";
+	document.getElementById("b4").innerHTML = " ";
+	document.getElementById("c1").innerHTML = " ";
+	document.getElementById("c2").innerHTML = " ";
+	document.getElementById("c3").innerHTML = " ";
+	document.getElementById("fin").innerHTML = " ";
+}
+var fightSetUp = function(enemyName){ 
+	document.getElementById("combatUI").classList.add('combatUI-active');
+	writer("vs_title", names[nameNumber] + " " + enemyName);
+	writer("at1", at1[nameNumber]);
+	writer("at2", at1[nameNumber]);
+	writer("at3", at1[nameNumber]);
+	writer("at4", at1[nameNumber]);
+	writer("at5", at1[nameNumber]);
+}
+// CHARACTERS
 
 var randomName = false;
 var nameChange = function(){
 	randomName = true;
+	hide("nameChange");
 }
 var nameNumber;
-var names = ["Luffy","Sanji", "Zorro", "Ace"];
-
-// CUSTOM ATTACKS (POR HACER)
+var names = ["Luffy","Sanji", "Zorro"];
+var at1 = ["Estira el brazo, puñetazo", "Patada Pierna Negra", "Sablazo"];
+var at2 = ["Galleta galleta, metralleta", "Disparo de Venado", "Estilo de Tres Espadas"];
+var at3 = ["Retuérce el tornillo, molinillo", "Patada Escalope", "Corte del Demonio"];
+var at4 = ["Estira el cuello mazo, cabezazo", "Espectro del Pan Frito", "Espiral del Dragón"];
+var at5 = ["Haki del Rey", "Pierna del Diablo", "Tatsumaki"];
 
 // RECUPERACIÓN
 
@@ -105,7 +133,7 @@ var recuperar = function(vida, dVida){
 
 var checkHUD = function(){
 	document.getElementById("vida").innerHTML = luffyVida;
-	document.getElementById("ataque").innerHTML = danoL;
+	document.getElementById("ataque").innerHTML = grado;
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
 	console.log("HUD revisado");
@@ -115,13 +143,8 @@ var expChecking = false;
 
 // ATAQUES
 
-/*var ataqueEstandar = function(danoV, multi, objetivoH){
-	dProvocadoV = Math.floor(Math.random() * multi + danoV);
-	objetivoH -= dProvocadoV;
-};*/
-
 var ataque = function(dano, multi){
-	dProvocadoH = Math.floor(Math.random() * multi + dano);
+	return Math.floor(Math.random() * multi + dano);
 };
 
 /*
@@ -199,30 +222,6 @@ var fullbodyContinua = function(){
 	Alvida
 */
 
-/*var luchaAlvida = function(){
-	var atacar = true;
-	var danoGolpeLuffy;
-	var danoGolpeAlvida;
-	var danoTotalL = 0;
-	var danoTotalA = 0;
-	while(atacar === true){
-		if(danoTotalL >= 100){
-			console.log("CHP: Alvida murió.");
-			writer("a4","");
-			atacar = false;
-		}else if(luffyVida === 0){
-			writer("a4","Perdiste contra Alvida.<br/> <span>FIN</span>");
-			atacar = false;
-		}else{
-			var danoGolpeLuffy = ataqueL(5, 1);
-			var danoGolpeAlvida = ataqueEstandar(2, 1, luffyVida);
-			AlVida -= danoGolpeLuffy;
-			luffyVida -= danoGolpeAlvida;
-			checkHUD();
-		};
-	};
-};*/
-
 var luchaAlv = function(){
 	var atacar = true;
 	var acertar = true;
@@ -234,15 +233,22 @@ var luchaAlv = function(){
 	while(atacar){
 		writer("a4", "Pegaste a Alvida");
 		danoTotal += danoRound;
-		if(danoTotal >= 100){
+		luffyVida -= danoAlv;
+		if(danoTotal >= 100){ //Ganas
 			writer("b1", "Tiraste a Alvida al mar de un puñetazo.");
 			show("");
 			hide("d2p_a");
 			hide("d2p_b");
 			atacar = false;
-		}else if(luffyVida <= 0){
-			writer("b1", "Alvida te pudoy en un golpe de suerte te tiró al mar.");
+			checkHUD;
+		}else if(luffyVida <= 0){ //Pierdes
+			writer("b1", "Alvida te pudo y en un golpe de suerte te tiró al mar.");
 			atacar = false;
+			checkHUD;
+		}else{ //Continua
+			console.log("Luffy:" + " " + luffyVida);
+			console.log("AlVida:" + " " + danoTotal);
+			checkHUD;
 		}
 	}
 }
