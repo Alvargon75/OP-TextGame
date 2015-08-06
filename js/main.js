@@ -59,12 +59,12 @@ var start = function(){
 		writer("at3", at3[nameNumber]);
 		writer("at4", at4[nameNumber]);
 		writer("at5", at5[nameNumber]);
-		if(names[nameNumber] === "Zorro"){
-			writer("name", "Zorro Ronoa");
+		if(names[nameNumber] === Zoro){
+			writer("name", Zoro.longname);
 			hide("i_intro_luffy");
 			show("i_intro_zoro");
-		}else if(names[nameNumber] === "Sanji"){
-			writer("name", "Sanji Pierna Negra");
+		}else if(names[nameNumber] === Sanji){
+			writer("name", Sanji.longName);
 			hide("i_intro_luffy");
 			show("i_intro_sanji");
 		}else{
