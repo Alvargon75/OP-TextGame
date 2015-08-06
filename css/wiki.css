@@ -16,3 +16,7 @@
 	src: url(../recursos/fonts/robotoitalic.ttf);
 	font-style: italic;
 }
+@font-face {
+	font-family: OnePiece;
+	src: url(../recursos/fonts/onepiece.ttf);
+}

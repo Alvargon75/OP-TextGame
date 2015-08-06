@@ -66,7 +66,7 @@ var start = function(){
 		}else if(names[nameNumber] === "Sanji"){
 			writer("name", "Sanji Pierna Negra");
 			hide("i_intro_luffy");
-			show("i_intro_sanji")
+			show("i_intro_sanji");
 		}else{
 			writer("name", "Monkey D. Luffy");
 		}
@@ -98,13 +98,13 @@ var clear = function(){
 	document.getElementById("fin").innerHTML = " ";
 }
 var fightSetUp = function(enemyName){ 
-	document.getElementById("combatUI").classList.add('combatUI-active');
-	writer("vs_title", names[nameNumber] + " " + enemyName);
+	document.getElementById("combatUI").classList.remove('combatUI-inactive');
+	writer("vs_title", names[nameNumber] + " " + "vs" + " " + enemyName);
 	writer("at1", at1[nameNumber]);
-	writer("at2", at1[nameNumber]);
-	writer("at3", at1[nameNumber]);
-	writer("at4", at1[nameNumber]);
-	writer("at5", at1[nameNumber]);
+	writer("at2", at2[nameNumber]);
+	writer("at3", at3[nameNumber]);
+	writer("at4", at4[nameNumber]);
+	writer("at5", at5[nameNumber]);
 }
 // CHARACTERS
 
