@@ -72,12 +72,7 @@ var start = function(){
 		}
 	}else{
 		nameNumber = 0;
-		console.log("Name:" + " " + names[nameNumber]);
-		writer("at1", at1[nameNumber]);
-		writer("at2", at2[nameNumber]);
-		writer("at3", at3[nameNumber]);
-		writer("at4", at4[nameNumber]);
-		writer("at5", at5[nameNumber]);
+		console.log("Name:" + " " + names[nameNumber].name);
 		writer("name", "Monkey D. Luffy");
 	};
 };
@@ -100,11 +95,11 @@ var clear = function(){
 var fightSetUp = function(enemyName){ 
 	document.getElementById("combatUI").classList.remove('combatUI-inactive');
 	writer("vs_title", names[nameNumber] + " " + "vs" + " " + enemyName);
-	writer("at1", at1[nameNumber]);
-	writer("at2", at2[nameNumber]);
-	writer("at3", at3[nameNumber]);
-	writer("at4", at4[nameNumber]);
-	writer("at5", at5[nameNumber]);
+	writer("at1", names[nameNumber].ataque[1]);
+	writer("at2", names[nameNumber].ataque[2]);
+	writer("at3", names[nameNumber].ataque[3]);
+	writer("at4", names[nameNumber].ataque[4]);
+	writer("at5", names[nameNumber].ataque[5]);
 }
 // CHARACTERS
 
@@ -114,13 +109,8 @@ var nameChange = function(){
 	hide("nameChange");
 }
 var nameNumber;
-var names = ["Luffy","Sanji", "Zorro"];
-var at1 = ["Estira el brazo, puñetazo", "Patada Pierna Negra", "Sablazo"];
-var at2 = ["Galleta galleta, metralleta", "Disparo de Venado", "Estilo de Tres Espadas"];
-var at3 = ["Retuérce el tornillo, molinillo", "Patada Escalope", "Corte del Demonio"];
-var at4 = ["Estira el cuello mazo, cabezazo", "Espectro del Pan Frito", "Espiral del Dragón"];
-var at5 = ["Haki del Rey", "Pierna del Diablo", "Tatsumaki"];
-
+var names = [Luffy, Sanji, Zoro];
+var name = names[nameNumber];
 var Sanji = {
 	name: "Sanji",
 	longName: "Sanji Pierna Negra",
