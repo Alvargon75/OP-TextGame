@@ -61,8 +61,12 @@ var start = function(){
 		writer("at5", at5[nameNumber]);
 		if(names[nameNumber] === "Zorro"){
 			writer("name", "Zorro Ronoa");
+			hide("i_intro_luffy");
+			show("i_intro_zoro");
 		}else if(names[nameNumber] === "Sanji"){
 			writer("name", "Sanji Pierna Negra");
+			hide("i_intro_luffy");
+			show("i_intro_sanji")
 		}else{
 			writer("name", "Monkey D. Luffy");
 		}
@@ -240,6 +244,7 @@ var luchaAlv = function(){
 			hide("d2p_a");
 			hide("d2p_b");
 			atacar = false;
+			luffyVida = 500;
 			checkHUD;
 		}else if(luffyVida <= 0){ //Pierdes
 			writer("b1", "Alvida te pudo y en un golpe de suerte te tiró al mar.");
