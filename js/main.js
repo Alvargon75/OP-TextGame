@@ -121,6 +121,42 @@ var at3 = ["Retuérce el tornillo, molinillo", "Patada Escalope", "Corte del Dem
 var at4 = ["Estira el cuello mazo, cabezazo", "Espectro del Pan Frito", "Espiral del Dragón"];
 var at5 = ["Haki del Rey", "Pierna del Diablo", "Tatsumaki"];
 
+var Sanji = {
+	name: "Sanji",
+	longName: "Sanji Pierna Negra",
+	HP: 400,
+	maxHP 400,
+	MP: 250,
+	grados: ["Pierna Negra", "Haki de Armadura", "Diable Jamble"],
+	ataques: ["Patada Pierna Negra", "Disparo de Venado", "Patada Escalope", "Espectro del Pan Frito", "Pierna del Diablo"],
+	ataquesValores: [2, 5, 7, 13, 20],
+	ataquesCoste: [0, 2, 6, 11, 100],
+}
+
+var Luffy = {
+	name: "Luffy",
+	longName: "Monkey D. Luffy",
+	HP: 500,
+	maxHP: 500,
+	MP: 180,
+	grados: ["Hombre de Goma", "Grado 2", "Grado 3"],
+	ataques: ["Estira el brazo, puñetazo", "Galleta galleta, metralleta", "Retuérce el tornillo, Molinillo", "Estira el cuello mazo, cabezazo", "Haki del Rey"],
+	ataquesValores: [3, 9, 10, 15, 25],
+	ataquesCoste: [0, 1, 7, 11, 115],
+}
+
+var Zoro = {
+	name: "Zoro",
+	longName: "Zoro Ronoa",
+	HP: 600,
+	maxHP: 600,
+	MP: 150,
+	grados: ["Casual", "Concentrado", "Mente en Blanco"],
+	ataques: ["Sablazo", "Estilo de Tres Espadas", "Corte del Demonio", "Espiral del Dragón", "Tatsumaki"],
+	ataquesValores: [4, 7, 10, 13, 20],
+	ataquesCoste: [0, 3, 5, 14, 95],
+}
+
 // RECUPERACIÓN
 
 var recuperar = function(vida, dVida){
