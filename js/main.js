@@ -115,7 +115,7 @@ var Sanji = {
 	name: "Sanji",
 	longName: "Sanji Pierna Negra",
 	HP: 400,
-	maxHP 400,
+	maxHP: 400,
 	MP: 250,
 	grados: ["Pierna Negra", "Haki de Armadura", "Diable Jamble"],
 	ataques: ["Patada Pierna Negra", "Disparo de Venado", "Patada Escalope", "Espectro del Pan Frito", "Pierna del Diablo"],
