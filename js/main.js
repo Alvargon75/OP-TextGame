@@ -53,17 +53,12 @@ var start = function(){
 	checkHUD();
 	if(randomName == true){
 		nameNumber = Math.floor(Math.random() * 3);
-		console.log("Name:" + " " + names[nameNumber]);
-		writer("at1", at1[nameNumber]);
-		writer("at2", at2[nameNumber]);
-		writer("at3", at3[nameNumber]);
-		writer("at4", at4[nameNumber]);
-		writer("at5", at5[nameNumber]);
-		if(names[nameNumber] === Zoro){
+		console.log("Name:" + " " + name.name);
+		if(names[nameNumber] == Zoro){
 			writer("name", Zoro.longname);
 			hide("i_intro_luffy");
 			show("i_intro_zoro");
-		}else if(names[nameNumber] === Sanji){
+		}else if(names[nameNumber] == Sanji){
 			writer("name", Sanji.longName);
 			hide("i_intro_luffy");
 			show("i_intro_sanji");
