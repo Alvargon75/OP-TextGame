@@ -18,6 +18,36 @@
  -->
  <body>
   <header><h1>One Piece</h1></header>
+   <div id="combatUI" class="combatUI-inactive">
+	<div id="header_cont">
+	 <h1 id="vs_title"></h1>
+	</div>
+	<div id="visual">
+	 <div id="enemigo">
+	  <div id="sprite">
+	   <img src=""></img>
+	  </div>
+	  <div id="stats">
+		
+	  </div>
+	 </div>
+	 <div id="personaje">
+	  <div id="sprite">
+		<img src=""></img>
+	  </div>
+	  <div id="stats">
+		
+	  </div>
+	 </div>
+	</div>
+	<div id="ataques" class="">
+	 <button type="button" id="at1" onclick=""></button>
+	 <button type="button" id="at2" onclick=""></button>
+	 <button type="button" id="at3" onclick=""></button>
+	 <button type="button" id="at4" onclick=""></button>
+	 <button type="button" id="at5" onclick=""></button>
+	</div>
+   </div>
   <div id="izq">
    <div id="text-box">
     <p>Este juego está hecho por <a href="http://www.taringa.net/Alvargon75">Alvargon75</a>
@@ -57,14 +87,16 @@
    <div id="stats">
     <h1 id="name"></h1>
     <ul>
-	 <li class="stats_list">Vida: <span id="vida" class="green"></span><span class="green">/500</span></li>
+	 <li class="stats_list">Vida: <span id="vida" class="green"></span><span class="green">/</span><span id="maxVida" class="green"></span></li>
 	 <li class="stats_list">Grado: <span id="ataque" class="red"></span></li>
 	 <li class="stats_list">Nivel: <span id="nivel_exp"></span></li>
 	 <li class="stats_list">Experiencia: <span id="exp"></span></li>
 	</ul>
    </div>
    <div id="ilustraciones">
-	<img id="i_intro" class="" src="recursos/ilustrations/logo.png">
+	<img id="i_intro_luffy" class="" src="recursos/ilustrations/logo.png">
+	<img id="i_intro_sanji" class="hidden" src="recursos/ilustrations/sanji_jollyroger.png">
+	<img id="i_intro_zoro" class="hidden" src="recursos/ilustrations/zoro_jollyroger.png">
    </div>
   </div>
   <div id="audio_container" class="hidden">
@@ -74,36 +106,6 @@
    <audio>
 	<source src="recursos/music/overtaken.mp3" type="audio/mpeg" id="music_overtaken">
    </audio>
-  </div>
-  <div id="combatUI" class="">
-   <div id="header_cont">
-	<h1 id="vs_title"></h1>
-   </div>
-   <div id="visual">
-	<div id="enemigo">
-	 <div id="sprite">
-	  <img src=""></img>
-	 </div>
-	 <div id="stats">
-	  
-	 </div>
-	</div>
-	<div id="personaje">
-	 <div id="sprite">
-	  <img src=""></img>
-	 </div>
-	 <div id="stats">
-	 
-	 </div>
-	</div>
-   </div>
-   <div id="ataques" class="">
-	<button type="button" id="at1" onclick=""></button>
-	<button type="button" id="at2" onclick=""></button>
-	<button type="button" id="at3" onclick=""></button>
-	<button type="button" id="at4" onclick=""></button>
-	<button type="button" id="at5" onclick=""></button>
-   </div>
   </div>
  </body>
 </html>
