@@ -11,7 +11,7 @@
 var nivelExp = 1;
 var expPoints = 1;
 var luffyVida = 500;
-var grado = 1;
+var gradoActual = 0;
 
 // SAVING TIME
 
@@ -52,22 +52,21 @@ var start = function(){
 	show("d1_b");
 	checkHUD();
 	if(randomName == true){
-		nameNumber = Math.floor(Math.random() * 3);
-		console.log("Name:" + " " + name.name);
-		if(names[nameNumber] == Zoro){
-			writer("name", Zoro.longname);
+		if(nameNumber == 2){
+			writer("name", Zoro.longName);
 			hide("i_intro_luffy");
 			show("i_intro_zoro");
-		}else if(names[nameNumber] == Sanji){
+		}else if(nameNumber == 1){
 			writer("name", Sanji.longName);
 			hide("i_intro_luffy");
 			show("i_intro_sanji");
 		}else{
 			writer("name", "Monkey D. Luffy");
 		}
+		console.log("Name:" + " " + names[nameNumber].name);
 	}else{
 		nameNumber = 0;
-		console.log("Name:" + " " + names[nameNumber].name);
+		console.log("Name:" + " " + Luffy.name);
 		writer("name", "Monkey D. Luffy");
 	};
 };
@@ -89,12 +88,12 @@ var clear = function(){
 }
 var fightSetUp = function(enemyName){ 
 	document.getElementById("combatUI").classList.remove('combatUI-inactive');
-	writer("vs_title", names[nameNumber] + " " + "vs" + " " + enemyName);
-	writer("at1", names[nameNumber].ataque[1]);
-	writer("at2", names[nameNumber].ataque[2]);
-	writer("at3", names[nameNumber].ataque[3]);
-	writer("at4", names[nameNumber].ataque[4]);
-	writer("at5", names[nameNumber].ataque[5]);
+	writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
+	writer("at1", names[nameNumber].ataques[0]);
+	writer("at2", names[nameNumber].ataques[1]);
+	writer("at3", names[nameNumber].ataques[2]);
+	writer("at4", names[nameNumber].ataques[3]);
+	writer("at5", names[nameNumber].ataques[4]);
 }
 // CHARACTERS
 
@@ -102,16 +101,16 @@ var randomName = false;
 var nameChange = function(){
 	randomName = true;
 	hide("nameChange");
+	nameNumber = Math.floor(Math.random() * 3);
 }
-var nameNumber;
-var names = [Luffy, Sanji, Zoro];
-var name = names[nameNumber];
+var nameNumber = 0;
 var Sanji = {
 	name: "Sanji",
 	longName: "Sanji Pierna Negra",
 	HP: 400,
 	maxHP: 400,
 	MP: 250,
+	maxMP: 250,
 	grados: ["Pierna Negra", "Haki de Armadura", "Diable Jamble"],
 	ataques: ["Patada Pierna Negra", "Disparo de Venado", "Patada Escalope", "Espectro del Pan Frito", "Pierna del Diablo"],
 	ataquesValores: [2, 5, 7, 13, 20],
@@ -124,6 +123,7 @@ var Luffy = {
 	HP: 500,
 	maxHP: 500,
 	MP: 180,
+	maxMP: 180,
 	grados: ["Hombre de Goma", "Grado 2", "Grado 3"],
 	ataques: ["Estira el brazo, puñetazo", "Galleta galleta, metralleta", "Retuérce el tornillo, Molinillo", "Estira el cuello mazo, cabezazo", "Haki del Rey"],
 	ataquesValores: [3, 9, 10, 15, 25],
@@ -136,11 +136,14 @@ var Zoro = {
 	HP: 600,
 	maxHP: 600,
 	MP: 150,
+	maxMP: 150,
 	grados: ["Casual", "Concentrado", "Mente en Blanco"],
 	ataques: ["Sablazo", "Estilo de Tres Espadas", "Corte del Demonio", "Espiral del Dragón", "Tatsumaki"],
 	ataquesValores: [4, 7, 10, 13, 20],
 	ataquesCoste: [0, 3, 5, 14, 95],
 }
+
+var names = [Luffy, Sanji, Zoro];
 
 // RECUPERACIÓN
 
@@ -157,8 +160,9 @@ var recuperar = function(vida, dVida){
 // HUD
 
 var checkHUD = function(){
-	document.getElementById("vida").innerHTML = luffyVida;
-	document.getElementById("ataque").innerHTML = grado;
+	document.getElementById("vida").innerHTML = names[nameNumber].HP;
+	writer("maxVida", names[nameNumber].maxHP);
+	document.getElementById("ataque").innerHTML = names[nameNumber].grados[gradoActual];
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
 	console.log("HUD revisado");
@@ -168,9 +172,18 @@ var expChecking = false;
 
 // ATAQUES
 
-var ataque = function(dano, multi){
+var ataquePrimeraPelea = function(dano, multi){
 	return Math.floor(Math.random() * multi + dano);
 };
+
+var ataqueVillano = function(dano, multi){
+	return Math.floor(Math.random() * multi + dano);
+}
+
+var ataqueSdP = function(dano, multi, coste){
+	return Math.floor(Math.random() * multi + dano);
+	names[nameNumber].MP -= coste;
+}
 
 /*
 	██╗  ██╗██╗███████╗████████╗ ██████╗ ██████╗ ██╗ █████╗ 
@@ -250,8 +263,8 @@ var fullbodyContinua = function(){
 var luchaAlv = function(){
 	var atacar = true;
 	var acertar = true;
-	var danoRound = ataque(5, 1);
-	var danoAlv = ataque(2, 1);
+	var danoRound = ataquePrimeraPelea(5, 1);
+	var danoAlv = ataquePrimeraPelea(2, 1);
 	var danoTotal = 0;
 	
 	//Pelea
