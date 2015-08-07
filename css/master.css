@@ -123,7 +123,46 @@ a:hover {
 	font-size: 2.8em;
 	margin-top: -15px;
 }
-#combatUI #
+#combatUI #ataques {
+	position: relative;
+	top: 240px;
+	left: 490px;
+	width: 45%;
+	height: 10%;
+}
+#combatUI #ataques button {
+	display: inline-block;
+	padding: 8px;
+	background-color: white;
+	margin: 4px;
+}
+#combatUI #ataques #at1 {
+	border-top: 3px solid #d11141;
+	border-bottom: 3px solid #d11141;
+	border-left: 6px solid #d11141;
+	border-right: 6px solid #d11141;
+}
+#combatUI #ataques #at2 {
+	border-top: 3px solid #00b159;
+	border-bottom: 3px solid #00b159;
+	border-left: 6px solid #00b159;
+	border-right: 6px solid #00b159;
+}
+#combatUI #ataques #at3 {
+	border-top: 3px solid #00aedb;
+	border-bottom: 3px solid #00aedb;
+	border-left: 6px solid #00aedb;
+	border-right: 6px solid #00aedb;
+}
+#combatUI #ataques #at4 {
+	border-top: 3px solid #f37735;
+	border-bottom: 3px solid #f37735;
+	border-left: 6px solid #f37735;
+	border-right: 6px solid #f37735;
+}
+#combatUI #ataques #at5 {
+	
+}
 /* VERSION MOVIL */
 @media only screen and (max-width: 768px){
 	
