@@ -1,3 +1,5 @@
+/*Ordenador*/
+@media only screen and (min-width: 768px){
 /*Fonts and Universals*/
 * {
 	font-family: Roboto, Robot, sans-serif;
@@ -21,7 +23,7 @@
 	src: url(../recursos/fonts/onepiece.ttf);
 }
 .hidden {
-	display: none;
+	display: none !important;
 }
 /*CSS*/
 header{
@@ -47,7 +49,7 @@ header h1 {
 	height: 80%;
 }
 #controls {
-	
+
 }
 #controls button {
 	background-image: url(../recursos/img/icon.png);
@@ -123,8 +125,68 @@ a:hover {
 	font-size: 2.8em;
 	margin-top: -15px;
 }
-#combatUI #
-/* VERSION MOVIL */
-@media only screen and (max-width: 768px){
-	
+#combatUI footer {
+	position: relative;
+	top: 45px;
+	right: 5px;
+	width: 80%;
+	height: 10%;
+}
+#combatUI footer #ataques {
+	float: right;
+	clear: left;
+	position: relative;
+	top: 270px;
+}
+#combatUI footer ul {
+	float: left;
+	clear: right;
+	position: relative;
+	top: 360px;
+	border: 4px solid firebrick;
+	padding: 13px;
+	background-color: #fbf677;
+}
+#combatUI .combatUI-statlist {
+	list-style-type: none;
+}
+#combatUI #ataques button {
+	display: inline-block;
+	padding: 8px;
+	background-color: white;
+	margin: 4px;
+}
+#combatUI #ataques #at1 {
+	border-top: 3px solid #d11141;
+	border-bottom: 3px solid #d11141;
+	border-left: 6px solid #d11141;
+	border-right: 6px solid #d11141;
+}
+#combatUI #ataques #at2 {
+	border-top: 3px solid #00b159;
+	border-bottom: 3px solid #00b159;
+	border-left: 6px solid #00b159;
+	border-right: 6px solid #00b159;
+}
+#combatUI #ataques #at3 {
+	border-top: 3px solid #00aedb;
+	border-bottom: 3px solid #00aedb;
+	border-left: 6px solid #00aedb;
+	border-right: 6px solid #00aedb;
+}
+#combatUI #ataques #at4 {
+	border-top: 3px solid #f37735;
+	border-bottom: 3px solid #f37735;
+	border-left: 6px solid #f37735;
+	border-right: 6px solid #f37735;
+}
+#combatUI #ataques #at5 {
+	border-right: 6px solid gold;
+	border-left: 6px solid gold;
+	border-top: 3px solid gold;
+	border-bottom: 3px solid gold;
+	background-color: #fbf677;
+}
+
+
 }
