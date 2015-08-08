@@ -21,7 +21,7 @@
 	src: url(../recursos/fonts/onepiece.ttf);
 }
 .hidden {
-	display: none;
+	display: none !important;
 }
 /*CSS*/
 header{
@@ -47,7 +47,7 @@ header h1 {
 	height: 80%;
 }
 #controls {
-	
+
 }
 #controls button {
 	background-image: url(../recursos/img/icon.png);
@@ -123,12 +123,23 @@ a:hover {
 	font-size: 2.8em;
 	margin-top: -15px;
 }
-#combatUI #ataques {
+#combatUI footer {
 	position: relative;
-	top: 240px;
-	left: 490px;
-	width: 45%;
+	top: 45px;
+	left: 0;
+	width: 80%;
 	height: 10%;
+}
+#combatUI footer #ataques {
+	float: right;
+	clear: left;
+}
+#combatUI footer ul {
+	float: left;
+	clear: right;
+}
+#combatUI .combatUI-statlist {
+	list-style-type: none;
 }
 #combatUI #ataques button {
 	display: inline-block;
@@ -161,9 +172,13 @@ a:hover {
 	border-right: 6px solid #f37735;
 }
 #combatUI #ataques #at5 {
-	
+	border-right: 6px solid gold;
+	border-left: 6px solid gold;
+	border-top: 3px solid gold;
+	border-bottom: 3px solid gold;
+	background-color: lightyellow;
 }
 /* VERSION MOVIL */
 @media only screen and (max-width: 768px){
-	
+
 }

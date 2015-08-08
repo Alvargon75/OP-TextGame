@@ -162,6 +162,8 @@ var recuperar = function(vida, dVida){
 var checkHUD = function(){
 	document.getElementById("vida").innerHTML = names[nameNumber].HP;
 	writer("maxVida", names[nameNumber].maxHP);
+	writer("MP", names[nameNumber].MP);
+	writer("maxMP", names[nameNumber].maxMP);
 	document.getElementById("ataque").innerHTML = names[nameNumber].grados[gradoActual];
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
@@ -181,8 +183,8 @@ var ataqueVillano = function(dano, multi){
 }
 
 var ataqueSdP = function(dano, multi, coste){
-	return Math.floor(Math.random() * multi + dano);
 	names[nameNumber].MP -= coste;
+	return Math.floor(Math.random() * multi + dano);
 }
 
 /*

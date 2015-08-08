@@ -35,18 +35,25 @@
 	  <div id="sprite">
 		<img src=""></img>
 	  </div>
-	  <div id="stats">
-
-	  </div>
 	 </div>
 	</div>
-	<div id="ataques" class="">
-	 <button type="button" id="at1" onclick=""></button>
-	 <button type="button" id="at2" onclick=""></button>
-	 <button type="button" id="at3" onclick=""></button>
-	 <button type="button" id="at4" onclick=""></button>
-	 <button type="button" id="at5" class="hidden" onclick=""></button>
-	</div>
+    <footer>
+     <div id="combatUI-stats">
+      <ul>
+       <li class="combatUI-statlist">Vida: <span id="combatUI-vida" class="green"></span><span class="green">/</span><span id="combatUI-maxVida" class="green"></span></li>
+       <li class="combatUI-statlist">Energía: <span id="combatUI-MP" class="azul"></span><span class="azul">/</span><span id="combatUI-maxMP" class="azul"></span></li>
+       <li class="combatUI-statlist">Grado: <span id="combatUI-ataque" class="red"></span></li>
+       <li class="combatUI-statlist">Nivel: <span id="combatUI-nivelExp"></span></li>
+      </ul>
+     </div>
+	 <div id="ataques" class="">
+	  <button type="button" id="at1" onclick=""></button>
+	  <button type="button" id="at2" onclick=""></button>
+	  <button type="button" id="at3" onclick=""></button>
+	  <button type="button" id="at4" onclick=""></button>
+	  <button type="button" id="at5" class="hidden" onclick=""></button>
+	 </div>
+    </footer>
    </div>
   <div id="izq">
    <div id="text-box">
@@ -91,6 +98,7 @@
     <h1 id="name"></h1>
     <ul>
 	 <li class="stats_list">Vida: <span id="vida" class="green"></span><span class="green">/</span><span id="maxVida" class="green"></span></li>
+     <li class="stats_list">Energía: <span id="MP" class="azul"></span><span class="azul">/</span><span id="maxMP" class="azul"></span></li>
 	 <li class="stats_list">Grado: <span id="ataque" class="red"></span></li>
 	 <li class="stats_list">Nivel: <span id="nivel_exp"></span></li>
 	 <li class="stats_list">Experiencia: <span id="exp"></span></li>
