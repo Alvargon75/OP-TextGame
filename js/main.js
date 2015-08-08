@@ -94,6 +94,7 @@ var fightSetUp = function(enemyName){
 	writer("at3", names[nameNumber].ataques[2]);
 	writer("at4", names[nameNumber].ataques[3]);
 	writer("at5", names[nameNumber].ataques[4]);
+	combatHUD();
 }
 // CHARACTERS
 
@@ -169,6 +170,14 @@ var checkHUD = function(){
 	document.getElementById("exp").innerHTML = expPoints;
 	console.log("HUD revisado");
 };
+
+var combatHUD = function(){
+	writer("combatUI-vida", names[nameNumber].HP);
+	writer("combatUI-maxVida", names[nameNumber].maxHP);
+	writer("combatUI-MP", names[nameNumber].MP);
+	writer("combatUI-maxMP", names[nameNumber].maxMP);
+	writer("combatUI-nivelExp", nivelExp);
+}
 
 var expChecking = false;
 
