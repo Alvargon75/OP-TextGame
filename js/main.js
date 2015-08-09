@@ -31,16 +31,6 @@ var randomizer = function(multi){
 	Math.floor(Math.random() * multi);
 }
 
-var audioPlayer_play = function(id){
-	var aud = document.getElementById(id);
-	aud.play();
-}
-
-var audioPlayer_pause = function(id){
-	var aud = document.getElementById(id);
-	aud.pause();
-}
-
 // START AND CLEAR
 
 var start = function(){
@@ -144,7 +134,20 @@ var Zoro = {
 	ataquesCoste: [0, 3, 5, 14, 95],
 }
 
-var names = [Luffy, Sanji, Zoro];
+var GodMode = { // Personaje de Prueba o Cheat
+	name: "Dios", // Anteriormente Álvaro G.
+	longName: "Papu, el Dios",
+	HP: 1000000,
+	maxHP: 1000000,
+	MP: 9999,
+	maxMP: 9999,
+	grados: ["Dios", "SSJ1", "SSJ4"],
+	ataques: ["Kamehameha", "Furia del Proletariado", "Kung Fury", "PapuAtaque", "Ataque Final"],
+	ataquesValores: [10, 100, 1000, 10000, 999999],
+	ataquesCoste: [1, 1, 1, 1, 1],
+}
+
+var names = [Luffy, Sanji, Zoro, GodMode];
 
 // RECUPERACIÓN
 
@@ -178,8 +181,6 @@ var combatHUD = function(){
 	writer("combatUI-maxMP", names[nameNumber].maxMP);
 	writer("combatUI-nivelExp", nivelExp);
 }
-
-var expChecking = false;
 
 // ATAQUES
 
