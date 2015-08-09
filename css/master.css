@@ -1,30 +1,5 @@
 /*Ordenador*/
 @media only screen and (min-width: 768px){
-/*Fonts and Universals*/
-* {
-	font-family: Roboto, Robot, sans-serif;
-}
-@font-face {
-	font-family: Robot;
-	src: url(../recursos/fonts/robotoregular.ttf);
-}
-@font-face {
-	font-family: Robot;
-	src: url(../recursos/fonts/robotobold.ttf);
-	font-weight: bold;
-}
-@font-face {
-	font-family: Robot;
-	src: url(../recursos/fonts/robotoitalic.ttf);
-	font-style: italic;
-}
-@font-face {
-	font-family: OnePiece;
-	src: url(../recursos/fonts/onepiece.ttf);
-}
-.hidden {
-	display: none !important;
-}
 /*CSS*/
 header{
 	width: 60%;
