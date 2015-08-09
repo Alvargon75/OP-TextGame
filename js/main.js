@@ -144,6 +144,19 @@ var Zoro = {
 	ataquesCoste: [0, 3, 5, 14, 95],
 }
 
+var GodMode = { // Personaje de Prueba o Cheat
+	name: "Dios",
+	longName: "Papu, el Dios",
+	HP: 1000000,
+	maxHP: 1000000,
+	MP: 9999,
+	maxMP: 9999,
+	grados: ["Dios", "SSJ1", "SSJ4"],
+	ataques: ["Kamehameha", "Furia del Proletariado", "Kung Fury", "PapuAtaque", "Ataque Final"],
+	ataquesValores: [10, 100, 1000, 10000, 999999],
+	ataquesCoste: [1, 1, 1, 1, 1],
+}
+
 var names = [Luffy, Sanji, Zoro];
 
 // RECUPERACIÓN
