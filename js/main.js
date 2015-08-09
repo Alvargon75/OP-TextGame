@@ -31,16 +31,6 @@ var randomizer = function(multi){
 	Math.floor(Math.random() * multi);
 }
 
-var audioPlayer_play = function(id){
-	var aud = document.getElementById(id);
-	aud.play();
-}
-
-var audioPlayer_pause = function(id){
-	var aud = document.getElementById(id);
-	aud.pause();
-}
-
 // START AND CLEAR
 
 var start = function(){
@@ -145,7 +135,7 @@ var Zoro = {
 }
 
 var GodMode = { // Personaje de Prueba o Cheat
-	name: "Dios",
+	name: "Dios", // Anteriormente Álvaro G.
 	longName: "Papu, el Dios",
 	HP: 1000000,
 	maxHP: 1000000,
@@ -191,8 +181,6 @@ var combatHUD = function(){
 	writer("combatUI-maxMP", names[nameNumber].maxMP);
 	writer("combatUI-nivelExp", nivelExp);
 }
-
-var expChecking = false;
 
 // ATAQUES
 
