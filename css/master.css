@@ -45,7 +45,7 @@ a:hover {
 }
 #drch #stats {
 	margin-top: -15px;
-	padding-right: 35px;
+	padding-right: 30px;
 	background-color: white;
 	background-position: center;
 }
@@ -90,17 +90,17 @@ a:hover {
 	margin-top: -15px;
 }
 #combatUI footer {
-	position: relative;
-	top: 45px;
-	right: 5px;
+	position: absolute;
 	width: 80%;
 	height: 10%;
+	
 }
 #combatUI footer #ataques {
 	float: right;
 	clear: left;
 	position: relative;
 	top: 270px;
+	margin-right: 10px;
 }
 #combatUI footer ul {
 	float: left;
@@ -119,6 +119,7 @@ a:hover {
 	padding: 8px;
 	background-color: white;
 	margin: 4px;
+	min-width: 181px;
 }
 #combatUI #ataques #at1 {
 	border-top: 3px solid #d11141;
