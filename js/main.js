@@ -157,7 +157,7 @@ var GodMode = { // Personaje de Prueba o Cheat
 	ataquesCoste: [1, 1, 1, 1, 1],
 }
 
-var names = [Luffy, Sanji, Zoro];
+var names = [Luffy, Sanji, Zoro, GodMode];
 
 // RECUPERACIÓN
 
