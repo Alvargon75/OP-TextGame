@@ -50,3 +50,6 @@ a {
 a:hover {
 	color: grey;
 }
+.text {
+  text-align: justify;
+}
