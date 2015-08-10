@@ -1,30 +1,5 @@
 /*Ordenador*/
 @media only screen and (min-width: 768px){
-/*Fonts and Universals*/
-* {
-	font-family: Roboto, Robot, sans-serif;
-}
-@font-face {
-	font-family: Robot;
-	src: url(../recursos/fonts/robotoregular.ttf);
-}
-@font-face {
-	font-family: Robot;
-	src: url(../recursos/fonts/robotobold.ttf);
-	font-weight: bold;
-}
-@font-face {
-	font-family: Robot;
-	src: url(../recursos/fonts/robotoitalic.ttf);
-	font-style: italic;
-}
-@font-face {
-	font-family: OnePiece;
-	src: url(../recursos/fonts/onepiece.ttf);
-}
-.hidden {
-	display: none !important;
-}
 /*CSS*/
 header{
 	width: 60%;
@@ -48,29 +23,13 @@ header h1 {
 #controls button {
 	background-image: url(../recursos/img/icon.png);
 }
-a {
-	text-decoration: none;
-	color: inherit;
-}
-a:hover {
-	color: grey;
-}
 #text-box p span {
 	font-size: 2em;
 	font-weight: bold;
 }
-.green {
-	color: green;
-}
-.red {
-	color: red;
-}
-.azul {
-	color: darkblue;
-}
 #drch #stats {
 	margin-top: -15px;
-	padding-right: 35px;
+	padding-right: 30px;
 	background-color: white;
 	background-position: center;
 }
@@ -97,35 +56,23 @@ a:hover {
 	height: 256px;
 }
 /*COMBAT UI*/
-#combatUI {
-	width: 100%;
-	height: 100%;
-	position: fixed !important;
-	z-index: 999 !important;
-	background-color: #FFFFFF;
-}
-.combatUI-inactive{
-	display: none;
-	width: 0;
-	height: 0;
-}
 #combatUI #header_cont h1 {
 	text-align: center;
 	font-size: 2.8em;
 	margin-top: -15px;
 }
 #combatUI footer {
-	position: relative;
-	top: 45px;
-	right: 5px;
+	position: absolute;
 	width: 80%;
 	height: 10%;
+
 }
 #combatUI footer #ataques {
 	float: right;
 	clear: left;
 	position: relative;
 	top: 270px;
+	margin-right: 10px;
 }
 #combatUI footer ul {
 	float: left;
@@ -144,6 +91,7 @@ a:hover {
 	padding: 8px;
 	background-color: white;
 	margin: 4px;
+	min-width: 181px;
 }
 #combatUI #ataques #at1 {
 	border-top: 3px solid #d11141;

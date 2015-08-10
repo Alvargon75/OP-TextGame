@@ -46,10 +46,12 @@ var start = function(){
 			writer("name", Zoro.longName);
 			hide("i_intro_luffy");
 			show("i_intro_zoro");
+			document.getElementById("stats").classList.add("stats-zoro");
 		}else if(nameNumber == 1){
 			writer("name", Sanji.longName);
 			hide("i_intro_luffy");
 			show("i_intro_sanji");
+			document.getElementById("stats").classList.add("stats-sanji");
 		}else{
 			writer("name", "Monkey D. Luffy");
 		}
