@@ -5,6 +5,7 @@
     margin-right: auto;
     margin-left: auto;
     margin-top: -28px;
+    position: fixed;
   }
   header h1 {
     text-align: center;
@@ -60,5 +61,11 @@
     font-size: 1.7em;
     text-align: center;
     display: block;
+  }
+  /* Combat UI */
+  #combatUI {
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
   }
 }

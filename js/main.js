@@ -28,7 +28,7 @@ var show = function(id){
 }
 
 var randomizer = function(multi){
-	Math.floor(Math.random() * multi);
+	return Math.floor(Math.random() * multi);
 }
 
 // START AND CLEAR
@@ -62,6 +62,14 @@ var start = function(){
 		writer("name", "Monkey D. Luffy");
 	};
 };
+
+var segundoSdP;
+var tercerSdP;
+var cuartoSdP;
+var quintoSdP;
+var sextoSdP;
+var septimoSdP;
+var octavoSdp;
 
 var clear = function(){
 	document.getElementById("intro").innerHTML = " ";
@@ -97,16 +105,31 @@ var nameChange = function(){
 	nameNumber = Math.floor(Math.random() * 3);
 }
 var nameNumber = 0;
+/*
+
+El tema de los estados va por numeros:
+
+ 0 = Normal
+ 1 = En Llamas
+ 2 = Envenenado
+ 3 = Paralizado
+ 4 =
+ 100 = Eufórico
+ 101 = Último Aliento
+
+*/
+
 var Sanji = {
 	name: "Sanji",
 	longName: "Sanji Pierna Negra",
 	HP: 400,
 	maxHP: 400,
-	MP: 250,
-	maxMP: 250,
+	MP: 270,
+	maxMP: 270,
+	estado: 0,
 	grados: ["Pierna Negra", "Haki de Armadura", "Diable Jamble"],
 	ataques: ["Patada Pierna Negra", "Disparo de Venado", "Patada Escalope", "Espectro del Pan Frito", "Pierna del Diablo"],
-	ataquesValores: [2, 5, 7, 13, 20],
+	ataquesValores: [4, 7, 9, 15, 22],
 	ataquesCoste: [0, 2, 6, 11, 100],
 }
 
@@ -115,11 +138,12 @@ var Luffy = {
 	longName: "Monkey D. Luffy",
 	HP: 500,
 	maxHP: 500,
-	MP: 180,
-	maxMP: 180,
+	MP: 230,
+	maxMP: 230,
+	estado: 0,
 	grados: ["Hombre de Goma", "Grado 2", "Grado 3"],
 	ataques: ["Estira el brazo, puñetazo", "Galleta galleta, metralleta", "Retuérce el tornillo, Molinillo", "Estira el cuello mazo, cabezazo", "Haki del Rey"],
-	ataquesValores: [3, 9, 10, 15, 25],
+	ataquesValores: [5, 11, 13, 17, 27],
 	ataquesCoste: [0, 1, 7, 11, 115],
 }
 
@@ -128,11 +152,12 @@ var Zoro = {
 	longName: "Zoro Ronoa",
 	HP: 600,
 	maxHP: 600,
-	MP: 150,
-	maxMP: 150,
+	MP: 190,
+	maxMP: 190,
+	estado: 0,
 	grados: ["Casual", "Concentrado", "Mente en Blanco"],
 	ataques: ["Sablazo", "Estilo de Tres Espadas", "Corte del Demonio", "Espiral del Dragón", "Tatsumaki"],
-	ataquesValores: [4, 7, 10, 13, 20],
+	ataquesValores: [6, 8, 12, 15, 22],
 	ataquesCoste: [0, 3, 5, 14, 95],
 }
 
@@ -143,24 +168,81 @@ var GodMode = { // Personaje de Prueba o Cheat
 	maxHP: 1000000,
 	MP: 9999,
 	maxMP: 9999,
+	estado: 0,
 	grados: ["Dios", "SSJ1", "SSJ4"],
 	ataques: ["Kamehameha", "Furia del Proletariado", "Kung Fury", "PapuAtaque", "Ataque Final"],
 	ataquesValores: [10, 100, 1000, 10000, 999999],
 	ataquesCoste: [1, 1, 1, 1, 1],
 }
+// TODO añadir a los personajes aleatorios.
+var Nami = {
+	name: "Nami",
+	longName: "Nami la Ladrona",
+	HP: 190,
+	maxHP: 190,
+	MP: 70,
+	maxMP: 70,
+	estado: 0,
+	grados: ["undefined", "undefined", "undefined"],
+	ataques: ["Patada", "Robo"/*Tiene una probabilidad de dar Vida o MP*/, "Ataque Climático", "Tormenta", "Nube de Enel"],
+	ataquesValores: [1, 1, 5, 8, 11],
+	ataquesCoste: [0, 1, 3, 3, 9],
+}
+
+var Ussop = {
+	name: "Ussop",
+	longName: "Ussop el Tirador",
+	HP: 275,
+	maxHP: 275,
+	MP: 120,
+	maxMP: 120,
+	estado: 0,
+	grados: ["Cobardía", "Valentía", "Equilibrio"],
+	ataques: ["Tiro", "Canica Explosiva", "Canica de Fuego", "Canica de Kaya", "Taifa de Ussop"],
+	ataquesValores: [1, 3, 8, 9, 13],
+	ataquesCoste: [0, 2, 5, 9, 13],
+}
+
+var Chopper; // TODO Las formas de Chopper
+
+var Robin = {
+	name: "Robin",
+	longName: "Nico Robin",
+	HP: 250,
+	maxHP: 250,
+	MP: 300,
+	maxMP: 300,
+	estado: 0,
+	grados: ["Doña Domingo", "No Quiero Vivir", "Soy una Sombrero de Paja"],
+	ataques: ["Brotad en 3", "Brotad en 5", "10 Flores", "Infinitas Flores", "Brotad en Millones"],
+	ataquesValores: [3, 6, 8, 14, 20],
+	ataquesCoste: [0, 3, 4, 7, 16],
+}
+
+var Franky = {
+	name: "Franky",
+	longName: "Cutty Flam",
+	HP: 480,
+	maxHP: 480,
+	MP: 200,
+	maxMP: 200,
+	estado: 0,
+	grados: ["Humano", "Cyborg", "Cyborg Perfecto"],
+	ataques: ["Puñetazo", "Golpe Metálico", "Lanzallamas", "Bebida Fresca", "SUUUUUUUUUUPER"],
+	ataquesValores: [1, 3, 6 /*Añade en Llamas*/, 5 /*Sube HP*/, 18],
+	ataquesCoste: [0, 2, 4, 5, 10],
+}
 
 var names = [Luffy, Sanji, Zoro, GodMode];
 
-// RECUPERACIÓN
+var SdPnames = [Luffy, Sanji, Zoro, Nami, Ussop, Chopper, Robin, Franky];
 
-var recuperar = function(vida, dVida){
-	if(vida == dVida){
-		console.log("Fail");
-	} else {
-		for(vida; vida < dVida; vida++){
-			console.log("Vida en:" + vida);
-		}
-	}
+// RECUPERACIÓN Y EXPERIENCIA
+
+var recuperar = function(){
+	while(names[nameNumber].maxHP >= names[nameNumber].HP){
+		names[nameNumber].HP += 1;
+	};
 };
 
 // HUD
@@ -288,7 +370,7 @@ var luchaAlv = function(){
 		luffyVida -= danoAlv;
 		if(danoTotal >= 100){ //Ganas
 			writer("b1", "Tiraste a Alvida al mar de un puñetazo.");
-			show("");
+			show("p0");
 			hide("d2p_a");
 			hide("d2p_b");
 			atacar = false;
@@ -320,6 +402,11 @@ var rendirseAlv = function(){
 	|______/   \______/   \______|  \______|    |__|
 	Buggy
 */
+var buggy1 = function(){
+	clear();
+
+	writer("into", "Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + names[segundoSdP].longName);
+}
 
 /*
 	.______        ___      .______          ___   .___________. __   _______
