@@ -44,42 +44,43 @@ var start = function(){
 	if(randomName == true){
 		switch(nameNumber){
 			case 0: //Luffy
-			 break;
+				break;
 			case 1: // Sanji
-			 hide("i_intro_luffy");
-			 show("i_intro_sanji");
-			 document.getElementById("stats").classList.add('stats-sanji');
-			 break;
+				hide("i_intro_luffy");
+				show("i_intro_sanji");
+				document.getElementById("stats").classList.add('stats-sanji');
+				break;
 			case 2: // Zoro
-			 hide("i_intro_luffy");
-			 show("i_intro_zoro");
-			 document.getElementById("stats").classList.add('stats-zoro');
-			 break;
+				hide("i_intro_luffy");
+				show("i_intro_zoro");
+				document.getElementById("stats").classList.add('stats-zoro');
+				break;
 			case 3: //Nami
-			 hide("i_intro_luffy");
-			 show("i_intro_nami");
-			 document.getElementById("stats").classList.add('stats-nami');
-			 break;
+				hide("i_intro_luffy");
+				show("i_intro_nami");
+				document.getElementById("stats").classList.add('stats-nami');
+				break;
 			case 4: //Ussop
-			 hide("i_intro_luffy");
-			 show("i_intro_ussop");
-			 document.getElementById("stats").classList.add('stats-ussop');
-			 break;
+				hide("i_intro_luffy");
+				show("i_intro_ussop");
+				document.getElementById("stats").classList.add('stats-ussop');
+				writer("name", Ussop.longName);
+				break;
 			case 5: //Robin
- 			 hide("i_intro_luffy");
- 			 show("i_intro_robin");
- 			 document.getElementById("stats").classList.add('stats-');
- 			 break;
+ 				hide("i_intro_luffy");
+ 				show("i_intro_robin");
+ 				document.getElementById("stats").classList.add('stats-');
+ 				break;
 			case 6: //Franky
- 			 hide("i_intro_luffy");
- 			 show("i_intro_franky");
- 			 document.getElementById("stats").classList.add('stats-');
- 			 break;
+ 				hide("i_intro_luffy");
+ 				show("i_intro_franky");
+ 				document.getElementById("stats").classList.add('stats-');
+ 				break;
 			case 7: //Chopper
- 			 hide("i_intro_luffy");
- 			 show("i_intro_chopper");
- 			 document.getElementById("stats").classList.add('stats-');
- 			 break;
+ 				hide("i_intro_luffy");
+ 				show("i_intro_chopper");
+ 				document.getElementById("stats").classList.add('stats-');
+ 				break;
 		}
 		writer("name", names[nameNumber].longName)
 		console.log("Name:" + " " + names[nameNumber].name);
@@ -89,6 +90,42 @@ var start = function(){
 		writer("name", "Monkey D. Luffy");
 	};
 };
+// names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
+var SdPGenerator = function(index){
+	if(randomName === true){
+		var temp = Math.floor(Math.random() * 8);
+		var usados = [nameNumber];
+		if(temp){
+
+		}else{
+
+		}
+	}else{
+		switch (index) {
+			case 2:
+				return 2;
+				break;
+			case 3:
+				return 3;
+				break;
+			case 4:
+				return 4;
+				break;
+			case 5:
+				return 1;
+				break;
+			case 6:
+				return 7;
+				break;
+			case 7:
+				return 5;
+				break;
+			case 8:
+				return 6;
+				break;
+		}
+	}
+}
 
 var segundoSdP;
 var tercerSdP;
