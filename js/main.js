@@ -42,19 +42,46 @@ var start = function(){
 	show("d1_b");
 	checkHUD();
 	if(randomName == true){
-		if(nameNumber == 2){
-			writer("name", Zoro.longName);
-			hide("i_intro_luffy");
-			show("i_intro_zoro");
-			document.getElementById("stats").classList.add("stats-zoro");
-		}else if(nameNumber == 1){
-			writer("name", Sanji.longName);
-			hide("i_intro_luffy");
-			show("i_intro_sanji");
-			document.getElementById("stats").classList.add("stats-sanji");
-		}else{
-			writer("name", "Monkey D. Luffy");
+		switch(nameNumber){
+			case 0: //Luffy
+			 break;
+			case 1: // Sanji
+			 hide("i_intro_luffy");
+			 show("i_intro_sanji");
+			 document.getElementById("stats").classList.add('stats-sanji');
+			 break;
+			case 2: // Zoro
+			 hide("i_intro_luffy");
+			 show("i_intro_zoro");
+			 document.getElementById("stats").classList.add('stats-zoro');
+			 break;
+			case 3: //Nami
+			 hide("i_intro_luffy");
+			 show("i_intro_nami");
+			 document.getElementById("stats").classList.add('stats-nami');
+			 break;
+			case 4: //Ussop
+			 hide("i_intro_luffy");
+			 show("i_intro_ussop");
+			 document.getElementById("stats").classList.add('stats-ussop');
+			 break;
+			case 5: //Robin
+ 			 hide("i_intro_luffy");
+ 			 show("i_intro_robin");
+ 			 document.getElementById("stats").classList.add('stats-');
+ 			 break;
+			case 6: //Franky
+ 			 hide("i_intro_luffy");
+ 			 show("i_intro_franky");
+ 			 document.getElementById("stats").classList.add('stats-');
+ 			 break;
+			case 7: //Chopper
+ 			 hide("i_intro_luffy");
+ 			 show("i_intro_chopper");
+ 			 document.getElementById("stats").classList.add('stats-');
+ 			 break;
 		}
+		writer("name", names[nameNumber].longName)
 		console.log("Name:" + " " + names[nameNumber].name);
 	}else{
 		nameNumber = 0;
@@ -102,7 +129,7 @@ var randomName = false;
 var nameChange = function(){
 	randomName = true;
 	hide("nameChange");
-	nameNumber = Math.floor(Math.random() * 3);
+	nameNumber = Math.floor(Math.random() * 8);
 }
 var nameNumber = 0;
 /*
@@ -233,9 +260,9 @@ var Franky = {
 	ataquesCoste: [0, 2, 4, 5, 10],
 }
 
-var names = [Luffy, Sanji, Zoro, GodMode];
+/*var names = [Luffy, Sanji, Zoro, GodMode];*/
 
-var SdPnames = [Luffy, Sanji, Zoro, Nami, Ussop, Chopper, Robin, Franky];
+var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
 
 // RECUPERACIÓN Y EXPERIENCIA
 

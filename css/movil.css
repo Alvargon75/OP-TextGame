@@ -53,6 +53,18 @@
   .stats-zoro {
       background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
   }
+  .stats-nami {
+      background-image: url(../recursos/img/jollyrogers/statsS.png)!important;
+  }
+  .stats-ussop {
+      background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
+  }
+  .stats-robin {
+      background-image: url(../recursos/img/jollyrogers/statsS.png)!important;
+  }
+  .stats-franky {
+      background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
+  }
   .text {
     margin: 12px 10px;
   }
