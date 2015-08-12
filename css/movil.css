@@ -24,7 +24,7 @@
   }
   #stats {
     background-color: #e2e2e2;
-    background-image: url(../recursos/bg/statsL.png);
+    background-image: url(../recursos/img/jollyrogers/statsL.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -48,10 +48,10 @@
     margin: auto
   }
   .stats-sanji {
-      background-image: url(../recursos/bg/statsS.png)!important;
+      background-image: url(../recursos/img/jollyrogers/statsS.png)!important;
   }
   .stats-zoro {
-      background-image: url(../recursos/bg/statsZ.png)!important;
+      background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
   }
   .text {
     margin: 12px 10px;
