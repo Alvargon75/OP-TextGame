@@ -31,6 +31,16 @@ var randomizer = function(multi){
 	return Math.floor(Math.random() * multi);
 }
 
+var checkArray = function(objeto, array){
+	for(var i = 0; i < array.length; i++){
+		if(array[i] === objeto){
+			return true;
+		}
+	}
+	
+	return false;
+}
+
 // START AND CLEAR
 
 var start = function(){
@@ -91,15 +101,21 @@ var start = function(){
 	};
 };
 // names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
+var usados = [nameNumber];
+
 var SdPGenerator = function(index){
 	if(randomName === true){
-		var temp = Math.floor(Math.random() * 8);
-		var usados = [nameNumber];
-		if(temp){
-
-		}else{
-
-		}
+		var personaje = Math.floor(Math.random() * 8);
+		var temp = checkArray(personaje, usados);
+		do{
+			if(temp === true){
+				personaje = Math.floor(Math.random() * 8);
+				temp = checkArray(personaje, usados);
+			}else{
+				usados.push(personaje);
+				return personaje;
+			}
+		}while(temp === true)
 	}else{
 		switch (index) {
 			case 2:
@@ -127,13 +143,13 @@ var SdPGenerator = function(index){
 	}
 }
 
-var segundoSdP;
-var tercerSdP;
-var cuartoSdP;
-var quintoSdP;
-var sextoSdP;
-var septimoSdP;
-var octavoSdp;
+var segundoSdP = SdPGenerator(2);
+var tercerSdP = SdPGenerator(3);
+var cuartoSdP = SdPGenerator(4);
+var quintoSdP = SdPGenerator(5);
+var sextoSdP = SdPGenerator(6);
+var septimoSdP = SdPGenerator(7);
+var octavoSdp = SdPGenerator(8);
 
 var clear = function(){
 	document.getElementById("intro").innerHTML = " ";
@@ -238,7 +254,6 @@ var GodMode = { // Personaje de Prueba o Cheat
 	ataquesValores: [10, 100, 1000, 10000, 999999],
 	ataquesCoste: [1, 1, 1, 1, 1],
 }
-// TODO añadir a los personajes aleatorios.
 var Nami = {
 	name: "Nami",
 	longName: "Nami la Ladrona",
