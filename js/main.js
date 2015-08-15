@@ -45,7 +45,7 @@ var checkArray = function(objeto, array){
 
 var start = function(){
 	console.log("Game Started");
-	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
+	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una enseña pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
 	hide("inicio");
 	hide("nameChange");
 	hide("cc")
@@ -285,7 +285,19 @@ var Ussop = {
 	ataquesCoste: [0, 2, 5, 9, 13],
 }
 
-var Chopper; // TODO Las formas de Chopper
+var Chopper = {
+	name: "Chopper",
+	longName: "Tony Tony Chopper",
+	HP: 300,
+	maxHP: 300,
+	MP: 240,
+	maxMP: 240,
+	estado: 0,
+	grados: ["Brain Point", "Heavy Point", "Monster Point"],
+	ataques: [],
+	ataquesValores: [],
+	ataquesCoste: [],
+};
 
 var Robin = {
 	name: "Robin",
