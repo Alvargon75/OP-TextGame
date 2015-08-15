@@ -5,7 +5,6 @@
     margin-right: auto;
     margin-left: auto;
     margin-top: -28px;
-    position: fixed;
   }
   header h1 {
     text-align: center;
@@ -29,9 +28,8 @@
     background-repeat: no-repeat;
     background-position: bottom;
     width: 79%;
-    margin: 0 auto;
+    margin: 12px auto 30px auto;
     padding: 10px 5px 25px 5px;
-    margin-bottom: 30px;
   }
   #stats h1 {
     font-size: 1.5em;
@@ -54,16 +52,19 @@
       background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
   }
   .stats-nami {
-      background-image: url(../recursos/img/jollyrogers/statsS.png)!important;
+      background-image: url(../recursos/img/jollyrogers/statsN.png)!important;
   }
   .stats-ussop {
-      background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
+      background-image: url(../recursos/img/jollyrogers/statsU.png)!important;
   }
   .stats-robin {
-      background-image: url(../recursos/img/jollyrogers/statsS.png)!important;
+      background-image: url(../recursos/img/jollyrogers/statsR.png)!important;
   }
   .stats-franky {
-      background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
+      background-image: url(../recursos/img/jollyrogers/statsF.png)!important;
+  }
+  .stats-chopper {
+      background-image: url(../recursos/img/jollyrogers/statsC.png)!important;
   }
   .text {
     margin: 12px 10px;

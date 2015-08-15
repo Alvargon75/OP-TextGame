@@ -37,7 +37,7 @@ var checkArray = function(objeto, array){
 			return true;
 		}
 	}
-	
+
 	return false;
 }
 
@@ -45,9 +45,10 @@ var checkArray = function(objeto, array){
 
 var start = function(){
 	console.log("Game Started");
-	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
+	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una enseña pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
 	hide("inicio");
 	hide("nameChange");
+	hide("cc")
 	show("d1_a");
 	show("d1_b");
 	checkHUD();
@@ -79,17 +80,17 @@ var start = function(){
 			case 5: //Robin
  				hide("i_intro_luffy");
  				show("i_intro_robin");
- 				document.getElementById("stats").classList.add('stats-');
+ 				document.getElementById("stats").classList.add('stats-robin');
  				break;
 			case 6: //Franky
  				hide("i_intro_luffy");
  				show("i_intro_franky");
- 				document.getElementById("stats").classList.add('stats-');
+ 				document.getElementById("stats").classList.add('stats-franky');
  				break;
-			case 7: //Chopper
+			case 7: //Chopper TEMPORALMENTE DESHABILITADO
  				hide("i_intro_luffy");
  				show("i_intro_chopper");
- 				document.getElementById("stats").classList.add('stats-');
+ 				document.getElementById("stats").classList.add('stats-chopper');
  				break;
 		}
 		writer("name", names[nameNumber].longName)
@@ -100,6 +101,8 @@ var start = function(){
 		writer("name", "Monkey D. Luffy");
 	};
 };
+
+
 // names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
 var usados = [nameNumber];
 
@@ -182,7 +185,7 @@ var randomName = false;
 var nameChange = function(){
 	randomName = true;
 	hide("nameChange");
-	nameNumber = Math.floor(Math.random() * 8);
+	nameNumber = Math.floor(Math.random() * 7);
 }
 var nameNumber = 0;
 /*
@@ -282,7 +285,19 @@ var Ussop = {
 	ataquesCoste: [0, 2, 5, 9, 13],
 }
 
-var Chopper; // TODO Las formas de Chopper
+var Chopper = {
+	name: "Chopper",
+	longName: "Tony Tony Chopper",
+	HP: 300,
+	maxHP: 300,
+	MP: 240,
+	maxMP: 240,
+	estado: 0,
+	grados: ["Brain Point", "Heavy Point", "Monster Point"],
+	ataques: [],
+	ataquesValores: [],
+	ataquesCoste: [],
+};
 
 var Robin = {
 	name: "Robin",
