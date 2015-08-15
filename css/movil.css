@@ -54,16 +54,19 @@
       background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
   }
   .stats-nami {
-      background-image: url(../recursos/img/jollyrogers/statsS.png)!important;
+      background-image: url(../recursos/img/jollyrogers/statsN.png)!important;
   }
   .stats-ussop {
-      background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
+      background-image: url(../recursos/img/jollyrogers/statsU.png)!important;
   }
   .stats-robin {
-      background-image: url(../recursos/img/jollyrogers/statsS.png)!important;
+      background-image: url(../recursos/img/jollyrogers/statsR.png)!important;
   }
   .stats-franky {
-      background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
+      background-image: url(../recursos/img/jollyrogers/statsF.png)!important;
+  }
+  .stats-chopper {
+      background-image: url(../recursos/img/jollyrogers/statsC.png)
   }
   .text {
     margin: 12px 10px;
