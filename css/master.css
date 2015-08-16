@@ -58,8 +58,8 @@ header h1 {
 /*CHARACTER CHOOSER*/
 #cc_container {
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	width: 99%;
+	height: 99%;
 	z-index: 9999;
 	background-color: rgba(0, 0, 0, 0.6);
 }
@@ -72,6 +72,10 @@ header h1 {
 	clear: both;
 	margin: auto;
 	border: 3px solid black;
+	background-color: #FFF;
+}
+#character_chooser > div {
+	display: inline-block;
 }
 /*COMBAT UI*/
 #combatUI #header_cont h1 {
