@@ -146,6 +146,12 @@ var SdPGenerator = function(index){
 	}
 }
 
+var characterChosen = function(character){
+	hide("nameChange");
+	nameNumber = character;
+	return true;
+}
+
 var segundoSdP = SdPGenerator(2);
 var tercerSdP = SdPGenerator(3);
 var cuartoSdP = SdPGenerator(4);
