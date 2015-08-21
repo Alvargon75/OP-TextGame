@@ -41,6 +41,110 @@ var checkArray = function(objeto, array){
 	return false;
 }
 
+var randomString = function(length){
+	var char = [];
+	var RStemp;
+	for(var i = 0; i < length; i++){
+		switch(Math.floor(Math.random() * 30)){
+			case 0:
+				RStemp = "A";
+				break;
+			case 1:
+				RStemp = "H";
+				break;
+			case 2:
+				RStemp = "t";
+				break;
+			case 3:
+				RStemp = "Q";
+				break;
+			case 4:
+				RStemp = "j";
+				break;
+			case 5:
+				RStemp = "7";
+				break;
+			case 6:
+				RStemp = "8";
+				break;
+			case 7:
+				RStemp = "Y";
+				break;
+			case 8:
+				RStemp = "G";
+				break;
+			case 9:
+				RStemp = "l";
+				break;
+			case 10:
+				RStemp = "9";
+				break;
+			case 11:
+				RStemp = "L";
+				break;
+			case 12:
+				RStemp = "M";
+				break;
+			case 13:
+				RStemp = "n";
+				break;
+			case 14:
+				RStemp = "X";
+				break;
+			case 15:
+				RStemp = "z";
+				break;
+			case 16:
+				RStemp = "X";
+				break;
+			case 17:
+				RStemp = "B";
+				break;
+			case 18:
+				RStemp = "W";
+				break;
+			case 19:
+				RStemp = "q";
+				break;
+			case 20:
+				RStemp = "S";
+				break;
+			case 21:
+				RStemp = "a";
+				break;
+			case 22:
+				RStemp = "K";
+				break;
+			case 23:
+				RStemp = "i";
+				break;
+			case 24:
+				RStemp = "-";
+				break;
+			case 25:
+				RStemp = "M";
+				break;
+			case 26:
+				RStemp = "_";
+				break;
+			case 27:
+				RStemp = "b";
+				break;
+			case 28:
+				RStemp = "v";
+				break;
+			case 29:
+				RStemp = "P";
+				break;
+			case 30:
+				RStemp = "7";
+				break;
+		}
+		char.push(RStemp);
+	}
+	return char.join("");
+}
+
 // START AND CLEAR
 
 var start = function(){
@@ -285,7 +389,7 @@ var Ussop = {
 	MP: 120,
 	maxMP: 120,
 	estado: 0,
-	grados: ["Cobardía", "Valentía", "Equilibrio"],
+	grados: ["Cobardía", "Valentía", "Sogeking"],
 	ataques: ["Tiro", "Canica Explosiva", "Canica de Fuego", "Canica de Kaya", "Taifa de Ussop"],
 	ataquesValores: [1, 3, 8, 9, 13],
 	ataquesCoste: [0, 2, 5, 9, 13],
@@ -313,7 +417,7 @@ var Robin = {
 	MP: 300,
 	maxMP: 300,
 	estado: 0,
-	grados: ["Doña Domingo", "No Quiero Vivir", "Soy una Sombrero de Paja"],
+	grados: ["Doña Domingo", "No Quiero Vivir", "Quiero vivir"],
 	ataques: ["Brotad en 3", "Brotad en 5", "10 Flores", "Infinitas Flores", "Brotad en Millones"],
 	ataquesValores: [3, 6, 8, 14, 20],
 	ataquesCoste: [0, 3, 4, 7, 16],
@@ -327,15 +431,15 @@ var Franky = {
 	MP: 200,
 	maxMP: 200,
 	estado: 0,
-	grados: ["Humano", "Cyborg", "Cyborg Perfecto"],
-	ataques: ["Puñetazo", "Golpe Metálico", "Lanzallamas", "Bebida Fresca", "SUUUUUUUUUUPER"],
+	grados: ["Agotado", "Normal", "SUUUUUUUUUUUPER"],
+	ataques: ["Weapons Left", "Strong Hammer", "Lanzallamas", "Coup de Vent", "SUUUUUUUUUUPER"],
 	ataquesValores: [1, 3, 6 /*Añade en Llamas*/, 5 /*Sube HP*/, 18],
 	ataquesCoste: [0, 2, 4, 5, 10],
 }
 
 /*var names = [Luffy, Sanji, Zoro, GodMode];*/
 
-var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
+var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];
 
 // RECUPERACIÓN Y EXPERIENCIA
 
