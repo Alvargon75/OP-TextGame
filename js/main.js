@@ -487,6 +487,30 @@ var ataquePrimeraPelea = function(dano, multi){
 var ataqueVillano = function(dano, multi){
 	return Math.floor(Math.random() * multi + dano);
 }
+
+/*
+██╗  ██╗███╗   ███╗██╗         ██████╗  █████╗ ██████╗ ███████╗██╗███╗   ██╗ ██████╗
+╚██╗██╔╝████╗ ████║██║         ██╔══██╗██╔══██╗██╔══██╗██╔════╝██║████╗  ██║██╔════╝
+ ╚███╔╝ ██╔████╔██║██║         ██████╔╝███████║██████╔╝███████╗██║██╔██╗ ██║██║  ███╗
+ ██╔██╗ ██║╚██╔╝██║██║         ██╔═══╝ ██╔══██║██╔══██╗╚════██║██║██║╚██╗██║██║   ██║
+██╔╝ ██╗██║ ╚═╝ ██║███████╗    ██║     ██║  ██║██║  ██║███████║██║██║ ╚████║╚██████╔╝
+╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝
+
+*/
+
+var xmlhttp;
+var xmlDoc;
+
+if(window.XMLHttpRequest){ //Modern Browsers
+    xmlhttp = new XMLHttpRequest();
+}else{ // IE
+    xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET","../locale/es_ES.xml", true);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseHTML;
+
+var setLanguage
 /*
 	██╗  ██╗██╗███████╗████████╗ ██████╗ ██████╗ ██╗ █████╗
 	██║  ██║██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗██║██╔══██╗
