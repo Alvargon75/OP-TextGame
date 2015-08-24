@@ -537,14 +537,14 @@ var ataqueVillano = function(dano, multi){
 	Inicio
 */
 var marine = function(){
-	document.getElementById("a1").innerHTML = "Decides ir con el barco de los marines. Allí encuentras al Teniente Fullbody que te recibe amablemente. Te invita a ir con el hasta la Villa de las Conchas o unirte a la Marina. <br /> ¿Qué eliges?";
+	document.getElementById("a1").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine > intro_marine")[0].childNodes[0].nodeValue;
 	document.getElementById("d1_a").classList.add('hidden');
 	document.getElementById("d1_b").classList.add('hidden');
 	document.getElementById("d2m_a").classList.remove('hidden');
 	document.getElementById("d2m_b").classList.remove('hidden');
 }
 var pirata = function(){
-	document.getElementById("a1").innerHTML = "No sabes por qué pero no quieres ir con los marines, prefieres ir con los piratas. Remas el barril hasta el barco pirata y escalas hasta arriba. <br /> Allí ves a la capitana que te quiere ejecutar. <br /> ¿Vas a morir o a luchar?";
+	document.getElementById("a1").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio pirata > intro_pirata")[0].childNodes[0].nodeValue;
 	document.getElementById("d1_a").classList.add('hidden');
 	document.getElementById("d1_b").classList.add('hidden');
 	document.getElementById("d2p_a").classList.remove('hidden');
@@ -554,33 +554,33 @@ var pirata = function(){
 //Pequeno Arco Marine
 
 var villa = function(){
-	document.getElementById("d2").innerHTML = "Vas a la Villa y vives feliz.<br/><span>FIN</span>";
+	document.getElementById("a2").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine > village")[0].childNodes[0].nodeValue;
 	document.getElementById("d2m_a").classList.add('hidden');
 	document.getElementById("d2m_b").classList.add('hidden');
 }
 var alistarse = function(){
 	document.getElementById("d2m_a").classList.add('hidden');
 	document.getElementById("d2m_b").classList.add('hidden');
-	var valorLucha = prompt("¿Cómo de bueno eres luchando del 1 al 10?");
+	var valorLucha = prompt(xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-1")[0].childNodes[0].nodeValue);
 	if(valorLucha <= 10){
-		document.getElementById("d2").innerHTML = "No eres lo bastante bueno, adiós.<span>FIN</span>";
+		document.getElementById("a2").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-2")[0].childNodes[0].nodeValue;
 	}
 	else if(valorLucha > 10){
-		document.getElementById("d2").innerHTML = "Me gustas chaval, serás mi primero de abordo- dijo Fullbody-.";
+		document.getElementById("a2").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-3")[0].childNodes[0].nodeValue;
 		document.getElementById("m1_op").classList.remove('hidden');
 	}
 	else {
-		var retraso = confirm("¿Eres tonto?");
+		var retraso = confirm(xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-4")[0].childNodes[0].nodeValue);
 		if(confirm == true){
-			document.getElementById("a3").innerHTML = "Ya lo decía yo.";
+			document.getElementById("a3").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-5")[0].childNodes[0].nodeValue;
 		}
 		else {
-			document.getElementById("a3").innerHTML = "No me mientas.";
+			document.getElementById("a3").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-6")[0].childNodes[0].nodeValue;
 		}
 	}
 }
 var fullbodyContinua = function(){
-	document.getElementById("a3").innerHTML = "Fullbody te mató.<br/> <span>FIN</span>";
+	document.getElementById("a3").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine > fullbody")[0].childNodes[0].nodeValue;
 	document.getElementById("m1_op").classList.add('hidden');
 }
 
@@ -603,25 +603,23 @@ var luchaAlv = function(){
 
 	//Pelea
 	while(atacar){
-		writer("a4", "Pegaste a Alvida");
+		writer("a4", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-1")[0].childNodes[0].nodeValue);
 		danoTotal += danoRound;
 		luffyVida -= danoAlv;
 		if(danoTotal >= 100){ //Ganas
-			writer("b1", "Tiraste a Alvida al mar de un puñetazo.");
+			writer("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-2")[0].childNodes[0].nodeValue);
 			show("p0");
 			hide("d2p_a");
 			hide("d2p_b");
 			atacar = false;
 			luffyVida = 500;
-			checkHUD;
+			checkHUD();
 		}else if(luffyVida <= 0){ //Pierdes
-			writer("b1", "Alvida te pudo y en un golpe de suerte te tiró al mar.");
+			writer("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-3")[0].childNodes[0].nodeValue);
 			atacar = false;
-			checkHUD;
+			checkHUD();
 		}else{ //Continua
-			console.log("Luffy:" + " " + luffyVida);
-			console.log("AlVida:" + " " + danoTotal);
-			checkHUD;
+			checkHUD();
 		}
 	}
 }
@@ -629,7 +627,7 @@ var luchaAlv = function(){
 var rendirseAlv = function(){
 	document.getElementById("d2p_a").classList.add('hidden');
 	document.getElementById("d2p_b").classList.add('hidden');
-	document.getElementById("a3").innerHTML = "Aceptaste tu destino y Alvida te mató.<br/><span>FIN</span>";
+	document.getElementById("a3").innerHTML = xmlhttp.responseXML.querySelectorAll("alvida > surrender")[0].childNodes[0].nodeValue;
 }
 /*
 	.______    __    __    _______   ___________    ____
@@ -642,7 +640,7 @@ var rendirseAlv = function(){
 */
 var buggy1 = function(){
 	clear();
-	writer("into", "Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + names[segundoSdP].longName);
+	writer("into", xmlhttp.responseXML.querySelectorAll("buggy > intro")[0].childNodes[0].nodeValue);
 }
 
 /*
