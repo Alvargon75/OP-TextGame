@@ -293,7 +293,7 @@ var fight = {
 	},
 	atackAlly: function(ataque){
 		names[nameNumber].MP -= names[nameNumber].ataquesCoste[ataque];
-		names[nameNumber].
+		//names[nameNumber].
 	}
 }
 // CHARACTERS
@@ -500,17 +500,27 @@ var ataqueVillano = function(dano, multi){
 
 var xmlhttp;
 var xmlDoc;
+var language = window.navigator.userLanguage || window.navigator.language;
 
 if(window.XMLHttpRequest){ //Modern Browsers
     xmlhttp = new XMLHttpRequest();
 }else{ // IE
     xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
 }
-xmlhttp.open("GET","../locale/es_ES.xml", true);
-xmlhttp.send();
+
+if(language == "es-ES"){
+	xmlhttp.open("GET", "locale/es-ES.xml", true);
+	xmlhttp.send();
+}else if(language == "en-US"){
+	xmlhttp.open("GET", "locale/en-US.xml", true);
+	xmlhttp.send();
+}
+
 xmlDoc = xmlhttp.responseHTML;
 
-var setLanguage
+
+console.log("Lang: " + language)
+
 /*
 	██╗  ██╗██╗███████╗████████╗ ██████╗ ██████╗ ██╗ █████╗
 	██║  ██║██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗██║██╔══██╗
