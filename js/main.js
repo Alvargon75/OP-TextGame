@@ -156,12 +156,13 @@ var randomString = function(length){
 */
 
 var xmlhttp;
+var xmlDocument;
 var language = window.navigator.userLanguage || window.navigator.language;
 
 if(window.XMLHttpRequest){ //Modern Browsers
     xmlhttp = new XMLHttpRequest();
 }else{ // IE
-    xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
 
 if(language == "es-ES"){
@@ -172,17 +173,14 @@ if(language == "es-ES"){
 	xmlhttp.send();
 }
 
-var xmlDoc = xmlhttp.responseHTML;
-
-
-console.log("Lang: " + language)
+console.log("Lang: " + language);
 
 
 // START AND CLEAR
 
 var start = function(){
 	console.log("Game Started");
-	writer("intro", xmlDoc.querySelectorAll('inicio > intro'));
+	writer("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
 	hide("inicio");
 	hide("nameChange");
 	hide("cc")
@@ -745,4 +743,5 @@ Cosas que copiar comunes:
 	document.getElementById("").classList.add('hidden');
 	document.getElementById("").classList.remove('hidden');
 
+	xmlhttp.responseXML.querySelectorAll('')[0].childNodes[0].nodeValue
 */

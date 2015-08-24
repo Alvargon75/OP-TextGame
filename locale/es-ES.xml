@@ -2,7 +2,7 @@
 <es-ES name="Español">
     <arcs>
         <inicio number="0">
-            <intro js="152">"Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una enseña pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?"</intro>
+            <intro js="152" id="something">Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una enseña pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?</intro>
             <marine js="541">
                 <intro_marine js="541"></intro_marine>
                 <village js="558"></village>
