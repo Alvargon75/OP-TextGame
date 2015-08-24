@@ -279,15 +279,22 @@ var clear = function(){
 	document.getElementById("c3").innerHTML = " ";
 	document.getElementById("fin").innerHTML = " ";
 }
-var fightSetUp = function(enemyName){
-	document.getElementById("combatUI").classList.remove('combatUI-inactive');
-	writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
-	writer("at1", names[nameNumber].ataques[0]);
-	writer("at2", names[nameNumber].ataques[1]);
-	writer("at3", names[nameNumber].ataques[2]);
-	writer("at4", names[nameNumber].ataques[3]);
-	writer("at5", names[nameNumber].ataques[4]);
-	combatHUD();
+
+var fight = {
+	setUp: function(){
+		document.getElementById("combatUI").classList.remove('combatUI-inactive');
+		writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
+		writer("at1", names[nameNumber].ataques[0]);
+		writer("at2", names[nameNumber].ataques[1]);
+		writer("at3", names[nameNumber].ataques[2]);
+		writer("at4", names[nameNumber].ataques[3]);
+		writer("at5", names[nameNumber].ataques[4]);
+		combatHUD();
+	},
+	atackAlly: function(ataque){
+		names[nameNumber].MP -= names[nameNumber].ataquesCoste[ataque];
+		//names[nameNumber].
+	}
 }
 // CHARACTERS
 
@@ -404,7 +411,7 @@ var Chopper = {
 	maxMP: 240,
 	estado: 0,
 	grados: ["Brain Point", "Heavy Point", "Monster Point"],
-	ataques: [],
+	ataques: ["Scope"],
 	ataquesValores: [],
 	ataquesCoste: [],
 };
@@ -437,7 +444,8 @@ var Franky = {
 	ataquesCoste: [0, 2, 4, 5, 10],
 }
 
-/*var names = [Luffy, Sanji, Zoro, GodMode];*/
+// Generic Villain
+
 
 var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];
 
@@ -480,10 +488,38 @@ var ataqueVillano = function(dano, multi){
 	return Math.floor(Math.random() * multi + dano);
 }
 
-var ataqueSdP = function(dano, multi, coste){
-	names[nameNumber].MP -= coste;
-	return Math.floor(Math.random() * multi + dano);
+/*
+██╗  ██╗███╗   ███╗██╗         ██████╗  █████╗ ██████╗ ███████╗██╗███╗   ██╗ ██████╗
+╚██╗██╔╝████╗ ████║██║         ██╔══██╗██╔══██╗██╔══██╗██╔════╝██║████╗  ██║██╔════╝
+ ╚███╔╝ ██╔████╔██║██║         ██████╔╝███████║██████╔╝███████╗██║██╔██╗ ██║██║  ███╗
+ ██╔██╗ ██║╚██╔╝██║██║         ██╔═══╝ ██╔══██║██╔══██╗╚════██║██║██║╚██╗██║██║   ██║
+██╔╝ ██╗██║ ╚═╝ ██║███████╗    ██║     ██║  ██║██║  ██║███████║██║██║ ╚████║╚██████╔╝
+╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝
+
+*/
+
+var xmlhttp;
+var xmlDoc;
+var language = window.navigator.userLanguage || window.navigator.language;
+
+if(window.XMLHttpRequest){ //Modern Browsers
+    xmlhttp = new XMLHttpRequest();
+}else{ // IE
+    xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
 }
+
+if(language == "es-ES"){
+	xmlhttp.open("GET", "locale/es-ES.xml", true);
+	xmlhttp.send();
+}else if(language == "en-US"){
+	xmlhttp.open("GET", "locale/en-US.xml", true);
+	xmlhttp.send();
+}
+
+xmlDoc = xmlhttp.responseHTML;
+
+
+console.log("Lang: " + language)
 
 /*
 	██╗  ██╗██╗███████╗████████╗ ██████╗ ██████╗ ██╗ █████╗
