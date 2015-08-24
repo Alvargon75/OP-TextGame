@@ -145,11 +145,44 @@ var randomString = function(length){
 	return char.join("");
 }
 
+/*
+██╗  ██╗███╗   ███╗██╗         ██████╗  █████╗ ██████╗ ███████╗██╗███╗   ██╗ ██████╗
+╚██╗██╔╝████╗ ████║██║         ██╔══██╗██╔══██╗██╔══██╗██╔════╝██║████╗  ██║██╔════╝
+ ╚███╔╝ ██╔████╔██║██║         ██████╔╝███████║██████╔╝███████╗██║██╔██╗ ██║██║  ███╗
+ ██╔██╗ ██║╚██╔╝██║██║         ██╔═══╝ ██╔══██║██╔══██╗╚════██║██║██║╚██╗██║██║   ██║
+██╔╝ ██╗██║ ╚═╝ ██║███████╗    ██║     ██║  ██║██║  ██║███████║██║██║ ╚████║╚██████╔╝
+╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝
+
+*/
+
+var xmlhttp;
+var language = window.navigator.userLanguage || window.navigator.language;
+
+if(window.XMLHttpRequest){ //Modern Browsers
+    xmlhttp = new XMLHttpRequest();
+}else{ // IE
+    xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+if(language == "es-ES"){
+	xmlhttp.open("GET", "locale/es-ES.xml", true);
+	xmlhttp.send();
+}else if(language == "en-US"){
+	xmlhttp.open("GET", "locale/en-US.xml", true);
+	xmlhttp.send();
+}
+
+var xmlDoc = xmlhttp.responseHTML;
+
+
+console.log("Lang: " + language)
+
+
 // START AND CLEAR
 
 var start = function(){
 	console.log("Game Started");
-	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una enseña pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
+	writer("intro", xmlDoc.querySelectorAll('inicio > intro'));
 	hide("inicio");
 	hide("nameChange");
 	hide("cc")
@@ -489,39 +522,6 @@ var ataqueVillano = function(dano, multi){
 }
 
 /*
-██╗  ██╗███╗   ███╗██╗         ██████╗  █████╗ ██████╗ ███████╗██╗███╗   ██╗ ██████╗
-╚██╗██╔╝████╗ ████║██║         ██╔══██╗██╔══██╗██╔══██╗██╔════╝██║████╗  ██║██╔════╝
- ╚███╔╝ ██╔████╔██║██║         ██████╔╝███████║██████╔╝███████╗██║██╔██╗ ██║██║  ███╗
- ██╔██╗ ██║╚██╔╝██║██║         ██╔═══╝ ██╔══██║██╔══██╗╚════██║██║██║╚██╗██║██║   ██║
-██╔╝ ██╗██║ ╚═╝ ██║███████╗    ██║     ██║  ██║██║  ██║███████║██║██║ ╚████║╚██████╔╝
-╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝
-
-*/
-
-var xmlhttp;
-var xmlDoc;
-var language = window.navigator.userLanguage || window.navigator.language;
-
-if(window.XMLHttpRequest){ //Modern Browsers
-    xmlhttp = new XMLHttpRequest();
-}else{ // IE
-    xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
-}
-
-if(language == "es-ES"){
-	xmlhttp.open("GET", "locale/es-ES.xml", true);
-	xmlhttp.send();
-}else if(language == "en-US"){
-	xmlhttp.open("GET", "locale/en-US.xml", true);
-	xmlhttp.send();
-}
-
-xmlDoc = xmlhttp.responseHTML;
-
-
-console.log("Lang: " + language)
-
-/*
 	██╗  ██╗██╗███████╗████████╗ ██████╗ ██████╗ ██╗ █████╗
 	██║  ██║██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗██║██╔══██╗
 	███████║██║███████╗   ██║   ██║   ██║██████╔╝██║███████║
@@ -644,7 +644,6 @@ var rendirseAlv = function(){
 */
 var buggy1 = function(){
 	clear();
-
 	writer("into", "Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + names[segundoSdP].longName);
 }
 
