@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <es-ES name="Español">
     <arcs>
-        <inicio js="152"></inicio>
-
+        <inicio number="0">
+            <intro js="152"></intro>
+            <marine js="541">
+                <intro_marine js="541"></intro_marine>
+                <village js="558"></village>
+                <enroll js="563"></enroll>
+                <fullbody js="584"></fullbody>
+            </marine>
+            <pirata>
+                <intro_pirata js="548"></intro_pirata>
+            </pirata>
+        </inicio>
+        <alvida number="1">
+            <functions>
+                <fight js="599" fname="luchaAlv()">
+                    <text line="608" id="luchaAlv-1"></text>
+                    <text line="612" id="luchaAlv-2"></text>
+                    <text line="" id=""></text>
+                    <text line="" id=""></text>
+                </fight>
+            </functions>
+        </alvida>
     </arcs>
 </es-ES>
