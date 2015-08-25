@@ -17,7 +17,7 @@
             <atacks>
                 <atack id="atack1">Estira el Brazo, Puñetazo</atack>
                 <atack id="atack2">Galleta galleta, metralleta</atack>
-                <atack id="atack3">Retuérce el tornillo, Molinillo</atack>
+                <atack id="atack3">Estira, estira, BAZOOKA</atack>
                 <atack id="atack4">Estira el cuello mazo, cabezazo</atack>
                 <atack id="atack5">Haki del Rey</atack>
             </atacks>
@@ -34,7 +34,7 @@
                 <atack id="atack1">Sablazo</atack>
                 <atack id="atack2">Estilo de Tres Espadas</atack>
                 <atack id="atack3">Corte del Demonio</atack>
-                <atack id="atack4">Espiral del Dragón</atack>
+                <atack id="atack4">Ashura</atack>
                 <atack id="atack5">Tatsumaki</atack>
             </atacks>
         </zoro>
