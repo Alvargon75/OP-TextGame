@@ -1,5 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <es-ES name="Español">
+    <GUI>
+        <stats>
+            <HP>Vida: </HP>
+        </stats>
+    </GUI>
+    <characters>
+        <luffy>
+            <longName>Monkey D. Luffy</longName>
+            <MP>Energía: </MP>
+            <gears>
+                <gear id="gear1">Hombre de Goma</gear>
+                <gear id="gear2">Segundo Marcha</gear>
+                <gear id="gear3">Tercera Marcha</gear>
+            </gears>
+            <atacks>
+                <atack id="atack1">Estira el Brazo, Puñetazo</atack>
+                <atack id="atack2">Galleta galleta, metralleta</atack>
+                <atack id="atack3">Retuérce el tornillo, Molinillo</atack>
+                <atack id="atack4">Estira el cuello mazo, cabezazo</atack>
+                <atack id="atack5">Haki del Rey</atack>
+            </atacks>
+        </luffy>
+        <zoro>
+            <longName>Zoro Ronoa</longName>
+            <MP>Energía: </MP>
+            <gears>
+                <gear id="gear1">Casual</gear>
+                <gear id="gear2">Concentrado</gear>
+                <gear id="gear3">Mente en Blanco</gear>
+            </gears>
+            <atacks>
+                <atack id="atack1">Sablazo</atack>
+                <atack id="atack2">Estilo de Tres Espadas</atack>
+                <atack id="atack3">Corte del Demonio</atack>
+                <atack id="atack4">Espiral del Dragón</atack>
+                <atack id="atack5">Tatsumaki</atack>
+            </atacks>
+        </zoro>
+        <sanji>
+            <longName>Sanji Pierna Negra</longName>
+            <MP>Energía: </MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </sanji>
+        <nami>
+            <longName>Nami la Gata Ladrona</longName>
+            <MP>Energía: </MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </nami>
+        <ussop>
+            <longName>Ussop el Tirador</longName>
+            <MP>Energía: </MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </ussop>
+        <chopper>
+            <longName>Tony Tony Chopper</longName>
+            <MP>Energía: </MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </chopper>
+        <robin>
+            <longName>Nico Robin</longName>
+            <MP>Energía: </MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </robin>
+        <franky>
+            <longName>Cutty Flam</longName>
+            <MP>Cola: </MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </franky>
+    </characters>
     <arcs>
         <inicio number="0">
             <intro js="152"><![CDATA[Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una enseña pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?]]></intro>

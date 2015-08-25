@@ -1,5 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <language name="languagename">
+    <GUI>
+        <stats>
+            <HP></HP>
+        </stats>
+    </GUI>
+    <characters>
+        <luffy>
+            <longName></longName>
+            <MP></MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </luffy>
+        <zoro>
+            <longName></longName>
+            <MP></MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </zoro>
+        <sanji>
+            <longName></longName>
+            <MP></MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </sanji>
+        <nami>
+            <longName></longName>
+            <MP></MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </nami>
+        <ussop>
+            <longName></longName>
+            <MP></MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </ussop>
+        <chopper>
+            <longName></longName>
+            <MP></MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </chopper>
+        <robin>
+            <longName></longName>
+            <MP></MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </robin>
+        <franky>
+            <longName></longName>
+            <MP></MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </franky>
+    </characters>
     <arcs>
         <inicio number="0">
             <intro js="152"><![CDATA[]]></intro>

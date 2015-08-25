@@ -168,7 +168,7 @@ if(window.XMLHttpRequest){ //Modern Browsers
 if(language == "es-ES"){
 	xmlhttp.open("GET", "locale/es-ES.xml", true);
 	xmlhttp.send();
-}else if(language == "en-US"){
+}else{
 	xmlhttp.open("GET", "locale/en-US.xml", true);
 	xmlhttp.send();
 }
@@ -349,8 +349,15 @@ El tema de los estados va por numeros:
  101 = Último Aliento
 
 */
+/*
+var statsObj = {
+	HP: xmlhttp.responseXML.querySelectorAll("GUI > stats > HP")[0].childNodes[0].nodeValue,
+	MP: xmlhttp.responseXML.querySelectorAll("characters >" + names[nameNumber].id + "> MP")[0].childNodes[0].nodeValue
 
+}
+*/
 var Sanji = {
+	id: "sanji",
 	name: "Sanji",
 	longName: "Sanji Pierna Negra",
 	HP: 400,
@@ -365,6 +372,7 @@ var Sanji = {
 }
 
 var Luffy = {
+	id: "luffy",
 	name: "Luffy",
 	longName: "Monkey D. Luffy",
 	HP: 500,
@@ -379,6 +387,7 @@ var Luffy = {
 }
 
 var Zoro = {
+	id: "zoro",
 	name: "Zoro",
 	longName: "Zoro Ronoa",
 	HP: 600,
@@ -393,6 +402,7 @@ var Zoro = {
 }
 
 var GodMode = { // Personaje de Prueba o Cheat
+	id: "godmode",
 	name: "Dios", // Anteriormente Álvaro G.
 	longName: "Papu, el Dios",
 	HP: 1000000,
@@ -406,6 +416,7 @@ var GodMode = { // Personaje de Prueba o Cheat
 	ataquesCoste: [1, 1, 1, 1, 1],
 }
 var Nami = {
+	id: "nami",
 	name: "Nami",
 	longName: "Nami la Ladrona",
 	HP: 190,
@@ -420,6 +431,7 @@ var Nami = {
 }
 
 var Ussop = {
+	id: "usuf",
 	name: "Ussop",
 	longName: "Ussop el Tirador",
 	HP: 275,
@@ -434,6 +446,7 @@ var Ussop = {
 }
 
 var Chopper = {
+	id: "chopper",
 	name: "Chopper",
 	longName: "Tony Tony Chopper",
 	HP: 300,
@@ -448,6 +461,7 @@ var Chopper = {
 };
 
 var Robin = {
+	id: "robin",
 	name: "Robin",
 	longName: "Nico Robin",
 	HP: 250,
@@ -462,6 +476,7 @@ var Robin = {
 }
 
 var Franky = {
+	id: "franky",
 	name: "Franky",
 	longName: "Cutty Flam",
 	HP: 480,
