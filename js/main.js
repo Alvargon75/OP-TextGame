@@ -324,7 +324,11 @@ var fight = {
 	},
 	atackAlly: function(ataque){
 		names[nameNumber].MP -= names[nameNumber].ataquesCoste[ataque];
-		//names[nameNumber].
+		enemy.HP -= names[nameNumber].ataquesValores[ataque];
+		expPoints += Math.floor(Math.random() * 100);
+	},
+	atackEnemy: function(whichEnemy, ataque){
+		
 	}
 }
 // CHARACTERS
@@ -349,6 +353,88 @@ El tema de los estados va por numeros:
  101 = Último Aliento
 
 */
+
+// GENERIC ENEMY OBJECT
+
+var enemy = {
+	generic: {
+		HP: 100,
+		maxHP: 100,
+		MP: 100,
+		maxMP: 100,
+		ataques: [],
+		ataquesCoste: [],
+		ataquesValores: [],
+	},
+	alvida: {},
+	buggy: {},
+	krieg: {},
+	arlongPark: {
+		arlong: {},
+		octi: {},
+		kurobi: {},
+		chew: {},
+	},
+	logueTown: {
+		smoker: {},
+		tashigi: {},
+	},
+	arabasta: {
+		whiskeyPeak: {
+			multitud: {},
+			igarapoi: {},
+			// TODO Incluir la pelea de Zorro y Luffy
+			mr5: {},
+			missValentine: {},
+		},
+		littleGarden: {
+			mr5: {},
+			missValentine: {},
+			missGoldenWeek: {},
+			mr3: {},
+			mr13: {},
+			missFriday: {},
+		},
+		drum: {
+			kureha: {},
+			chess: {},
+			kuromanimo: {},
+			wapol: {},
+		},
+		arabasta: {
+			smoker: {}, // VS Portgas D. Ace
+			missSunday: {},
+			crocodile: {},
+			mr4: {},
+			missXmas: {},
+			bentham: {},
+			paula: {},
+			dazBones: {},
+			crocodilePalace: {},
+			crocodilePantheon: {},
+		},
+		skypea: {
+			jaya: {
+				bellamy: {},
+			},
+			skyIsle: {
+				satori: {},
+				shuraFuza: {},
+				braham: {},
+				yama: {},
+				gedatsu: {},
+				enel: {},
+			},
+		},
+		water7: {
+			davyBackFight: {},
+			water7: {},
+			enniesLobby: {},
+			postEnniesLobby: {}
+		}
+	}
+}
+
 /*
 var statsObj = {
 	HP: xmlhttp.responseXML.querySelectorAll("GUI > stats > HP")[0].childNodes[0].nodeValue,
