@@ -54,6 +54,18 @@
 	 </div>
     </footer>
    </div>
+   <div id="cc_container" class="cc_inactive">
+    <div class="" id="character_chooser">
+     <div id="cc_luffy"><img src=""><h2>Monkey D. Luffy</h2><p class="cc_description"></p></div>
+     <div id="cc_zoro"><img src=""><h2>Zoro Ronoa</h2><p class="cc_description"></p></div>
+     <div id="cc_sanji"><img src=""><h2>Sanji Pierna Negra</h2><p class="cc_description"></p></div>
+     <div id="cc_nami"><img src=""><h2>Nami la Ladrona</h2><p class="cc_description"></p></div>
+     <div id="cc_ussop"><img src=""><h2>Ussop el Tirador</h2><p class="cc_description"></p></div>
+     <div id="cc_robin"><img src=""><h2>Nico Robin</h2><p class="cc_description"></p></div>
+     <div id="cc_franky"><img src=""><h2>Franky</h2><p class="cc_description"></p></div>
+     <div id="cc_chopper"><img src=""><h2>Tony Tony Chopper</h2><p class="cc_description"></p></div>
+    </div>
+   </div>
   <div id="drch">
    <div id="stats">
     <h1 id="name"></h1>
@@ -70,21 +82,11 @@
 	<img id="i_intro_sanji" class="hidden" src="recursos/img/jollyrogers/sanji_jollyroger.png">
 	<img id="i_intro_zoro" class="hidden" src="recursos/img/jollyrogers/zoro_jollyroger.png">
     <img id="i_intro_nami" class="hidden" src="recursos/img/jollyrogers/nami_jollyroger.png">
-    <img id="i_intro_ussop" class="hidden" src="recursos/img/jollyrogers/ussopp_jollyroger.png">
+    <img id="i_intro_ussop" class="hidden" src="recursos/img/jollyrogers/ussop_jollyroger.png">
     <img id="i_intro_robin" class="hidden" src="recursos/img/jollyrogers/robin_jollyroger.png">
-    <img id="i_intro_franky" class="hidden" src="recursos/img/jollyrogers/zoro_jollyroger.png">
-    <img id="i_intro_chopper" class="hidden" src="recursos/img/jollyrogers/zoro_jollyroger.png">
+    <img id="i_intro_franky" class="hidden" src="recursos/img/jollyrogers/franky_jollyroger.png">
+    <img id="i_intro_chopper" class="hidden" src="recursos/img/jollyrogers/chopper_jollyroger.png">
    </div>
-  </div>
-  <div class="hidden" id="character_chooser">
-   <div id="cc_luffy"><img src=""><h2>Monkey D. Luffy</h2><p class="cc_description"></p></div>
-   <div id="cc_zoro"><img src=""><h2>Zoro Ronoa</h2><p class="cc_description"></p></div>
-   <div id="cc_sanji"><img src=""><h2>Sanji Pierna Negra</h2><p class="cc_description"></p></div>
-   <div id="cc_nami"><img src=""><h2>Nami la Ladrona</h2><p class="cc_description"></p></div>
-   <div id="cc_ussop"><img src=""><h2>Ussop el Tirador</h2><p class="cc_description"></p></div>
-   <div id="cc_robin"><img src=""><h2>Nico Robin</h2><p class="cc_description"></p></div>
-   <div id="cc_franky"><img src=""><h2>Franky</h2><p class="cc_description"></p></div>
-   <div id="cc_chopper"><img src=""><h2>Tony Tony Chopper</h2><p class="cc_description"></p></div>
   </div>
   <div id="izq">
    <div id="text-box">
@@ -109,6 +111,7 @@
 	 <!-- Intro - Decisiones Importantes -->
      <button type="button" id="inicio" class="" onclick="start()">Inicio</button>
 	 <button type="button" id="nameChange" class="" onclick="nameChange()">Nombre Aleatorio</button>
+     <button type="button" id="cc" class="" onclick="document.getElementById('cc_container').classList.remove('cc_inactive')">Elegir Personaje</button>
 	 <button type="button" id="d1_a" class="hidden" onclick="pirata()">El Barco Pirata</button>
 	 <button type="button" id="d1_b" class="hidden" onclick="marine()">La Armada</button>
 	 <button type="button" id="d2m_a" class="hidden" onclick="alistarse()">Me Alisto</button>

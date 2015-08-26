@@ -55,6 +55,28 @@ header h1 {
 	width: 256px;
 	height: 256px;
 }
+/*CHARACTER CHOOSER*/
+#cc_container {
+	position: absolute;
+	width: 99%;
+	height: 99%;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.cc_inactive {
+	display:none;
+	width: 0;
+	height: 0;
+}
+#character_chooser {
+	clear: both;
+	margin: auto;
+	border: 3px solid black;
+	background-color: #FFF;
+}
+#character_chooser > div {
+	display: inline-block;
+}
 /*COMBAT UI*/
 #combatUI #header_cont h1 {
 	text-align: center;

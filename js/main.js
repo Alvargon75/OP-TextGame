@@ -37,17 +37,153 @@ var checkArray = function(objeto, array){
 			return true;
 		}
 	}
-	
+
 	return false;
 }
+
+var randomString = function(length){
+	var char = [];
+	var RStemp;
+	for(var i = 0; i < length; i++){
+		switch(Math.floor(Math.random() * 30)){
+			case 0:
+				RStemp = "A";
+				break;
+			case 1:
+				RStemp = "H";
+				break;
+			case 2:
+				RStemp = "t";
+				break;
+			case 3:
+				RStemp = "Q";
+				break;
+			case 4:
+				RStemp = "j";
+				break;
+			case 5:
+				RStemp = "7";
+				break;
+			case 6:
+				RStemp = "8";
+				break;
+			case 7:
+				RStemp = "Y";
+				break;
+			case 8:
+				RStemp = "G";
+				break;
+			case 9:
+				RStemp = "l";
+				break;
+			case 10:
+				RStemp = "9";
+				break;
+			case 11:
+				RStemp = "L";
+				break;
+			case 12:
+				RStemp = "M";
+				break;
+			case 13:
+				RStemp = "n";
+				break;
+			case 14:
+				RStemp = "X";
+				break;
+			case 15:
+				RStemp = "z";
+				break;
+			case 16:
+				RStemp = "X";
+				break;
+			case 17:
+				RStemp = "B";
+				break;
+			case 18:
+				RStemp = "W";
+				break;
+			case 19:
+				RStemp = "q";
+				break;
+			case 20:
+				RStemp = "S";
+				break;
+			case 21:
+				RStemp = "a";
+				break;
+			case 22:
+				RStemp = "K";
+				break;
+			case 23:
+				RStemp = "i";
+				break;
+			case 24:
+				RStemp = "-";
+				break;
+			case 25:
+				RStemp = "M";
+				break;
+			case 26:
+				RStemp = "_";
+				break;
+			case 27:
+				RStemp = "b";
+				break;
+			case 28:
+				RStemp = "v";
+				break;
+			case 29:
+				RStemp = "P";
+				break;
+			case 30:
+				RStemp = "7";
+				break;
+		}
+		char.push(RStemp);
+	}
+	return char.join("");
+}
+
+/*
+██╗  ██╗███╗   ███╗██╗         ██████╗  █████╗ ██████╗ ███████╗██╗███╗   ██╗ ██████╗
+╚██╗██╔╝████╗ ████║██║         ██╔══██╗██╔══██╗██╔══██╗██╔════╝██║████╗  ██║██╔════╝
+ ╚███╔╝ ██╔████╔██║██║         ██████╔╝███████║██████╔╝███████╗██║██╔██╗ ██║██║  ███╗
+ ██╔██╗ ██║╚██╔╝██║██║         ██╔═══╝ ██╔══██║██╔══██╗╚════██║██║██║╚██╗██║██║   ██║
+██╔╝ ██╗██║ ╚═╝ ██║███████╗    ██║     ██║  ██║██║  ██║███████║██║██║ ╚████║╚██████╔╝
+╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝
+
+*/
+
+var xmlhttp;
+var xmlDocument;
+var language = window.navigator.userLanguage || window.navigator.language;
+
+if(window.XMLHttpRequest){ //Modern Browsers
+    xmlhttp = new XMLHttpRequest();
+}else{ // IE
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+if(language == "es-ES"){
+	xmlhttp.open("GET", "locale/es-ES.xml", true);
+	xmlhttp.send();
+}else{
+	xmlhttp.open("GET", "locale/en-US.xml", true);
+	xmlhttp.send();
+}
+
+console.log("Lang: " + language);
+
 
 // START AND CLEAR
 
 var start = function(){
 	console.log("Game Started");
-	writer("intro","Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una ensena pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?");
+	writer("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
 	hide("inicio");
 	hide("nameChange");
+	hide("cc")
 	show("d1_a");
 	show("d1_b");
 	checkHUD();
@@ -79,17 +215,17 @@ var start = function(){
 			case 5: //Robin
  				hide("i_intro_luffy");
  				show("i_intro_robin");
- 				document.getElementById("stats").classList.add('stats-');
+ 				document.getElementById("stats").classList.add('stats-robin');
  				break;
 			case 6: //Franky
  				hide("i_intro_luffy");
  				show("i_intro_franky");
- 				document.getElementById("stats").classList.add('stats-');
+ 				document.getElementById("stats").classList.add('stats-franky');
  				break;
-			case 7: //Chopper
+			case 7: //Chopper TEMPORALMENTE DESHABILITADO
  				hide("i_intro_luffy");
  				show("i_intro_chopper");
- 				document.getElementById("stats").classList.add('stats-');
+ 				document.getElementById("stats").classList.add('stats-chopper');
  				break;
 		}
 		writer("name", names[nameNumber].longName)
@@ -100,6 +236,8 @@ var start = function(){
 		writer("name", "Monkey D. Luffy");
 	};
 };
+
+
 // names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
 var usados = [nameNumber];
 
@@ -172,15 +310,22 @@ var clear = function(){
 	document.getElementById("c3").innerHTML = " ";
 	document.getElementById("fin").innerHTML = " ";
 }
-var fightSetUp = function(enemyName){
-	document.getElementById("combatUI").classList.remove('combatUI-inactive');
-	writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
-	writer("at1", names[nameNumber].ataques[0]);
-	writer("at2", names[nameNumber].ataques[1]);
-	writer("at3", names[nameNumber].ataques[2]);
-	writer("at4", names[nameNumber].ataques[3]);
-	writer("at5", names[nameNumber].ataques[4]);
-	combatHUD();
+
+var fight = {
+	setUp: function(){
+		document.getElementById("combatUI").classList.remove('combatUI-inactive');
+		writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
+		writer("at1", names[nameNumber].ataques[0]);
+		writer("at2", names[nameNumber].ataques[1]);
+		writer("at3", names[nameNumber].ataques[2]);
+		writer("at4", names[nameNumber].ataques[3]);
+		writer("at5", names[nameNumber].ataques[4]);
+		combatHUD();
+	},
+	atackAlly: function(ataque){
+		names[nameNumber].MP -= names[nameNumber].ataquesCoste[ataque];
+		//names[nameNumber].
+	}
 }
 // CHARACTERS
 
@@ -188,7 +333,7 @@ var randomName = false;
 var nameChange = function(){
 	randomName = true;
 	hide("nameChange");
-	nameNumber = Math.floor(Math.random() * 8);
+	nameNumber = Math.floor(Math.random() * 7);
 }
 var nameNumber = 0;
 /*
@@ -204,8 +349,15 @@ El tema de los estados va por numeros:
  101 = Último Aliento
 
 */
+/*
+var statsObj = {
+	HP: xmlhttp.responseXML.querySelectorAll("GUI > stats > HP")[0].childNodes[0].nodeValue,
+	MP: xmlhttp.responseXML.querySelectorAll("characters >" + names[nameNumber].id + "> MP")[0].childNodes[0].nodeValue
 
+}
+*/
 var Sanji = {
+	id: "sanji",
 	name: "Sanji",
 	longName: "Sanji Pierna Negra",
 	HP: 400,
@@ -220,6 +372,7 @@ var Sanji = {
 }
 
 var Luffy = {
+	id: "luffy",
 	name: "Luffy",
 	longName: "Monkey D. Luffy",
 	HP: 500,
@@ -234,6 +387,7 @@ var Luffy = {
 }
 
 var Zoro = {
+	id: "zoro",
 	name: "Zoro",
 	longName: "Zoro Ronoa",
 	HP: 600,
@@ -248,6 +402,7 @@ var Zoro = {
 }
 
 var GodMode = { // Personaje de Prueba o Cheat
+	id: "godmode",
 	name: "Dios", // Anteriormente Álvaro G.
 	longName: "Papu, el Dios",
 	HP: 1000000,
@@ -261,6 +416,7 @@ var GodMode = { // Personaje de Prueba o Cheat
 	ataquesCoste: [1, 1, 1, 1, 1],
 }
 var Nami = {
+	id: "nami",
 	name: "Nami",
 	longName: "Nami la Ladrona",
 	HP: 190,
@@ -275,6 +431,7 @@ var Nami = {
 }
 
 var Ussop = {
+	id: "usuf",
 	name: "Ussop",
 	longName: "Ussop el Tirador",
 	HP: 275,
@@ -282,15 +439,29 @@ var Ussop = {
 	MP: 120,
 	maxMP: 120,
 	estado: 0,
-	grados: ["Cobardía", "Valentía", "Equilibrio"],
+	grados: ["Cobardía", "Valentía", "Sogeking"],
 	ataques: ["Tiro", "Canica Explosiva", "Canica de Fuego", "Canica de Kaya", "Taifa de Ussop"],
 	ataquesValores: [1, 3, 8, 9, 13],
 	ataquesCoste: [0, 2, 5, 9, 13],
 }
 
-var Chopper; // TODO Las formas de Chopper
+var Chopper = {
+	id: "chopper",
+	name: "Chopper",
+	longName: "Tony Tony Chopper",
+	HP: 300,
+	maxHP: 300,
+	MP: 240,
+	maxMP: 240,
+	estado: 0,
+	grados: ["Brain Point", "Heavy Point", "Monster Point"],
+	ataques: ["Scope"],
+	ataquesValores: [],
+	ataquesCoste: [],
+};
 
 var Robin = {
+	id: "robin",
 	name: "Robin",
 	longName: "Nico Robin",
 	HP: 250,
@@ -298,13 +469,14 @@ var Robin = {
 	MP: 300,
 	maxMP: 300,
 	estado: 0,
-	grados: ["Doña Domingo", "No Quiero Vivir", "Soy una Sombrero de Paja"],
+	grados: ["Doña Domingo", "No Quiero Vivir", "Quiero vivir"],
 	ataques: ["Brotad en 3", "Brotad en 5", "10 Flores", "Infinitas Flores", "Brotad en Millones"],
 	ataquesValores: [3, 6, 8, 14, 20],
 	ataquesCoste: [0, 3, 4, 7, 16],
 }
 
 var Franky = {
+	id: "franky",
 	name: "Franky",
 	longName: "Cutty Flam",
 	HP: 480,
@@ -312,15 +484,16 @@ var Franky = {
 	MP: 200,
 	maxMP: 200,
 	estado: 0,
-	grados: ["Humano", "Cyborg", "Cyborg Perfecto"],
-	ataques: ["Puñetazo", "Golpe Metálico", "Lanzallamas", "Bebida Fresca", "SUUUUUUUUUUPER"],
+	grados: ["Agotado", "Normal", "SUUUUUUUUUUUPER"],
+	ataques: ["Weapons Left", "Strong Hammer", "Lanzallamas", "Coup de Vent", "SUUUUUUUUUUPER"],
 	ataquesValores: [1, 3, 6 /*Añade en Llamas*/, 5 /*Sube HP*/, 18],
 	ataquesCoste: [0, 2, 4, 5, 10],
 }
 
-/*var names = [Luffy, Sanji, Zoro, GodMode];*/
+// Generic Villain
 
-var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
+
+var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];
 
 // RECUPERACIÓN Y EXPERIENCIA
 
@@ -361,11 +534,6 @@ var ataqueVillano = function(dano, multi){
 	return Math.floor(Math.random() * multi + dano);
 }
 
-var ataqueSdP = function(dano, multi, coste){
-	names[nameNumber].MP -= coste;
-	return Math.floor(Math.random() * multi + dano);
-}
-
 /*
 	██╗  ██╗██╗███████╗████████╗ ██████╗ ██████╗ ██╗ █████╗
 	██║  ██║██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗██║██╔══██╗
@@ -384,14 +552,14 @@ var ataqueSdP = function(dano, multi, coste){
 	Inicio
 */
 var marine = function(){
-	document.getElementById("a1").innerHTML = "Decides ir con el barco de los marines. Allí encuentras al Teniente Fullbody que te recibe amablemente. Te invita a ir con el hasta la Villa de las Conchas o unirte a la Marina. <br /> ¿Qué eliges?";
+	document.getElementById("a1").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine > intro_marine")[0].childNodes[0].nodeValue;
 	document.getElementById("d1_a").classList.add('hidden');
 	document.getElementById("d1_b").classList.add('hidden');
 	document.getElementById("d2m_a").classList.remove('hidden');
 	document.getElementById("d2m_b").classList.remove('hidden');
 }
 var pirata = function(){
-	document.getElementById("a1").innerHTML = "No sabes por qué pero no quieres ir con los marines, prefieres ir con los piratas. Remas el barril hasta el barco pirata y escalas hasta arriba. <br /> Allí ves a la capitana que te quiere ejecutar. <br /> ¿Vas a morir o a luchar?";
+	document.getElementById("a1").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio pirata > intro_pirata")[0].childNodes[0].nodeValue;
 	document.getElementById("d1_a").classList.add('hidden');
 	document.getElementById("d1_b").classList.add('hidden');
 	document.getElementById("d2p_a").classList.remove('hidden');
@@ -401,33 +569,33 @@ var pirata = function(){
 //Pequeno Arco Marine
 
 var villa = function(){
-	document.getElementById("d2").innerHTML = "Vas a la Villa y vives feliz.<br/><span>FIN</span>";
+	document.getElementById("a2").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine > village")[0].childNodes[0].nodeValue;
 	document.getElementById("d2m_a").classList.add('hidden');
 	document.getElementById("d2m_b").classList.add('hidden');
 }
 var alistarse = function(){
 	document.getElementById("d2m_a").classList.add('hidden');
 	document.getElementById("d2m_b").classList.add('hidden');
-	var valorLucha = prompt("¿Cómo de bueno eres luchando del 1 al 10?");
+	var valorLucha = prompt(xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-1")[0].childNodes[0].nodeValue);
 	if(valorLucha <= 10){
-		document.getElementById("d2").innerHTML = "No eres lo bastante bueno, adiós.<span>FIN</span>";
+		document.getElementById("a2").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-2")[0].childNodes[0].nodeValue;
 	}
 	else if(valorLucha > 10){
-		document.getElementById("d2").innerHTML = "Me gustas chaval, serás mi primero de abordo- dijo Fullbody-.";
+		document.getElementById("a2").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-3")[0].childNodes[0].nodeValue;
 		document.getElementById("m1_op").classList.remove('hidden');
 	}
 	else {
-		var retraso = confirm("¿Eres tonto?");
+		var retraso = confirm(xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-4")[0].childNodes[0].nodeValue);
 		if(confirm == true){
-			document.getElementById("a3").innerHTML = "Ya lo decía yo.";
+			document.getElementById("a3").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-5")[0].childNodes[0].nodeValue;
 		}
 		else {
-			document.getElementById("a3").innerHTML = "No me mientas.";
+			document.getElementById("a3").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine enroll > text#enroll-6")[0].childNodes[0].nodeValue;
 		}
 	}
 }
 var fullbodyContinua = function(){
-	document.getElementById("a3").innerHTML = "Fullbody te mató.<br/> <span>FIN</span>";
+	document.getElementById("a3").innerHTML = xmlhttp.responseXML.querySelectorAll("inicio marine > fullbody")[0].childNodes[0].nodeValue;
 	document.getElementById("m1_op").classList.add('hidden');
 }
 
@@ -450,25 +618,23 @@ var luchaAlv = function(){
 
 	//Pelea
 	while(atacar){
-		writer("a4", "Pegaste a Alvida");
+		writer("a4", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-1")[0].childNodes[0].nodeValue);
 		danoTotal += danoRound;
 		luffyVida -= danoAlv;
 		if(danoTotal >= 100){ //Ganas
-			writer("b1", "Tiraste a Alvida al mar de un puñetazo.");
+			writer("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-2")[0].childNodes[0].nodeValue);
 			show("p0");
 			hide("d2p_a");
 			hide("d2p_b");
 			atacar = false;
 			luffyVida = 500;
-			checkHUD;
+			checkHUD();
 		}else if(luffyVida <= 0){ //Pierdes
-			writer("b1", "Alvida te pudo y en un golpe de suerte te tiró al mar.");
+			writer("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-3")[0].childNodes[0].nodeValue);
 			atacar = false;
-			checkHUD;
+			checkHUD();
 		}else{ //Continua
-			console.log("Luffy:" + " " + luffyVida);
-			console.log("AlVida:" + " " + danoTotal);
-			checkHUD;
+			checkHUD();
 		}
 	}
 }
@@ -476,7 +642,7 @@ var luchaAlv = function(){
 var rendirseAlv = function(){
 	document.getElementById("d2p_a").classList.add('hidden');
 	document.getElementById("d2p_b").classList.add('hidden');
-	document.getElementById("a3").innerHTML = "Aceptaste tu destino y Alvida te mató.<br/><span>FIN</span>";
+	document.getElementById("a3").innerHTML = xmlhttp.responseXML.querySelectorAll("alvida > surrender")[0].childNodes[0].nodeValue;
 }
 /*
 	.______    __    __    _______   ___________    ____
@@ -489,8 +655,7 @@ var rendirseAlv = function(){
 */
 var buggy1 = function(){
 	clear();
-
-	writer("into", "Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + names[segundoSdP].longName);
+	writer("into", xmlhttp.responseXML.querySelectorAll("buggy > intro")[0].childNodes[0].nodeValue);
 }
 
 /*
@@ -591,4 +756,5 @@ Cosas que copiar comunes:
 	document.getElementById("").classList.add('hidden');
 	document.getElementById("").classList.remove('hidden');
 
+	xmlhttp.responseXML.querySelectorAll('')[0].childNodes[0].nodeValue
 */
