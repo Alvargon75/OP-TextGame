@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<en-US name="English">
+<language name="languagename">
     <GUI>
         <stats>
-            <HP>Health: </HP>
+            <HP></HP>
         </stats>
     </GUI>
     <characters>
         <luffy>
-            <longName>Monkey D. Luffy</longName>
-            <MP>Energy: </MP>
+            <longName></longName>
+            <MP></MP>
             <gears>
-                <gear id="gear1">Rubber Man</gear>
-                <gear id="gear2">Gear Second</gear>
-                <gear id="gear3">Gear Third</gear>
-            </gears>
-            <atacks>
-                <atack id="atack1">Gomu Gomu no Pistol</atack>
-                <atack id="atack2">Gomu Gomu no Gatling</atack>
-                <atack id="atack3">Gomu Gomu no Bazooka</atack>
-                <atack id="atack4">Gomu Gomu no Storm</atack>
-                <atack id="atack5">Haki</atack>
-            </atacks>
-        </luffy>
-        <zoro>
-            <longName>Zoro Ronoa</longName>
-            <MP>Energy: </MP>
-            <gears>
-                <gear id="gear1">Normal</gear>
+                <gear id="gear1"></gear>
                 <gear id="gear2"></gear>
                 <gear id="gear3"></gear>
             </gears>
             <atacks>
-                <atack id="atack1">Sword Hit</atack>
-                <atack id="atack2">Santoryu</atack>
-                <atack id="atack3">Onigiri</atack>
-                <atack id="atack4">Ashura</atack>
-                <atack id="atack5">Tatsumaki</atack>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
+            </atacks>
+        </luffy>
+        <zoro>
+            <longName></longName>
+            <MP></MP>
+            <gears>
+                <gear id="gear1"></gear>
+                <gear id="gear2"></gear>
+                <gear id="gear3"></gear>
+            </gears>
+            <atacks>
+                <atack id="atack1"></atack>
+                <atack id="atack2"></atack>
+                <atack id="atack3"></atack>
+                <atack id="atack4"></atack>
+                <atack id="atack5"></atack>
             </atacks>
         </zoro>
         <sanji>
-            <longName>Black Leg Sanji</longName>
-            <MP>Energy:</MP>
+            <longName></longName>
+            <MP></MP>
             <gears>
                 <gear id="gear1"></gear>
                 <gear id="gear2"></gear>
@@ -167,4 +167,4 @@
             <intro js="645"><![CDATA[]]></intro>
         </buggy>
     </arcs>
-</en-US>
+</language>
