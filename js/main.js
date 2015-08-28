@@ -186,7 +186,7 @@ var start = function(){
 	hide("cc")
 	show("d1_a");
 	show("d1_b");
-	checkHUD();
+	checkHUD(); /* No more random name
 	if(randomName == true){
 		switch(nameNumber){
 			case 0: //Luffy
@@ -234,7 +234,9 @@ var start = function(){
 		nameNumber = 0;
 		console.log("Name:" + " " + Luffy.name);
 		writer("name", "Monkey D. Luffy");
-	};
+	};*/
+	nameNumber = 0;
+	writer("name", names[nameNumber].longName);
 };
 
 
@@ -337,12 +339,8 @@ var fight = {
 }
 // CHARACTERS
 
-var randomName = false;
-var nameChange = function(){
-	randomName = true;
-	hide("nameChange");
-	nameNumber = Math.floor(Math.random() * 7);
-}
+var randomName = false; // This will remain 'false'
+
 var nameNumber = 0;
 /*
 
@@ -525,13 +523,9 @@ var enemy = {
 	}
 }
 
-/*
-var statsObj = {
-	HP: xmlhttp.responseXML.querySelectorAll("GUI > stats > HP")[0].childNodes[0].nodeValue,
-	MP: xmlhttp.responseXML.querySelectorAll("characters >" + names[nameNumber].id + "> MP")[0].childNodes[0].nodeValue
 
-}
-*/
+var currentCharacter = names[0];
+
 var Sanji = {
 	id: "sanji",
 	name: "Sanji",
