@@ -310,7 +310,7 @@ var clear = function(){
 	document.getElementById("c3").innerHTML = " ";
 	document.getElementById("fin").innerHTML = " ";
 }
-
+var turnCount = 0;
 var fight = {
 	setUp: function(){
 		document.getElementById("combatUI").classList.remove('combatUI-inactive');
@@ -328,6 +328,10 @@ var fight = {
 		expPoints += Math.floor(Math.random() * 100);
 	},
 	atackEnemy: function(whichEnemy, ataque){
+		turnCount++;
+	},
+	endBattle: function(){
+		turnCount = 0;
 		
 	}
 }
@@ -358,22 +362,78 @@ El tema de los estados va por numeros:
 
 var enemy = {
 	generic: {
-		HP: 100,
-		maxHP: 100,
-		MP: 100,
-		maxMP: 100,
+		HP: ,
+		maxHP: ,
+		MP: ,
+		maxMP: ,
 		ataques: [],
 		ataquesCoste: [],
-		ataquesValores: [],
+		ataquesValores: []
 	},
-	alvida: {},
-	buggy: {},
-	krieg: {},
+	alvida: {
+		HP: 20,
+		maxHP: 20,
+		MP: 18,
+		maxMP: 18,
+		ataques: ["Puñetazo", "Mazazo"],
+		ataquesCoste: [0, 3],
+		ataquesValores: [1, 4]
+	},
+	buggy: {
+		HP: 100,
+		maxHP: 100,
+		MP: 78,
+		maxMP: 78,
+		ataques: ["", "", ""],
+		ataquesCoste: [],
+		ataquesValores: []
+	},
+	krieg: {
+		HP: 180,
+		maxHP: 180,
+		MP: 120,
+		maxMP: 120,
+		ataques: [],
+		ataquesCoste: [],
+		ataquesValores: []
+	},
 	arlongPark: {
-		arlong: {},
-		octi: {},
-		kurobi: {},
-		chew: {},
+		arlong: {
+			HP: 300,
+			maxHP: 300,
+			MP: 210,
+			maxMP: 210,
+			ataques: [],
+			ataquesCoste: [],
+			ataquesValores: []
+		},
+		octi: {
+			HP: ,
+			maxHP: ,
+			MP: ,
+			maxMP: ,
+			ataques: [],
+			ataquesCoste: [],
+			ataquesValores: []
+		},
+		kurobi: {
+			HP: ,
+			maxHP: ,
+			MP: ,
+			maxMP: ,
+			ataques: [],
+			ataquesCoste: [],
+			ataquesValores: []
+		},
+		chew: {
+			HP: ,
+			maxHP: ,
+			MP: ,
+			maxMP: ,
+			ataques: [],
+			ataquesCoste: [],
+			ataquesValores: []
+		},
 	},
 	logueTown: {
 		smoker: {},
@@ -427,10 +487,40 @@ var enemy = {
 			},
 		},
 		water7: {
-			davyBackFight: {},
-			water7: {},
-			enniesLobby: {},
-			postEnniesLobby: {}
+			davyBackFight: {
+				foxy: {}
+			},
+			water7: {
+				frankyFamily: {},
+				secondFrankyFamily: {},
+				ussop: {},
+				franky: {},
+				paulie: {},
+				jerry: {},
+				wanze: {},
+				nero: {},
+				blueno: {}
+			},
+			enniesLobby: {
+				kasheeOimo: {},
+				blueno: {},
+				kalifa: {},
+				chapapa: {},
+				kumadori: {},
+				monsterChopper: {},
+				jabra: {},
+				kaku: {},
+				robLucci: {},
+				spandam: {}
+			},
+			postEnniesLobby: {
+				coby: {},
+				helmeppo: {},
+				shanksVSwhitebeard: {},
+				monkeyDGarp: {},
+				aceVSblackbeard: {},
+
+			}
 		}
 	}
 }
