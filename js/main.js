@@ -720,7 +720,15 @@ var enemy = {
 				ataquesCoste: [],
 				ataquesValores: []
 			},
-				yama: {},
+				yama: {
+					HP: ,
+					maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
 				gedatsu: {},
 				enel: {},
 			},
