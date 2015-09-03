@@ -2,12 +2,12 @@
 
 ##v0.1
 
-Basic game
+La alpha del juego.
 
 ##v0.2 - The Great Unification of JS
 
-Unificated all the JavaScript into one file.
+Unificamos todo el *JavaScript* del juego
 
 ##v0.2.1 - Hotfix
 
-Solved bugs.
+Solucionamos unos bugs.
