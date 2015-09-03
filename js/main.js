@@ -434,51 +434,292 @@ var enemy = {
 		},
 	},
 	logueTown: {
-		smoker: {},
-		tashigi: {},
+		smoker: {
+			HP: ,
+			maxHP: ,
+			MP: ,
+			maxMP: ,
+			ataques: [],
+			ataquesCoste: [],
+			ataquesValores: []
+		},
+		tashigi: {
+			HP: ,
+			maxHP: ,
+			MP: ,
+			maxMP: ,
+			ataques: [],
+			ataquesCoste: [],
+			ataquesValores: []
+		}
 	},
 	arabasta: {
 		whiskeyPeak: {
-			multitud: {},
-			igarapoi: {},
+			multitud: {
+			HP: ,
+			maxHP: ,
+			MP: ,
+			maxMP: ,
+			ataques: [],
+			ataquesCoste: [],
+			ataquesValores: []
+			},
+			igarapoi: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
 			// TODO Incluir la pelea de Zorro y Luffy
-			mr5: {},
-			missValentine: {},
+			mr5: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			missValentine: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
 		},
 		littleGarden: {
-			mr5: {},
-			missValentine: {},
-			missGoldenWeek: {},
-			mr3: {},
-			mr13: {},
-			missFriday: {},
+			mr5: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			missValentine: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+				
+			},
+			missGoldenWeek: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			mr3: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			mr13: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			missFriday: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
 		},
 		drum: {
-			kureha: {},
-			chess: {},
-			kuromanimo: {},
-			wapol: {},
+			kureha: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			chess: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			kuromanimo: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			wapol: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
 		},
 		arabasta: {
-			smoker: {}, // VS Portgas D. Ace
-			missSunday: {},
-			crocodile: {},
-			mr4: {},
-			missXmas: {},
-			bentham: {},
-			paula: {},
-			dazBones: {},
-			crocodilePalace: {},
-			crocodilePantheon: {},
+			smoker: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			}, // VS Portgas D. Ace
+			missSunday: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			crocodile: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			mr4: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			missXmas: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			bentham: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			paula: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			dazBones: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			crocodilePalace: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+			crocodilePantheon: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
 		},
 		skypea: {
 			jaya: {
-				bellamy: {},
+				bellamy: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
 			},
 			skyIsle: {
-				satori: {},
-				shuraFuza: {},
-				braham: {},
+				satori: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				shuraFuza: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
+				braham: {
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
+			},
 				yama: {},
 				gedatsu: {},
 				enel: {},
