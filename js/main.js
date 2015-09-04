@@ -186,7 +186,7 @@ var start = function(){
 	hide("cc")
 	show("d1_a");
 	show("d1_b");
-	checkHUD();
+	checkHUD(); /* No more random name
 	if(randomName == true){
 		switch(nameNumber){
 			case 0: //Luffy
@@ -234,7 +234,9 @@ var start = function(){
 		nameNumber = 0;
 		console.log("Name:" + " " + Luffy.name);
 		writer("name", "Monkey D. Luffy");
-	};
+	};*/
+	nameNumber = 0;
+	writer("name", names[nameNumber].longName);
 };
 
 
@@ -337,12 +339,8 @@ var fight = {
 }
 // CHARACTERS
 
-var randomName = false;
-var nameChange = function(){
-	randomName = true;
-	hide("nameChange");
-	nameNumber = Math.floor(Math.random() * 7);
-}
+var randomName = false; // This will remain 'false'
+
 var nameNumber = 0;
 /*
 
@@ -458,13 +456,13 @@ var enemy = {
 	arabasta: {
 		whiskeyPeak: {
 			multitud: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
 			},
 			igarapoi: {
 				HP: ,
@@ -705,74 +703,293 @@ var enemy = {
 					ataquesValores: []
 				},
 				shuraFuza: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
 				braham: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-				yama: {},
-				gedatsu: {},
-				enel: {},
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				yama: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				gedatsu: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				enel: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
 			},
 		},
 		water7: {
 			davyBackFight: {
-				foxy: {}
+				foxy: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				}
 			},
 			water7: {
-				frankyFamily: {},
-				secondFrankyFamily: {},
-				ussop: {},
-				franky: {},
-				paulie: {},
-				jerry: {},
-				wanze: {},
-				nero: {},
-				blueno: {}
+				frankyFamily: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				secondFrankyFamily: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				ussop: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				franky: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				paulie: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				jerry: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				wanze: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				nero: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				blueno: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				}
 			},
 			enniesLobby: {
-				kasheeOimo: {},
-				blueno: {},
-				kalifa: {},
-				chapapa: {},
-				kumadori: {},
-				monsterChopper: {},
-				jabra: {},
-				kaku: {},
-				robLucci: {},
-				spandam: {}
+				kasheeOimo: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				blueno: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				kalifa: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				chapapa: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				kumadori: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				monsterChopper: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				jabra: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				kaku: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				robLucci: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				spandam: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				}
 			},
 			postEnniesLobby: {
-				coby: {},
-				helmeppo: {},
-				shanksVSwhitebeard: {},
-				monkeyDGarp: {},
-				aceVSblackbeard: {},
-
+				coby: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				helmeppo: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				shanksVSwhitebeard: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				monkeyDGarp: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				aceVSblackbeard: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				}
 			}
 		}
 	}
 }
 
-/*
-var statsObj = {
-	HP: xmlhttp.responseXML.querySelectorAll("GUI > stats > HP")[0].childNodes[0].nodeValue,
-	MP: xmlhttp.responseXML.querySelectorAll("characters >" + names[nameNumber].id + "> MP")[0].childNodes[0].nodeValue
 
-}
-*/
+var currentCharacter = names[0];
+
 var Sanji = {
 	id: "sanji",
 	name: "Sanji",
