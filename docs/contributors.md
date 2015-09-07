@@ -1,4 +1,4 @@
 # Contributors
 
-* [Alvargon75](http://github.com/Alvargon75)
-* [Aksu20](http://github.com/Aksu20)
+* [Alvargon75](http://github.com/Alvargon75 "El menda")
+* [Aksu20](http://github.com/Aksu20 )
