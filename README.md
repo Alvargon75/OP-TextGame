@@ -12,9 +12,8 @@ Esto es un simple juego que estoy haciendo como práctica de JavaScript.
 
 ## Futuro
 
-* Acabar el juego
-* Colocarlo en una web
+Mira en `docs/to-do.md`.
 
 ## Contribuciones
 
-Puedes contribuir editando lo que quieras. Simplemente edita el código que quieras, envía un *Pull request* y revisaré personalmente el código.
+Mira `docs/contributin.md`

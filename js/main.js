@@ -1,349 +1,13 @@
-﻿/*
-███╗   ███╗███████╗ ██████╗ █████╗ ███╗   ██╗██╗███████╗███╗   ███╗ ██████╗ ███████╗
-████╗ ████║██╔════╝██╔════╝██╔══██╗████╗  ██║██║██╔════╝████╗ ████║██╔═══██╗██╔════╝
-██╔████╔██║█████╗  ██║     ███████║██╔██╗ ██║██║███████╗██╔████╔██║██║   ██║███████╗
-██║╚██╔╝██║██╔══╝  ██║     ██╔══██║██║╚██╗██║██║╚════██║██║╚██╔╝██║██║   ██║╚════██║
-██║ ╚═╝ ██║███████╗╚██████╗██║  ██║██║ ╚████║██║███████║██║ ╚═╝ ██║╚██████╔╝███████║
-╚═╝     ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝
-*/
-// VARIABLES
-
-var nivelExp = 1;
-var expPoints = 1;
-var luffyVida = 500;
-var gradoActual = 0;
-
-// SAVING TIME
-
-var writer = function(id,text){
-	document.getElementById(id).innerHTML = text;
-}
-
-var hide = function(id){
-	document.getElementById(id).classList.add('hidden');
-}
-
-var show = function(id){
-	document.getElementById(id).classList.remove('hidden');
-}
-
-var randomizer = function(multi){
-	return Math.floor(Math.random() * multi);
-}
-
-var checkArray = function(objeto, array){
-	for(var i = 0; i < array.length; i++){
-		if(array[i] === objeto){
-			return true;
-		}
-	}
-
-	return false;
-}
-
-var randomString = function(length){
-	var char = [];
-	var RStemp;
-	for(var i = 0; i < length; i++){
-		switch(Math.floor(Math.random() * 30)){
-			case 0:
-				RStemp = "A";
-				break;
-			case 1:
-				RStemp = "H";
-				break;
-			case 2:
-				RStemp = "t";
-				break;
-			case 3:
-				RStemp = "Q";
-				break;
-			case 4:
-				RStemp = "j";
-				break;
-			case 5:
-				RStemp = "7";
-				break;
-			case 6:
-				RStemp = "8";
-				break;
-			case 7:
-				RStemp = "Y";
-				break;
-			case 8:
-				RStemp = "G";
-				break;
-			case 9:
-				RStemp = "l";
-				break;
-			case 10:
-				RStemp = "9";
-				break;
-			case 11:
-				RStemp = "L";
-				break;
-			case 12:
-				RStemp = "M";
-				break;
-			case 13:
-				RStemp = "n";
-				break;
-			case 14:
-				RStemp = "X";
-				break;
-			case 15:
-				RStemp = "z";
-				break;
-			case 16:
-				RStemp = "X";
-				break;
-			case 17:
-				RStemp = "B";
-				break;
-			case 18:
-				RStemp = "W";
-				break;
-			case 19:
-				RStemp = "q";
-				break;
-			case 20:
-				RStemp = "S";
-				break;
-			case 21:
-				RStemp = "a";
-				break;
-			case 22:
-				RStemp = "K";
-				break;
-			case 23:
-				RStemp = "i";
-				break;
-			case 24:
-				RStemp = "-";
-				break;
-			case 25:
-				RStemp = "M";
-				break;
-			case 26:
-				RStemp = "_";
-				break;
-			case 27:
-				RStemp = "b";
-				break;
-			case 28:
-				RStemp = "v";
-				break;
-			case 29:
-				RStemp = "P";
-				break;
-			case 30:
-				RStemp = "7";
-				break;
-		}
-		char.push(RStemp);
-	}
-	return char.join("");
-}
-
 /*
-██╗  ██╗███╗   ███╗██╗         ██████╗  █████╗ ██████╗ ███████╗██╗███╗   ██╗ ██████╗
-╚██╗██╔╝████╗ ████║██║         ██╔══██╗██╔══██╗██╔══██╗██╔════╝██║████╗  ██║██╔════╝
- ╚███╔╝ ██╔████╔██║██║         ██████╔╝███████║██████╔╝███████╗██║██╔██╗ ██║██║  ███╗
- ██╔██╗ ██║╚██╔╝██║██║         ██╔═══╝ ██╔══██║██╔══██╗╚════██║██║██║╚██╗██║██║   ██║
-██╔╝ ██╗██║ ╚═╝ ██║███████╗    ██║     ██║  ██║██║  ██║███████║██║██║ ╚████║╚██████╔╝
-╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝
-
+	 ██████╗██╗  ██╗ █████╗ ██████╗  █████╗  ██████╗████████╗███████╗██████╗ ███████╗
+	██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
+	██║     ███████║███████║██████╔╝███████║██║        ██║   █████╗  ██████╔╝███████╗
+	██║     ██╔══██║██╔══██║██╔══██╗██╔══██║██║        ██║   ██╔══╝  ██╔══██╗╚════██║
+	╚██████╗██║  ██║██║  ██║██║  ██║██║  ██║╚██████╗   ██║   ███████╗██║  ██║███████║
+	 ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝
 */
 
-var xmlhttp;
-var xmlDocument;
-var language = window.navigator.userLanguage || window.navigator.language;
-
-if(window.XMLHttpRequest){ //Modern Browsers
-    xmlhttp = new XMLHttpRequest();
-}else{ // IE
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-}
-
-if(language == "es-ES"){
-	xmlhttp.open("GET", "locale/es-ES.xml", true);
-	xmlhttp.send();
-}else{
-	xmlhttp.open("GET", "locale/en-US.xml", true);
-	xmlhttp.send();
-}
-
-console.log("Lang: " + language);
-
-
-// START AND CLEAR
-
-var start = function(){
-	console.log("Game Started");
-	writer("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
-	hide("inicio");
-	hide("nameChange");
-	hide("cc")
-	show("d1_a");
-	show("d1_b");
-	checkHUD();
-	if(randomName == true){
-		switch(nameNumber){
-			case 0: //Luffy
-				break;
-			case 1: // Sanji
-				hide("i_intro_luffy");
-				show("i_intro_sanji");
-				document.getElementById("stats").classList.add('stats-sanji');
-				break;
-			case 2: // Zoro
-				hide("i_intro_luffy");
-				show("i_intro_zoro");
-				document.getElementById("stats").classList.add('stats-zoro');
-				break;
-			case 3: //Nami
-				hide("i_intro_luffy");
-				show("i_intro_nami");
-				document.getElementById("stats").classList.add('stats-nami');
-				break;
-			case 4: //Ussop
-				hide("i_intro_luffy");
-				show("i_intro_ussop");
-				document.getElementById("stats").classList.add('stats-ussop');
-				writer("name", Ussop.longName);
-				break;
-			case 5: //Robin
- 				hide("i_intro_luffy");
- 				show("i_intro_robin");
- 				document.getElementById("stats").classList.add('stats-robin');
- 				break;
-			case 6: //Franky
- 				hide("i_intro_luffy");
- 				show("i_intro_franky");
- 				document.getElementById("stats").classList.add('stats-franky');
- 				break;
-			case 7: //Chopper TEMPORALMENTE DESHABILITADO
- 				hide("i_intro_luffy");
- 				show("i_intro_chopper");
- 				document.getElementById("stats").classList.add('stats-chopper');
- 				break;
-		}
-		writer("name", names[nameNumber].longName)
-		console.log("Name:" + " " + names[nameNumber].name);
-	}else{
-		nameNumber = 0;
-		console.log("Name:" + " " + Luffy.name);
-		writer("name", "Monkey D. Luffy");
-	};
-};
-
-
-// names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
-var usados = [nameNumber];
-
-var SdPGenerator = function(index){
-	if(randomName === true){
-		var personaje = Math.floor(Math.random() * 8);
-		var temp = checkArray(personaje, usados);
-		do{
-			if(temp === true){
-				personaje = Math.floor(Math.random() * 8);
-				temp = checkArray(personaje, usados);
-			}else{
-				usados.push(personaje);
-				return personaje;
-			}
-		}while(temp === true)
-	}else{
-		switch (index) {
-			case 2:
-				return 2;
-				break;
-			case 3:
-				return 3;
-				break;
-			case 4:
-				return 4;
-				break;
-			case 5:
-				return 1;
-				break;
-			case 6:
-				return 7;
-				break;
-			case 7:
-				return 5;
-				break;
-			case 8:
-				return 6;
-				break;
-		}
-	}
-}
-
-var characterChosen = function(character){
-	hide("nameChange");
-	nameNumber = character;
-	return true;
-}
-
-var segundoSdP = SdPGenerator(2);
-var tercerSdP = SdPGenerator(3);
-var cuartoSdP = SdPGenerator(4);
-var quintoSdP = SdPGenerator(5);
-var sextoSdP = SdPGenerator(6);
-var septimoSdP = SdPGenerator(7);
-var octavoSdp = SdPGenerator(8);
-
-var clear = function(){
-	document.getElementById("intro").innerHTML = " ";
-	document.getElementById("a1").innerHTML = " ";
-	document.getElementById("a2").innerHTML = " ";
-	document.getElementById("a3").innerHTML = " ";
-	document.getElementById("a4").innerHTML = " ";
-	document.getElementById("b1").innerHTML = " ";
-	document.getElementById("b2").innerHTML = " ";
-	document.getElementById("b3").innerHTML = " ";
-	document.getElementById("b4").innerHTML = " ";
-	document.getElementById("c1").innerHTML = " ";
-	document.getElementById("c2").innerHTML = " ";
-	document.getElementById("c3").innerHTML = " ";
-	document.getElementById("fin").innerHTML = " ";
-}
-var turnCount = 0;
-var fight = {
-	setUp: function(){
-		document.getElementById("combatUI").classList.remove('combatUI-inactive');
-		writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
-		writer("at1", names[nameNumber].ataques[0]);
-		writer("at2", names[nameNumber].ataques[1]);
-		writer("at3", names[nameNumber].ataques[2]);
-		writer("at4", names[nameNumber].ataques[3]);
-		writer("at5", names[nameNumber].ataques[4]);
-		combatHUD();
-	},
-	atackAlly: function(ataque){
-		names[nameNumber].MP -= names[nameNumber].ataquesCoste[ataque];
-		enemy.HP -= names[nameNumber].ataquesValores[ataque];
-		expPoints += Math.floor(Math.random() * 100);
-	},
-	atackEnemy: function(whichEnemy, ataque){
-		turnCount++;
-	},
-	endBattle: function(){
-		turnCount = 0;
-		
-	}
-}
-// CHARACTERS
-
-var randomName = false;
-var nameChange = function(){
-	randomName = true;
-	hide("nameChange");
-	nameNumber = Math.floor(Math.random() * 7);
-}
-var nameNumber = 0;
+var randomName = false; // This will remain 'false'
 /*
 
 El tema de los estados va por numeros:
@@ -359,7 +23,7 @@ El tema de los estados va por numeros:
 */
 
 // GENERIC ENEMY OBJECT
-
+/*
 var enemy = {
 	generic: {
 		HP: ,
@@ -458,13 +122,13 @@ var enemy = {
 	arabasta: {
 		whiskeyPeak: {
 			multitud: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
+				HP: ,
+				maxHP: ,
+				MP: ,
+				maxMP: ,
+				ataques: [],
+				ataquesCoste: [],
+				ataquesValores: []
 			},
 			igarapoi: {
 				HP: ,
@@ -513,7 +177,7 @@ var enemy = {
 				ataques: [],
 				ataquesCoste: [],
 				ataquesValores: []
-				
+
 			},
 			missGoldenWeek: {
 				HP: ,
@@ -705,74 +369,291 @@ var enemy = {
 					ataquesValores: []
 				},
 				shuraFuza: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
 				braham: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-				yama: {},
-				gedatsu: {},
-				enel: {},
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				yama: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				gedatsu: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				enel: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
 			},
 		},
 		water7: {
 			davyBackFight: {
-				foxy: {}
+				foxy: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				}
 			},
 			water7: {
-				frankyFamily: {},
-				secondFrankyFamily: {},
-				ussop: {},
-				franky: {},
-				paulie: {},
-				jerry: {},
-				wanze: {},
-				nero: {},
-				blueno: {}
+				frankyFamily: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				secondFrankyFamily: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				ussop: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				franky: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				paulie: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				jerry: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				wanze: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				nero: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				blueno: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				}
 			},
 			enniesLobby: {
-				kasheeOimo: {},
-				blueno: {},
-				kalifa: {},
-				chapapa: {},
-				kumadori: {},
-				monsterChopper: {},
-				jabra: {},
-				kaku: {},
-				robLucci: {},
-				spandam: {}
+				kasheeOimo: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				blueno: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				kalifa: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				chapapa: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				kumadori: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				monsterChopper: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				jabra: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				kaku: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				robLucci: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				spandam: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				}
 			},
 			postEnniesLobby: {
-				coby: {},
-				helmeppo: {},
-				shanksVSwhitebeard: {},
-				monkeyDGarp: {},
-				aceVSblackbeard: {},
-
+				coby: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				helmeppo: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				shanksVSwhitebeard: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				monkeyDGarp: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				},
+				aceVSblackbeard: {
+					HP: ,
+					maxHP: ,
+					MP: ,
+					maxMP: ,
+					ataques: [],
+					ataquesCoste: [],
+					ataquesValores: []
+				}
 			}
 		}
 	}
 }
-
-/*
-var statsObj = {
-	HP: xmlhttp.responseXML.querySelectorAll("GUI > stats > HP")[0].childNodes[0].nodeValue,
-	MP: xmlhttp.responseXML.querySelectorAll("characters >" + names[nameNumber].id + "> MP")[0].childNodes[0].nodeValue
-
-}
 */
+
 var Sanji = {
 	id: "sanji",
 	name: "Sanji",
@@ -786,7 +667,7 @@ var Sanji = {
 	ataques: ["Patada Pierna Negra", "Disparo de Venado", "Patada Escalope", "Espectro del Pan Frito", "Pierna del Diablo"],
 	ataquesValores: [4, 7, 9, 15, 22],
 	ataquesCoste: [0, 2, 6, 11, 100],
-}
+};
 
 var Luffy = {
 	id: "luffy",
@@ -801,7 +682,7 @@ var Luffy = {
 	ataques: ["Estira el brazo, puñetazo", "Galleta galleta, metralleta", "Retuérce el tornillo, Molinillo", "Estira el cuello mazo, cabezazo", "Haki del Rey"],
 	ataquesValores: [5, 11, 13, 17, 27],
 	ataquesCoste: [0, 1, 7, 11, 115],
-}
+};
 
 var Zoro = {
 	id: "zoro",
@@ -816,7 +697,7 @@ var Zoro = {
 	ataques: ["Sablazo", "Estilo de Tres Espadas", "Corte del Demonio", "Espiral del Dragón", "Tatsumaki"],
 	ataquesValores: [6, 8, 12, 15, 22],
 	ataquesCoste: [0, 3, 5, 14, 95],
-}
+};
 
 var GodMode = { // Personaje de Prueba o Cheat
 	id: "godmode",
@@ -831,7 +712,7 @@ var GodMode = { // Personaje de Prueba o Cheat
 	ataques: ["Kamehameha", "Furia del Proletariado", "Kung Fury", "PapuAtaque", "Ataque Final"],
 	ataquesValores: [10, 100, 1000, 10000, 999999],
 	ataquesCoste: [1, 1, 1, 1, 1],
-}
+};
 var Nami = {
 	id: "nami",
 	name: "Nami",
@@ -845,7 +726,7 @@ var Nami = {
 	ataques: ["Patada", "Robo"/*Tiene una probabilidad de dar Vida o MP*/, "Ataque Climático", "Tormenta", "Nube de Enel"],
 	ataquesValores: [1, 1, 5, 8, 11],
 	ataquesCoste: [0, 1, 3, 3, 9],
-}
+};
 
 var Ussop = {
 	id: "usuf",
@@ -860,7 +741,7 @@ var Ussop = {
 	ataques: ["Tiro", "Canica Explosiva", "Canica de Fuego", "Canica de Kaya", "Taifa de Ussop"],
 	ataquesValores: [1, 3, 8, 9, 13],
 	ataquesCoste: [0, 2, 5, 9, 13],
-}
+};
 
 var Chopper = {
 	id: "chopper",
@@ -890,7 +771,7 @@ var Robin = {
 	ataques: ["Brotad en 3", "Brotad en 5", "10 Flores", "Infinitas Flores", "Brotad en Millones"],
 	ataquesValores: [3, 6, 8, 14, 20],
 	ataquesCoste: [0, 3, 4, 7, 16],
-}
+};
 
 var Franky = {
 	id: "franky",
@@ -905,12 +786,355 @@ var Franky = {
 	ataques: ["Weapons Left", "Strong Hammer", "Lanzallamas", "Coup de Vent", "SUUUUUUUUUUPER"],
 	ataquesValores: [1, 3, 6 /*Añade en Llamas*/, 5 /*Sube HP*/, 18],
 	ataquesCoste: [0, 2, 4, 5, 10],
-}
+};
 
 // Generic Villain
 
 
-var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];
+var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
+var nameNumber = 0;
+var currentCharacter = names[0];
+
+
+/*
+███╗   ███╗███████╗ ██████╗ █████╗ ███╗   ██╗██╗███████╗███╗   ███╗ ██████╗ ███████╗
+████╗ ████║██╔════╝██╔════╝██╔══██╗████╗  ██║██║██╔════╝████╗ ████║██╔═══██╗██╔════╝
+██╔████╔██║█████╗  ██║     ███████║██╔██╗ ██║██║███████╗██╔████╔██║██║   ██║███████╗
+██║╚██╔╝██║██╔══╝  ██║     ██╔══██║██║╚██╗██║██║╚════██║██║╚██╔╝██║██║   ██║╚════██║
+██║ ╚═╝ ██║███████╗╚██████╗██║  ██║██║ ╚████║██║███████║██║ ╚═╝ ██║╚██████╔╝███████║
+╚═╝     ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝
+*/
+// VARIABLES
+
+var nivelExp = 1;
+var expPoints = 1;
+var luffyVida = 500;
+var gradoActual = 0;
+
+// SAVING TIME
+
+var writer = function(id,text){
+	document.getElementById(id).innerHTML = text;
+}
+
+var hide = function(id){
+	document.getElementById(id).classList.add('hidden');
+}
+
+var show = function(id){
+	document.getElementById(id).classList.remove('hidden');
+}
+
+var randomizer = function(multi){
+	return Math.floor(Math.random() * multi);
+}
+
+var checkArray = function(objeto, array){
+	for(var i = 0; i < array.length; i++){
+		if(array[i] === objeto){
+			return true;
+		}
+	}
+
+	return false;
+}
+
+var randomString = function(length){
+	var char = [];
+	var RStemp;
+	for(var i = 0; i < length; i++){
+		switch(Math.floor(Math.random() * 30)){
+			case 0:
+				RStemp = "A";
+				break;
+			case 1:
+				RStemp = "H";
+				break;
+			case 2:
+				RStemp = "t";
+				break;
+			case 3:
+				RStemp = "Q";
+				break;
+			case 4:
+				RStemp = "j";
+				break;
+			case 5:
+				RStemp = "7";
+				break;
+			case 6:
+				RStemp = "8";
+				break;
+			case 7:
+				RStemp = "Y";
+				break;
+			case 8:
+				RStemp = "G";
+				break;
+			case 9:
+				RStemp = "l";
+				break;
+			case 10:
+				RStemp = "9";
+				break;
+			case 11:
+				RStemp = "L";
+				break;
+			case 12:
+				RStemp = "M";
+				break;
+			case 13:
+				RStemp = "n";
+				break;
+			case 14:
+				RStemp = "X";
+				break;
+			case 15:
+				RStemp = "z";
+				break;
+			case 16:
+				RStemp = "X";
+				break;
+			case 17:
+				RStemp = "B";
+				break;
+			case 18:
+				RStemp = "W";
+				break;
+			case 19:
+				RStemp = "q";
+				break;
+			case 20:
+				RStemp = "S";
+				break;
+			case 21:
+				RStemp = "a";
+				break;
+			case 22:
+				RStemp = "K";
+				break;
+			case 23:
+				RStemp = "i";
+				break;
+			case 24:
+				RStemp = "-";
+				break;
+			case 25:
+				RStemp = "M";
+				break;
+			case 26:
+				RStemp = "_";
+				break;
+			case 27:
+				RStemp = "b";
+				break;
+			case 28:
+				RStemp = "v";
+				break;
+			case 29:
+				RStemp = "P";
+				break;
+			case 30:
+				RStemp = "7";
+				break;
+		}
+		char.push(RStemp);
+	}
+	return char.join("");
+}
+
+/*
+██╗  ██╗███╗   ███╗██╗         ██████╗  █████╗ ██████╗ ███████╗██╗███╗   ██╗ ██████╗
+╚██╗██╔╝████╗ ████║██║         ██╔══██╗██╔══██╗██╔══██╗██╔════╝██║████╗  ██║██╔════╝
+ ╚███╔╝ ██╔████╔██║██║         ██████╔╝███████║██████╔╝███████╗██║██╔██╗ ██║██║  ███╗
+ ██╔██╗ ██║╚██╔╝██║██║         ██╔═══╝ ██╔══██║██╔══██╗╚════██║██║██║╚██╗██║██║   ██║
+██╔╝ ██╗██║ ╚═╝ ██║███████╗    ██║     ██║  ██║██║  ██║███████║██║██║ ╚████║╚██████╔╝
+╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝
+
+*/
+
+var xmlhttp;
+var xmlDocument;
+var language = window.navigator.userLanguage || window.navigator.language;
+
+if(window.XMLHttpRequest){ //Modern Browsers
+    xmlhttp = new XMLHttpRequest();
+}else{ // IE
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+if(language == "es-ES"){
+	xmlhttp.open("GET", "locale/es-ES.xml", true);
+	xmlhttp.send();
+}else{
+	xmlhttp.open("GET", "locale/en-US.xml", true);
+	xmlhttp.send();
+}
+
+console.log("Lang: " + language);
+
+
+// START AND CLEAR
+
+var start = function(){
+	console.log("Game Started");
+	writer("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
+	hide("inicio");
+	hide("nameChange");
+	hide("cc")
+	show("d1_a");
+	show("d1_b");
+	checkHUD(); /* No more random name
+	if(randomName == true){
+		switch(nameNumber){
+			case 0: //Luffy
+				break;
+			case 1: // Sanji
+				hide("i_intro_luffy");
+				show("i_intro_sanji");
+				document.getElementById("stats").classList.add('stats-sanji');
+				break;
+			case 2: // Zoro
+				hide("i_intro_luffy");
+				show("i_intro_zoro");
+				document.getElementById("stats").classList.add('stats-zoro');
+				break;
+			case 3: //Nami
+				hide("i_intro_luffy");
+				show("i_intro_nami");
+				document.getElementById("stats").classList.add('stats-nami');
+				break;
+			case 4: //Ussop
+				hide("i_intro_luffy");
+				show("i_intro_ussop");
+				document.getElementById("stats").classList.add('stats-ussop');
+				writer("name", Ussop.longName);
+				break;
+			case 5: //Robin
+ 				hide("i_intro_luffy");
+ 				show("i_intro_robin");
+ 				document.getElementById("stats").classList.add('stats-robin');
+ 				break;
+			case 6: //Franky
+ 				hide("i_intro_luffy");
+ 				show("i_intro_franky");
+ 				document.getElementById("stats").classList.add('stats-franky');
+ 				break;
+			case 7: //Chopper TEMPORALMENTE DESHABILITADO
+ 				hide("i_intro_luffy");
+ 				show("i_intro_chopper");
+ 				document.getElementById("stats").classList.add('stats-chopper');
+ 				break;
+		}
+		writer("name", names[nameNumber].longName)
+		console.log("Name:" + " " + names[nameNumber].name);
+	}else{
+		nameNumber = 0;
+		console.log("Name:" + " " + Luffy.name);
+		writer("name", "Monkey D. Luffy");
+	};*/
+	nameNumber = 0;
+	writer("name", names[nameNumber].longName);
+};
+
+
+// names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
+var usados = [nameNumber];
+
+var SdPGenerator = function(index){
+	if(randomName === true){
+		var personaje = Math.floor(Math.random() * 8);
+		var temp = checkArray(personaje, usados);
+		do{
+			if(temp === true){
+				personaje = Math.floor(Math.random() * 8);
+				temp = checkArray(personaje, usados);
+			}else{
+				usados.push(personaje);
+				return personaje;
+			}
+		}while(temp === true)
+	}else{
+		switch (index) {
+			case 2:
+				return 2;
+				break;
+			case 3:
+				return 3;
+				break;
+			case 4:
+				return 4;
+				break;
+			case 5:
+				return 1;
+				break;
+			case 6:
+				return 7;
+				break;
+			case 7:
+				return 5;
+				break;
+			case 8:
+				return 6;
+				break;
+		}
+	}
+}
+
+var characterChosen = function(character){
+	hide("nameChange");
+	nameNumber = character;
+	return true;
+}
+
+var segundoSdP = SdPGenerator(2);
+var tercerSdP = SdPGenerator(3);
+var cuartoSdP = SdPGenerator(4);
+var quintoSdP = SdPGenerator(5);
+var sextoSdP = SdPGenerator(6);
+var septimoSdP = SdPGenerator(7);
+var octavoSdp = SdPGenerator(8);
+
+var clear = function(){
+	document.getElementById("intro").innerHTML = " ";
+	document.getElementById("a1").innerHTML = " ";
+	document.getElementById("a2").innerHTML = " ";
+	document.getElementById("a3").innerHTML = " ";
+	document.getElementById("a4").innerHTML = " ";
+	document.getElementById("b1").innerHTML = " ";
+	document.getElementById("b2").innerHTML = " ";
+	document.getElementById("b3").innerHTML = " ";
+	document.getElementById("b4").innerHTML = " ";
+	document.getElementById("c1").innerHTML = " ";
+	document.getElementById("c2").innerHTML = " ";
+	document.getElementById("c3").innerHTML = " ";
+	document.getElementById("fin").innerHTML = " ";
+}
+var turnCount = 0;
+var fight = {
+	setUp: function(){
+		document.getElementById("combatUI").classList.remove('combatUI-inactive');
+		writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
+		writer("at1", names[nameNumber].ataques[0]);
+		writer("at2", names[nameNumber].ataques[1]);
+		writer("at3", names[nameNumber].ataques[2]);
+		writer("at4", names[nameNumber].ataques[3]);
+		writer("at5", names[nameNumber].ataques[4]);
+		combatHUD();
+	},
+	atackAlly: function(ataque){
+		names[nameNumber].MP -= names[nameNumber].ataquesCoste[ataque];
+		enemy.HP -= names[nameNumber].ataquesValores[ataque];
+		expPoints += Math.floor(Math.random() * 100);
+	},
+	atackEnemy: function(whichEnemy, ataque){
+		turnCount++;
+	},
+	endBattle: function(){
+		turnCount = 0;
+
+	}
+}
 
 // RECUPERACIÓN Y EXPERIENCIA
 
