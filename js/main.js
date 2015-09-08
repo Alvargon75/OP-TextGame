@@ -1381,21 +1381,22 @@ var buggy1 = function(){
 
 
 /*
-	 █████╗ ██╗   ██╗██╗   ██╗██████╗  █████╗ ███████╗
-	██╔══██╗╚██╗ ██╔╝██║   ██║██╔══██╗██╔══██╗██╔════╝
-	███████║ ╚████╔╝ ██║   ██║██║  ██║███████║███████╗
-	██╔══██║  ╚██╔╝  ██║   ██║██║  ██║██╔══██║╚════██║
-	██║  ██║   ██║   ╚██████╔╝██████╔╝██║  ██║███████║
-	╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗
+██╔══██╗██╔════╝██╔══██╗██║   ██║██╔════╝
+██║  ██║█████╗  ██████╔╝██║   ██║██║  ███╗
+██║  ██║██╔══╝  ██╔══██╗██║   ██║██║   ██║
+██████╔╝███████╗██████╔╝╚██████╔╝╚██████╔╝
+╚═════╝ ╚══════╝╚═════╝  ╚═════╝  ╚═════╝
 */
-/*
-Cosas que copiar comunes:
 
-	document.getElementById("").innerHTML = "";
-	document.getElementById("").classList.add('');
-	document.getElementById("").classList.remove('');
-	document.getElementById("").classList.add('hidden');
-	document.getElementById("").classList.remove('hidden');
+var debug = {
+	funcionTest: function(funcion, funcionValores/*Pilla un array*/){
+		var argumentos;
+		for(var i = 0; i < funcionValores.length; i++){
 
-	xmlhttp.responseXML.querySelectorAll('')[0].childNodes[0].nodeValue
-*/
+		}
+		try{
+			funcion();
+		}
+	}
+}
