@@ -1,4 +1,4 @@
-/*
+﻿/*
 	 ██████╗██╗  ██╗ █████╗ ██████╗  █████╗  ██████╗████████╗███████╗██████╗ ███████╗
 	██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
 	██║     ███████║███████║██████╔╝███████║██║        ██║   █████╗  ██████╔╝███████╗
@@ -22,637 +22,7 @@ El tema de los estados va por numeros:
 
 */
 
-// GENERIC ENEMY OBJECT
-/*
-var enemy = {
-	generic: {
-		HP: ,
-		maxHP: ,
-		MP: ,
-		maxMP: ,
-		ataques: [],
-		ataquesCoste: [],
-		ataquesValores: []
-	},
-	alvida: {
-		HP: 20,
-		maxHP: 20,
-		MP: 18,
-		maxMP: 18,
-		ataques: ["Puñetazo", "Mazazo"],
-		ataquesCoste: [0, 3],
-		ataquesValores: [1, 4]
-	},
-	buggy: {
-		HP: 100,
-		maxHP: 100,
-		MP: 78,
-		maxMP: 78,
-		ataques: ["", "", ""],
-		ataquesCoste: [],
-		ataquesValores: []
-	},
-	krieg: {
-		HP: 180,
-		maxHP: 180,
-		MP: 120,
-		maxMP: 120,
-		ataques: [],
-		ataquesCoste: [],
-		ataquesValores: []
-	},
-	arlongPark: {
-		arlong: {
-			HP: 300,
-			maxHP: 300,
-			MP: 210,
-			maxMP: 210,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
-		},
-		octi: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
-		},
-		kurobi: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
-		},
-		chew: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
-		},
-	},
-	logueTown: {
-		smoker: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
-		},
-		tashigi: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
-		}
-	},
-	arabasta: {
-		whiskeyPeak: {
-			multitud: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			igarapoi: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			// TODO Incluir la pelea de Zorro y Luffy
-			mr5: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			missValentine: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-		},
-		littleGarden: {
-			mr5: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			missValentine: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
 
-			},
-			missGoldenWeek: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			mr3: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			mr13: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			missFriday: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-		},
-		drum: {
-			kureha: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			chess: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			kuromanimo: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			wapol: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-		},
-		arabasta: {
-			smoker: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			}, // VS Portgas D. Ace
-			missSunday: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			crocodile: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			mr4: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			missXmas: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			bentham: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			paula: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			dazBones: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			crocodilePalace: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			crocodilePantheon: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-		},
-		skypea: {
-			jaya: {
-				bellamy: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-			},
-			skyIsle: {
-				satori: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				shuraFuza: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				braham: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				yama: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				gedatsu: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				enel: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-			},
-		},
-		water7: {
-			davyBackFight: {
-				foxy: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				}
-			},
-			water7: {
-				frankyFamily: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				secondFrankyFamily: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				ussop: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				franky: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				paulie: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				jerry: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				wanze: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				nero: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				blueno: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				}
-			},
-			enniesLobby: {
-				kasheeOimo: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				blueno: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				kalifa: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				chapapa: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				kumadori: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				monsterChopper: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				jabra: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				kaku: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				robLucci: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				spandam: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				}
-			},
-			postEnniesLobby: {
-				coby: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				helmeppo: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				shanksVSwhitebeard: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				monkeyDGarp: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				},
-				aceVSblackbeard: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
-				}
-			}
-		}
-	}
-}
-*/
 
 var Sanji = {
 	id: "sanji",
@@ -980,8 +350,6 @@ var start = function(){
 	console.log("Game Started");
 	writer("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
 	hide("inicio");
-	hide("nameChange");
-	hide("cc")
 	show("d1_a");
 	show("d1_b");
 	checkHUD(); /* No more random name
@@ -1112,7 +480,7 @@ var clear = function(){
 }
 var turnCount = 0;
 var fight = {
-	setUp: function(){
+	setUp: function(enemyName){
 		document.getElementById("combatUI").classList.remove('combatUI-inactive');
 		writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
 		writer("at1", names[nameNumber].ataques[0]);
@@ -1184,12 +552,15 @@ var ataqueVillano = function(dano, multi){
 	╚═╝  ╚═╝╚═╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
 */
 /*
-	__  .__   __.  __    ______  __    ______
-	|  | |  \ |  | |  |  /      ||  |  /  __  \
-	|  | |   \|  | |  | |  ,----'|  | |  |  |  |
-	|  | |  . `  | |  | |  |     |  | |  |  |  |
-	|  | |  |\   | |  | |  `----.|  | |  `--'  |
-	|__| |__| \__| |__|  \______||__|  \______/
+$$$$$$\           $$\           $$\
+\_$$  _|          \__|          \__|
+  $$ |  $$$$$$$\  $$\  $$$$$$$\ $$\  $$$$$$\
+  $$ |  $$  __$$\ $$ |$$  _____|$$ |$$  __$$\
+  $$ |  $$ |  $$ |$$ |$$ /      $$ |$$ /  $$ |
+  $$ |  $$ |  $$ |$$ |$$ |      $$ |$$ |  $$ |
+$$$$$$\ $$ |  $$ |$$ |\$$$$$$$\ $$ |\$$$$$$  |
+\______|\__|  \__|\__| \_______|\__| \______/
+
 	Inicio
 */
 var marine = function(){
@@ -1241,12 +612,14 @@ var fullbodyContinua = function(){
 }
 
 /*
-	___       __      ____    ____  __   _______       ___
-    /   \     |  |     \   \  /   / |  | |       \     /   \
-	/  ^  \    |  |      \   \/   /  |  | |  .--.  |   /  ^  \
-	/  /_\  \   |  |       \      /   |  | |  |  |  |  /  /_\  \
-	/  _____  \  |  `----.   \    /    |  | |  '--'  | /  _____  \
-	/__/     \__\ |_______|    \__/     |__| |_______/ /__/     \__\
+ $$$$$$\  $$\            $$\       $$\
+$$  __$$\ $$ |           \__|      $$ |
+$$ /  $$ |$$ |$$\    $$\ $$\  $$$$$$$ | $$$$$$\
+$$$$$$$$ |$$ |\$$\  $$  |$$ |$$  __$$ | \____$$\
+$$  __$$ |$$ | \$$\$$  / $$ |$$ /  $$ | $$$$$$$ |
+$$ |  $$ |$$ |  \$$$  /  $$ |$$ |  $$ |$$  __$$ |
+$$ |  $$ |$$ |   \$  /   $$ |\$$$$$$$ |\$$$$$$$ |
+\__|  \__|\__|    \_/    \__| \_______| \_______|
 	Alvida
 */
 
@@ -1286,12 +659,17 @@ var rendirseAlv = function(){
 	document.getElementById("a3").innerHTML = xmlhttp.responseXML.querySelectorAll("alvida > surrender")[0].childNodes[0].nodeValue;
 }
 /*
-	.______    __    __    _______   ___________    ____
-	|   _  \  |  |  |  |  /  _____| /  _____\   \  /   /
-	|  |_)  | |  |  |  | |  |  __  |  |  __  \   \/   /
-	|   _  <  |  |  |  | |  | |_ | |  | |_ |  \_    _/
-	|  |_)  | |  `--'  | |  |__| | |  |__| |    |  |
-	|______/   \______/   \______|  \______|    |__|
+$$$$$$$\
+$$  __$$\
+$$ |  $$ |$$\   $$\  $$$$$$\   $$$$$$\  $$\   $$\
+$$$$$$$\ |$$ |  $$ |$$  __$$\ $$  __$$\ $$ |  $$ |
+$$  __$$\ $$ |  $$ |$$ /  $$ |$$ /  $$ |$$ |  $$ |
+$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |
+$$$$$$$  |\$$$$$$  |\$$$$$$$ |\$$$$$$$ |\$$$$$$$ |
+\_______/  \______/  \____$$ | \____$$ | \____$$ |
+                    $$\   $$ |$$\   $$ |$$\   $$ |
+                    \$$$$$$  |\$$$$$$  |\$$$$$$  |
+                     \______/  \______/  \______/
 	Buggy
 */
 var buggy1 = function(){
@@ -1300,102 +678,121 @@ var buggy1 = function(){
 }
 
 /*
-	.______        ___      .______          ___   .___________. __   _______
-	|   _  \      /   \     |   _  \        /   \  |           ||  | |   ____|
-	|  |_)  |    /  ^  \    |  |_)  |      /  ^  \ `---|  |----`|  | |  |__
-	|   _  <    /  /_\  \   |      /      /  /_\  \    |  |     |  | |   __|
-	|  |_)  |  /  _____  \  |  |\  \----./  _____  \   |  |     |  | |  |____
-	|______/  /__/     \__\ | _| `._____/__/     \__\  |__|     |__| |_______|
+$$$$$$$\                                $$\     $$\
+$$  __$$\                               $$ |    \__|
+$$ |  $$ | $$$$$$\   $$$$$$\  $$$$$$\ $$$$$$\   $$\  $$$$$$\
+$$$$$$$\ | \____$$\ $$  __$$\ \____$$\\_$$  _|  $$ |$$  __$$\
+$$  __$$\  $$$$$$$ |$$ |  \__|$$$$$$$ | $$ |    $$ |$$$$$$$$ |
+$$ |  $$ |$$  __$$ |$$ |     $$  __$$ | $$ |$$\ $$ |$$   ____|
+$$$$$$$  |\$$$$$$$ |$$ |     \$$$$$$$ | \$$$$  |$$ |\$$$$$$$\
+\_______/  \_______|\__|      \_______|  \____/ \__| \_______|
 	Baratie
 */
 
 /*
-	___      .______       __        ______   .__   __.   _______    .______      ___      .______       __  ___
-    /   \     |   _  \     |  |      /  __  \  |  \ |  |  /  _____|   |   _  \    /   \     |   _  \     |  |/  /
-	/  ^  \    |  |_)  |    |  |     |  |  |  | |   \|  | |  |  __     |  |_)  |  /  ^  \    |  |_)  |    |  '  /
-	/  /_\  \   |      /     |  |     |  |  |  | |  . `  | |  | |_ |    |   ___/  /  /_\  \   |      /     |    <
-	/  _____  \  |  |\  \----.|  `----.|  `--'  | |  |\   | |  |__| |    |  |     /  _____  \  |  |\  \----.|  .  \
-	/__/     \__\ | _| `._____||_______| \______/  |__| \__|  \______|    | _|    /__/     \__\ | _| `._____||__|\__\
+$$$$$$\            $$\                                     $$$$$$$\                     $$\
+$$  __$$\           $$ |                                    $$  __$$\                    $$ |
+$$ /  $$ | $$$$$$\  $$ | $$$$$$\  $$$$$$$\   $$$$$$\        $$ |  $$ |$$$$$$\   $$$$$$\  $$ |  $$\
+$$$$$$$$ |$$  __$$\ $$ |$$  __$$\ $$  __$$\ $$  __$$\       $$$$$$$  |\____$$\ $$  __$$\ $$ | $$  |
+$$  __$$ |$$ |  \__|$$ |$$ /  $$ |$$ |  $$ |$$ /  $$ |      $$  ____/ $$$$$$$ |$$ |  \__|$$$$$$  /
+$$ |  $$ |$$ |      $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |      $$ |     $$  __$$ |$$ |      $$  _$$<
+$$ |  $$ |$$ |      $$ |\$$$$$$  |$$ |  $$ |\$$$$$$$ |      $$ |     \$$$$$$$ |$$ |      $$ | \$$\
+\__|  \__|\__|      \__| \______/ \__|  \__| \____$$ |      \__|      \_______|\__|      \__|  \__|
+										   $$\   $$ |
+										   \$$$$$$  |
+											\______/
 	Arlong Park
 */
 
 /*
-	__        ______     _______  __    __   _______
-	|  |      /  __  \   /  _____||  |  |  | |   ____|
-	|  |     |  |  |  | |  |  __  |  |  |  | |  |__
-	|  |     |  |  |  | |  | |_ | |  |  |  | |   __|
-	|  `----.|  `--'  | |  |__| | |  `--'  | |  |____
-	|_______| \______/   \______|  \______/  |_______|
+$$\                                               $$\
+$$ |                                              $$ |
+$$ |      $$$$$$\   $$$$$$\  $$\   $$\  $$$$$$\ $$$$$$\    $$$$$$\  $$\  $$\  $$\ $$$$$$$\
+$$ |     $$  __$$\ $$  __$$\ $$ |  $$ |$$  __$$\\_$$  _|  $$  __$$\ $$ | $$ | $$ |$$  __$$\
+$$ |     $$ /  $$ |$$ /  $$ |$$ |  $$ |$$$$$$$$ | $$ |    $$ /  $$ |$$ | $$ | $$ |$$ |  $$ |
+$$ |     $$ |  $$ |$$ |  $$ |$$ |  $$ |$$   ____| $$ |$$\ $$ |  $$ |$$ | $$ | $$ |$$ |  $$ |
+$$$$$$$$\\$$$$$$  |\$$$$$$$ |\$$$$$$  |\$$$$$$$\  \$$$$  |\$$$$$$  |\$$$$$\$$$$  |$$ |  $$ |
+\________|\______/  \____$$ | \______/  \_______|  \____/  \______/  \_____\____/ \__|  \__|
+                   $$\   $$ |
+                   \$$$$$$  |
+                    \______/
 	Logue
 */
 
 /*
-	_______ .______          ___      .__   __.  _______      __       __  .__   __.  _______
-	/  _____||   _  \        /   \     |  \ |  | |       \    |  |     |  | |  \ |  | |   ____|
-	|  |  __  |  |_)  |      /  ^  \    |   \|  | |  .--.  |   |  |     |  | |   \|  | |  |__
-	|  | |_ | |      /      /  /_\  \   |  . `  | |  |  |  |   |  |     |  | |  . `  | |   __|
-	|  |__| | |  |\  \----./  _____  \  |  |\   | |  '--'  |   |  `----.|  | |  |\   | |  |____
-	\______| | _| `._____/__/     \__\ |__| \__| |_______/    |_______||__| |__| \__| |_______|
+$$$$$$\                                     $$\       $$\       $$\
+$$  __$$\                                    $$ |      $$ |      \__|
+$$ /  \__| $$$$$$\  $$$$$$\  $$$$$$$\   $$$$$$$ |      $$ |      $$\ $$$$$$$\   $$$$$$\
+$$ |$$$$\ $$  __$$\ \____$$\ $$  __$$\ $$  __$$ |      $$ |      $$ |$$  __$$\ $$  __$$\
+$$ |\_$$ |$$ |  \__|$$$$$$$ |$$ |  $$ |$$ /  $$ |      $$ |      $$ |$$ |  $$ |$$$$$$$$ |
+$$ |  $$ |$$ |     $$  __$$ |$$ |  $$ |$$ |  $$ |      $$ |      $$ |$$ |  $$ |$$   ____|
+\$$$$$$  |$$ |     \$$$$$$$ |$$ |  $$ |\$$$$$$$ |      $$$$$$$$\ $$ |$$ |  $$ |\$$$$$$$\
+\______/ \__|      \_______|\__|  \__| \_______|      \________|\__|\__|  \__| \_______|
 	Grand Line
 */
 
 /*
-	___      .______          ___      .______        ___           _______.___________.    ___
-    /   \     |   _  \        /   \     |   _  \      /   \         /       |           |   /   \
-	/  ^  \    |  |_)  |      /  ^  \    |  |_)  |    /  ^  \       |   (----`---|  |----`  /  ^  \
-	/  /_\  \   |      /      /  /_\  \   |   _  <    /  /_\  \       \   \       |  |      /  /_\  \
-	/  _____  \  |  |\  \----./  _____  \  |  |_)  |  /  _____  \  .----)   |      |  |     /  _____  \
-	/__/     \__\ | _| `._____/__/     \__\ |______/  /__/     \__\ |_______/       |__|    /__/     \__\
+$$$$$$\                     $$\                             $$\
+$$  __$$\                    $$ |                            $$ |
+$$ /  $$ | $$$$$$\  $$$$$$\  $$$$$$$\   $$$$$$\   $$$$$$$\ $$$$$$\    $$$$$$\
+$$$$$$$$ |$$  __$$\ \____$$\ $$  __$$\  \____$$\ $$  _____|\_$$  _|   \____$$\
+$$  __$$ |$$ |  \__|$$$$$$$ |$$ |  $$ | $$$$$$$ |\$$$$$$\    $$ |     $$$$$$$ |
+$$ |  $$ |$$ |     $$  __$$ |$$ |  $$ |$$  __$$ | \____$$\   $$ |$$\ $$  __$$ |
+$$ |  $$ |$$ |     \$$$$$$$ |$$$$$$$  |\$$$$$$$ |$$$$$$$  |  \$$$$  |\$$$$$$$ |
+\__|  \__|\__|      \_______|\_______/  \_______|\_______/    \____/  \_______|
 	Arabasta
 */
 
 /*
-	   _______. __  ___ ____    ____ .______    _______     ___
-      /       ||  |/  / \   \  /   / |   _  \  |   ____|   /   \
-     |   (----`|  '  /   \   \/   /  |  |_)  | |  |__     /  ^  \
-     \   \    |    <     \_    _/   |   ___/  |   __|   /  /_\  \
-     .----)   |   |  .  \      |  |     |  |      |  |____ /  _____  \
-   |_______/    |__|\__\     |__|     | _|      |_______/__/     \__\
+$$$$$$\  $$\
+$$  __$$\ $$ |
+$$ /  \__|$$ |  $$\ $$\   $$\  $$$$$$\   $$$$$$\   $$$$$$\
+\$$$$$$\  $$ | $$  |$$ |  $$ |$$  __$$\ $$  __$$\  \____$$\
+\____$$\ $$$$$$  / $$ |  $$ |$$ /  $$ |$$$$$$$$ | $$$$$$$ |
+$$\   $$ |$$  _$$<  $$ |  $$ |$$ |  $$ |$$   ____|$$  __$$ |
+\$$$$$$  |$$ | \$$\ \$$$$$$$ |$$$$$$$  |\$$$$$$$\ \$$$$$$$ |
+\______/ \__|  \__| \____$$ |$$  ____/  \_______| \_______|
+				   $$\   $$ |$$ |
+				   \$$$$$$  |$$ |
+					\______/ \__|
 	Skypea
 */
 
-/*
-	.__   __.      ___   ____    ____  ___      .______        ______   .__   __.  _______
-	|  \ |  |     /   \  \   \  /   / /   \     |   _  \      /  __  \  |  \ |  | |   ____|
-	|   \|  |    /  ^  \  \   \/   / /  ^  \    |  |_)  |    |  |  |  | |   \|  | |  |__
-	|  . `  |   /  /_\  \  \      / /  /_\  \   |      /     |  |  |  | |  . `  | |   __|
-	|  |\   |  /  _____  \  \    / /  _____  \  |  |\  \----.|  `--'  | |  |\   | |  |____
-	|__| \__| /__/     \__\  \__/ /__/     \__\ | _| `._____| \______/  |__| \__| |_______|
-	Navarone
-*/
 
 /*
-	____    __    ____  ___   .___________. _______ .______          ______
-	\   \  /  \  /   / /   \  |           ||   ____||   _  \        |____  |
-	 \   \/    \/   / /  ^  \ `---|  |----`|  |__   |  |_)  |           / /
-	  \            / /  /_\  \    |  |     |   __|  |      /           / /
-	   \    /\    / /  _____  \   |  |     |  |____ |  |\  \----.     / /
-        \__/  \__/ /__/     \__\  |__|     |_______|| _| `._____|    /_/
+$$\      $$\            $$\                               $$$$$$$$\
+$$ | $\  $$ |           $$ |                              \____$$  |
+$$ |$$$\ $$ | $$$$$$\ $$$$$$\    $$$$$$\   $$$$$$\            $$  /
+$$ $$ $$\$$ | \____$$\\_$$  _|  $$  __$$\ $$  __$$\          $$  /
+$$$$  _$$$$ | $$$$$$$ | $$ |    $$$$$$$$ |$$ |  \__|        $$  /
+$$$  / \$$$ |$$  __$$ | $$ |$$\ $$   ____|$$ |             $$  /
+$$  /   \$$ |\$$$$$$$ | \$$$$  |\$$$$$$$\ $$ |            $$  /
+\__/     \__| \_______|  \____/  \_______|\__|            \__/
 	Water 7
 */
 
 
 /*
-	 █████╗ ██╗   ██╗██╗   ██╗██████╗  █████╗ ███████╗
-	██╔══██╗╚██╗ ██╔╝██║   ██║██╔══██╗██╔══██╗██╔════╝
-	███████║ ╚████╔╝ ██║   ██║██║  ██║███████║███████╗
-	██╔══██║  ╚██╔╝  ██║   ██║██║  ██║██╔══██║╚════██║
-	██║  ██║   ██║   ╚██████╔╝██████╔╝██║  ██║███████║
-	╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗
+██╔══██╗██╔════╝██╔══██╗██║   ██║██╔════╝
+██║  ██║█████╗  ██████╔╝██║   ██║██║  ███╗
+██║  ██║██╔══╝  ██╔══██╗██║   ██║██║   ██║
+██████╔╝███████╗██████╔╝╚██████╔╝╚██████╔╝
+╚═════╝ ╚══════╝╚═════╝  ╚═════╝  ╚═════╝
 */
-/*
-Cosas que copiar comunes:
 
-	document.getElementById("").innerHTML = "";
-	document.getElementById("").classList.add('');
-	document.getElementById("").classList.remove('');
-	document.getElementById("").classList.add('hidden');
-	document.getElementById("").classList.remove('hidden');
+var debug = {
+	funcionTest: function(funcion, funcionValores/*Pilla un array*/){
+		var argumentos;
+		for(var i = 0; i < funcionValores.length; i++){
 
-	xmlhttp.responseXML.querySelectorAll('')[0].childNodes[0].nodeValue
-*/
+		}
+		try{
+			funcion();
+		}catch(err){
+			console.log("Bug FOund");
+		}finally{
+			console.log("Debug Finished")
+		}
+	}
+}
