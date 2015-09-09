@@ -1,4 +1,4 @@
-/*
+﻿/*
 	 ██████╗██╗  ██╗ █████╗ ██████╗  █████╗  ██████╗████████╗███████╗██████╗ ███████╗
 	██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
 	██║     ███████║███████║██████╔╝███████║██║        ██║   █████╗  ██████╔╝███████╗
@@ -980,8 +980,6 @@ var start = function(){
 	console.log("Game Started");
 	writer("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
 	hide("inicio");
-	hide("nameChange");
-	hide("cc")
 	show("d1_a");
 	show("d1_b");
 	checkHUD(); /* No more random name
@@ -1112,7 +1110,7 @@ var clear = function(){
 }
 var turnCount = 0;
 var fight = {
-	setUp: function(){
+	setUp: function(enemyName){
 		document.getElementById("combatUI").classList.remove('combatUI-inactive');
 		writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
 		writer("at1", names[nameNumber].ataques[0]);
@@ -1397,7 +1395,7 @@ $$ | $\  $$ |           $$ |                              \____$$  |
 $$ |$$$\ $$ | $$$$$$\ $$$$$$\    $$$$$$\   $$$$$$\            $$  /
 $$ $$ $$\$$ | \____$$\\_$$  _|  $$  __$$\ $$  __$$\          $$  /
 $$$$  _$$$$ | $$$$$$$ | $$ |    $$$$$$$$ |$$ |  \__|        $$  /
-$$$  / \$$$ |$$  __$$ | $$ |$$\ $$   ____|$$ |             $$  /    
+$$$  / \$$$ |$$  __$$ | $$ |$$\ $$   ____|$$ |             $$  /
 $$  /   \$$ |\$$$$$$$ | \$$$$  |\$$$$$$$\ $$ |            $$  /
 \__/     \__| \_______|  \____/  \_______|\__|            \__/
 	Water 7
@@ -1421,6 +1419,10 @@ var debug = {
 		}
 		try{
 			funcion();
+		}catch(err){
+			console.log("Bug FOund");
+		}finally{
+			console.log("Debug Finished")
 		}
 	}
 }
