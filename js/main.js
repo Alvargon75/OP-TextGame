@@ -1,4 +1,4 @@
-﻿/*
+/*
 	 ██████╗██╗  ██╗ █████╗ ██████╗  █████╗  ██████╗████████╗███████╗██████╗ ███████╗
 	██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
 	██║     ███████║███████║██████╔╝███████║██║        ██║   █████╗  ██████╔╝███████╗
@@ -350,6 +350,8 @@ var start = function(){
 	console.log("Game Started");
 	writer("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
 	hide("inicio");
+	hide("nameChange");
+	hide("cc")
 	show("d1_a");
 	show("d1_b");
 	checkHUD(); /* No more random name
@@ -480,9 +482,9 @@ var clear = function(){
 }
 var turnCount = 0;
 var fight = {
-	setUp: function(enemyName){
+	setUp: function(enemy){
 		document.getElementById("combatUI").classList.remove('combatUI-inactive');
-		writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
+		writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemy.name);
 		writer("at1", names[nameNumber].ataques[0]);
 		writer("at2", names[nameNumber].ataques[1]);
 		writer("at3", names[nameNumber].ataques[2]);
@@ -782,17 +784,17 @@ $$  /   \$$ |\$$$$$$$ | \$$$$  |\$$$$$$$\ $$ |            $$  /
 */
 
 var debug = {
-	funcionTest: function(funcion, funcionValores/*Pilla un array*/){
+	funcionTest: function(funcion){
 		var argumentos;
 		for(var i = 0; i < funcionValores.length; i++){
 
 		}
 		try{
-			funcion();
+			funcion;
 		}catch(err){
-			console.log("Bug FOund");
+			console.log("Se encontró un error: " + err.name + " ." + err.message);
 		}finally{
-			console.log("Debug Finished")
+			console.log("Debug Acabado");
 		}
 	}
 }
