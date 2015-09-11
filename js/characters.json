@@ -42,332 +42,331 @@
 			"MP": 210,
 			"maxMP": 210,
 			"ataques": [],
-			ataquesCoste: [],
+			"ataquesCoste": [],
 			ataquesValores: []
 		},
-		octi: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
+		"octi": {
+			"HP": ,
+			"maxHP": ,
+			"MP": ,
+			"maxMP": ,
+			"ataques": [],
+			"ataquesCoste": [],
+			"ataquesValores": []
 		},
-		kurobi: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
+		"kurobi": {
+			"HP": ,
+			"maxHP": ,
+			"MP": ,
+			"maxMP": ,
+			"ataques": [],
+			"ataquesCoste": [],
+			"ataquesValores": []
 		},
-		chew: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
+		"chew": {
+			"HP": ,
+			"maxHP": ,
+			"MP": ,
+			"maxMP": ,
+			"ataques": [],
+			"ataquesCoste": [],
+			"ataquesValores": []
 		},
 	},
-	logueTown: {
-		smoker: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
+	"logueTown": {
+		"smoker": {
+			"HP": ,
+			"maxHP": ,
+			"MP": ,
+			"maxMP": ,
+			"ataques": [],
+			"ataquesCoste": [],
+			"ataquesValores": []
 		},
-		tashigi: {
-			HP: ,
-			maxHP: ,
-			MP: ,
-			maxMP: ,
-			ataques: [],
-			ataquesCoste: [],
-			ataquesValores: []
+		"tashigi": {
+			"HP": ,
+			"maxHP": ,
+			"MP": ,
+			"maxMP": ,
+			"ataques": [],
+			"ataquesCoste": [],
+			"ataquesValores": []
 		}
 	},
-	arabasta: {
-		whiskeyPeak: {
-			multitud: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+	"arabasta": {
+		"whiskeyPeak": {
+			"multitud": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
-			igarapoi: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"igarapoi": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
-			// TODO Incluir la pelea de Zorro y Luffy
-			mr5: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"mr5": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
-			missValentine: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"missValentine": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
 		},
-		littleGarden: {
-			mr5: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+		"littleGarden": {
+			"mr5": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
-			missValentine: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"missValentine": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 
 			},
-			missGoldenWeek: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"missGoldenWeek": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
-			mr3: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"mr3": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
-			mr13: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"mr13": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
-			missFriday: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-		},
-		drum: {
-			kureha: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			chess: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			kuromanimo: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			wapol: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"missFriday": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
 		},
-		arabasta: {
-			smoker: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			}, // VS Portgas D. Ace
-			missSunday: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+		"drum": {
+			"kureha": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
-			crocodile: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"chess": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
-			mr4: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"kuromanimo": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
-			missXmas: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			bentham: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			paula: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			dazBones: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			crocodilePalace: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
-			},
-			crocodilePantheon: {
-				HP: ,
-				maxHP: ,
-				MP: ,
-				maxMP: ,
-				ataques: [],
-				ataquesCoste: [],
-				ataquesValores: []
+			"wapol": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
 			},
 		},
-		skypea: {
-			jaya: {
-				bellamy: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
+		"arabasta": {
+			"smoker": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
+			},
+			"missSunday": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
+			},
+			"crocodile": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
+			},
+			"mr4": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
+			},
+			"missXmas": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
+			},
+			"bentham": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
+			},
+			"paula": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
+			},
+			"dazBones": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
+			},
+			"crocodilePalace": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
+			},
+			"crocodilePantheon": {
+				"HP": ,
+				"maxHP": ,
+				"MP": ,
+				"maxMP": ,
+				"ataques": [],
+				"ataquesCoste": [],
+				"ataquesValores": []
+			},
+		},
+		"skypea": {
+			"jaya": {
+				"bellamy": {
+					"HP": ,
+					"maxHP": ,
+					"MP": ,
+					"maxMP": ,
+					"ataques": [],
+					"ataquesCoste": [],
+					"ataquesValores": []
 				},
 			},
-			skyIsle: {
-				satori: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
+			"skyIsle": {
+				"satori": {
+					"HP": ,
+					"maxHP": ,
+					"MP": ,
+					"maxMP": ,
+					"ataques": [],
+					"ataquesCoste": [],
+					"ataquesValores": []
 				},
-				shuraFuza: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
+				"shuraFuza": {
+					"HP": ,
+					"maxHP": ,
+					"MP": ,
+					"maxMP": ,
+					"ataques": [],
+					"ataquesCoste": [],
+					"ataquesValores": []
 				},
-				braham: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
+				"braham": {
+					"HP": ,
+					"maxHP": ,
+					"MP": ,
+					"maxMP": ,
+					"ataques": [],
+					"ataquesCoste": [],
+					"ataquesValores": []
 				},
-				yama: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
+				"yama": {
+					"HP": ,
+					"maxHP": ,
+					"MP": ,
+					"maxMP": ,
+					"ataques": [],
+					"ataquesCoste": [],
+					"ataquesValores": []
 				},
 				gedatsu: {
 					HP: ,

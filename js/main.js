@@ -323,14 +323,17 @@ var randomString = function(length){
 
 */
 
-var xmlhttp;
-var xmlDocument;
+var xmlhttp, jsonhttp, jsonCharacters;
 var language = window.navigator.userLanguage || window.navigator.language;
 
 if(window.XMLHttpRequest){ //Modern Browsers
     xmlhttp = new XMLHttpRequest();
+	jsonhttp = new XMLHttpRequest();
+	jsonCharacters = new XMLHttpRequest();
 }else{ // IE
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	jsonhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	jsonCharacters = new ActiveXObject("Microsoft.XMLHTTP");
 }
 
 if(language == "es-ES"){
@@ -340,6 +343,12 @@ if(language == "es-ES"){
 	xmlhttp.open("GET", "locale/en-US.xml", true);
 	xmlhttp.send();
 }
+jsonhttp.open("GET", "locale/reference.json", true);
+jsonhttp.send();
+
+jsonCharacters.open("GET", "js/characters.json", true);
+jsonCharacters.send();
+
 
 console.log("Lang: " + language);
 
