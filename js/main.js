@@ -175,18 +175,14 @@ if(language == "es-ES"){
 }
 jsonFile.open("GET", "js/characters.json", true);
 jsonFile.send();
+var temp = JSON.stringify(jsonFile);
 
+var personajes = JSON.parse(temp);
 
 console.log("Lang: " + language);
 
-var readSource = function(file, reference){
-	if(file === "XML" || "xml" || xmlhttp){
-		return xmlhttp.responseXML.querySelectorAll(reference)[0].childNodes[0].nodeValue;
-	}else if(file === "JSON" || "json" || jsonFile){
-		return jsonFile.reference;
-	}else{
-		console.log("Error reading external files.");
-	}
+var readSource = function(reference){
+	return xmlhttp.responseXML.querySelectorAll(reference)[0].childNodes[0].nodeValue;
 }
 
 /*
@@ -216,10 +212,8 @@ El tema de los estados va por numeros:
 // Generic Villain
 //var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
 
-var names = [readSource(jsonFile, aliados.Luffy), readSource(jsonFile, aliados.Sanji), readSource(jsonFile, aliados.Zoro), readSource(jsonFile, aliados.Nami), readSource(jsonFile, aliados.Ussop), readSource(jsonFile, aliados.Robin), readSource(jsonFile, aliados.Franky), readSource(jsonFile, aliados.Chopper)];﻿
+var names = [personajes.aliados.Luffy, personajes.aliados.Sanji, personajes.aliados.Zoro, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Robin, personajes.aliados.Franky, personajes.aliados.Chopper];﻿
 var nameNumber = 0;
-var currentCharacter = names[0];
-
 
 // START AND CLEAR
 
