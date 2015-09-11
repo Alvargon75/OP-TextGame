@@ -368,47 +368,47 @@
 					"ataquesCoste": [],
 					"ataquesValores": []
 				},
-				gedatsu: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
+				"gedatsu": {
+					"HP": ,
+					"maxHP": ,
+					"MP": ,
+					"maxMP": ,
+					"ataques": [],
+					"ataquesCoste": [],
+					"ataquesValores": []
 				},
-				enel: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
+				"enel": {
+					"HP": ,
+					"maxHP": ,
+					"MP": ,
+					"maxMP": ,
+					"ataques": [],
+					"ataquesCoste": [],
+					"ataquesValores": []
 				},
 			},
 		},
-		water7: {
-			davyBackFight: {
-				foxy: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
+		"water7": {
+			"davyBackFight": {
+				"foxy": {
+					"HP": ,
+					"maxHP": ,
+					"MP": ,
+					"maxMP": ,
+					"ataques": [],
+					"ataquesCoste": [],
+					"ataquesValores": []
 				}
 			},
-			water7: {
-				frankyFamily: {
-					HP: ,
-					maxHP: ,
-					MP: ,
-					maxMP: ,
-					ataques: [],
-					ataquesCoste: [],
-					ataquesValores: []
+			"water7": {
+				"frankyFamily": {
+					"HP": ,
+					"maxHP": ,
+					"MP": ,
+					"maxMP": ,
+					"ataques": [],
+					"ataquesCoste": [],
+					"ataquesValores": []
 				},
 				"secondFrankyFamily": {
 					"HP": ,
