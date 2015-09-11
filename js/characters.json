@@ -137,15 +137,6 @@
 
 
 "enemies": {
-	"generic": {
-		"HP": ,
-		"maxHP": ,
-		"MP": ,
-		"maxMP": ,
-		"ataques": [],
-		"ataquesCoste": [],
-		"ataquesValores": []
-	},
 	"alvida": {
 		"HP": 20,
 		"maxHP": 20,
@@ -181,31 +172,31 @@
 			"maxMP": 210,
 			"ataques": [],
 			"ataquesCoste": [],
-			ataquesValores: []
+			"ataquesValores": []
 		},
 		"octi": {
-			"HP": ,
-			"maxHP": ,
-			"MP": ,
-			"maxMP": ,
+			"HP": 180,
+			"maxHP": 180,
+			"MP": 70,
+			"maxMP": 70,
 			"ataques": [],
 			"ataquesCoste": [],
 			"ataquesValores": []
 		},
 		"kurobi": {
-			"HP": ,
-			"maxHP": ,
-			"MP": ,
-			"maxMP": ,
+			"HP": 180,
+			"maxHP": 180,
+			"MP": 70,
+			"maxMP": 70,
 			"ataques": [],
 			"ataquesCoste": [],
 			"ataquesValores": []
 		},
 		"chew": {
-			"HP": ,
-			"maxHP": ,
-			"MP": ,
-			"maxMP": ,
+			"HP": 170,
+			"maxHP": 170,
+			"MP": 60,
+			"maxMP": 60,
 			"ataques": [],
 			"ataquesCoste": [],
 			"ataquesValores": []
@@ -213,19 +204,19 @@
 	},
 	"logueTown": {
 		"smoker": {
-			"HP": ,
-			"maxHP": ,
-			"MP": ,
-			"maxMP": ,
+			"HP": 700,
+			"maxHP": 700,
+			"MP": 350,
+			"maxMP": 350,
 			"ataques": [],
 			"ataquesCoste": [],
 			"ataquesValores": []
 		},
 		"tashigi": {
-			"HP": ,
-			"maxHP": ,
-			"MP": ,
-			"maxMP": ,
+			"HP": 390,
+			"maxHP": 390,
+			"MP": 100,
+			"maxMP": 100,
 			"ataques": [],
 			"ataquesCoste": [],
 			"ataquesValores": []
@@ -234,26 +225,26 @@
 	"arabasta": {
 		"whiskeyPeak": {
 			"multitud": {
-				"HP": ,
-				"maxHP": ,
-				"MP": ,
-				"maxMP": ,
+				"HP": 20,
+				"maxHP": 20,
+				"MP": 10,
+				"maxMP": 10,
 				"ataques": [],
 				"ataquesCoste": [],
 				"ataquesValores": []
 			},
 			"igarapoi": {
-				"HP": ,
-				"maxHP": ,
-				"MP": ,
-				"maxMP": ,
+				"HP": 40,
+				"maxHP": 40,
+				"MP": 10,
+				"maxMP": 10,
 				"ataques": [],
 				"ataquesCoste": [],
 				"ataquesValores": []
 			},
 			"mr5": {
-				"HP": ,
-				"maxHP": ,
+				"HP": 190,
+				"maxHP": 190,
 				"MP": ,
 				"maxMP": ,
 				"ataques": [],
