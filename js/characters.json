@@ -200,7 +200,7 @@
 			"ataques": [],
 			"ataquesCoste": [],
 			"ataquesValores": []
-		},
+		}
 	},
 	"logueTown": {
 		"smoker": {
@@ -259,7 +259,7 @@
 				"ataques": [],
 				"ataquesCoste": [],
 				"ataquesValores": []
-			},
+			}
 		},
 		"littleGarden": {
 			"mr5": {
@@ -316,7 +316,7 @@
 				"ataques": [],
 				"ataquesCoste": [],
 				"ataquesValores": []
-			},
+			}
 		},
 		"drum": {
 			"chess": {
@@ -345,7 +345,7 @@
 				"ataques": [],
 				"ataquesCoste": [],
 				"ataquesValores": []
-			},
+			}
 		},
 		"arabasta": {
 			"smoker": {
@@ -428,7 +428,7 @@
 				"ataques": [],
 				"ataquesCoste": [],
 				"ataquesValores": []
-			},
+			}
 		},
 		"skypea": {
 			"jaya": {
@@ -440,7 +440,7 @@
 					"ataques": [],
 					"ataquesCoste": [],
 					"ataquesValores": []
-				},
+				}
 			},
 			"islaDelCielo": {
 				"satori": {
@@ -496,8 +496,8 @@
 					"ataques": [],
 					"ataquesCoste": [],
 					"ataquesValores": []
-				},
-			},
+				}
+			}
 		},
 		"water7": {
 			"davyBackFight": {
