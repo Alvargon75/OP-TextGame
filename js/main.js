@@ -207,14 +207,22 @@ if(language == "es-ES"){
 	xmlhttp.open("GET", "locale/en-US.xml", true);
 	xmlhttp.send();
 }
-jsonhttp.open("GET", "locale/reference.json", true);
-jsonhttp.send();
-
-jsonCharacters.open("GET", "js/characters.json", true);
-jsonCharacters.send();
+json.open("GET", "js/characters.json", true);
+json.send();
 
 
 console.log("Lang: " + language);
+
+var readSource = function(file, reference){
+	if(file === "XML" || "xml" || xmlhttp){
+		return xmlhttp.responseXML.querySelectorAll(reference)[0].childNodes[0].nodeValue;
+	}else if(file === "JSON" || "json" || json){
+		JSON.parse(json);
+		return json.reference;
+	}else{
+		console.log("Error reading external files.");
+	}
+}
 
 
 // START AND CLEAR
