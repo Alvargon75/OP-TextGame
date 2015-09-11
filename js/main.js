@@ -1,36 +1,4 @@
 /*
-	 ██████╗██╗  ██╗ █████╗ ██████╗  █████╗  ██████╗████████╗███████╗██████╗ ███████╗
-	██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
-	██║     ███████║███████║██████╔╝███████║██║        ██║   █████╗  ██████╔╝███████╗
-	██║     ██╔══██║██╔══██║██╔══██╗██╔══██║██║        ██║   ██╔══╝  ██╔══██╗╚════██║
-	╚██████╗██║  ██║██║  ██║██║  ██║██║  ██║╚██████╗   ██║   ███████╗██║  ██║███████║
-	 ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝
-*/
-
-var randomName = false; // This will remain 'false'
-/*
-
-El tema de los estados va por numeros:
-
- 0 = Normal
- 1 = En Llamas
- 2 = Envenenado
- 3 = Paralizado
- 4 =
- 100 = Eufórico
- 101 = Último Aliento
-
-*/
-
-// Generic Villain
-
-
-var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
-var nameNumber = 0;
-var currentCharacter = names[0];
-
-
-/*
 ███╗   ███╗███████╗ ██████╗ █████╗ ███╗   ██╗██╗███████╗███╗   ███╗ ██████╗ ███████╗
 ████╗ ████║██╔════╝██╔════╝██╔══██╗████╗  ██║██║██╔════╝████╗ ████║██╔═══██╗██╔════╝
 ██╔████╔██║█████╗  ██║     ███████║██╔██╗ ██║██║███████╗██╔████╔██║██║   ██║███████╗
@@ -187,17 +155,15 @@ var randomString = function(length){
 
 */
 
-var xmlhttp, jsonhttp, jsonCharacters;
+var xmlhttp, jsonFile;
 var language = window.navigator.userLanguage || window.navigator.language;
 
 if(window.XMLHttpRequest){ //Modern Browsers
     xmlhttp = new XMLHttpRequest();
-	jsonhttp = new XMLHttpRequest();
-	jsonCharacters = new XMLHttpRequest();
+	jsonFile = new XMLHttpRequest();
 }else{ // IE
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-	jsonhttp = new ActiveXObject("Microsoft.XMLHTTP");
-	jsonCharacters = new ActiveXObject("Microsoft.XMLHTTP");
+	jsonFile = new ActiveXObject("Microsoft.XMLHTTP");
 }
 
 if(language == "es-ES"){
@@ -207,8 +173,8 @@ if(language == "es-ES"){
 	xmlhttp.open("GET", "locale/en-US.xml", true);
 	xmlhttp.send();
 }
-json.open("GET", "js/characters.json", true);
-json.send();
+jsonFile.open("GET", "js/characters.json", true);
+jsonFile.send();
 
 
 console.log("Lang: " + language);
@@ -216,13 +182,43 @@ console.log("Lang: " + language);
 var readSource = function(file, reference){
 	if(file === "XML" || "xml" || xmlhttp){
 		return xmlhttp.responseXML.querySelectorAll(reference)[0].childNodes[0].nodeValue;
-	}else if(file === "JSON" || "json" || json){
-		JSON.parse(json);
-		return json.reference;
+	}else if(file === "JSON" || "json" || jsonFile){
+		return jsonFile.reference;
 	}else{
 		console.log("Error reading external files.");
 	}
 }
+
+/*
+	 ██████╗██╗  ██╗ █████╗ ██████╗  █████╗  ██████╗████████╗███████╗██████╗ ███████╗
+	██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
+	██║     ███████║███████║██████╔╝███████║██║        ██║   █████╗  ██████╔╝███████╗
+	██║     ██╔══██║██╔══██║██╔══██╗██╔══██║██║        ██║   ██╔══╝  ██╔══██╗╚════██║
+	╚██████╗██║  ██║██║  ██║██║  ██║██║  ██║╚██████╗   ██║   ███████╗██║  ██║███████║
+	 ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝
+*/
+
+var randomName = false; // This will remain 'false'
+/*
+
+El tema de los estados va por numeros:
+
+ 0 = Normal
+ 1 = En Llamas
+ 2 = Envenenado
+ 3 = Paralizado
+ 4 =
+ 100 = Eufórico
+ 101 = Último Aliento
+
+*/
+
+// Generic Villain
+//var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
+
+var names = [readSource(jsonFile, aliados.Luffy), readSource(jsonFile, aliados.Sanji), readSource(jsonFile, aliados.Zoro), readSource(jsonFile, aliados.Nami), readSource(jsonFile, aliados.Ussop), readSource(jsonFile, aliados.Robin), readSource(jsonFile, aliados.Franky), readSource(jsonFile, aliados.Chopper)];﻿
+var nameNumber = 0;
+var currentCharacter = names[0];
 
 
 // START AND CLEAR

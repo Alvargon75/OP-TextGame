@@ -12,7 +12,7 @@
 		"grados": ["Pierna Negra", "Haki de Armadura", "Diable Jamble"],
 		"ataques": ["Patada Pierna Negra", "Disparo de Venado", "Patada Escalope", "Espectro del Pan Frito", "Pierna del Diablo"],
 		"ataquesValores": [4, 7, 9, 15, 22],
-		"ataquesCoste": [0, 2, 6, 11, 100],
+		"ataquesCoste": [0, 2, 6, 11, 100]
 	},
 
 	 "Luffy" : {
@@ -27,7 +27,7 @@
 		"grados": ["Hombre de Goma", "Grado 2", "Grado 3"],
 		"ataques": ["Estira el brazo, puñetazo", "Galleta galleta, metralleta", "Retuérce el tornillo, Molinillo", "Estira el cuello mazo, cabezazo", "Haki del Rey"],
 		"ataquesValores": [5, 11, 13, 17, 27],
-		"ataquesCoste": [0, 1, 7, 11, 115],
+		"ataquesCoste": [0, 1, 7, 11, 115]
 	},
 
 	 "Zoro" : {
@@ -42,7 +42,7 @@
 		"grados": ["Casual", "Concentrado", "Mente en Blanco"],
 		"ataques": ["Sablazo", "Estilo de Tres Espadas", "Corte del Demonio", "Espiral del Dragón", "Tatsumaki"],
 		"ataquesValores": [6, 8, 12, 15, 22],
-		"ataquesCoste": [0, 3, 5, 14, 95],
+		"ataquesCoste": [0, 3, 5, 14, 95]
 	},
 
 	 "GodMode" : {
@@ -57,7 +57,7 @@
 		"grados": ["Dios", "SSJ1", "SSJ4"],
 		"ataques": ["Kamehameha", "Furia del Proletariado", "Kung Fury", "PapuAtaque", "Ataque Final"],
 		"ataquesValores": [10, 100, 1000, 10000, 999999],
-		"ataquesCoste": [1, 1, 1, 1, 1],
+		"ataquesCoste": [1, 1, 1, 1, 1]
 	},
 	 "Nami" : {
 		"id": "nami",
@@ -71,7 +71,7 @@
 		"grados": ["undefined", "undefined", "undefined"],
 		"ataques": ["Patada", "Robo", "Ataque Climático", "Tormenta", "Nube de Enel"],
 		"ataquesValores": [1, 1, 5, 8, 11],
-		"ataquesCoste": [0, 1, 3, 3, 9],
+		"ataquesCoste": [0, 1, 3, 3, 9]
 	},
 
 	 "Ussop" : {
@@ -86,7 +86,7 @@
 		"grados": ["Cobardía", "Valentía", "Sogeking"],
 		"ataques": ["Tiro", "Canica Explosiva", "Canica de Fuego", "Canica de Kaya", "Taifa de Ussop"],
 		"ataquesValores": [1, 3, 8, 9, 13],
-		"ataquesCoste": [0, 2, 5, 9, 13],
+		"ataquesCoste": [0, 2, 5, 9, 13]
 	},
 
 	 "Chopper" : {
@@ -101,7 +101,7 @@
 		"grados": ["Brain Point", "Heavy Point", "Monster Point"],
 		"ataques": ["Scope"],
 		"ataquesValores": [],
-		"ataquesCoste": [],
+		"ataquesCoste": []
 	},
 
 	 "Robin" : {
@@ -116,7 +116,7 @@
 		"grados": ["Doña Domingo", "No Quiero Vivir", "Quiero vivir"],
 		"ataques": ["Brotad en 3", "Brotad en 5", "10 Flores", "Infinitas Flores", "Brotad en Millones"],
 		"ataquesValores": [3, 6, 8, 14, 20],
-		"ataquesCoste": [0, 3, 4, 7, 16],
+		"ataquesCoste": [0, 3, 4, 7, 16]
 	},
 
 	 "Franky" : {
@@ -131,7 +131,7 @@
 		"grados": ["Agotado", "Normal", "SUUUUUUUUUUUPER"],
 		"ataques": ["Weapons Left", "Strong Hammer", "Lanzallamas", "Coup de Vent", "SUUUUUUUUUUPER"],
 		"ataquesValores": [1, 3, 6, 5 , 18],
-		"ataquesCoste": [0, 2, 4, 5, 10],
+		"ataquesCoste": [0, 2, 4, 5, 10]
 	}
 },
 
