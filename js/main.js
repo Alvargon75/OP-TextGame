@@ -177,7 +177,7 @@ if(language == "es-ES"){
 jsonFile.open("GET", "data/characters.json", true);
 jsonFile.send();
 
-function AJAX_JSON_Req(url){
+function readJSON(url, final){
     var AJAX_req = new XMLHttpRequest();
     AJAX_req.open( "GET", url, true );
     AJAX_req.setRequestHeader("Content-type", "application/json");
@@ -186,13 +186,12 @@ function AJAX_JSON_Req(url){
     {
         if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
         {
-        	personajes = JSON.parse( AJAX_req.responseText );
+        	var response = JSON.parse(AJAX_req.responseText);
+			final(response);
         }
     }
     AJAX_req.send();
 }
-
-personajes = AJAX_JSON_Req( 'data/characters.json' );
 
 
 console.log("Lang: " + language);
@@ -228,7 +227,9 @@ El tema de los estados va por numeros:
 // Generic Villain
 //var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
 
-var personajeAhora = personajes.aliados.Luffy;
+var personajeAhora = readJSON('data/characters.json', function(data){
+	
+});
 
 // START AND CLEAR
 
