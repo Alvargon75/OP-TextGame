@@ -177,7 +177,25 @@ if(language == "es-ES"){
 jsonFile.open("GET", "data/characters.json", true);
 jsonFile.send();
 
-function readJSON(url, final){
+var read;
+
+var read.JSON.file = function(url, final){
+    var AJAX_req = new XMLHttpRequest();
+    AJAX_req.open( "GET", url, true );
+    AJAX_req.setRequestHeader("Content-type", "application/json");
+
+    AJAX_req.onreadystatechange = function()
+    {
+        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
+        {
+        	var response = JSON.parse(AJAX_req.responseText);
+			final(response);
+        }
+    }
+    AJAX_req.send();
+}
+
+var read.JSON.personajes = function(final){
     var AJAX_req = new XMLHttpRequest();
     AJAX_req.open( "GET", url, true );
     AJAX_req.setRequestHeader("Content-type", "application/json");
@@ -196,7 +214,7 @@ function readJSON(url, final){
 
 console.log("Lang: " + language);
 
-var readXML = function(css){
+var read.XML = function(css){
 	return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
 }
 
@@ -228,7 +246,7 @@ El tema de los estados va por numeros:
 //var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
 
 var personajeAhora = readJSON('data/characters.json', function(data){
-	
+
 });
 
 // START AND CLEAR
