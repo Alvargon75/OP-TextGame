@@ -155,8 +155,9 @@ var randomString = function(length){
 
 */
 
-var xmlhttp, jsonFile;
+var xmlhttp, jsonFile, personajes;
 var language = window.navigator.userLanguage || window.navigator.language;
+
 
 if(window.XMLHttpRequest){ //Modern Browsers
     xmlhttp = new XMLHttpRequest();
@@ -175,14 +176,29 @@ if(language == "es-ES"){
 }
 jsonFile.open("GET", "data/characters.json", true);
 jsonFile.send();
-var temp = JSON.stringify(jsonFile);
 
-var personajes = JSON.parse(temp);
+var loadJSON = function(callback) {
+
+   var xobj = new XMLHttpRequest();
+	   xobj.overrideMimeType("application/json");
+   xobj.open('GET', 'data/characters.json', true); // Replace 'my_data' with the path to your file
+   xobj.onreadystatechange = function () {
+		 if (xobj.readyState == 4 && xobj.status == "200") {
+		   // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+		   callback(xobj.responseText);
+		 }
+   };
+   xobj.send(null);
+}
 
 console.log("Lang: " + language);
 
-var readSource = function(reference){
-	return xmlhttp.responseXML.querySelectorAll(reference)[0].childNodes[0].nodeValue;
+loadJSON(function(response){
+	personajes = JSON.parse(response);
+});
+
+var readXML = function(css){
+	return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
 }
 
 /*
