@@ -192,7 +192,7 @@ function AJAX_JSON_Req(url){
     AJAX_req.send();
 }
 
-AJAX_JSON_Req( 'data/characters.json' );
+personajes = AJAX_JSON_Req( 'data/characters.json' );
 
 
 console.log("Lang: " + language);
@@ -228,8 +228,7 @@ El tema de los estados va por numeros:
 // Generic Villain
 //var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
 
-var names = [personajes.aliados.Luffy, personajes.aliados.Sanji, personajes.aliados.Zoro, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Robin, personajes.aliados.Franky, personajes.aliados.Chopper];﻿
-var nameNumber = 0;
+var personajeAhora = personajes.aliados.Luffy;
 
 // START AND CLEAR
 
@@ -404,11 +403,11 @@ var recuperar = function(){
 // HUD
 
 var checkHUD = function(){
-	document.getElementById("vida").innerHTML = names[nameNumber].HP;
-	writer("maxVida", names[nameNumber].maxHP);
-	writer("MP", names[nameNumber].MP);
-	writer("maxMP", names[nameNumber].maxMP);
-	document.getElementById("ataque").innerHTML = names[nameNumber].grados[gradoActual];
+	document.getElementById("vida").innerHTML = personajeAhora.HP;
+	writer("maxVida", personajeAhora.maxHP);
+	writer("MP", personajeAhora.MP);
+	writer("maxMP", personajeAhora.maxMP);
+	document.getElementById("ataque").innerHTML = personajeAhora.grados[gradoActual];
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
 	console.log("HUD revisado");
