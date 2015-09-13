@@ -177,25 +177,25 @@ if(language == "es-ES"){
 jsonFile.open("GET", "data/characters.json", true);
 jsonFile.send();
 
-var loadJSON = function(callback) {
+function AJAX_JSON_Req(url){
+    var AJAX_req = new XMLHttpRequest();
+    AJAX_req.open( "GET", url, true );
+    AJAX_req.setRequestHeader("Content-type", "application/json");
 
-   var xobj = new XMLHttpRequest();
-	   xobj.overrideMimeType("application/json");
-   xobj.open('GET', 'data/characters.json', true); // Replace 'my_data' with the path to your file
-   xobj.onreadystatechange = function () {
-		 if (xobj.readyState == 4 && xobj.status == "200") {
-		   // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-		   callback(xobj.responseText);
-		 }
-   };
-   xobj.send(null);
+    AJAX_req.onreadystatechange = function()
+    {
+        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
+        {
+        	personajes = JSON.parse( AJAX_req.responseText );
+        }
+    }
+    AJAX_req.send();
 }
 
-console.log("Lang: " + language);
+AJAX_JSON_Req( 'data/characters.json' );
 
-loadJSON(function(response){
-	personajes = JSON.parse(response);
-});
+
+console.log("Lang: " + language);
 
 var readXML = function(css){
 	return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
