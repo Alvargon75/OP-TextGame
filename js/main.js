@@ -167,13 +167,13 @@ if(window.XMLHttpRequest){ //Modern Browsers
 }
 
 if(language == "es-ES"){
-	xmlhttp.open("GET", "locale/es-ES.xml", true);
+	xmlhttp.open("GET", "data/locale/es-ES.xml", true);
 	xmlhttp.send();
 }else{
-	xmlhttp.open("GET", "locale/en-US.xml", true);
+	xmlhttp.open("GET", "data/locale/en-US.xml", true);
 	xmlhttp.send();
 }
-jsonFile.open("GET", "js/characters.json", true);
+jsonFile.open("GET", "data/characters.json", true);
 jsonFile.send();
 var temp = JSON.stringify(jsonFile);
 
