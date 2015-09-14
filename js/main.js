@@ -270,8 +270,6 @@ var start = function(){
 	console.log("Game Started");
 	writer("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
 	hide("inicio");
-	hide("nameChange");
-	hide("cc")
 	show("d1_a");
 	show("d1_b");
 	checkHUD(); /* No more random name
