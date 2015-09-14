@@ -181,46 +181,59 @@ if(language == "es-ES"){
 jsonFile.open("GET", "data/characters.json", true);
 jsonFile.send();
 
-var read;
+var read = {
+	JSON: {
+		file: function(url, final){
+		    var AJAX_req = new XMLHttpRequest();
+		    AJAX_req.open( "GET", url, true );
+		    AJAX_req.setRequestHeader("Content-type", "application/json");
+		    AJAX_req.onreadystatechange = function()
+		    {
+		        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
+		        {
+		        	var response = JSON.parse(AJAX_req.responseText);
+					final(response);
+		        }
+		    }
+		    AJAX_req.send();
+		},
+		personajes: function(referencia){
+		    var AJAX_req = new XMLHttpRequest();
+		    AJAX_req.open( "GET", url, true );
+		    AJAX_req.setRequestHeader("Content-type", "application/json");
+		    AJAX_req.onreadystatechange = function()
+		    {
+		        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
+		        {
+		        	var response = JSON.parse(AJAX_req.responseText);
+					return personajes.referencia;
+		        }
+		    }
+		    AJAX_req.send();
+		},
+		reference: function(referencia){
+			var AJAX_req = new XMLHttpRequest();
+		    AJAX_req.open( "GET", 'data/locale/referencia.json', true );
+		    AJAX_req.setRequestHeader("Content-type", "application/json");
+		    AJAX_req.onreadystatechange = function()
+		    {
+		        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
+		        {
+		        	var response = JSON.parse(AJAX_req.responseText);
+					return quoteRemover(referencia);
 
-var read.JSON.file = function(url, final){
-    var AJAX_req = new XMLHttpRequest();
-    AJAX_req.open( "GET", url, true );
-    AJAX_req.setRequestHeader("Content-type", "application/json");
-
-    AJAX_req.onreadystatechange = function()
-    {
-        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
-        {
-        	var response = JSON.parse(AJAX_req.responseText);
-			final(response);
-        }
-    }
-    AJAX_req.send();
-}
-
-var read.JSON.personajes = function(final){
-    var AJAX_req = new XMLHttpRequest();
-    AJAX_req.open( "GET", url, true );
-    AJAX_req.setRequestHeader("Content-type", "application/json");
-
-    AJAX_req.onreadystatechange = function()
-    {
-        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
-        {
-        	var response = JSON.parse(AJAX_req.responseText);
-			final(response);
-        }
-    }
-    AJAX_req.send();
+		        };
+		    }
+		    AJAX_req.send();
+		}
+	},
+	XML: function(css){
+		return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
+	}
 }
 
 
 console.log("Lang: " + language);
-
-var read.XML = function(css){
-	return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
-}
 
 /*
 	 ██████╗██╗  ██╗ █████╗ ██████╗  █████╗  ██████╗████████╗███████╗██████╗ ███████╗
@@ -249,9 +262,7 @@ El tema de los estados va por numeros:
 // Generic Villain
 //var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
 
-var personajeAhora = readJSON('data/characters.json', function(data){
-
-});
+var personajesActual; // TODO: poner el significado.
 
 // START AND CLEAR
 
