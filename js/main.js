@@ -327,64 +327,6 @@ var start = function(){
 	writer("name", names[nameNumber].longName);
 };
 
-
-// names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
-var usados = [nameNumber];
-
-var SdPGenerator = function(index){
-	if(randomName === true){
-		var personaje = Math.floor(Math.random() * 8);
-		var temp = checkArray(personaje, usados);
-		do{
-			if(temp === true){
-				personaje = Math.floor(Math.random() * 8);
-				temp = checkArray(personaje, usados);
-			}else{
-				usados.push(personaje);
-				return personaje;
-			}
-		}while(temp === true)
-	}else{
-		switch (index) {
-			case 2:
-				return 2;
-				break;
-			case 3:
-				return 3;
-				break;
-			case 4:
-				return 4;
-				break;
-			case 5:
-				return 1;
-				break;
-			case 6:
-				return 7;
-				break;
-			case 7:
-				return 5;
-				break;
-			case 8:
-				return 6;
-				break;
-		}
-	}
-}
-
-var characterChosen = function(character){
-	hide("nameChange");
-	nameNumber = character;
-	return true;
-}
-
-var segundoSdP = SdPGenerator(2);
-var tercerSdP = SdPGenerator(3);
-var cuartoSdP = SdPGenerator(4);
-var quintoSdP = SdPGenerator(5);
-var sextoSdP = SdPGenerator(6);
-var septimoSdP = SdPGenerator(7);
-var octavoSdp = SdPGenerator(8);
-
 var clear = function(){
 	document.getElementById("intro").innerHTML = " ";
 	document.getElementById("a1").innerHTML = " ";
@@ -400,30 +342,41 @@ var clear = function(){
 	document.getElementById("c3").innerHTML = " ";
 	document.getElementById("fin").innerHTML = " ";
 }
-var turnCount = 0;
-var fight = {
-	setUp: function(enemy){
-		document.getElementById("combatUI").classList.remove('combatUI-inactive');
-		writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemy.name);
-		writer("at1", names[nameNumber].ataques[0]);
-		writer("at2", names[nameNumber].ataques[1]);
-		writer("at3", names[nameNumber].ataques[2]);
-		writer("at4", names[nameNumber].ataques[3]);
-		writer("at5", names[nameNumber].ataques[4]);
-		combatHUD();
-	},
-	atackAlly: function(ataque){
-		names[nameNumber].MP -= names[nameNumber].ataquesCoste[ataque];
-		enemy.HP -= names[nameNumber].ataquesValores[ataque];
-		expPoints += Math.floor(Math.random() * 100);
-	},
-	atackEnemy: function(whichEnemy, ataque){
-		turnCount++;
-	},
-	endBattle: function(){
-		turnCount = 0;
 
+var fight = {
+	valores: {
+		turnos: 0
+	},
+	antes: {
+		setUp: function(enemy){
+			document.getElementById("combatUI").classList.remove('combatUI-inactive');
+			writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemy.name);
+			writer("at1", names[nameNumber].ataques[0]);
+			writer("at2", names[nameNumber].ataques[1]);
+			writer("at3", names[nameNumber].ataques[2]);
+			writer("at4", names[nameNumber].ataques[3]);
+			writer("at5", names[nameNumber].ataques[4]);
+			combatHUD();
+		}
+	},
+	durante: {
+		atackAlly: function(ataque){
+			names[nameNumber].MP -= names[nameNumber].ataquesCoste[ataque];
+			enemy.HP -= names[nameNumber].ataquesValores[ataque];
+			expPoints += Math.floor(Math.random() * 100);
+		},
+		atackEnemy: function(whichEnemy, ataque){
+			figth.valores.turnos++;
+		}
+	},
+
+	despues: {
+		endBattle: function(){
+			figth.valores.turnos = 0;
+		}
 	}
+
+
 }
 
 // RECUPERACIÓN Y EXPERIENCIA
