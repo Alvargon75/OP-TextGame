@@ -41,6 +41,10 @@ var checkArray = function(objeto, array){
 	return false;
 }
 
+var quoteRemover = function(string){
+    return string.replace(/['"]+/g, '');
+}
+
 var randomString = function(length){
 	var char = [];
 	var RStemp;
