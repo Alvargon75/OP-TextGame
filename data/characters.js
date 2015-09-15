@@ -1,4 +1,4 @@
-{
+var personajes = {
 "aliados": {
 	 "Sanji" : {
 		"id": "sanji",
@@ -121,7 +121,7 @@
 },
 
 
-"enemies": {
+"enemigos": {
 	"alvida": {
 		"HP": 20,
 		"maxHP": 20,
