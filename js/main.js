@@ -5,7 +5,6 @@
 ██║╚██╔╝██║██╔══╝  ██║     ██╔══██║██║╚██╗██║██║╚════██║██║╚██╔╝██║██║   ██║╚════██║
 ██║ ╚═╝ ██║███████╗╚██████╗██║  ██║██║ ╚████║██║███████║██║ ╚═╝ ██║╚██████╔╝███████║
 ╚═╝     ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝
-Mecanismos
 */
 // VARIABLES
 
@@ -16,15 +15,15 @@ var gradoActual = 0;
 
 // SAVING TIME
 
-var writer = function(id,text){
+var escribir = function(id,text){
 	document.getElementById(id).innerHTML = text;
 }
 
-var hide = function(id){
+var ocultar = function(id){
 	document.getElementById(id).classList.add('hidden');
 }
 
-var show = function(id){
+var mostrar = function(id){
 	document.getElementById(id).classList.remove('hidden');
 }
 
@@ -157,7 +156,7 @@ var randomString = function(length){
  ██╔██╗ ██║╚██╔╝██║██║         ██╔═══╝ ██╔══██║██╔══██╗╚════██║██║██║╚██╗██║██║   ██║
 ██╔╝ ██╗██║ ╚═╝ ██║███████╗    ██║     ██║  ██║██║  ██║███████║██║██║ ╚████║╚██████╔╝
 ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝
-XML Parseado
+
 */
 
 var xmlhttp, jsonFile, personajes;
@@ -243,7 +242,6 @@ console.log("Lang: " + language);
 	██║     ██╔══██║██╔══██║██╔══██╗██╔══██║██║        ██║   ██╔══╝  ██╔══██╗╚════██║
 	╚██████╗██║  ██║██║  ██║██║  ██║██║  ██║╚██████╗   ██║   ███████╗██║  ██║███████║
 	 ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝
-	 Personajes
 */
 
 var randomName = false; // This will remain 'false'
@@ -270,61 +268,61 @@ var personajesActual; // TODO: poner el significado.
 
 var start = function(){
 	console.log("Game Started");
-	writer("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
-	hide("inicio");
-	show("d1_a");
-	show("d1_b");
+	escribir("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
+	ocultar("inicio");
+	mostrar("d1_a");
+	mostrar("d1_b");
 	checkHUD(); /* No more random name
 	if(randomName == true){
 		switch(nameNumber){
 			case 0: //Luffy
 				break;
 			case 1: // Sanji
-				hide("i_intro_luffy");
-				show("i_intro_sanji");
+				ocultar("i_intro_luffy");
+				mostrar("i_intro_sanji");
 				document.getElementById("stats").classList.add('stats-sanji');
 				break;
 			case 2: // Zoro
-				hide("i_intro_luffy");
-				show("i_intro_zoro");
+				ocultar("i_intro_luffy");
+				mostrar("i_intro_zoro");
 				document.getElementById("stats").classList.add('stats-zoro');
 				break;
 			case 3: //Nami
-				hide("i_intro_luffy");
-				show("i_intro_nami");
+				ocultar("i_intro_luffy");
+				mostrar("i_intro_nami");
 				document.getElementById("stats").classList.add('stats-nami');
 				break;
 			case 4: //Ussop
-				hide("i_intro_luffy");
-				show("i_intro_ussop");
+				ocultar("i_intro_luffy");
+				mostrar("i_intro_ussop");
 				document.getElementById("stats").classList.add('stats-ussop');
-				writer("name", Ussop.longName);
+				escribir("name", Ussop.longName);
 				break;
 			case 5: //Robin
- 				hide("i_intro_luffy");
- 				show("i_intro_robin");
+ 				ocultar("i_intro_luffy");
+ 				mostrar("i_intro_robin");
  				document.getElementById("stats").classList.add('stats-robin');
  				break;
 			case 6: //Franky
- 				hide("i_intro_luffy");
- 				show("i_intro_franky");
+ 				ocultar("i_intro_luffy");
+ 				mostrar("i_intro_franky");
  				document.getElementById("stats").classList.add('stats-franky');
  				break;
 			case 7: //Chopper TEMPORALMENTE DESHABILITADO
- 				hide("i_intro_luffy");
- 				show("i_intro_chopper");
+ 				ocultar("i_intro_luffy");
+ 				mostrar("i_intro_chopper");
  				document.getElementById("stats").classList.add('stats-chopper');
  				break;
 		}
-		writer("name", names[nameNumber].longName)
+		escribir("name", names[nameNumber].longName)
 		console.log("Name:" + " " + names[nameNumber].name);
 	}else{
 		nameNumber = 0;
 		console.log("Name:" + " " + Luffy.name);
-		writer("name", "Monkey D. Luffy");
+		escribir("name", "Monkey D. Luffy");
 	};*/
 	nameNumber = 0;
-	writer("name", names[nameNumber].longName);
+	escribir("name", names[nameNumber].longName);
 };
 
 var clear = function(){
@@ -350,12 +348,12 @@ var fight = {
 	antes: {
 		setUp: function(enemy){
 			document.getElementById("combatUI").classList.remove('combatUI-inactive');
-			writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemy.name);
-			writer("at1", names[nameNumber].ataques[0]);
-			writer("at2", names[nameNumber].ataques[1]);
-			writer("at3", names[nameNumber].ataques[2]);
-			writer("at4", names[nameNumber].ataques[3]);
-			writer("at5", names[nameNumber].ataques[4]);
+			escribir("vs_title", names[nameNumber].name + " " + "vs" + " " + enemy.name);
+			escribir("at1", names[nameNumber].ataques[0]);
+			escribir("at2", names[nameNumber].ataques[1]);
+			escribir("at3", names[nameNumber].ataques[2]);
+			escribir("at4", names[nameNumber].ataques[3]);
+			escribir("at5", names[nameNumber].ataques[4]);
 			combatHUD();
 		}
 	},
@@ -391,9 +389,9 @@ var recuperar = function(){
 
 var checkHUD = function(){
 	document.getElementById("vida").innerHTML = personajeAhora.HP;
-	writer("maxVida", personajeAhora.maxHP);
-	writer("MP", personajeAhora.MP);
-	writer("maxMP", personajeAhora.maxMP);
+	escribir("maxVida", personajeAhora.maxHP);
+	escribir("MP", personajeAhora.MP);
+	escribir("maxMP", personajeAhora.maxMP);
 	document.getElementById("ataque").innerHTML = personajeAhora.grados[gradoActual];
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
@@ -401,11 +399,11 @@ var checkHUD = function(){
 };
 
 var combatHUD = function(){
-	writer("combatUI-vida", names[nameNumber].HP);
-	writer("combatUI-maxVida", names[nameNumber].maxHP);
-	writer("combatUI-MP", names[nameNumber].MP);
-	writer("combatUI-maxMP", names[nameNumber].maxMP);
-	writer("combatUI-nivelExp", nivelExp);
+	escribir("combatUI-vida", names[nameNumber].HP);
+	escribir("combatUI-maxVida", names[nameNumber].maxHP);
+	escribir("combatUI-MP", names[nameNumber].MP);
+	escribir("combatUI-maxMP", names[nameNumber].maxMP);
+	escribir("combatUI-nivelExp", nivelExp);
 }
 
 // ATAQUES
@@ -425,7 +423,6 @@ var ataqueVillano = function(dano, multi){
 	██╔══██║██║╚════██║   ██║   ██║   ██║██╔══██╗██║██╔══██║
 	██║  ██║██║███████║   ██║   ╚██████╔╝██║  ██║██║██║  ██║
 	╚═╝  ╚═╝╚═╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
-	Historia
 */
 /*
 $$$$$$\           $$\           $$\
@@ -508,19 +505,19 @@ var luchaAlv = function(){
 
 	//Pelea
 	while(atacar){
-		writer("a4", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-1")[0].childNodes[0].nodeValue);
+		escribir("a4", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-1")[0].childNodes[0].nodeValue);
 		danoTotal += danoRound;
 		luffyVida -= danoAlv;
 		if(danoTotal >= 100){ //Ganas
-			writer("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-2")[0].childNodes[0].nodeValue);
-			show("p0");
-			hide("d2p_a");
-			hide("d2p_b");
+			escribir("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-2")[0].childNodes[0].nodeValue);
+			mostrar("p0");
+			ocultar("d2p_a");
+			ocultar("d2p_b");
 			atacar = false;
 			luffyVida = 500;
 			checkHUD();
 		}else if(luffyVida <= 0){ //Pierdes
-			writer("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-3")[0].childNodes[0].nodeValue);
+			escribir("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-3")[0].childNodes[0].nodeValue);
 			atacar = false;
 			checkHUD();
 		}else{ //Continua
@@ -550,7 +547,7 @@ $$$$$$$  |\$$$$$$  |\$$$$$$$ |\$$$$$$$ |\$$$$$$$ |
 */
 var buggy1 = function(){
 	clear();
-	writer("into", xmlhttp.responseXML.querySelectorAll("buggy > intro")[0].childNodes[0].nodeValue);
+	escribir("into", xmlhttp.responseXML.querySelectorAll("buggy > intro")[0].childNodes[0].nodeValue);
 }
 
 /*
