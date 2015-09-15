@@ -159,16 +159,14 @@ var randomString = function(length){
 
 */
 
-var xmlhttp, jsonFile, personajes;
+var xmlhttp;
 var language = window.navigator.userLanguage || window.navigator.language;
 
 
 if(window.XMLHttpRequest){ //Modern Browsers
     xmlhttp = new XMLHttpRequest();
-	jsonFile = new XMLHttpRequest();
 }else{ // IE
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-	jsonFile = new ActiveXObject("Microsoft.XMLHTTP");
 }
 
 if(language == "es-ES"){
@@ -180,9 +178,8 @@ if(language == "es-ES"){
 }
 
 var readXML = function(css){
-	return xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue;
+	return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
 }
-readXML('buggy > pelea');
 
 console.log("Lang: " + language);
 
@@ -292,11 +289,11 @@ var recuperar = function(){
 // HUD
 
 var checkHUD = function(){
-	document.getElementById("vida").innerHTML = personajeAhora.HP;
-	escribir("maxVida", personajeAhora.maxHP);
-	escribir("MP", personajeAhora.MP);
-	escribir("maxMP", personajeAhora.maxMP);
-	document.getElementById("ataque").innerHTML = personajeAhora.grados[gradoActual];
+	document.getElementById("vida").innerHTML = personajeActual.HP;
+	escribir("maxVida", personajeActual.maxHP);
+	escribir("MP", personajeActual.MP);
+	escribir("maxMP", personajeActual.maxMP);
+	document.getElementById("ataque").innerHTML = personajeActual.grados[gradoActual];
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
 	console.log("HUD revisado");
