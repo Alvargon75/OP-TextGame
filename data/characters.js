@@ -123,6 +123,8 @@ var personajes = {
 
 "enemigos": {
 	"alvida": {
+		"name": "Alvida",
+		"longName": "Alvida la gorada"
 		"HP": 20,
 		"maxHP": 20,
 		"MP": 18,
@@ -132,6 +134,8 @@ var personajes = {
 		"ataquesValores": [1, 4]
 	},
 	"buggy": {
+		"name": "Buggy",
+		"longName": "Buggy El Payaso"
 		"HP": 100,
 		"maxHP": 100,
 		"MP": 78,
@@ -141,6 +145,8 @@ var personajes = {
 		"ataquesValores": []
 	},
 	"krieg": {
+		"name": "Kireg"
+		"longNmae": "krieg"
 		"HP": 180,
 		"maxHP": 180,
 		"MP": 120,
@@ -151,6 +157,8 @@ var personajes = {
 	},
 	"arlongPark": {
 		"arlong": {
+			"name": "Arlong"
+			"longName": "Arlong Squalo"
 			"HP": 300,
 			"maxHP": 300,
 			"MP": 210,
@@ -160,6 +168,8 @@ var personajes = {
 			"ataquesValores": []
 		},
 		"octi": {
+			"name": "Octi"
+			"longName": "Octi"
 			"HP": 180,
 			"maxHP": 180,
 			"MP": 70,
@@ -169,6 +179,8 @@ var personajes = {
 			"ataquesValores": []
 		},
 		"kurobi": {
+			"name": "Kurobi"
+			"longName": "Kurobi"
 			"HP": 180,
 			"maxHP": 180,
 			"MP": 70,
@@ -178,6 +190,8 @@ var personajes = {
 			"ataquesValores": []
 		},
 		"chew": {
+			"name": "Chew"
+			"longName": "Chew"
 			"HP": 170,
 			"maxHP": 170,
 			"MP": 60,
@@ -189,6 +203,8 @@ var personajes = {
 	},
 	"logueTown": {
 		"smoker": {
+			"name": "Smoker"
+			"longName": "El Cazador Blanco"
 			"HP": 700,
 			"maxHP": 700,
 			"MP": 350,
@@ -198,6 +214,9 @@ var personajes = {
 			"ataquesValores": []
 		},
 		"tashigi": {
+			"name": "Tashigi"
+			"longName": "Tashigi"
+			"name":
 			"HP": 390,
 			"maxHP": 390,
 			"MP": 100,
@@ -209,6 +228,8 @@ var personajes = {
 	},
 	"arabasta": {
 		"whiskeyPeak": {
+			"name": "WhiskeyPeak"
+			"longName": "WhiskeyPeak"
 			"multitud": {
 				"HP": 20,
 				"maxHP": 20,
@@ -219,6 +240,8 @@ var personajes = {
 				"ataquesValores": []
 			},
 			"igarapoi": {
+				"name": "Igarapoi"
+				"longName": "Igarapoi"
 				"HP": 40,
 				"maxHP": 40,
 				"MP": 10,
@@ -228,6 +251,8 @@ var personajes = {
 				"ataquesValores": []
 			},
 			"mr5": {
+				"name": "Mr5"
+				"longName": "Don 5"
 				"HP": 190,
 				"maxHP": 190,
 				"MP": 90,
@@ -237,6 +262,8 @@ var personajes = {
 				"ataquesValores": []
 			},
 			"missValentine": {
+				"name": "MissValentine"
+				"longName": "MissValentine"
 				"HP": 100,
 				"maxHP": 100,
 				"MP": 120,
@@ -248,6 +275,8 @@ var personajes = {
 		},
 		"littleGarden": {
 			"mr5": {
+				"name": "Mr5"
+				"longName": "Don 5"
 				"HP": 190,
 				"maxHP": 190,
 				"MP": 90,
@@ -257,6 +286,8 @@ var personajes = {
 				"ataquesValores": []
 			},
 			"missValentine": {
+				"name": "MissValentine"
+				"longName": "MissValentine"
 				"HP": 100,
 				"maxHP": 100,
 				"MP": 120,
@@ -267,6 +298,8 @@ var personajes = {
 
 			},
 			"missGoldenWeek": {
+				"name": "MissGoldenWeek"
+				"longNmae": "MissGoldenWeek"
 				"HP": 50,
 				"maxHP": 50,
 				"MP": 60,
@@ -276,6 +309,8 @@ var personajes = {
 				"ataquesValores": []
 			},
 			"mr3": {
+				"name": "Mr3"
+				"longNmae": "Don 3"
 				"HP": 260,
 				"maxHP": 260,
 				"MP": 250,
@@ -285,6 +320,8 @@ var personajes = {
 				"ataquesValores": []
 			},
 			"mr13": {
+				"name": "Mr13"
+				"longName": "Don 13"
 				"HP": 40,
 				"maxHP":40 ,
 				"MP": 20,
