@@ -178,60 +178,11 @@ if(language == "es-ES"){
 	xmlhttp.open("GET", "data/locale/en-US.xml", true);
 	xmlhttp.send();
 }
-jsonFile.open("GET", "data/characters.json", true);
-jsonFile.send();
 
-var read = {
-	JSON: {
-		file: function(url, final){
-		    var AJAX_req = new XMLHttpRequest();
-		    AJAX_req.open( "GET", url, true );
-		    AJAX_req.setRequestHeader("Content-type", "application/json");
-		    AJAX_req.onreadystatechange = function()
-		    {
-		        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
-		        {
-		        	var response = JSON.parse(AJAX_req.responseText);
-					final(response);
-		        }
-		    }
-		    AJAX_req.send();
-		},
-		personajes: function(referencia){
-		    var AJAX_req = new XMLHttpRequest();
-		    AJAX_req.open( "GET", url, true );
-		    AJAX_req.setRequestHeader("Content-type", "application/json");
-		    AJAX_req.onreadystatechange = function()
-		    {
-		        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
-		        {
-		        	var response = JSON.parse(AJAX_req.responseText);
-					return personajes.referencia;
-		        }
-		    }
-		    AJAX_req.send();
-		},
-		reference: function(referencia){
-			var AJAX_req = new XMLHttpRequest();
-		    AJAX_req.open( "GET", 'data/locale/referencia.json', true );
-		    AJAX_req.setRequestHeader("Content-type", "application/json");
-		    AJAX_req.onreadystatechange = function()
-		    {
-		        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
-		        {
-		        	var response = JSON.parse(AJAX_req.responseText);
-					return quoteRemover(referencia);
-
-		        };
-		    }
-		    AJAX_req.send();
-		}
-	},
-	XML: function(css){
-		return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
-	}
+var readXML = function(css){
+	return xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue;
 }
-
+readXML('buggy > pelea');
 
 console.log("Lang: " + language);
 
@@ -244,7 +195,6 @@ console.log("Lang: " + language);
 	 ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝
 */
 
-var randomName = false; // This will remain 'false'
 /*
 
 El tema de los estados va por numeros:
@@ -262,7 +212,9 @@ El tema de los estados va por numeros:
 // Generic Villain
 //var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
 
-var personajesActual; // TODO: poner el significado.
+var personajes = [personajes.aliados.Luffy, personajes.aliados.Zorro, personajes.aliados.Sanji, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Chopper, personajes.aliados.Robin, personajes.aliados.Franky];
+var personajeActual = personajes[0];
+
 
 // START AND CLEAR
 
@@ -272,57 +224,9 @@ var start = function(){
 	ocultar("inicio");
 	mostrar("d1_a");
 	mostrar("d1_b");
-	checkHUD(); /* No more random name
-	if(randomName == true){
-		switch(nameNumber){
-			case 0: //Luffy
-				break;
-			case 1: // Sanji
-				ocultar("i_intro_luffy");
-				mostrar("i_intro_sanji");
-				document.getElementById("stats").classList.add('stats-sanji');
-				break;
-			case 2: // Zoro
-				ocultar("i_intro_luffy");
-				mostrar("i_intro_zoro");
-				document.getElementById("stats").classList.add('stats-zoro');
-				break;
-			case 3: //Nami
-				ocultar("i_intro_luffy");
-				mostrar("i_intro_nami");
-				document.getElementById("stats").classList.add('stats-nami');
-				break;
-			case 4: //Ussop
-				ocultar("i_intro_luffy");
-				mostrar("i_intro_ussop");
-				document.getElementById("stats").classList.add('stats-ussop');
-				escribir("name", Ussop.longName);
-				break;
-			case 5: //Robin
- 				ocultar("i_intro_luffy");
- 				mostrar("i_intro_robin");
- 				document.getElementById("stats").classList.add('stats-robin');
- 				break;
-			case 6: //Franky
- 				ocultar("i_intro_luffy");
- 				mostrar("i_intro_franky");
- 				document.getElementById("stats").classList.add('stats-franky');
- 				break;
-			case 7: //Chopper TEMPORALMENTE DESHABILITADO
- 				ocultar("i_intro_luffy");
- 				mostrar("i_intro_chopper");
- 				document.getElementById("stats").classList.add('stats-chopper');
- 				break;
-		}
-		escribir("name", names[nameNumber].longName)
-		console.log("Name:" + " " + names[nameNumber].name);
-	}else{
-		nameNumber = 0;
-		console.log("Name:" + " " + Luffy.name);
-		escribir("name", "Monkey D. Luffy");
-	};*/
+	checkHUD();
 	nameNumber = 0;
-	escribir("name", names[nameNumber].longName);
+	escribir("name", personajeActual.longName);
 };
 
 var clear = function(){
@@ -341,35 +245,35 @@ var clear = function(){
 	document.getElementById("fin").innerHTML = " ";
 }
 
-var fight = {
+var combate = {
 	valores: {
 		turnos: 0
 	},
 	antes: {
 		setUp: function(enemy){
 			document.getElementById("combatUI").classList.remove('combatUI-inactive');
-			escribir("vs_title", names[nameNumber].name + " " + "vs" + " " + enemy.name);
-			escribir("at1", names[nameNumber].ataques[0]);
-			escribir("at2", names[nameNumber].ataques[1]);
-			escribir("at3", names[nameNumber].ataques[2]);
-			escribir("at4", names[nameNumber].ataques[3]);
-			escribir("at5", names[nameNumber].ataques[4]);
+			escribir("vs_title", personajeActual.name + " " + "vs" + " " + enemy.name);
+			escribir("at1", personajeActual.ataques[0]);
+			escribir("at2", personajeActual.ataques[1]);
+			escribir("at3", personajeActual.ataques[2]);
+			escribir("at4", personajeActual.ataques[3]);
+			escribir("at5", personajeActual.ataques[4]);
 			combatHUD();
 		}
 	},
 	durante: {
-		atackAlly: function(ataque){
-			names[nameNumber].MP -= names[nameNumber].ataquesCoste[ataque];
-			enemy.HP -= names[nameNumber].ataquesValores[ataque];
+		ataqueAliado: function(ataque){
+			personajeActual.MP -= personajeActual.ataquesCoste[ataque];
+			enemy.HP -= personajeActual.ataquesValores[ataque];
 			expPoints += Math.floor(Math.random() * 100);
 		},
-		atackEnemy: function(whichEnemy, ataque){
+		ataqueEnemigo: function(whichEnemy, ataque){
 			figth.valores.turnos++;
 		}
 	},
 
 	despues: {
-		endBattle: function(){
+		finBatalla: function(){
 			figth.valores.turnos = 0;
 		}
 	}
@@ -380,8 +284,8 @@ var fight = {
 // RECUPERACIÓN Y EXPERIENCIA
 
 var recuperar = function(){
-	while(names[nameNumber].maxHP >= names[nameNumber].HP){
-		names[nameNumber].HP += 1;
+	while(personajeActual.maxHP >= personajeActual.HP){
+		personajeActual.HP += 1;
 	};
 };
 
@@ -399,10 +303,10 @@ var checkHUD = function(){
 };
 
 var combatHUD = function(){
-	escribir("combatUI-vida", names[nameNumber].HP);
-	escribir("combatUI-maxVida", names[nameNumber].maxHP);
-	escribir("combatUI-MP", names[nameNumber].MP);
-	escribir("combatUI-maxMP", names[nameNumber].maxMP);
+	escribir("combatUI-vida", personajeActual.HP);
+	escribir("combatUI-maxVida", personajeActual.maxHP);
+	escribir("combatUI-MP", personajeActual.MP);
+	escribir("combatUI-maxMP", personajeActual.maxMP);
 	escribir("combatUI-nivelExp", nivelExp);
 }
 
