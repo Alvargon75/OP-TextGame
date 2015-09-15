@@ -146,7 +146,7 @@ var personajes = {
 	},
 	"krieg": {
 		"name": "Kireg",
-		"longNme": "krieg",
+		"longName": "krieg",
 		"HP": 180,
 		"maxHP": 180,
 		"MP": 120,
