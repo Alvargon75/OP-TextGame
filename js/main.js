@@ -1,171 +1,3 @@
-﻿/*
-	 ██████╗██╗  ██╗ █████╗ ██████╗  █████╗  ██████╗████████╗███████╗██████╗ ███████╗
-	██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
-	██║     ███████║███████║██████╔╝███████║██║        ██║   █████╗  ██████╔╝███████╗
-	██║     ██╔══██║██╔══██║██╔══██╗██╔══██║██║        ██║   ██╔══╝  ██╔══██╗╚════██║
-	╚██████╗██║  ██║██║  ██║██║  ██║██║  ██║╚██████╗   ██║   ███████╗██║  ██║███████║
-	 ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝
-*/
-
-var randomName = false; // This will remain 'false'
-/*
-
-El tema de los estados va por numeros:
-
- 0 = Normal
- 1 = En Llamas
- 2 = Envenenado
- 3 = Paralizado
- 4 =
- 100 = Eufórico
- 101 = Último Aliento
-
-*/
-
-
-
-var Sanji = {
-	id: "sanji",
-	name: "Sanji",
-	longName: "Sanji Pierna Negra",
-	HP: 400,
-	maxHP: 400,
-	MP: 270,
-	maxMP: 270,
-	estado: 0,
-	grados: ["Pierna Negra", "Haki de Armadura", "Diable Jamble"],
-	ataques: ["Patada Pierna Negra", "Disparo de Venado", "Patada Escalope", "Espectro del Pan Frito", "Pierna del Diablo"],
-	ataquesValores: [4, 7, 9, 15, 22],
-	ataquesCoste: [0, 2, 6, 11, 100],
-};
-
-var Luffy = {
-	id: "luffy",
-	name: "Luffy",
-	longName: "Monkey D. Luffy",
-	HP: 500,
-	maxHP: 500,
-	MP: 230,
-	maxMP: 230,
-	estado: 0,
-	grados: ["Hombre de Goma", "Grado 2", "Grado 3"],
-	ataques: ["Estira el brazo, puñetazo", "Galleta galleta, metralleta", "Retuérce el tornillo, Molinillo", "Estira el cuello mazo, cabezazo", "Haki del Rey"],
-	ataquesValores: [5, 11, 13, 17, 27],
-	ataquesCoste: [0, 1, 7, 11, 115],
-};
-
-var Zoro = {
-	id: "zoro",
-	name: "Zoro",
-	longName: "Zoro Ronoa",
-	HP: 600,
-	maxHP: 600,
-	MP: 190,
-	maxMP: 190,
-	estado: 0,
-	grados: ["Casual", "Concentrado", "Mente en Blanco"],
-	ataques: ["Sablazo", "Estilo de Tres Espadas", "Corte del Demonio", "Espiral del Dragón", "Tatsumaki"],
-	ataquesValores: [6, 8, 12, 15, 22],
-	ataquesCoste: [0, 3, 5, 14, 95],
-};
-
-var GodMode = { // Personaje de Prueba o Cheat
-	id: "godmode",
-	name: "Dios", // Anteriormente Álvaro G.
-	longName: "Papu, el Dios",
-	HP: 1000000,
-	maxHP: 1000000,
-	MP: 9999,
-	maxMP: 9999,
-	estado: 0,
-	grados: ["Dios", "SSJ1", "SSJ4"],
-	ataques: ["Kamehameha", "Furia del Proletariado", "Kung Fury", "PapuAtaque", "Ataque Final"],
-	ataquesValores: [10, 100, 1000, 10000, 999999],
-	ataquesCoste: [1, 1, 1, 1, 1],
-};
-var Nami = {
-	id: "nami",
-	name: "Nami",
-	longName: "Nami la Ladrona",
-	HP: 190,
-	maxHP: 190,
-	MP: 70,
-	maxMP: 70,
-	estado: 0,
-	grados: ["undefined", "undefined", "undefined"],
-	ataques: ["Patada", "Robo"/*Tiene una probabilidad de dar Vida o MP*/, "Ataque Climático", "Tormenta", "Nube de Enel"],
-	ataquesValores: [1, 1, 5, 8, 11],
-	ataquesCoste: [0, 1, 3, 3, 9],
-};
-
-var Ussop = {
-	id: "usuf",
-	name: "Ussop",
-	longName: "Ussop el Tirador",
-	HP: 275,
-	maxHP: 275,
-	MP: 120,
-	maxMP: 120,
-	estado: 0,
-	grados: ["Cobardía", "Valentía", "Sogeking"],
-	ataques: ["Tiro", "Canica Explosiva", "Canica de Fuego", "Canica de Kaya", "Taifa de Ussop"],
-	ataquesValores: [1, 3, 8, 9, 13],
-	ataquesCoste: [0, 2, 5, 9, 13],
-};
-
-var Chopper = {
-	id: "chopper",
-	name: "Chopper",
-	longName: "Tony Tony Chopper",
-	HP: 300,
-	maxHP: 300,
-	MP: 240,
-	maxMP: 240,
-	estado: 0,
-	grados: ["Brain Point", "Heavy Point", "Monster Point"],
-	ataques: ["Scope"],
-	ataquesValores: [],
-	ataquesCoste: [],
-};
-
-var Robin = {
-	id: "robin",
-	name: "Robin",
-	longName: "Nico Robin",
-	HP: 250,
-	maxHP: 250,
-	MP: 300,
-	maxMP: 300,
-	estado: 0,
-	grados: ["Doña Domingo", "No Quiero Vivir", "Quiero vivir"],
-	ataques: ["Brotad en 3", "Brotad en 5", "10 Flores", "Infinitas Flores", "Brotad en Millones"],
-	ataquesValores: [3, 6, 8, 14, 20],
-	ataquesCoste: [0, 3, 4, 7, 16],
-};
-
-var Franky = {
-	id: "franky",
-	name: "Franky",
-	longName: "Cutty Flam",
-	HP: 480,
-	maxHP: 480,
-	MP: 200,
-	maxMP: 200,
-	estado: 0,
-	grados: ["Agotado", "Normal", "SUUUUUUUUUUUPER"],
-	ataques: ["Weapons Left", "Strong Hammer", "Lanzallamas", "Coup de Vent", "SUUUUUUUUUUPER"],
-	ataquesValores: [1, 3, 6 /*Añade en Llamas*/, 5 /*Sube HP*/, 18],
-	ataquesCoste: [0, 2, 4, 5, 10],
-};
-
-// Generic Villain
-
-
-var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
-var nameNumber = 0;
-var currentCharacter = names[0];
-
-
 /*
 ███╗   ███╗███████╗ ██████╗ █████╗ ███╗   ██╗██╗███████╗███╗   ███╗ ██████╗ ███████╗
 ████╗ ████║██╔════╝██╔════╝██╔══██╗████╗  ██║██║██╔════╝████╗ ████║██╔═══██╗██╔════╝
@@ -183,15 +15,15 @@ var gradoActual = 0;
 
 // SAVING TIME
 
-var writer = function(id,text){
+var escribir = function(id,text){
 	document.getElementById(id).innerHTML = text;
 }
 
-var hide = function(id){
+var ocultar = function(id){
 	document.getElementById(id).classList.add('hidden');
 }
 
-var show = function(id){
+var mostrar = function(id){
 	document.getElementById(id).classList.remove('hidden');
 }
 
@@ -207,6 +39,10 @@ var checkArray = function(objeto, array){
 	}
 
 	return false;
+}
+
+var quoteRemover = function(string){
+    return string.replace(/['"]+/g, '');
 }
 
 var randomString = function(length){
@@ -324,8 +160,8 @@ var randomString = function(length){
 */
 
 var xmlhttp;
-var xmlDocument;
 var language = window.navigator.userLanguage || window.navigator.language;
+
 
 if(window.XMLHttpRequest){ //Modern Browsers
     xmlhttp = new XMLHttpRequest();
@@ -334,134 +170,61 @@ if(window.XMLHttpRequest){ //Modern Browsers
 }
 
 if(language == "es-ES"){
-	xmlhttp.open("GET", "locale/es-ES.xml", true);
+	xmlhttp.open("GET", "data/locale/es-ES.xml", true);
 	xmlhttp.send();
 }else{
-	xmlhttp.open("GET", "locale/en-US.xml", true);
+	xmlhttp.open("GET", "data/locale/en-US.xml", true);
 	xmlhttp.send();
 }
 
+var readXML = function(css){
+	return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
+}
+
 console.log("Lang: " + language);
+
+/*
+	 ██████╗██╗  ██╗ █████╗ ██████╗  █████╗  ██████╗████████╗███████╗██████╗ ███████╗
+	██╔════╝██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
+	██║     ███████║███████║██████╔╝███████║██║        ██║   █████╗  ██████╔╝███████╗
+	██║     ██╔══██║██╔══██║██╔══██╗██╔══██║██║        ██║   ██╔══╝  ██╔══██╗╚════██║
+	╚██████╗██║  ██║██║  ██║██║  ██║██║  ██║╚██████╗   ██║   ███████╗██║  ██║███████║
+	 ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝
+*/
+
+/*
+
+El tema de los estados va por numeros:
+
+ 0 = Normal
+ 1 = En Llamas
+ 2 = Envenenado
+ 3 = Paralizado
+ 4 =
+ 100 = Eufórico
+ 101 = Último Aliento
+
+*/
+
+// Generic Villain
+//var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
+
+var personajes = [personajes.aliados.Luffy, personajes.aliados.Zorro, personajes.aliados.Sanji, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Chopper, personajes.aliados.Robin, personajes.aliados.Franky];
+var personajeActual = personajes[0];
 
 
 // START AND CLEAR
 
 var start = function(){
 	console.log("Game Started");
-	writer("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
-	hide("inicio");
-	show("d1_a");
-	show("d1_b");
-	checkHUD(); /* No more random name
-	if(randomName == true){
-		switch(nameNumber){
-			case 0: //Luffy
-				break;
-			case 1: // Sanji
-				hide("i_intro_luffy");
-				show("i_intro_sanji");
-				document.getElementById("stats").classList.add('stats-sanji');
-				break;
-			case 2: // Zoro
-				hide("i_intro_luffy");
-				show("i_intro_zoro");
-				document.getElementById("stats").classList.add('stats-zoro');
-				break;
-			case 3: //Nami
-				hide("i_intro_luffy");
-				show("i_intro_nami");
-				document.getElementById("stats").classList.add('stats-nami');
-				break;
-			case 4: //Ussop
-				hide("i_intro_luffy");
-				show("i_intro_ussop");
-				document.getElementById("stats").classList.add('stats-ussop');
-				writer("name", Ussop.longName);
-				break;
-			case 5: //Robin
- 				hide("i_intro_luffy");
- 				show("i_intro_robin");
- 				document.getElementById("stats").classList.add('stats-robin');
- 				break;
-			case 6: //Franky
- 				hide("i_intro_luffy");
- 				show("i_intro_franky");
- 				document.getElementById("stats").classList.add('stats-franky');
- 				break;
-			case 7: //Chopper TEMPORALMENTE DESHABILITADO
- 				hide("i_intro_luffy");
- 				show("i_intro_chopper");
- 				document.getElementById("stats").classList.add('stats-chopper');
- 				break;
-		}
-		writer("name", names[nameNumber].longName)
-		console.log("Name:" + " " + names[nameNumber].name);
-	}else{
-		nameNumber = 0;
-		console.log("Name:" + " " + Luffy.name);
-		writer("name", "Monkey D. Luffy");
-	};*/
+	escribir("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
+	ocultar("inicio");
+	mostrar("d1_a");
+	mostrar("d1_b");
+	checkHUD();
 	nameNumber = 0;
-	writer("name", names[nameNumber].longName);
+	escribir("name", personajeActual.longName);
 };
-
-
-// names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper];
-var usados = [nameNumber];
-
-var SdPGenerator = function(index){
-	if(randomName === true){
-		var personaje = Math.floor(Math.random() * 8);
-		var temp = checkArray(personaje, usados);
-		do{
-			if(temp === true){
-				personaje = Math.floor(Math.random() * 8);
-				temp = checkArray(personaje, usados);
-			}else{
-				usados.push(personaje);
-				return personaje;
-			}
-		}while(temp === true)
-	}else{
-		switch (index) {
-			case 2:
-				return 2;
-				break;
-			case 3:
-				return 3;
-				break;
-			case 4:
-				return 4;
-				break;
-			case 5:
-				return 1;
-				break;
-			case 6:
-				return 7;
-				break;
-			case 7:
-				return 5;
-				break;
-			case 8:
-				return 6;
-				break;
-		}
-	}
-}
-
-var characterChosen = function(character){
-	hide("nameChange");
-	nameNumber = character;
-	return true;
-}
-
-var segundoSdP = SdPGenerator(2);
-var tercerSdP = SdPGenerator(3);
-var cuartoSdP = SdPGenerator(4);
-var quintoSdP = SdPGenerator(5);
-var sextoSdP = SdPGenerator(6);
-var septimoSdP = SdPGenerator(7);
-var octavoSdp = SdPGenerator(8);
 
 var clear = function(){
 	document.getElementById("intro").innerHTML = " ";
@@ -478,59 +241,70 @@ var clear = function(){
 	document.getElementById("c3").innerHTML = " ";
 	document.getElementById("fin").innerHTML = " ";
 }
-var turnCount = 0;
-var fight = {
-	setUp: function(enemyName){
-		document.getElementById("combatUI").classList.remove('combatUI-inactive');
-		writer("vs_title", names[nameNumber].name + " " + "vs" + " " + enemyName);
-		writer("at1", names[nameNumber].ataques[0]);
-		writer("at2", names[nameNumber].ataques[1]);
-		writer("at3", names[nameNumber].ataques[2]);
-		writer("at4", names[nameNumber].ataques[3]);
-		writer("at5", names[nameNumber].ataques[4]);
-		combatHUD();
-	},
-	atackAlly: function(ataque){
-		names[nameNumber].MP -= names[nameNumber].ataquesCoste[ataque];
-		enemy.HP -= names[nameNumber].ataquesValores[ataque];
-		expPoints += Math.floor(Math.random() * 100);
-	},
-	atackEnemy: function(whichEnemy, ataque){
-		turnCount++;
-	},
-	endBattle: function(){
-		turnCount = 0;
 
+var combate = {
+	valores: {
+		turnos: 0
+	},
+	antes: {
+		setUp: function(enemy){
+			document.getElementById("combatUI").classList.remove('combatUI-inactive');
+			escribir("vs_title", personajeActual.name + " " + "vs" + " " + enemy.name);
+			escribir("at1", personajeActual.ataques[0]);
+			escribir("at2", personajeActual.ataques[1]);
+			escribir("at3", personajeActual.ataques[2]);
+			escribir("at4", personajeActual.ataques[3]);
+			escribir("at5", personajeActual.ataques[4]);
+			combatHUD();
+		}
+	},
+	durante: {
+		ataqueAliado: function(ataque){
+			personajeActual.MP -= personajeActual.ataquesCoste[ataque];
+			enemy.HP -= personajeActual.ataquesValores[ataque];
+			expPoints += Math.floor(Math.random() * 100);
+		},
+		ataqueEnemigo: function(whichEnemy, ataque){
+			figth.valores.turnos++;
+		}
+	},
+
+	despues: {
+		finBatalla: function(){
+			figth.valores.turnos = 0;
+		}
 	}
+
+
 }
 
 // RECUPERACIÓN Y EXPERIENCIA
 
 var recuperar = function(){
-	while(names[nameNumber].maxHP >= names[nameNumber].HP){
-		names[nameNumber].HP += 1;
+	while(personajeActual.maxHP >= personajeActual.HP){
+		personajeActual.HP += 1;
 	};
 };
 
 // HUD
 
 var checkHUD = function(){
-	document.getElementById("vida").innerHTML = names[nameNumber].HP;
-	writer("maxVida", names[nameNumber].maxHP);
-	writer("MP", names[nameNumber].MP);
-	writer("maxMP", names[nameNumber].maxMP);
-	document.getElementById("ataque").innerHTML = names[nameNumber].grados[gradoActual];
+	document.getElementById("vida").innerHTML = personajeActual.HP;
+	escribir("maxVida", personajeActual.maxHP);
+	escribir("MP", personajeActual.MP);
+	escribir("maxMP", personajeActual.maxMP);
+	document.getElementById("ataque").innerHTML = personajeActual.grados[gradoActual];
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
 	console.log("HUD revisado");
 };
 
 var combatHUD = function(){
-	writer("combatUI-vida", names[nameNumber].HP);
-	writer("combatUI-maxVida", names[nameNumber].maxHP);
-	writer("combatUI-MP", names[nameNumber].MP);
-	writer("combatUI-maxMP", names[nameNumber].maxMP);
-	writer("combatUI-nivelExp", nivelExp);
+	escribir("combatUI-vida", personajeActual.HP);
+	escribir("combatUI-maxVida", personajeActual.maxHP);
+	escribir("combatUI-MP", personajeActual.MP);
+	escribir("combatUI-maxMP", personajeActual.maxMP);
+	escribir("combatUI-nivelExp", nivelExp);
 }
 
 // ATAQUES
@@ -632,19 +406,19 @@ var luchaAlv = function(){
 
 	//Pelea
 	while(atacar){
-		writer("a4", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-1")[0].childNodes[0].nodeValue);
+		escribir("a4", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-1")[0].childNodes[0].nodeValue);
 		danoTotal += danoRound;
 		luffyVida -= danoAlv;
 		if(danoTotal >= 100){ //Ganas
-			writer("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-2")[0].childNodes[0].nodeValue);
-			show("p0");
-			hide("d2p_a");
-			hide("d2p_b");
+			escribir("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-2")[0].childNodes[0].nodeValue);
+			mostrar("p0");
+			ocultar("d2p_a");
+			ocultar("d2p_b");
 			atacar = false;
 			luffyVida = 500;
 			checkHUD();
 		}else if(luffyVida <= 0){ //Pierdes
-			writer("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-3")[0].childNodes[0].nodeValue);
+			escribir("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-3")[0].childNodes[0].nodeValue);
 			atacar = false;
 			checkHUD();
 		}else{ //Continua
@@ -674,7 +448,7 @@ $$$$$$$  |\$$$$$$  |\$$$$$$$ |\$$$$$$$ |\$$$$$$$ |
 */
 var buggy1 = function(){
 	clear();
-	writer("into", xmlhttp.responseXML.querySelectorAll("buggy > intro")[0].childNodes[0].nodeValue);
+	escribir("into", xmlhttp.responseXML.querySelectorAll("buggy > intro")[0].childNodes[0].nodeValue);
 }
 
 /*
@@ -782,17 +556,17 @@ $$  /   \$$ |\$$$$$$$ | \$$$$  |\$$$$$$$\ $$ |            $$  /
 */
 
 var debug = {
-	funcionTest: function(funcion, funcionValores/*Pilla un array*/){
+	funcionTest: function(funcion){
 		var argumentos;
 		for(var i = 0; i < funcionValores.length; i++){
 
 		}
 		try{
-			funcion();
+			funcion;
 		}catch(err){
-			console.log("Bug FOund");
+			console.log("Se encontró un error: " + err.name + " ." + err.message);
 		}finally{
-			console.log("Debug Finished")
+			console.log("Debug Acabado");
 		}
 	}
 }
