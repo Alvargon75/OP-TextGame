@@ -216,7 +216,6 @@ var personajes = {
 		"tashigi": {
 			"name": "Tashigi",
 			"longName": "Tashigi",
-			"name":
 			"HP": 390,
 			"maxHP": 390,
 			"MP": 100,
@@ -412,7 +411,6 @@ var personajes = {
 			"missXmas": {
 				"name": "MissXmas",
 				"longName": "MisXmas",
-,
 				"HP": 100,
 				"maxHP": 100,
 				"MP": 30,

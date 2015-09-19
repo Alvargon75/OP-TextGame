@@ -450,8 +450,6 @@ var buggy1 = function(){
 	clear();
 	escribir("into", xmlhttp.responseXML.querySelectorAll("buggy > intro")[0].childNodes[0].nodeValue);
 	escribir("a1" , "zorro y luffy estan viajando en su bote muertos de ambre, luffy ve un pájaro y usa su poder Gomu Gomu no Mi para atraparlo, pero el pájaro resulta ser mas grande de lo que pensaba. El pajaro se lleva a luffy y Zoro persigue al pájaro en el bote, pero se encuentra con tres piratas llamados Tightrope, Walking y Funan. Estos entran al bote y tratan de robarlo, pero son derrotados facilmente por Zoro");
-+	
-+	
 }
 
 /*
