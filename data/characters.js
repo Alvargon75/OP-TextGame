@@ -1,4 +1,4 @@
-{
+var personajes = {
 "aliados": {
 	 "Sanji" : {
 		"id": "sanji",
@@ -121,8 +121,10 @@
 },
 
 
-"enemies": {
+"enemigos": {
 	"alvida": {
+		"name": "Alvida",
+		"longName": "Alvida la gorada",
 		"HP": 20,
 		"maxHP": 20,
 		"MP": 18,
@@ -132,6 +134,8 @@
 		"ataquesValores": [1, 4]
 	},
 	"buggy": {
+		"name": "Buggy",
+		"longName": "Buggy El Payaso",
 		"HP": 100,
 		"maxHP": 100,
 		"MP": 78,
@@ -141,6 +145,8 @@
 		"ataquesValores": []
 	},
 	"krieg": {
+		"name": "Kireg",
+		"longName": "krieg",
 		"HP": 180,
 		"maxHP": 180,
 		"MP": 120,
@@ -151,6 +157,8 @@
 	},
 	"arlongPark": {
 		"arlong": {
+			"name": "Arlong",
+			"longName": "Arlong Squalo",
 			"HP": 300,
 			"maxHP": 300,
 			"MP": 210,
@@ -160,6 +168,8 @@
 			"ataquesValores": []
 		},
 		"octi": {
+			"name": "Octi",
+			"longName": "Octi",
 			"HP": 180,
 			"maxHP": 180,
 			"MP": 70,
@@ -169,6 +179,8 @@
 			"ataquesValores": []
 		},
 		"kurobi": {
+			"name": "Kurobi",
+			"longName": "Kurobi",
 			"HP": 180,
 			"maxHP": 180,
 			"MP": 70,
@@ -178,6 +190,8 @@
 			"ataquesValores": []
 		},
 		"chew": {
+			"name": "Chew",
+			"longName": "Chew",
 			"HP": 170,
 			"maxHP": 170,
 			"MP": 60,
@@ -189,6 +203,8 @@
 	},
 	"logueTown": {
 		"smoker": {
+			"name": "Smoker",
+			"longName": "El Cazador Blanco",
 			"HP": 700,
 			"maxHP": 700,
 			"MP": 350,
@@ -198,6 +214,8 @@
 			"ataquesValores": []
 		},
 		"tashigi": {
+			"name": "Tashigi",
+			"longName": "Tashigi",
 			"HP": 390,
 			"maxHP": 390,
 			"MP": 100,
@@ -219,6 +237,8 @@
 				"ataquesValores": []
 			},
 			"igarapoi": {
+				"name": "Igarapoi",
+				"longName": "Igarapoi",
 				"HP": 40,
 				"maxHP": 40,
 				"MP": 10,
@@ -228,6 +248,8 @@
 				"ataquesValores": []
 			},
 			"mr5": {
+				"name": "Mr5",
+				"longName": "Don 5",
 				"HP": 190,
 				"maxHP": 190,
 				"MP": 90,
@@ -237,6 +259,8 @@
 				"ataquesValores": []
 			},
 			"missValentine": {
+				"name": "MissValentine",
+				"longName": "MissValentine",
 				"HP": 100,
 				"maxHP": 100,
 				"MP": 120,
@@ -248,6 +272,8 @@
 		},
 		"littleGarden": {
 			"mr5": {
+				"name": "Mr5",
+				"longName": "Don 5",
 				"HP": 190,
 				"maxHP": 190,
 				"MP": 90,
@@ -257,6 +283,8 @@
 				"ataquesValores": []
 			},
 			"missValentine": {
+				"name": "MissValentine",
+				"longName": "MissValentine",
 				"HP": 100,
 				"maxHP": 100,
 				"MP": 120,
@@ -267,6 +295,8 @@
 
 			},
 			"missGoldenWeek": {
+				"name": "MissGoldenWeek",
+				"longName": "MissGoldenWeek",
 				"HP": 50,
 				"maxHP": 50,
 				"MP": 60,
@@ -276,6 +306,8 @@
 				"ataquesValores": []
 			},
 			"mr3": {
+				"name": "Mr3",
+				"longName": "Don 3",
 				"HP": 260,
 				"maxHP": 260,
 				"MP": 250,
@@ -285,6 +317,8 @@
 				"ataquesValores": []
 			},
 			"mr13": {
+				"name": "Mr13",
+				"longName": "Don 13",
 				"HP": 40,
 				"maxHP":40 ,
 				"MP": 20,
@@ -294,6 +328,8 @@
 				"ataquesValores": []
 			},
 			"missFriday": {
+				"name": "MissFriday",
+				"longName": "MissFriday",
 				"HP": 40,
 				"maxHP": 40,
 				"MP": 20,
@@ -305,6 +341,8 @@
 		},
 		"drum": {
 			"chess": {
+				"name": "Chess",
+				"longName": "Chess",
 				"HP": 120,
 				"maxHP": 120,
 				"MP": 60,
@@ -314,6 +352,8 @@
 				"ataquesValores": []
 			},
 			"kuromanimo": {
+				"name": "kuromanimo",
+				"longName": "kuromanimo" ,
 				"HP": 100,
 				"maxHP": 100,
 				"MP": 70,
@@ -323,6 +363,8 @@
 				"ataquesValores": []
 			},
 			"wapol": {
+				"name": "Wapol",
+				"longName": "Wapol",
 				"HP": 290,
 				"maxHP": 290,
 				"MP": 130,
@@ -334,6 +376,8 @@
 		},
 		"arabasta": {
 			"smoker": {
+				"name": "Smoker",
+				"longName": "Smoker",
 				"HP": 700,
 				"maxHP": 700,
 				"MP": 350,
@@ -343,6 +387,8 @@
 				"ataquesValores": []
 			},
 			"crocodile": {
+				"name": "Don 0",
+				"longNAme": "Crocodile",
 				"HP": 1000,
 				"maxHP": 100,
 				"MP": 500,
@@ -352,6 +398,8 @@
 				"ataquesValores": []
 			},
 			"mr4": {
+				"name": "Mr4",
+				"longName": "Don 4",
 				"HP": 160,
 				"maxHP": 160,
 				"MP": 100,
@@ -361,6 +409,8 @@
 				"ataquesValores": []
 			},
 			"missXmas": {
+				"name": "MissXmas",
+				"longName": "MisXmas",
 				"HP": 100,
 				"maxHP": 100,
 				"MP": 30,
@@ -370,6 +420,8 @@
 				"ataquesValores": []
 			},
 			"bentham": {
+				"name": "Bentham",
+				"longName": "Bentham",
 				"HP": 200,
 				"maxHP": 200,
 				"MP": 180,
@@ -379,6 +431,8 @@
 				"ataquesValores": []
 			},
 			"paula": {
+				"name": "Paula",
+				"longName": "Paula",
 				"HP": 240,
 				"maxHP": 240,
 				"MP": 300,
@@ -388,6 +442,8 @@
 				"ataquesValores": []
 			},
 			"dazBones": {
+				"name": "DazBones",
+				"longName": "DazBones",
 				"HP": 400,
 				"maxHP": 400,
 				"MP": 260,
@@ -397,6 +453,8 @@
 				"ataquesValores": []
 			},
 			"crocodilePalace": {
+				"name": "CrocodilePalece",
+				"longName": "CrocodilePalece",
 				"HP": 700,
 				"maxHP": 700,
 				"MP": 500,
@@ -406,6 +464,8 @@
 				"ataquesValores": []
 			},
 			"crocodilePantheon": {
+				"name": "CrocodilePantheon",
+				"longName": "CrocodilePantheon",
 				"HP": 650,
 				"maxHP": 650,
 				"MP": 400,
@@ -418,6 +478,8 @@
 		"skypea": {
 			"jaya": {
 				"bellamy": {
+				"name": "Belamy",
+				"longName": "Belamy",
 					"HP": 120,
 					"maxHP": 120,
 					"MP": 60,
@@ -429,6 +491,8 @@
 			},
 			"islaDelCielo": {
 				"satori": {
+					"name": "Satori",
+					"longName": "Satori",
 					"HP": 300,
 					"maxHP": 300,
 					"MP": 600,
@@ -438,6 +502,8 @@
 					"ataquesValores": []
 				},
 				"shuraFuza": {
+					"name": "ShuraFuza",
+					"longName": "ShuraFuza",
 					"HP": 300,
 					"maxHP": 300,
 					"MP": 400,
@@ -447,6 +513,8 @@
 					"ataquesValores": []
 				},
 				"braham": {
+					"name": "Braham",
+					"longName": "Braham",
 					"HP": 320,
 					"maxHP": 320,
 					"MP": 200,
@@ -456,6 +524,8 @@
 					"ataquesValores": []
 				},
 				"yama": {
+					"name": "Yama",
+					"longName": "Yama",
 					"HP": 300,
 					"maxHP": 300,
 					"MP": 210,
@@ -465,6 +535,8 @@
 					"ataquesValores": []
 				},
 				"gedatsu": {
+					"name": "Gedatsu",
+					"longName": "Gedatsu",
 					"HP": 200,
 					"maxHP": 200,
 					"MP": 175,
@@ -474,6 +546,8 @@
 					"ataquesValores": []
 				},
 				"enel": {
+					"name": "Enel",
+					"longName": "Enel El Dios",
 					"HP": 700,
 					"maxHP": 700,
 					"MP": 600,
@@ -487,6 +561,8 @@
 		"water7": {
 			"davyBackFight": {
 				"foxy": {
+					"name": "Foxy",
+					"longName": "Foxy El Zorro",
 					"HP": 200,
 					"maxHP": 200,
 					"MP": 300,
@@ -498,6 +574,8 @@
 			},
 			"water7": {
 				"frankyFamily": {
+					"name": "FrankyFamily",
+					"longName": "FrankyFamily",
 					"HP": 50,
 					"maxHP": 50,
 					"MP": 80,
@@ -516,6 +594,8 @@
 					"ataquesValores": []
 				},
 				"franky": {
+					"name": "Franky",
+					"longName": "CiborgFranky",
 					"HP": 500,
 					"maxHP": 500,
 					"MP": 320,
@@ -525,6 +605,8 @@
 					"ataquesValores": []
 				},
 				"jerry": {
+					"name": "Jerry",
+					"longName": "Jerry",
 					"HP": 260,
 					"maxHP": 260,
 					"MP": 100,
@@ -534,6 +616,8 @@
 					"ataquesValores": []
 				},
 				"wanze": {
+					"name": "Wanze",
+					"longName": "Wanze",
 					"HP": 240,
 					"maxHP": 240,
 					"MP": 200,
@@ -543,6 +627,8 @@
 					"ataquesValores": []
 				},
 				"nero": {
+					"name": "Nero",
+					"longName": "Nero",
 					"HP": 120,
 					"maxHP": 120,
 					"MP": 600,
@@ -552,6 +638,8 @@
 					"ataquesValores": []
 				},
 				"blueno": {
+					"name": "Blueno",
+					"longName": "Blueno",
 					"HP": 600,
 					"maxHP": 600,
 					"MP": 500,
@@ -563,6 +651,8 @@
 			},
 			"enniesLobby": {
 				"blueno": {
+					"name": "Blueno",
+					"longName": "Blueno",
 					"HP": 550,
 					"maxHP": 550,
 					"MP": 300,
@@ -572,6 +662,8 @@
 					"ataquesValores": []
 				},
 				"kalifa": {
+					"name": "Kalifa",
+					"longName": "Kalifa",
 					"HP": 400,
 					"maxHP": 400,
 					"MP": 300,
@@ -581,6 +673,8 @@
 					"ataquesValores": []
 				},
 				"chapapa": {
+					"name": "Chapa",
+					"longName": "Chapa",
 					"HP": 350,
 					"maxHP": 350,
 					"MP": 250,
@@ -590,6 +684,8 @@
 					"ataquesValores": []
 				},
 				"kumadori": {
+					"name": "Kumadori",
+					"longName": "Kumadori",
 					"HP": 350,
 					"maxHP": 350,
 					"MP": 250,
@@ -599,6 +695,8 @@
 					"ataquesValores": []
 				},
 				"monsterChopper": {
+					"name": "MonsterChopper",
+					"longName": "MonsterChopper",
 					"HP": 400,
 					"maxHP": 400,
 					"MP": 100,
@@ -608,6 +706,8 @@
 					"ataquesValores": []
 				},
 				"jabra": {
+					"name": "Jabra",
+					"longName": "Jabra",
 					"HP": 450,
 					"maxHP": 450,
 					"MP": 260,
@@ -617,6 +717,8 @@
 					"ataquesValores": []
 				},
 				"kaku": {
+					"name": "Kaku",
+					"longName": "Kaku",
 					"HP": 525,
 					"maxHP": 525,
 					"MP": 300,
@@ -626,6 +728,8 @@
 					"ataquesValores": []
 				},
 				"robLucci": {
+					"name": "RobLucci",
+					"longName": "",
 					"HP": 750,
 					"maxHP": 750,
 					"MP": 600,
@@ -635,6 +739,8 @@
 					"ataquesValores": []
 				},
 				"spandam": {
+					"name": "Spanadam",
+					"longName": "Spandam",
 					"HP": 80,
 					"maxHP": 80,
 					"MP": 10,
@@ -646,6 +752,8 @@
 			},
 			"postEnniesLobby": {
 				"coby": {
+					"name": "Coby",
+					"longName": "Coby",
 					"HP": 250,
 					"maxHP": 250,
 					"MP": 200,
@@ -655,6 +763,8 @@
 					"ataquesValores": []
 				},
 				"helmeppo": {
+					"name": "Helmeppo",
+					"longName": "Helmeppo",
 					"HP": 175,
 					"maxHP": 175,
 					"MP": 100,
@@ -665,6 +775,8 @@
 				},
 				"shanksVSwhitebeard": {
 					"shanks": {
+					"name": "shanks",
+					"longName": "shanks",
 						"HP": 900,
 						"maxHP": 900,
 						"MP": 500,
@@ -674,6 +786,8 @@
 						"ataquesValores": []
 					},
 					"barbaBlanca": {
+					"name": "BarabaBlanca",
+					"longName": "Barbablanca",
 						"HP": 1200,
 						"maxHP": 1200,
 						"MP": 500,
@@ -684,6 +798,8 @@
 					}
 				},
 				"monkeyDGarp": {
+					"name": "Garp",
+					"longName": "Monkey D Garp",
 					"HP": 600,
 					"maxHP": 600,
 					"MP": 500,
@@ -693,6 +809,8 @@
 					"ataquesValores": []
 				},
 				"aceVSblackbeard": {
+					"name": "Ace",
+					"longName": "Ace",
 					"HP": 700,
 					"maxHP": 700,
 					"MP": 560,

@@ -2,169 +2,168 @@
 <es-ES name="Español">
     <GUI>
         <stats>
-            <HP>Vida: </HP>
+            <HP tag="">Vida: </HP>
         </stats>
     </GUI>
     <characters>
         <luffy>
-            <longName>Monkey D. Luffy</longName>
-            <MP>Energía: </MP>
+            <longName tag="">Monkey D. Luffy</longName>
+            <MP tag="">Energía: </MP>
             <gears>
-                <gear id="gear1">Hombre de Goma</gear>
-                <gear id="gear2">Segundo Marcha</gear>
-                <gear id="gear3">Tercera Marcha</gear>
+                <gear id="gear1" tag="">Hombre de Goma</gear>
+                <gear id="gear2" tag="">Segundo Marcha</gear>
+                <gear id="gear3" tag="">Tercera Marcha</gear>
             </gears>
             <atacks>
-                <atack id="atack1">Estira el Brazo, Puñetazo</atack>
-                <atack id="atack2">Galleta galleta, metralleta</atack>
-                <atack id="atack3">Estira, estira, BAZOOKA</atack>
-                <atack id="atack4">Estira el cuello mazo, cabezazo</atack>
-                <atack id="atack5">Haki del Rey</atack>
+                <atack id="atack1" tag="">Estira el Brazo, Puñetazo</atack>
+                <atack id="atack2" tag="">Galleta galleta, metralleta</atack>
+                <atack id="atack3" tag="">Estira, estira, BAZOOKA</atack>
+                <atack id="atack4" tag="">Estira el cuello mazo, cabezazo</atack>
+                <atack id="atack5" tag="">Haki del Rey</atack>
             </atacks>
         </luffy>
         <zoro>
-            <longName>Zoro Ronoa</longName>
-            <MP>Energía: </MP>
+            <longName tag="">Zoro Ronoa</longName>
+            <MP tag="">Energía: </MP>
             <gears>
-                <gear id="gear1">Casual</gear>
-                <gear id="gear2">Concentrado</gear>
-                <gear id="gear3">Mente en Blanco</gear>
+                <gear id="gear1" tag="">Casual</gear>
+                <gear id="gear2" tag="">Concentrado</gear>
+                <gear id="gear3" tag="">Mente en Blanco</gear>
             </gears>
             <atacks>
-                <atack id="atack1">Sablazo</atack>
-                <atack id="atack2">Estilo de Tres Espadas</atack>
-                <atack id="atack3">Corte del Demonio</atack>
-                <atack id="atack4">Ashura</atack>
-                <atack id="atack5">Tatsumaki</atack>
+                <atack id="atack1" tag="">Sablazo</atack>
+                <atack id="atack2" tag="">Estilo de Tres Espadas</atack>
+                <atack id="atack3" tag="">Corte del Demonio</atack>
+                <atack id="atack4" tag="">Ashura</atack>
+                <atack id="atack5" tag="">Tatsumaki</atack>
             </atacks>
         </zoro>
         <sanji>
             <longName>Sanji Pierna Negra</longName>
             <MP>Energía: </MP>
             <gears>
-                <gear id="gear1"></gear>
-                <gear id="gear2"></gear>
-                <gear id="gear3"></gear>
+                <gear id="gear1" tag=""></gear>
+                <gear id="gear2" tag=""></gear>
+                <gear id="gear3" tag=""></gear>
             </gears>
             <atacks>
-                <atack id="atack1"></atack>
-                <atack id="atack2"></atack>
-                <atack id="atack3"></atack>
-                <atack id="atack4"></atack>
-                <atack id="atack5"></atack>
+                <atack id="atack1" tag=""></atack>
+                <atack id="atack2" tag=""></atack>
+                <atack id="atack3" tag=""></atack>
+                <atack id="atack4" tag=""></atack>
+                <atack id="atack5" tag=""></atack>
             </atacks>
         </sanji>
         <nami>
-            <longName>Nami la Gata Ladrona</longName>
-            <MP>Energía: </MP>
+            <longName tag="">Nami la Gata Ladrona</longName>
+            <MP tag="">Energía: </MP>
             <gears>
-                <gear id="gear1"></gear>
-                <gear id="gear2"></gear>
-                <gear id="gear3"></gear>
+                <gear id="gear1" tag=""></gear>
+                <gear id="gear2" tag=""></gear>
+                <gear id="gear3" tag=""></gear>
             </gears>
             <atacks>
-                <atack id="atack1"></atack>
-                <atack id="atack2"></atack>
-                <atack id="atack3"></atack>
-                <atack id="atack4"></atack>
-                <atack id="atack5"></atack>
+                <atack id="atack1" tag=""></atack>
+                <atack id="atack2" tag=""></atack>
+                <atack id="atack3" tag=""></atack>
+                <atack id="atack4" tag=""></atack>
+                <atack id="atack5" tag=""></atack>
             </atacks>
         </nami>
         <ussop>
-            <longName>Ussop el Tirador</longName>
-            <MP>Energía: </MP>
-            <gears>
-                <gear id="gear1"></gear>
-                <gear id="gear2"></gear>
-                <gear id="gear3"></gear>
+            <longName tag="">Ussop el Tirador</longName>
+            <MP tag="">Energía: </MP>
+            <gears tag="">
+                <gear id="gear1" tag=""></gear>
+                <gear id="gear2" tag=""></gear>
+                <gear id="gear3" tag=""></gear>
             </gears>
             <atacks>
-                <atack id="atack1"></atack>
-                <atack id="atack2"></atack>
-                <atack id="atack3"></atack>
-                <atack id="atack4"></atack>
-                <atack id="atack5"></atack>
+                <atack id="atack1" tag=""></atack>
+                <atack id="atack2" tag=""></atack>
+                <atack id="atack3" tag=""></atack>
+                <atack id="atack4" tag=""></atack>
+                <atack id="atack5" tag=""></atack>
             </atacks>
         </ussop>
         <chopper>
-            <longName>Tony Tony Chopper</longName>
-            <MP>Energía: </MP>
+            <longName tag="">Tony Tony Chopper</longName>
+            <MP tag="">Energía: </MP>
             <gears>
-                <gear id="gear1"></gear>
-                <gear id="gear2"></gear>
-                <gear id="gear3"></gear>
+                <gear id="gear1" tag=""></gear>
+                <gear id="gear2" tag=""></gear>
+                <gear id="gear3" tag=""></gear>
             </gears>
             <atacks>
-                <atack id="atack1"></atack>
-                <atack id="atack2"></atack>
-                <atack id="atack3"></atack>
-                <atack id="atack4"></atack>
-                <atack id="atack5"></atack>
+                <atack id="atack1" tag=""></atack>
+                <atack id="atack2" tag=""></atack>
+                <atack id="atack3" tag=""></atack>
+                <atack id="atack4" tag=""></atack>
+                <atack id="atack5" tag=""></atack>
             </atacks>
         </chopper>
         <robin>
-            <longName>Nico Robin</longName>
-            <MP>Energía: </MP>
+            <longName tag="">Nico Robin</longName>
+            <MP tag="">Energía: </MP>
             <gears>
-                <gear id="gear1"></gear>
-                <gear id="gear2"></gear>
-                <gear id="gear3"></gear>
+                <gear id="gear1" tag=""></gear>
+                <gear id="gear2" tag=""></gear>
+                <gear id="gear3" tag=""></gear>
             </gears>
             <atacks>
-                <atack id="atack1"></atack>
-                <atack id="atack2"></atack>
-                <atack id="atack3"></atack>
-                <atack id="atack4"></atack>
-                <atack id="atack5"></atack>
+                <atack id="atack1" tag=""></atack>
+                <atack id="atack2" tag=""></atack>
+                <atack id="atack3" tag=""></atack>
+                <atack id="atack4" tag=""></atack>
             </atacks>
         </robin>
         <franky>
-            <longName>Cutty Flam</longName>
-            <MP>Cola: </MP>
+            <longName tag="">Cutty Flam</longName>
+            <MP tag="">Cola: </MP>
             <gears>
-                <gear id="gear1"></gear>
-                <gear id="gear2"></gear>
-                <gear id="gear3"></gear>
+                <gear id="gear1" tag=""></gear>
+                <gear id="gear2" tag=""></gear>
+                <gear id="gear3" tag=""></gear>
             </gears>
             <atacks>
-                <atack id="atack1"></atack>
-                <atack id="atack2"></atack>
-                <atack id="atack3"></atack>
-                <atack id="atack4"></atack>
-                <atack id="atack5"></atack>
+                <atack id="atack1" tag=""></atack>
+                <atack id="atack2" tag=""></atack>
+                <atack id="atack3" tag=""></atack>
+                <atack id="atack4" tag=""></atack>
+                <atack id="atack5" tag=""></atack>
             </atacks>
         </franky>
     </characters>
     <arcs>
-        <inicio number="0">
-            <intro js="152"><![CDATA[Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una enseña pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?]]></intro>
-            <marine js="541">
-                <intro_marine js="541"><![CDATA[Decides ir con el barco de los marines. Allí encuentras al Teniente Fullbody que te recibe amablemente. Te invita a ir con el hasta la Villa de las Conchas o unirte a la Marina. <br /> ¿Qué eliges?]]></intro_marine>
-                <village js="558"><![CDATA[Vas a la Villa y vives feliz.]]><br/><span>FIN</span></village>
-                <enroll js="563">
-                    <text id="enroll-1"><![CDATA[¿Cómo de bueno eres luchando del 1 al 10?]]></text>
-                    <text id="enroll-2"><![CDATA[No eres lo bastante bueno, adiós.<br/><span>FIN</span>]]></text>
-                    <text id="enroll-3"><![CDATA[Me gustas chaval, serás mi primero de abordo- dijo Fullbody-.]]></text>
-                    <text id="enroll-4"><![CDATA[¿Eres tonto?]]></text>
-                    <text id="enroll-5"><![CDATA[Ya lo decía yo.]]></text>
-                    <text id="enroll-6"><![CDATA[No me mientas.]]></text>
+        <inicio>
+            <intro tag=""><![CDATA[Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una enseña pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?]]></intro>
+            <marine>
+                <intro_marine tag=""><![CDATA[Decides ir con el barco de los marines. Allí encuentras al Teniente Fullbody que te recibe amablemente. Te invita a ir con el hasta la Villa de las Conchas o unirte a la Marina. <br /> ¿Qué eliges?]]></intro_marine>
+                <village tag=""><![CDATA[Vas a la Villa y vives feliz.<br/><span>FIN</span>]]> tag=""</village>
+                <enroll>
+                    <text id="enroll-1" tag=""><![CDATA[¿Cómo de bueno eres luchando del 1 al 10?]]></text>
+                    <text id="enroll-2" tag=""><![CDATA[No eres lo bastante bueno, adiós.<br/><span>FIN</span>]]></text>
+                    <text id="enroll-3" tag=""><![CDATA[Me gustas chaval, serás mi primero de abordo- dijo Fullbody-.]]></text>
+                    <text id="enroll-4" tag=""><![CDATA[¿Eres tonto?]]></text>
+                    <text id="enroll-5" tag=""><![CDATA[Ya lo decía yo.]]></text>
+                    <text id="enroll-6" tag=""><![CDATA[No me mientas.]]></text>
                 </enroll>
-                <fullbody js="584"><![CDATA[Fullbody te mató.<br/> <span>FIN</span>]]></fullbody>
+                <fullbody tag=""><![CDATA[Fullbody te mató.<br/> <span>FIN</span>]]></fullbody>
             </marine>
             <pirata>
-                <intro_pirata js="548"><![CDATA[No sabes por qué pero no quieres ir con los marines, prefieres ir con los piratas. Remas el barril hasta el barco pirata y escalas hasta arriba. <br /> Allí ves a la capitana que te quiere ejecutar. <br /> ¿Vas a morir o a luchar?]]></intro_pirata>
+                <intro_pirata tag=""><![CDATA[No sabes por qué pero no quieres ir con los marines, prefieres ir con los piratas. Remas el barril hasta el barco pirata y escalas hasta arriba. <br /> Allí ves a la capitana que te quiere ejecutar. <br /> ¿Vas a morir o a luchar?]]></intro_pirata>
             </pirata>
         </inicio>
-        <alvida number="1">
-            <fight js="599" fname="luchaAlv()">
-                <text line="608" id="luchaAlv-1"><![CDATA[Pegaste a Alvida]]></text>
-                <text line="612" id="luchaAlv-2"><![CDATA[Tiraste a Alvida al mar de un puñetazo.]]></text>
-                <text line="620" id="luchaAlv-3"><![CDATA[Alvida te pudo y en un golpe de suerte te tiró al mar.]]></text>
+        <alvida>
+            <fight fname="luchaAlv()">
+                <text id="luchaAlv-1" tag=""><![CDATA[Pegaste a Alvida]]></text>
+                <text id="luchaAlv-2" tag=""><![CDATA[Tiraste a Alvida al mar de un puñetazo.]]></text>
+                <text id="luchaAlv-3" tag=""><![CDATA[Alvida te pudo y en un golpe de suerte te tiró al mar.]]></text>
             </fight>
-            <surrender js="631"><![CDATA[Aceptaste tu destino y Alvida te mató.<br/><span>FIN</span>]]></surrender>
+            <surrender tag=""><![CDATA[Aceptaste tu destino y Alvida te mató.<br/><span>FIN</span>]]></surrender>
         </alvida>
         <buggy number="2">
-            <intro js="645"><![CDATA[Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + names[segundoSdP].longName]]></intro>
+            <intro tag=""><![CDATA[Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + personajes.aliados.Zoro.longName]]></intro>
         </buggy>
     </arcs>
 </es-ES>

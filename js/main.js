@@ -169,19 +169,23 @@ if(window.XMLHttpRequest){ //Modern Browsers
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
 
+console.log("Lang: " + language);
+
 if(language == "es-ES"){
 	xmlhttp.open("GET", "data/locale/es-ES.xml", true);
+	xmlhttp.send();
+}else if(language == "en-US" || "en-GB" || "en-AU" || "en-NZ" || "en-CA" || "en-CB" || "en-IN" || "en-IE" || "en-JM" || "en-PH" || "en-ZA" || "en-TT"){
+	xmlhttp.open("GET", "data/locale/en-US.xml", true);
 	xmlhttp.send();
 }else{
 	xmlhttp.open("GET", "data/locale/en-US.xml", true);
 	xmlhttp.send();
+	console.warn("We lack for support for your language. If you want to translate see ")
 }
 
 var readXML = function(css){
 	return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
 }
-
-console.log("Lang: " + language);
 
 /*
 	 ██████╗██╗  ██╗ █████╗ ██████╗  █████╗  ██████╗████████╗███████╗██████╗ ███████╗
@@ -449,6 +453,7 @@ $$$$$$$  |\$$$$$$  |\$$$$$$$ |\$$$$$$$ |\$$$$$$$ |
 var buggy1 = function(){
 	clear();
 	escribir("into", xmlhttp.responseXML.querySelectorAll("buggy > intro")[0].childNodes[0].nodeValue);
+	escribir("a1" , "zorro y luffy estan viajando en su bote muertos de ambre, luffy ve un pájaro y usa su poder Gomu Gomu no Mi para atraparlo, pero el pájaro resulta ser mas grande de lo que pensaba. El pajaro se lleva a luffy y Zoro persigue al pájaro en el bote, pero se encuentra con tres piratas llamados Tightrope, Walking y Funan. Estos entran al bote y tratan de robarlo, pero son derrotados facilmente por Zoro");
 }
 
 /*
