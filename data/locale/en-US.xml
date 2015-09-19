@@ -136,12 +136,12 @@
         </franky>
     </characters>
     <arcs>
-        <inicio number="0">
-            <intro js="152"><![CDATA[]]></intro>
-            <marine js="541">
-                <intro_marine js="541"><![CDATA[]]></intro_marine>
-                <village js="558"><![CDATA[]]></village>
-                <enroll js="563">
+        <inicio>
+            <intro><![CDATA[]]></intro>
+            <marine>
+                <intro_marine><![CDATA[]]></intro_marine>
+                <village><![CDATA[]]></village>
+                <enroll>
                     <text id="enroll-1"><![CDATA[]]></text>
                     <text id="enroll-2"><![CDATA[]]></text>
                     <text id="enroll-3"><![CDATA[]]></text>
@@ -149,22 +149,22 @@
                     <text id="enroll-5"><![CDATA[]]></text>
                     <text id="enroll-6"><![CDATA[]]></text>
                 </enroll>
-                <fullbody js="584"><![CDATA[]]></fullbody>
+                <fullbody><![CDATA[]]></fullbody>
             </marine>
             <pirata>
-                <intro_pirata js="548"><![CDATA[]]></intro_pirata>
+                <intro_pirata><![CDATA[]]></intro_pirata>
             </pirata>
         </inicio>
-        <alvida number="1">
-            <fight js="599" fname="luchaAlv()">
-                <text line="608" id="luchaAlv-1"><![CDATA[]]></text>
-                <text line="612" id="luchaAlv-2"><![CDATA[]]></text>
-                <text line="620" id="luchaAlv-3"><![CDATA[]]></text>
+        <alvida>
+            <fight fname="luchaAlv()">
+                <text id="luchaAlv-1"><![CDATA[]]></text>
+                <text id="luchaAlv-2"><![CDATA[]]></text>
+                <text id="luchaAlv-3"><![CDATA[]]></text>
             </fight>
-            <surrender js="631"><![CDATA[]]></surrender>
+            <surrender><![CDATA[]]></surrender>
         </alvida>
-        <buggy number="2">
-            <intro js="645"><![CDATA[]]></intro>
+        <buggy>
+            <intro><![CDATA[]]></intro>
         </buggy>
     </arcs>
 </en-US>

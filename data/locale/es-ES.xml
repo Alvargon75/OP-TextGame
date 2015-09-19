@@ -136,12 +136,12 @@
         </franky>
     </characters>
     <arcs>
-        <inicio number="0">
-            <intro js="152"><![CDATA[Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una enseña pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?]]></intro>
-            <marine js="541">
-                <intro_marine js="541"><![CDATA[Decides ir con el barco de los marines. Allí encuentras al Teniente Fullbody que te recibe amablemente. Te invita a ir con el hasta la Villa de las Conchas o unirte a la Marina. <br /> ¿Qué eliges?]]></intro_marine>
-                <village js="558"><![CDATA[Vas a la Villa y vives feliz.]]><br/><span>FIN</span></village>
-                <enroll js="563">
+        <inicio>
+            <intro><![CDATA[Te encuentras en un barril en medio del mar, a lo lejos ves dos barcos, uno con una enseña pirata y otro de la marina. <br/> ¿A cuál decides pedir ayuda?]]></intro>
+            <marine>
+                <intro_marine><![CDATA[Decides ir con el barco de los marines. Allí encuentras al Teniente Fullbody que te recibe amablemente. Te invita a ir con el hasta la Villa de las Conchas o unirte a la Marina. <br /> ¿Qué eliges?]]></intro_marine>
+                <village><![CDATA[Vas a la Villa y vives feliz.]]><br/><span>FIN</span></village>
+                <enroll>
                     <text id="enroll-1"><![CDATA[¿Cómo de bueno eres luchando del 1 al 10?]]></text>
                     <text id="enroll-2"><![CDATA[No eres lo bastante bueno, adiós.<br/><span>FIN</span>]]></text>
                     <text id="enroll-3"><![CDATA[Me gustas chaval, serás mi primero de abordo- dijo Fullbody-.]]></text>
@@ -149,22 +149,22 @@
                     <text id="enroll-5"><![CDATA[Ya lo decía yo.]]></text>
                     <text id="enroll-6"><![CDATA[No me mientas.]]></text>
                 </enroll>
-                <fullbody js="584"><![CDATA[Fullbody te mató.<br/> <span>FIN</span>]]></fullbody>
+                <fullbody><![CDATA[Fullbody te mató.<br/> <span>FIN</span>]]></fullbody>
             </marine>
             <pirata>
-                <intro_pirata js="548"><![CDATA[No sabes por qué pero no quieres ir con los marines, prefieres ir con los piratas. Remas el barril hasta el barco pirata y escalas hasta arriba. <br /> Allí ves a la capitana que te quiere ejecutar. <br /> ¿Vas a morir o a luchar?]]></intro_pirata>
+                <intro_pirata><![CDATA[No sabes por qué pero no quieres ir con los marines, prefieres ir con los piratas. Remas el barril hasta el barco pirata y escalas hasta arriba. <br /> Allí ves a la capitana que te quiere ejecutar. <br /> ¿Vas a morir o a luchar?]]></intro_pirata>
             </pirata>
         </inicio>
-        <alvida number="1">
-            <fight js="599" fname="luchaAlv()">
-                <text line="608" id="luchaAlv-1"><![CDATA[Pegaste a Alvida]]></text>
-                <text line="612" id="luchaAlv-2"><![CDATA[Tiraste a Alvida al mar de un puñetazo.]]></text>
-                <text line="620" id="luchaAlv-3"><![CDATA[Alvida te pudo y en un golpe de suerte te tiró al mar.]]></text>
+        <alvida>
+            <fight fname="luchaAlv()">
+                <text id="luchaAlv-1"><![CDATA[Pegaste a Alvida]]></text>
+                <text id="luchaAlv-2"><![CDATA[Tiraste a Alvida al mar de un puñetazo.]]></text>
+                <text id="luchaAlv-3"><![CDATA[Alvida te pudo y en un golpe de suerte te tiró al mar.]]></text>
             </fight>
-            <surrender js="631"><![CDATA[Aceptaste tu destino y Alvida te mató.<br/><span>FIN</span>]]></surrender>
+            <surrender><![CDATA[Aceptaste tu destino y Alvida te mató.<br/><span>FIN</span>]]></surrender>
         </alvida>
         <buggy number="2">
-            <intro js="645"><![CDATA[Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + names[segundoSdP].longName]]></intro>
+            <intro><![CDATA[Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + personajes.aliados.Zoro.longName]]></intro>
         </buggy>
     </arcs>
 </es-ES>
