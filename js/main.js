@@ -611,7 +611,7 @@ var game = {
 		}else if(storage === true && localStorage.getItem('gameSave') !== true){
 			console.error(readXML('sys > localStorage > deleteSave > error[type="404"]'));
 		}
-	};
+	}
 };
 
 /*
