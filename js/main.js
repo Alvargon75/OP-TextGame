@@ -560,14 +560,44 @@ $$  /   \$$ |\$$$$$$$ | \$$$$  |\$$$$$$$\ $$ |            $$  /
 ╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝
 */
 
+var gameSave = {};
+
 var game = {
 	save: function(){
+		var storage = true;
 
+		try{
+			window.localStorage;
+		}catch(err){
+			console.error("localStorage not supported");
+			storage = false;
+		};
+
+		if(storage === true){
+			console.info(readXML('sys > localStorage > save > state[current="processing"]'));
+			localStorage.setItem('gameSave', JSON.stringify(gameSave));
+			console.info(readXML('sys > localStorage > save > state[current="done"]'));
+		}
 	},
 	load: function(){
-		
+
+	},
+	delete: function(){
+		var storage = true;
+
+		try{
+			window.localStorage;
+		}catch(err){
+			console.error("localStorage not supported");
+			storage = false;
+		};
+
+		if(storage === true && localStorage.getItem('gameSave')){
+			localStorage.removeItem('gameSave');
+			console.info('sys > localStorage > deleteSave');
+		};
 	}
-}
+};
 
 /*
 ██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗

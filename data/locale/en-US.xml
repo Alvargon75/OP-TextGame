@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <en-US name="English">
+    <sys>
+        <localStorage>
+            <error></error>
+            <save>
+                <state current="processing">Saving...</state>
+                <state current="done">Saving Complete</state>
+            </save>
+            <deleteSave>Save succesfully deleted.</deleteSave>
+        </localStorage>
+    </sys>
     <GUI>
         <stats>
             <HP tag="">Health: </HP>

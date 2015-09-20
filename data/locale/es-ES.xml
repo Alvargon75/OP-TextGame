@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <es-ES name="Español">
+    <sys>
+        <localStorage>
+            <error>El guardado no se efectuó con éxito. Tu explorador no soporta el almacenamiento local.</error>
+            <save>
+                <state current="processing">Guardando...</state>
+                <state current="done">Guardado con éxito</state>
+            </save>
+            <deleteSave>Partida eliminada con éxito.</deleteSave>
+        </localStorage>
+    </sys>
     <GUI>
         <stats>
             <HP tag="">Vida: </HP>
