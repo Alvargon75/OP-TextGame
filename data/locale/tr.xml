@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <tr name="Turco">
+    <sys>
+        <localStorage>
+            <error></error>
+            <save>
+                <state current="processing"></state>
+                <state current="done"></state>
+            </save>
+            <deleteSave>
+                <error type="404"></error>
+                <state current="done"></state>
+            </deleteSave>
+            <loadSave>
+                <error type="404"></error>
+                <state current="done"></state>
+            </loadSave>
+        </localStorage>
+    </sys>
     <GUI>
         <stats>
             <HP tag=""></HP>
