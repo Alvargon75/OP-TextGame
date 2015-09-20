@@ -7,7 +7,14 @@
                 <state current="processing">Saving...</state>
                 <state current="done">Saving Complete</state>
             </save>
-            <deleteSave>Save succesfully deleted.</deleteSave>
+            <deleteSave>
+                <error type="404">Error 404: Save not found.</error>
+                <state current="done">Save deleted succesfully.</state>
+            </deleteSave>
+            <loadSave>
+                <error type="404">Error 404: Save not found.</error>
+                <state current="done">Save loaded succesfully.</state>
+            </loadSave>
         </localStorage>
     </sys>
     <GUI>

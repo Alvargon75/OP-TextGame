@@ -7,7 +7,14 @@
                 <state current="processing">Guardando...</state>
                 <state current="done">Guardado con éxito</state>
             </save>
-            <deleteSave>Partida eliminada con éxito.</deleteSave>
+            <deleteSave>
+                <error type="404">Error 404: No hay partida para eliminar.</error>
+                <state current="done">Partida eliminada con éxito.</state>
+            </deleteSave>
+            <loadSave>
+                <error type="404">Error 404: No hay partida para cargar.</error>
+                <state current="done">Partida Cargada con éxito</state>
+            </loadSave>
         </localStorage>
     </sys>
     <GUI>
@@ -172,7 +179,7 @@
             </fight>
             <surrender tag=""><![CDATA[Aceptaste tu destino y Alvida te mató.<br/><span>FIN</span>]]></surrender>
         </alvida>
-        <buggy number="2">
+        <buggy>
             <intro tag=""><![CDATA[Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + personajes.aliados.Zoro.longName]]></intro>
         </buggy>
     </arcs>

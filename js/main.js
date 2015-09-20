@@ -580,7 +580,20 @@ var game = {
 		}
 	},
 	load: function(){
+		var storage = true;
 
+		try{
+			window.localStorage;
+		}catch(err){
+			console.error("localStorage not supported");
+			storage = false;
+		};
+
+		if(storage === true && localStorage.getItem('gameSave')){
+			gameSave = JSON.parse(localStorage.getItem('gameSave'));
+		}else if(storage === true && localStorage.getItem('gameSave') !== true){
+			console.error(readXML('sys > localStorage > deleteSave > error[type="404"]'))
+		}
 	},
 	delete: function(){
 		var storage = true;
@@ -594,9 +607,11 @@ var game = {
 
 		if(storage === true && localStorage.getItem('gameSave')){
 			localStorage.removeItem('gameSave');
-			console.info('sys > localStorage > deleteSave');
-		};
-	}
+			console.info(readXML('sys > localStorage > deleteSave > state[current="done"]'));
+		}else if(storage === true && localStorage.getItem('gameSave') !== true){
+			console.error(readXML('sys > localStorage > deleteSave > error[type="404"]'));
+		}
+	};
 };
 
 /*

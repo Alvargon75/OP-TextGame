@@ -7,7 +7,14 @@
                 <state current="processing"></state>
                 <state current="done"></state>
             </save>
-            <deleteSave></deleteSave>
+            <deleteSave>
+                <error type="404"></error>
+                <state current="done"></state>
+            </deleteSave>
+            <loadSave>
+                <error type="404"></error>
+                <state current="done"></state>
+            </loadSave>
         </localStorage>
     </sys>
     <GUI>
