@@ -2,13 +2,13 @@
 <tr name="Turco">
     <sys>
         <localStorage>
-            <error></error>
+            <error>Oyunu´nun bu bölümü kayit edilmedi</error> 
             <save>
-                <state current="processing"></state>
+                <state current="processing">Kayit ediliyor...</state>
                 <state current="done"></state>
             </save>
             <deleteSave>
-                <error type="404"></error>
+                <error type="404">Hata 404 Silinmiyor </error>
                 <state current="done"></state>
             </deleteSave>
             <loadSave>
