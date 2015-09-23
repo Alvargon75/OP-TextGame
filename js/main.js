@@ -214,10 +214,6 @@ El tema de los estados va por numeros:
 //var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
 
 var mugiwaras = [personajes.aliados.Luffy, personajes.aliados.Zorro, personajes.aliados.Sanji, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Chopper, personajes.aliados.Robin, personajes.aliados.Franky];
-var enemigos = [
-	personajes.enemigos.alvida,
-
-];
 var personajeActual = mugiwaras[0];
 
 
@@ -257,7 +253,7 @@ var combate = {
 	antes: {
 		setUp: function(enemy){
 			document.getElementById("combatUI").classList.remove('combatUI-inactive');
-			escribir("vs_title", personajeActual.name + " " + "vs" + " " + personajes.enemigos.buggy.name);
+			escribir("vs_title", personajeActual.name + " " + "vs" + " " + enemy.name);
 			escribir("at1", personajeActual.ataques[0]);
 			escribir("at2", personajeActual.ataques[1]);
 			escribir("at3", personajeActual.ataques[2]);
