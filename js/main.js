@@ -213,8 +213,12 @@ El tema de los estados va por numeros:
 // Generic Villain
 //var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
 
-var personajes = [personajes.aliados.Luffy, personajes.aliados.Zorro, personajes.aliados.Sanji, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Chopper, personajes.aliados.Robin, personajes.aliados.Franky];
-var personajeActual = personajes[0];
+var mugiwaras = [personajes.aliados.Luffy, personajes.aliados.Zorro, personajes.aliados.Sanji, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Chopper, personajes.aliados.Robin, personajes.aliados.Franky];
+var enemigos = [
+	personajes.enemigos.alvida,
+
+];
+var personajeActual = mugiwaras[0];
 
 
 // START AND CLEAR
@@ -253,7 +257,7 @@ var combate = {
 	antes: {
 		setUp: function(enemy){
 			document.getElementById("combatUI").classList.remove('combatUI-inactive');
-			escribir("vs_title", personajeActual.name + " " + "vs" + " " + enemy.name);
+			escribir("vs_title", personajeActual.name + " " + "vs" + " " + personajes.enemigos.buggy.name);
 			escribir("at1", personajeActual.ataques[0]);
 			escribir("at2", personajeActual.ataques[1]);
 			escribir("at3", personajeActual.ataques[2]);
@@ -560,7 +564,17 @@ $$  /   \$$ |\$$$$$$$ | \$$$$  |\$$$$$$$\ $$ |            $$  /
 ╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝
 */
 
-var gameSave = {};
+var gameSave = {
+	id: randomString(30),
+	stage: {
+		stages: [false ,'Morgan', 'Buggy', 'Krieg', 'Arlong Park', 'Grand Line', 'Whiskey Peak', 'Arabasta_ll', 'Arabasta_al', 'Jaya', 'Skypea', 'Water7', 'Ennies Lobby'],
+		current: 0
+	},
+	estadisticas: {
+		derrotas: 0,
+		victorias: 0,
+	}
+};
 
 var game = {
 	save: function(){
@@ -611,6 +625,9 @@ var game = {
 		}else if(storage === true && localStorage.getItem('gameSave') !== true){
 			console.error(readXML('sys > localStorage > deleteSave > error[type="404"]'));
 		}
+	},
+	auxiliar: {
+
 	}
 };
 
