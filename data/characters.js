@@ -124,7 +124,7 @@ var personajes = {
 "enemigos": {
 	"alvida": {
 		"name": "Alvida",
-		"longName": "Alvida la gorada",
+		"longName": "Alvida la Gorda",
 		"HP": 20,
 		"maxHP": 20,
 		"MP": 18,
