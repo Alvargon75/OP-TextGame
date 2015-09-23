@@ -180,7 +180,7 @@ if(language == "es-ES"){
 }else{
 	xmlhttp.open("GET", "data/locale/en-US.xml", true);
 	xmlhttp.send();
-	console.warn("We lack for support for your language. If you want to translate see ")
+	console.warn("We lack for support for your language. If you want to translate see docs/tranlations.md")
 }
 
 var readXML = function(css){
