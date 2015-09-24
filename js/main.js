@@ -260,6 +260,10 @@ var combate = {
 			escribir("at4", personajeActual.ataques[3]);
 			escribir("at5", personajeActual.ataques[4]);
 			combatHUD();
+
+			//Todo lo visual va abajo
+			document.querySelectorAll('div#combatUI > visualUI > pesonaje > sprite > img')[0].src = personajeActual.data[0].sprite
+			document.querySelectorAll('div#combatUI > visualUI > enemigo > sprite > img')[0].src = enemy.data[0].sprite;
 		}
 	},
 	durante: {

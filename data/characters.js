@@ -12,7 +12,12 @@ var personajes = {
 		"grados": ["Pierna Negra", "Haki de Armadura", "Diable Jamble"],
 		"ataques": ["Patada Pierna Negra", "Disparo de Venado", "Patada Escalope", "Espectro del Pan Frito", "Pierna del Diablo"],
 		"ataquesValores": [4, 7, 9, 15, 22],
-		"ataquesCoste": [0, 2, 6, 11, 100]
+		"ataquesCoste": [0, 2, 6, 11, 100],
+		"data": [
+			{
+				"sprite": "",
+			}
+		]
 	},
 
 	 "Luffy" : {
