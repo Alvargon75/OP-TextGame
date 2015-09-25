@@ -15,10 +15,12 @@ var personajes = {
 		"ataquesCoste": [0, 2, 6, 11, 100],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	},
@@ -38,10 +40,12 @@ var personajes = {
 		"ataquesCoste": [0, 1, 7, 11, 115],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	},
@@ -61,10 +65,12 @@ var personajes = {
 		"ataquesCoste": [0, 3, 5, 14, 95],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	},
@@ -83,10 +89,12 @@ var personajes = {
 		"ataquesCoste": [0, 1, 3, 3, 9],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	},
@@ -106,10 +114,12 @@ var personajes = {
 		"ataquesCoste": [0, 2, 5, 9, 13],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	},
@@ -129,10 +139,12 @@ var personajes = {
 		"ataquesCoste": [],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	},
@@ -152,10 +164,12 @@ var personajes = {
 		"ataquesCoste": [0, 3, 4, 7, 16],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	},
@@ -175,10 +189,12 @@ var personajes = {
 		"ataquesCoste": [0, 2, 4, 5, 10],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	}
@@ -198,10 +214,12 @@ var personajes = {
 		"ataquesValores": [1, 4],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	},
@@ -217,10 +235,12 @@ var personajes = {
 		"ataquesValores": [],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	},
@@ -236,10 +256,12 @@ var personajes = {
 		"ataquesValores": [],
 		"data": [
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			},
 			{
-				"sprite": ""
+				"sprite": "",
+				"artwork": ""
 			}
 		]
 	},
@@ -256,10 +278,12 @@ var personajes = {
 			"ataquesValores": [],
 			"data": [
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				},
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				}
 			]
 		},
@@ -275,10 +299,12 @@ var personajes = {
 			"ataquesValores": [],
 			"data": [
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				},
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				}
 			]
 		},
@@ -294,10 +320,12 @@ var personajes = {
 			"ataquesValores": [],
 			"data": [
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				},
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				}
 			]
 		},
@@ -313,10 +341,12 @@ var personajes = {
 			"ataquesValores": [],
 			"data": [
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				},
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				}
 			]
 		}
@@ -334,10 +364,12 @@ var personajes = {
 			"ataquesValores": [],
 			"data": [
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				},
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				}
 			]
 		},
@@ -353,10 +385,12 @@ var personajes = {
 			"ataquesValores": [],
 			"data": [
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				},
 				{
-					"sprite": ""
+					"sprite": "",
+					"artwork": ""
 				}
 			]
 		}
@@ -373,10 +407,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -392,10 +428,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -411,10 +449,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -430,10 +470,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			}
@@ -451,10 +493,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -470,10 +514,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 
@@ -490,10 +536,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -509,10 +557,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -528,10 +578,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -547,10 +599,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			}
@@ -568,10 +622,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -587,10 +643,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -606,10 +664,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			}
@@ -627,10 +687,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -646,10 +708,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -665,10 +729,12 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -684,10 +750,14 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -703,10 +773,14 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -722,10 +796,14 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -741,10 +819,14 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -760,10 +842,14 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					}
 				]
 			},
@@ -779,10 +865,14 @@ var personajes = {
 				"ataquesValores": [],
 				"data": [
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					},
 					{
-						"sprite": ""
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
 					}
 				]
 			}
@@ -801,10 +891,14 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": "",
+							"artwork": ""
 						}
 					]
 				}
@@ -822,10 +916,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -841,10 +937,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -860,10 +958,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -879,10 +979,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -898,10 +1000,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -917,10 +1021,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				}
@@ -940,10 +1046,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				}
@@ -961,10 +1069,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -978,10 +1088,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -997,10 +1109,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1016,10 +1130,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1035,10 +1151,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1054,10 +1172,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1073,10 +1193,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				}
@@ -1094,10 +1216,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1113,10 +1237,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1132,10 +1258,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1151,10 +1279,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1170,10 +1300,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1189,10 +1321,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1208,10 +1342,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1227,10 +1363,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1246,10 +1384,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				}
@@ -1267,10 +1407,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1286,10 +1428,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1306,10 +1450,12 @@ var personajes = {
 						"ataquesValores": [],
 						"data": [
 							{
-								"sprite": ""
+								"sprite": "",
+								"artwork": ""
 							},
 							{
-								"sprite": ""
+								"sprite": "",
+								"artwork": ""
 							}
 						]
 					},
@@ -1325,10 +1471,12 @@ var personajes = {
 						"ataquesValores": [],
 						"data": [
 							{
-								"sprite": ""
+								"sprite": "",
+								"artwork": ""
 							},
 							{
-								"sprite": ""
+								"sprite": "",
+								"artwork": ""
 							}
 						]
 					}
@@ -1345,10 +1493,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				},
@@ -1364,10 +1514,12 @@ var personajes = {
 					"ataquesValores": [],
 					"data": [
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						},
 						{
-							"sprite": ""
+							"sprite": "",
+							"artwork": ""
 						}
 					]
 				}
