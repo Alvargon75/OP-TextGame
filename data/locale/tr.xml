@@ -43,76 +43,76 @@
             <longName tag=""></longName>
             <MP tag=""></MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">3 kilic</gear>
+                <gear id="gear2" tag="">concentre</gear>
+                <gear id="gear3" tag="">tum gucum</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">kilicim</atack>
+                <atack id="atack2" tag="">3 kilic</atack>
+                <atack id="atack3" tag="">seytan kesimleri</atack>
+                <atack id="atack4" tag="">ashura</atack>
+                <atack id="atack5" tag="">Tatsumaki</atack>
             </atacks>
         </zoro>
         <sanji>
             <longName tag=""></longName>
             <MP tag=""></MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">siyah ayak</gear>
+                <gear id="gear2" tag="">sirh Haki´si</gear>
+                <gear id="gear3" tag="">diable jumble</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">siyah tekme</atack>
+                <atack id="atack2" tag="">ayak kaslarim</atack>
+                <atack id="atack3" tag="">guclu bir tekme</atack>
+                <atack id="atack4" tag="">ekmek yapalim</atack>
+                <atack id="atack5" tag="">seytan tekmesi</atack>
             </atacks>
         </sanji>
         <nami>
             <longName tag=""></longName>
             <MP tag=""></MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">hirsis</gear>
+                <gear id="gear2" tag="">hava durumu ocasi</gear>
+                <gear id="gear3" tag="">Post-Timeskip</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">tekme</atack>
+                <atack id="atack2" tag="">soygun var</atack>
+                <atack id="atack3" tag="">Rain Tempo</atack>
+                <atack id="atack4" tag="">Mirage Tact</atack>
+                <atack id="atack5" tag="">Thunderbolt Tempo</atack>
             </atacks>
         </nami>
         <ussop>
             <longName tag=""></longName>
             <MP tag=""></MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">korkak</gear>
+                <gear id="gear2" tag="">cesur</gear>
+                <gear id="gear3" tag="">sogeking</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">atis</atack>
+                <atack id="atack2" tag="">patlaici misket</atack>
+                <atack id="atack3" tag="">atesli misket</atack>
+                <atack id="atack4" tag="">kayanin misketi</atack>
+                <atack id="atack5" tag="">usup´un arkadaslari</atack>
             </atacks>
         </ussop>
         <chopper>
             <longName tag=""></longName>
             <MP tag=""></MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">Brain Point</gear>
+                <gear id="gear2" tag="">Heavy Point</gear>
+                <gear id="gear3" tag="">Monster Point</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
+                <atack id="atack1" tag="">Scope</atack>
                 <atack id="atack2" tag=""></atack>
                 <atack id="atack3" tag=""></atack>
                 <atack id="atack4" tag=""></atack>
@@ -123,32 +123,32 @@
             <longName tag=""></longName>
             <MP tag=""></MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">madam</gear>
+                <gear id="gear2" tag="">yasamak istemiyorum</gear>
+                <gear id="gear3" tag="">yasamak istiyorum</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">3 kol</atack>
+                <atack id="atack2" tag="">5kol</atack>
+                <atack id="atack3" tag="">10 cicek</atack>
+                <atack id="atack4" tag="">sonsusakadar cicek</atack>
+                <atack id="atack5" tag="">millon kadar cicke</atack>
             </atacks>
         </robin>
         <franky>
             <longName tag=""></longName>
             <MP tag=""></MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">yorgun</gear>
+                <gear id="gear2" tag="">normal</gear>
+                <gear id="gear3" tag="">suuuuuuuper!!!</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">Weapons Left</atack>
+                <atack id="atack2" tag="">Strong Hammer</atack>
+                <atack id="atack3" tag="">ates puskur</atack>
+                <atack id="atack4" tag="">Coup de Vent</atack>
+                <atack id="atack5" tag="">SUUUUUUUUUUPER</atack>
             </atacks>
         </franky>
     </characters>
