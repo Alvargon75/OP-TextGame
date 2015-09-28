@@ -3,18 +3,10 @@ var Character, Mugiwara,
   hasProp = {}.hasOwnProperty;
 
 Character = (function() {
-  function Character(name) {
+  function Character(name, ally) {
     this.name = name;
+    this.ally = ally != null ? ally : false;
   }
-
-  Character.prototype.side = function(ally) {
-    this.ally = ally;
-    if (this.ally === true) {
-      return console.log("Ally");
-    } else {
-      return console.log("Not Ally");
-    }
-  };
 
   return Character;
 
