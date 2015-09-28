@@ -6,6 +6,8 @@
 
 * Acabar la historia
 * Perfeccionar el sistema de combate
-* Reducir el tamaño.
+* Poner un sistema de guardado.
 
 ## Planeado
+
+* Reducir el tamaño.

@@ -180,7 +180,7 @@ if(language == "es-ES"){
 }else{
 	xmlhttp.open("GET", "data/locale/en-US.xml", true);
 	xmlhttp.send();
-	console.warn("We lack for support for your language. If you want to translate see ")
+	console.warn("We lack for support for your language. If you want to translate see docs/tranlations.md")
 }
 
 var readXML = function(css){
@@ -213,8 +213,8 @@ El tema de los estados va por numeros:
 // Generic Villain
 //var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
 
-var personajes = [personajes.aliados.Luffy, personajes.aliados.Zorro, personajes.aliados.Sanji, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Chopper, personajes.aliados.Robin, personajes.aliados.Franky];
-var personajeActual = personajes[0];
+var mugiwaras = [personajes.aliados.Luffy, personajes.aliados.Zorro, personajes.aliados.Sanji, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Chopper, personajes.aliados.Robin, personajes.aliados.Franky];
+var personajeActual = mugiwaras[0];
 
 
 // START AND CLEAR
@@ -260,6 +260,10 @@ var combate = {
 			escribir("at4", personajeActual.ataques[3]);
 			escribir("at5", personajeActual.ataques[4]);
 			combatHUD();
+
+			//Todo lo visual va abajo
+			document.querySelectorAll('div#combatUI > visualUI > pesonaje > sprite > img')[0].src = personajeActual.data[0].sprite
+			document.querySelectorAll('div#combatUI > visualUI > enemigo > sprite > img')[0].src = enemy.data[0].sprite;
 		}
 	},
 	durante: {
@@ -550,6 +554,82 @@ $$  /   \$$ |\$$$$$$$ | \$$$$  |\$$$$$$$\ $$ |            $$  /
 	Water 7
 */
 
+
+/*
+███████╗ █████╗ ██╗   ██╗███████╗
+██╔════╝██╔══██╗██║   ██║██╔════╝
+███████╗███████║██║   ██║█████╗
+╚════██║██╔══██║╚██╗ ██╔╝██╔══╝
+███████║██║  ██║ ╚████╔╝ ███████╗
+╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝
+*/
+
+var gameSave = {
+	id: randomString(30),
+	stage: {
+		stages: [false ,'Morgan', 'Buggy', 'Krieg', 'Arlong Park', 'Grand Line', 'Whiskey Peak', 'Arabasta_ll', 'Arabasta_al', 'Jaya', 'Skypea', 'Water7', 'Ennies Lobby'],
+		current: 0
+	},
+	estadisticas: {
+		derrotas: 0,
+		victorias: 0,
+	}
+};
+
+var game = {
+	save: function(){
+		var storage = true;
+
+		try{
+			window.localStorage;
+		}catch(err){
+			console.error("localStorage not supported");
+			storage = false;
+		};
+
+		if(storage === true){
+			console.info(readXML('sys > localStorage > save > state[current="processing"]'));
+			localStorage.setItem('gameSave', JSON.stringify(gameSave));
+			console.info(readXML('sys > localStorage > save > state[current="done"]'));
+		}
+	},
+	load: function(){
+		var storage = true;
+
+		try{
+			window.localStorage;
+		}catch(err){
+			console.error("localStorage not supported");
+			storage = false;
+		};
+
+		if(storage === true && localStorage.getItem('gameSave')){
+			gameSave = JSON.parse(localStorage.getItem('gameSave'));
+		}else if(storage === true && localStorage.getItem('gameSave') !== true){
+			console.error(readXML('sys > localStorage > deleteSave > error[type="404"]'))
+		}
+	},
+	delete: function(){
+		var storage = true;
+
+		try{
+			window.localStorage;
+		}catch(err){
+			console.error("localStorage not supported");
+			storage = false;
+		};
+
+		if(storage === true && localStorage.getItem('gameSave')){
+			localStorage.removeItem('gameSave');
+			console.info(readXML('sys > localStorage > deleteSave > state[current="done"]'));
+		}else if(storage === true && localStorage.getItem('gameSave') !== true){
+			console.error(readXML('sys > localStorage > deleteSave > error[type="404"]'));
+		}
+	},
+	auxiliar: {
+
+	}
+};
 
 /*
 ██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗

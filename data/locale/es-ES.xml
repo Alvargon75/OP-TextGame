@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <es-ES name="Español">
+    <sys>
+        <localStorage>
+            <error>El guardado no se efectuó con éxito. Tu explorador no soporta el almacenamiento local.</error>
+            <save>
+                <state current="processing">Guardando...</state>
+                <state current="done">Guardado con éxito</state>
+            </save>
+            <deleteSave>
+                <error type="404">Error 404: No hay partida para eliminar.</error>
+                <state current="done">Partida eliminada con éxito.</state>
+            </deleteSave>
+            <loadSave>
+                <error type="404">Error 404: No hay partida para cargar.</error>
+                <state current="done">Partida Cargada con éxito</state>
+            </loadSave>
+        </localStorage>
+    </sys>
     <GUI>
         <stats>
             <HP tag="">Vida: </HP>
@@ -162,7 +179,7 @@
             </fight>
             <surrender tag=""><![CDATA[Aceptaste tu destino y Alvida te mató.<br/><span>FIN</span>]]></surrender>
         </alvida>
-        <buggy number="2">
+        <buggy>
             <intro tag=""><![CDATA[Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + personajes.aliados.Zoro.longName]]></intro>
         </buggy>
     </arcs>

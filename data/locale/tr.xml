@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<language name="languagename">
+<tr name="Turco">
     <sys>
         <localStorage>
-            <error></error>
+            <error>Oyunu´nun bu bölümü kayit edilmedi</error> 
             <save>
-                <state current="processing"></state>
+                <state current="processing">Kayit ediliyor...</state>
                 <state current="done"></state>
             </save>
             <deleteSave>
-                <error type="404"></error>
+                <error type="404">Hata 404 Silinmiyor </error>
                 <state current="done"></state>
             </deleteSave>
             <loadSave>
@@ -27,16 +27,16 @@
             <longName tag=""></longName>
             <MP tag=""></MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">lastic insan</gear>
+                <gear id="gear2" tag="">2ª lv</gear>
+                <gear id="gear3" tag="">3ª lv</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">Gomu Gomu no pistolu</atack>
+                <atack id="atack2" tag="">guchlu vurus</atack>
+                <atack id="atack3" tag="">bazzoka</atack>
+                <atack id="atack4" tag="">benim adim luffy</atack>
+                <atack id="atack5" tag="">bitin sen</atack>
             </atacks>
         </luffy>
         <zoro>
@@ -184,4 +184,4 @@
             <intro tag=""><![CDATA[]]></intro>
         </buggy>
     </arcs>
-</language>
+</tr>

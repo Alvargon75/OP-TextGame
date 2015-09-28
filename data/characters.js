@@ -12,7 +12,17 @@ var personajes = {
 		"grados": ["Pierna Negra", "Haki de Armadura", "Diable Jamble"],
 		"ataques": ["Patada Pierna Negra", "Disparo de Venado", "Patada Escalope", "Espectro del Pan Frito", "Pierna del Diablo"],
 		"ataquesValores": [4, 7, 9, 15, 22],
-		"ataquesCoste": [0, 2, 6, 11, 100]
+		"ataquesCoste": [0, 2, 6, 11, 100],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	},
 
 	 "Luffy" : {
@@ -27,7 +37,17 @@ var personajes = {
 		"grados": ["Hombre de Goma", "Grado 2", "Grado 3"],
 		"ataques": ["Estira el brazo, puñetazo", "Galleta galleta, metralleta", "Retuérce el tornillo, Molinillo", "Estira el cuello mazo, cabezazo", "Haki del Rey"],
 		"ataquesValores": [5, 11, 13, 17, 27],
-		"ataquesCoste": [0, 1, 7, 11, 115]
+		"ataquesCoste": [0, 1, 7, 11, 115],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	},
 
 	 "Zoro" : {
@@ -42,7 +62,17 @@ var personajes = {
 		"grados": ["Casual", "Concentrado", "Mente en Blanco"],
 		"ataques": ["Sablazo", "Cañon de 180 libras", "Corte del Demonio", "Espiral del Dragón", "Tatsumaki"],
 		"ataquesValores": [6, 8, 12, 15, 22],
-		"ataquesCoste": [0, 3, 5, 14, 95]
+		"ataquesCoste": [0, 3, 5, 14, 95],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	},
 	 "Nami" : {
 		"id": "nami",
@@ -56,7 +86,17 @@ var personajes = {
 		"grados": ["Ladrona", "Maestra del Tiempo", "Post-Timeskip"],
 		"ataques": ["Patada", "Robo", "Rain Tempo", "Mirage Tact", "Thunderbolt Tempo"],
 		"ataquesValores": [1, 1, 5, 8, 11],
-		"ataquesCoste": [0, 1, 3, 3, 9]
+		"ataquesCoste": [0, 1, 3, 3, 9],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	},
 
 	 "Ussop" : {
@@ -71,7 +111,17 @@ var personajes = {
 		"grados": ["Cobardía", "Valentía", "Sogeking"],
 		"ataques": ["Tiro", "Canica Explosiva", "Canica de Fuego", "Canica de Kaya", "Taifa de Ussop"],
 		"ataquesValores": [1, 3, 8, 9, 13],
-		"ataquesCoste": [0, 2, 5, 9, 13]
+		"ataquesCoste": [0, 2, 5, 9, 13],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	},
 
 	 "Chopper" : {
@@ -86,7 +136,17 @@ var personajes = {
 		"grados": ["Brain Point", "Heavy Point", "Monster Point"],
 		"ataques": ["Scope"],
 		"ataquesValores": [],
-		"ataquesCoste": []
+		"ataquesCoste": [],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	},
 
 	 "Robin" : {
@@ -101,7 +161,17 @@ var personajes = {
 		"grados": ["Doña Domingo", "No Quiero Vivir", "Quiero vivir"],
 		"ataques": ["Brotad en 3", "Brotad en 5", "10 Flores", "Infinitas Flores", "Brotad en Millones"],
 		"ataquesValores": [3, 6, 8, 14, 20],
-		"ataquesCoste": [0, 3, 4, 7, 16]
+		"ataquesCoste": [0, 3, 4, 7, 16],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	},
 
 	 "Franky" : {
@@ -116,7 +186,17 @@ var personajes = {
 		"grados": ["Agotado", "Normal", "SUUUUUUUUUUUPER"],
 		"ataques": ["Weapons Left", "Strong Hammer", "Lanzallamas", "Coup de Vent", "SUUUUUUUUUUPER"],
 		"ataquesValores": [1, 3, 6, 5 , 18],
-		"ataquesCoste": [0, 2, 4, 5, 10]
+		"ataquesCoste": [0, 2, 4, 5, 10],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	}
 },
 
@@ -124,14 +204,24 @@ var personajes = {
 "enemigos": {
 	"alvida": {
 		"name": "Alvida",
-		"longName": "Alvida la gorada",
+		"longName": "Alvida la Gorda",
 		"HP": 20,
 		"maxHP": 20,
 		"MP": 18,
 		"maxMP": 18,
 		"ataques": ["Puñetazo", "Mazazo"],
 		"ataquesCoste": [0, 3],
-		"ataquesValores": [1, 4]
+		"ataquesValores": [1, 4],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	},
 	"buggy": {
 		"name": "Buggy",
@@ -142,7 +232,17 @@ var personajes = {
 		"maxMP": 78,
 		"ataques": ["", "", ""],
 		"ataquesCoste": [],
-		"ataquesValores": []
+		"ataquesValores": [],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	},
 	"krieg": {
 		"name": "Kireg",
@@ -153,7 +253,17 @@ var personajes = {
 		"maxMP": 120,
 		"ataques": [],
 		"ataquesCoste": [],
-		"ataquesValores": []
+		"ataquesValores": [],
+		"data": [
+			{
+				"sprite": "",
+				"artwork": ""
+			},
+			{
+				"sprite": "",
+				"artwork": ""
+			}
+		]
 	},
 	"arlongPark": {
 		"arlong": {
@@ -165,7 +275,17 @@ var personajes = {
 			"maxMP": 210,
 			"ataques": [],
 			"ataquesCoste": [],
-			"ataquesValores": []
+			"ataquesValores": [],
+			"data": [
+				{
+					"sprite": "",
+					"artwork": ""
+				},
+				{
+					"sprite": "",
+					"artwork": ""
+				}
+			]
 		},
 		"octi": {
 			"name": "Octi",
@@ -176,7 +296,17 @@ var personajes = {
 			"maxMP": 70,
 			"ataques": [],
 			"ataquesCoste": [],
-			"ataquesValores": []
+			"ataquesValores": [],
+			"data": [
+				{
+					"sprite": "",
+					"artwork": ""
+				},
+				{
+					"sprite": "",
+					"artwork": ""
+				}
+			]
 		},
 		"kurobi": {
 			"name": "Kurobi",
@@ -187,7 +317,17 @@ var personajes = {
 			"maxMP": 70,
 			"ataques": [],
 			"ataquesCoste": [],
-			"ataquesValores": []
+			"ataquesValores": [],
+			"data": [
+				{
+					"sprite": "",
+					"artwork": ""
+				},
+				{
+					"sprite": "",
+					"artwork": ""
+				}
+			]
 		},
 		"chew": {
 			"name": "Chew",
@@ -198,7 +338,17 @@ var personajes = {
 			"maxMP": 60,
 			"ataques": [],
 			"ataquesCoste": [],
-			"ataquesValores": []
+			"ataquesValores": [],
+			"data": [
+				{
+					"sprite": "",
+					"artwork": ""
+				},
+				{
+					"sprite": "",
+					"artwork": ""
+				}
+			]
 		}
 	},
 	"logueTown": {
@@ -211,7 +361,17 @@ var personajes = {
 			"maxMP": 350,
 			"ataques": [],
 			"ataquesCoste": [],
-			"ataquesValores": []
+			"ataquesValores": [],
+			"data": [
+				{
+					"sprite": "",
+					"artwork": ""
+				},
+				{
+					"sprite": "",
+					"artwork": ""
+				}
+			]
 		},
 		"tashigi": {
 			"name": "Tashigi",
@@ -222,7 +382,17 @@ var personajes = {
 			"maxMP": 100,
 			"ataques": [],
 			"ataquesCoste": [],
-			"ataquesValores": []
+			"ataquesValores": [],
+			"data": [
+				{
+					"sprite": "",
+					"artwork": ""
+				},
+				{
+					"sprite": "",
+					"artwork": ""
+				}
+			]
 		}
 	},
 	"arabasta": {
@@ -234,7 +404,17 @@ var personajes = {
 				"maxMP": 10,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"igarapoi": {
 				"name": "Igarapoi",
@@ -245,7 +425,17 @@ var personajes = {
 				"maxMP": 10,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"mr5": {
 				"name": "Mr5",
@@ -256,7 +446,17 @@ var personajes = {
 				"maxMP": 90,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"missValentine": {
 				"name": "MissValentine",
@@ -267,7 +467,17 @@ var personajes = {
 				"maxMP": 120,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			}
 		},
 		"littleGarden": {
@@ -280,7 +490,17 @@ var personajes = {
 				"maxMP": 90,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"missValentine": {
 				"name": "MissValentine",
@@ -291,7 +511,17 @@ var personajes = {
 				"maxMP": 120,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 
 			},
 			"missGoldenWeek": {
@@ -303,7 +533,17 @@ var personajes = {
 				"maxMP": 60,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"mr3": {
 				"name": "Mr3",
@@ -314,7 +554,17 @@ var personajes = {
 				"maxMP": 250,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"mr13": {
 				"name": "Mr13",
@@ -325,7 +575,17 @@ var personajes = {
 				"maxMP": 20,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"missFriday": {
 				"name": "MissFriday",
@@ -336,7 +596,17 @@ var personajes = {
 				"maxMP": 20,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			}
 		},
 		"drum": {
@@ -349,7 +619,17 @@ var personajes = {
 				"maxMP": 60,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"kuromanimo": {
 				"name": "kuromanimo",
@@ -360,7 +640,17 @@ var personajes = {
 				"maxMP": 70,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"wapol": {
 				"name": "Wapol",
@@ -371,7 +661,17 @@ var personajes = {
 				"maxMP": 130,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			}
 		},
 		"arabasta": {
@@ -384,7 +684,17 @@ var personajes = {
 				"maxMP": 350,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"crocodile": {
 				"name": "Don 0",
@@ -395,7 +705,17 @@ var personajes = {
 				"maxMP": 500,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"mr4": {
 				"name": "Mr4",
@@ -406,7 +726,17 @@ var personajes = {
 				"maxMP": 100,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": ""
+					}
+				]
 			},
 			"missXmas": {
 				"name": "MissXmas",
@@ -417,7 +747,19 @@ var personajes = {
 				"maxMP": 30,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					}
+				]
 			},
 			"bentham": {
 				"name": "Bentham",
@@ -428,7 +770,19 @@ var personajes = {
 				"maxMP": 180,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					}
+				]
 			},
 			"paula": {
 				"name": "Paula",
@@ -439,7 +793,19 @@ var personajes = {
 				"maxMP": 300,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					}
+				]
 			},
 			"dazBones": {
 				"name": "DazBones",
@@ -450,7 +816,19 @@ var personajes = {
 				"maxMP": 260,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					}
+				]
 			},
 			"crocodilePalace": {
 				"name": "CrocodilePalece",
@@ -461,7 +839,19 @@ var personajes = {
 				"maxMP": 500,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					}
+				]
 			},
 			"crocodilePantheon": {
 				"name": "CrocodilePantheon",
@@ -472,7 +862,19 @@ var personajes = {
 				"maxMP": 400,
 				"ataques": [],
 				"ataquesCoste": [],
-				"ataquesValores": []
+				"ataquesValores": [],
+				"data": [
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					},
+					{
+						"sprite": "",
+						"artwork": "",
+						"artwork": ""
+					}
+				]
 			}
 		},
 		"skypea": {
@@ -486,7 +888,19 @@ var personajes = {
 					"maxMP": 60,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": "",
+							"artwork": ""
+						}
+					]
 				}
 			},
 			"islaDelCielo": {
@@ -499,7 +913,17 @@ var personajes = {
 					"maxMP": 600,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"shuraFuza": {
 					"name": "ShuraFuza",
@@ -510,7 +934,17 @@ var personajes = {
 					"maxMP": 400,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"braham": {
 					"name": "Braham",
@@ -521,7 +955,17 @@ var personajes = {
 					"maxMP": 200,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"yama": {
 					"name": "Yama",
@@ -532,7 +976,17 @@ var personajes = {
 					"maxMP": 210,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"gedatsu": {
 					"name": "Gedatsu",
@@ -543,7 +997,17 @@ var personajes = {
 					"maxMP": 175,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"enel": {
 					"name": "Enel",
@@ -554,7 +1018,17 @@ var personajes = {
 					"maxMP": 600,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				}
 			}
 		},
@@ -569,7 +1043,17 @@ var personajes = {
 					"maxMP": 300,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				}
 			},
 			"water7": {
@@ -582,7 +1066,17 @@ var personajes = {
 					"maxMP": 80,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"ussop": {
 					"HP": 350,
@@ -591,7 +1085,17 @@ var personajes = {
 					"maxMP": 300,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"franky": {
 					"name": "Franky",
@@ -602,7 +1106,17 @@ var personajes = {
 					"maxMP": 320,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"jerry": {
 					"name": "Jerry",
@@ -613,7 +1127,17 @@ var personajes = {
 					"maxMP": 100,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"wanze": {
 					"name": "Wanze",
@@ -624,7 +1148,17 @@ var personajes = {
 					"maxMP": 200,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"nero": {
 					"name": "Nero",
@@ -635,7 +1169,17 @@ var personajes = {
 					"maxMP": 600,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"blueno": {
 					"name": "Blueno",
@@ -646,7 +1190,17 @@ var personajes = {
 					"maxMP": 500,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				}
 			},
 			"enniesLobby": {
@@ -659,7 +1213,17 @@ var personajes = {
 					"maxMP": 300,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"kalifa": {
 					"name": "Kalifa",
@@ -670,7 +1234,17 @@ var personajes = {
 					"maxMP": 300,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"chapapa": {
 					"name": "Chapa",
@@ -681,7 +1255,17 @@ var personajes = {
 					"maxMP": 250,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"kumadori": {
 					"name": "Kumadori",
@@ -692,7 +1276,17 @@ var personajes = {
 					"maxMP": 250,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"monsterChopper": {
 					"name": "MonsterChopper",
@@ -703,7 +1297,17 @@ var personajes = {
 					"maxMP": 100,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"jabra": {
 					"name": "Jabra",
@@ -714,7 +1318,17 @@ var personajes = {
 					"maxMP": 260,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"kaku": {
 					"name": "Kaku",
@@ -725,7 +1339,17 @@ var personajes = {
 					"maxMP": 300,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"robLucci": {
 					"name": "RobLucci",
@@ -736,7 +1360,17 @@ var personajes = {
 					"maxMP": 600,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"spandam": {
 					"name": "Spanadam",
@@ -747,7 +1381,17 @@ var personajes = {
 					"maxMP": 10,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				}
 			},
 			"postEnniesLobby": {
@@ -760,7 +1404,17 @@ var personajes = {
 					"maxMP": 200,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"helmeppo": {
 					"name": "Helmeppo",
@@ -771,30 +1425,60 @@ var personajes = {
 					"maxMP": 100,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"shanksVSwhitebeard": {
 					"shanks": {
-					"name": "shanks",
-					"longName": "shanks",
+					    "name": "shanks",
+					    "longName": "shanks",
 						"HP": 900,
 						"maxHP": 900,
 						"MP": 500,
 						"maxMP": 500,
 						"ataques": [],
 						"ataquesCoste": [],
-						"ataquesValores": []
+						"ataquesValores": [],
+						"data": [
+							{
+								"sprite": "",
+								"artwork": ""
+							},
+							{
+								"sprite": "",
+								"artwork": ""
+							}
+						]
 					},
 					"barbaBlanca": {
-					"name": "BarabaBlanca",
-					"longName": "Barbablanca",
+					    "name": "BarabaBlanca",
+					    "longName": "Barbablanca",
 						"HP": 1200,
 						"maxHP": 1200,
 						"MP": 500,
 						"maxMP": 500,
 						"ataques": [],
 						"ataquesCoste": [],
-						"ataquesValores": []
+						"ataquesValores": [],
+						"data": [
+							{
+								"sprite": "",
+								"artwork": ""
+							},
+							{
+								"sprite": "",
+								"artwork": ""
+							}
+						]
 					}
 				},
 				"monkeyDGarp": {
@@ -806,7 +1490,17 @@ var personajes = {
 					"maxMP": 500,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				},
 				"aceVSblackbeard": {
 					"name": "Ace",
@@ -817,7 +1511,17 @@ var personajes = {
 					"maxMP": 560,
 					"ataques": [],
 					"ataquesCoste": [],
-					"ataquesValores": []
+					"ataquesValores": [],
+					"data": [
+						{
+							"sprite": "",
+							"artwork": ""
+						},
+						{
+							"sprite": "",
+							"artwork": ""
+						}
+					]
 				}
 			}
 		}

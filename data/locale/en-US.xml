@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <en-US name="English">
+    <sys>
+        <localStorage>
+            <error></error>
+            <save>
+                <state current="processing">Saving...</state>
+                <state current="done">Saving Complete</state>
+            </save>
+            <deleteSave>
+                <error type="404">Error 404: Save not found.</error>
+                <state current="done">Save deleted succesfully.</state>
+            </deleteSave>
+            <loadSave>
+                <error type="404">Error 404: Save not found.</error>
+                <state current="done">Save loaded succesfully.</state>
+            </loadSave>
+        </localStorage>
+    </sys>
     <GUI>
         <stats>
             <HP tag="">Health: </HP>
@@ -19,7 +36,7 @@
                 <atack id="atack2" tag="">Gomu Gomu no Gatling</atack>
                 <atack id="atack3" tag="">Gomu Gomu no Bazooka</atack>
                 <atack id="atack4" tag="">Gomu Gomu no Storm</atack>
-                <atack id="atack5" tag="">Haki</atack>
+                <atack id="atack5" tag="">Conqueror's Haki</atack>
             </atacks>
         </luffy>
         <zoro>
@@ -27,8 +44,8 @@
             <MP tag="">Energy: </MP>
             <gears>
                 <gear id="gear1" tag="">Normal</gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear2" tag="">Focused</gear>
+                <gear id="gear3" tag="">Mental Blank</gear>
             </gears>
             <atacks>
                 <atack id="atack1" tag="">Sword Hit</atack>
