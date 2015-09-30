@@ -80,7 +80,7 @@ class Pelea
         @id = char.join("")
         this.generate()
     generate: () ->
-        
+
 
 ###
 ██████╗ ███████╗██████╗ ███████╗ ██████╗ ███╗   ██╗ █████╗      ██╗███████╗███████╗
@@ -105,5 +105,18 @@ class Mugiwara extends Character
 # Posiblemente haga clases separadas para cada uno pero de momento no.
 
 # Enemigos
-class Enemy extends Character
-    constructor: (@object, @ally = false, @banda) ->
+class Marine extends Character
+    constructor: (@object, @ally = false, @banda = 'Marina', @range = 'Capitán', random = true) ->
+        if random == true
+            switch range
+                when 'Capitán'
+                    temp = Math.random()
+                    @object = {
+                        HP: Math.floor(temp * 100)
+                        maxHP: Math.floor(temp * 100)
+                        MP: Math.floor(temp * 80)
+                        maxMP: Math.floor(temp * 80)
+                    }
+
+        else
+          # body...

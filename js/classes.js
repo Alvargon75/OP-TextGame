@@ -7,7 +7,7 @@
 ╚██████╗╚██████╔╝██║ ╚═╝ ██║██████╔╝██║  ██║   ██║   ███████╗
  ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝
  */
-var Character, Enemy, Mugiwara, Pelea,
+var Character, Marine, Mugiwara, Pelea,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
@@ -158,15 +158,34 @@ Mugiwara = (function(superClass) {
 
 })(Character);
 
-Enemy = (function(superClass) {
-  extend(Enemy, superClass);
+Marine = (function(superClass) {
+  extend(Marine, superClass);
 
-  function Enemy(object, ally, banda) {
+  function Marine(object, ally, banda, range1, random) {
+    var temp;
     this.object = object;
     this.ally = ally != null ? ally : false;
-    this.banda = banda;
+    this.banda = banda != null ? banda : 'Marina';
+    this.range = range1 != null ? range1 : 'Capitán';
+    if (random == null) {
+      random = true;
+    }
+    if (random === true) {
+      switch (range) {
+        case 'Capitán':
+          temp = Math.random();
+          this.object = {
+            HP: Math.floor(temp * 100),
+            maxHP: Math.floor(temp * 100),
+            MP: Math.floor(temp * 80),
+            maxMP: Math.floor(temp * 80)
+          };
+      }
+    } else {
+
+    }
   }
 
-  return Enemy;
+  return Marine;
 
 })(Character);
