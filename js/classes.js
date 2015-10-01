@@ -12,112 +12,21 @@ var Character, Marine, Mugiwara, Pelea,
   hasProp = {}.hasOwnProperty;
 
 Pelea = (function() {
-  function Pelea(id) {
-    var RStemp, char, i;
-    this.id = id != null ? id : void 0;
-    char = [];
-    RStemp = void 0;
-    i = 0;
-    while (i < 30) {
-      switch (Math.floor(Math.random() * 30)) {
-        case 0:
-          RStemp = 'A';
-          break;
-        case 1:
-          RStemp = 'H';
-          break;
-        case 2:
-          RStemp = 't';
-          break;
-        case 3:
-          RStemp = 'Q';
-          break;
-        case 4:
-          RStemp = 'j';
-          break;
-        case 5:
-          RStemp = '7';
-          break;
-        case 6:
-          RStemp = '8';
-          break;
-        case 7:
-          RStemp = 'Y';
-          break;
-        case 8:
-          RStemp = 'G';
-          break;
-        case 9:
-          RStemp = 'l';
-          break;
-        case 10:
-          RStemp = '9';
-          break;
-        case 11:
-          RStemp = 'L';
-          break;
-        case 12:
-          RStemp = 'M';
-          break;
-        case 13:
-          RStemp = 'n';
-          break;
-        case 14:
-          RStemp = 'X';
-          break;
-        case 15:
-          RStemp = 'z';
-          break;
-        case 16:
-          RStemp = 'X';
-          break;
-        case 17:
-          RStemp = 'B';
-          break;
-        case 18:
-          RStemp = 'W';
-          break;
-        case 19:
-          RStemp = 'q';
-          break;
-        case 20:
-          RStemp = 'S';
-          break;
-        case 21:
-          RStemp = 'a';
-          break;
-        case 22:
-          RStemp = 'K';
-          break;
-        case 23:
-          RStemp = 'i';
-          break;
-        case 24:
-          RStemp = '-';
-          break;
-        case 25:
-          RStemp = 'M';
-          break;
-        case 26:
-          RStemp = '_';
-          break;
-        case 27:
-          RStemp = 'b';
-          break;
-        case 28:
-          RStemp = 'v';
-          break;
-        case 29:
-          RStemp = 'P';
-          break;
-        case 30:
-          RStemp = '7';
-      }
-      char.push(RStemp);
-      i++;
-    }
-    this.id = char.join("");
-    this.generate();
+  function Pelea(enemy1) {
+    this.enemy = enemy1;
+    this.valores = {
+      turnos: 0
+    };
+    document.getElementById("combatUI").classList.remove('combatUI-inactive');
+    escribir("vs_title", personajeActual.name + " " + "vs" + " " + enemy.name);
+    escribir("at1", personajeActual.ataques[0]);
+    escribir("at2", personajeActual.ataques[1]);
+    escribir("at3", personajeActual.ataques[2]);
+    escribir("at4", personajeActual.ataques[3]);
+    escribir("at5", personajeActual.ataques[4]);
+    combatHUD();
+    document.querySelectorAll('div#combatUI > visualUI > personaje > i#sprite > img')[0].src = personajeActual.data[0].sprite;
+    document.querySelectorAll('div#combatUI > visualUI > enemigo > i#sprite > img')[0].src = enemy.data[0].sprite;
   }
 
   Pelea.prototype.generate = function() {};
