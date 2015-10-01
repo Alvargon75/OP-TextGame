@@ -10,7 +10,7 @@ var personajes = {
 		"maxMP": 320,
 		"estado": 0,
 		"grados": ["Pierna Negra", "Haki de Armadura", "Diable Jamble"],
-		"ataques": ["Patada Pierna Negra", "Disparo de Venado", "Patada Escalope", "Espectro del Pan Frito", "Pierna del Diablo"],
+		"ataques": ["Patada Pierna Negra", "Carne Picada de La Clase Mas Alta", "Recuerdos del infierno", "Espectro del Pan Frito", "Disparo Llameante"],
 		"ataquesValores": [4, 7, 9, 15, 22],
 		"ataquesCoste": [0, 2, 6, 11, 100],
 		"data": [
@@ -35,7 +35,7 @@ var personajes = {
 		"maxMP": 270,
 		"estado": 0,
 		"grados": ["Hombre de Goma", "Grado 2", "Grado 3"],
-		"ataques": ["Estira el brazo, puñetazo", "Galleta galleta, metralleta", "Retuérce el tornillo, Molinillo", "Estira el cuello mazo, cabezazo", "Haki del Rey"],
+		"ataques": ["Bazooka a 100,000 Grados", "Galleta galleta, metralleta", "Retuérce el tornillo, Molinillo", "Estira el cuello mazo, cabezazo", ""],
 		"ataquesValores": [5, 11, 13, 17, 27],
 		"ataquesCoste": [0, 1, 7, 11, 115],
 		"data": [
