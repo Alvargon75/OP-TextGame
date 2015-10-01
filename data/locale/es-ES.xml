@@ -32,11 +32,11 @@
                 <gear id="gear3" tag="">Tercera Marcha</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag="">Estira el Brazo, Puñetazo</atack>
-                <atack id="atack2" tag="">Galleta galleta, metralleta</atack>
+                <atack id="atack1" tag="">Estira el brazo por mil,misil</atack>
+                <atack id="atack2" tag="">Disparo de Serpiente</atack>
                 <atack id="atack3" tag="">Estira, estira, BAZOOKA</atack>
-                <atack id="atack4" tag="">Estira el cuello mazo, cabezazo</atack>
-                <atack id="atack5" tag="">Haki del Rey</atack>
+                <atack id="atack4" tag="">Gomu Gomu no Jet Gatlin Gun</atack>
+                <atack id="atack5" tag="">GiaSado Pistola Gigante</atack>
             </atacks>
         </luffy>
         <zoro>
@@ -44,40 +44,40 @@
             <MP tag="">Energía: </MP>
             <gears>
                 <gear id="gear1" tag="">Casual</gear>
-                <gear id="gear2" tag="">Concentrado</gear>
+                <gear id="gear2" tag="">Bandana</gear>
                 <gear id="gear3" tag="">Mente en Blanco</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag="">Sablazo</atack>
-                <atack id="atack2" tag="">Estilo de Tres Espadas</atack>
-                <atack id="atack3" tag="">Corte del Demonio</atack>
-                <atack id="atack4" tag="">Ashura</atack>
-                <atack id="atack5" tag="">Tatsumaki</atack>
+                <atack id="atack1" tag="">Canción del León</atack></atack>
+                <atack id="atack2" tag="">Cañón de 72Libras</atack>
+                <atack id="atack3" tag="">Corte Diabólico del Bello Demonio del Insomnio de La Noche</atack>
+                <atack id="atack4" tag="">Corte Abrasador del Demonio</atack>
+                <atack id="atack5" tag="">Ashura Ichibuguin</atack>
             </atacks>
         </zoro>
         <sanji>
             <longName>Sanji Pierna Negra</longName>
             <MP>Energía: </MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">Normal</gear>
+                <gear id="gear2" tag="">Amor Amor</gear>
+                <gear id="gear3" tag="">Fumaando</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">Surtido de Fritos</atack>
+                <atack id="atack2" tag="">Espectro de Pan Frito</atack>
+                <atack id="atack3" tag="">Recuerdos del infierno</atack>
+                <atack id="atack4" tag="">Carne Picada de La Clase Mas Alta)</atack>
+                <atack id="atack5" tag="">Disparo Llameante</atack>
             </atacks>
         </sanji>
         <nami>
             <longName tag="">Nami la Gata Ladrona</longName>
             <MP tag="">Energía: </MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">Normal</gear>
+                <gear id="gear2" tag="">Tempo Xpert</gear>
+                <gear id="gear3" tag="">Climatizacion</gear>
             </gears>
             <atacks>
                 <atack id="atack1" tag=""></atack>

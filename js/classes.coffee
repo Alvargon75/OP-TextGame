@@ -7,80 +7,28 @@
  ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝
 ###
 class Pelea
-    constructor: (@id = undefined) ->
-        char = []
-        RStemp = undefined
-        i = 0
-        while i < 30
-            switch Math.floor(Math.random() * 30)
-                when 0
-                    RStemp = 'A'
-                when 1
-                    RStemp = 'H'
-                when 2
-                    RStemp = 't'
-                when 3
-                    RStemp = 'Q'
-                when 4
-                    RStemp = 'j'
-                when 5
-                    RStemp = '7'
-                when 6
-                    RStemp = '8'
-                when 7
-                    RStemp = 'Y'
-                when 8
-                    RStemp = 'G'
-                when 9
-                    RStemp = 'l'
-                when 10
-                    RStemp = '9'
-                when 11
-                    RStemp = 'L'
-                when 12
-                    RStemp = 'M'
-                when 13
-                    RStemp = 'n'
-                when 14
-                    RStemp = 'X'
-                when 15
-                    RStemp = 'z'
-                when 16
-                    RStemp = 'X'
-                when 17
-                    RStemp = 'B'
-                when 18
-                    RStemp = 'W'
-                when 19
-                    RStemp = 'q'
-                when 20
-                    RStemp = 'S'
-                when 21
-                    RStemp = 'a'
-                when 22
-                    RStemp = 'K'
-                when 23
-                    RStemp = 'i'
-                when 24
-                    RStemp = '-'
-                when 25
-                    RStemp = 'M'
-                when 26
-                    RStemp = '_'
-                when 27
-                    RStemp = 'b'
-                when 28
-                    RStemp = 'v'
-                when 29
-                    RStemp = 'P'
-                when 30
-                    RStemp = '7'
-            char.push RStemp
-            i++
-        @id = char.join("")
-        this.generate()
+    constructor: (@enemy) ->
+        @valores = {
+            turnos: 0
+        }
+
+        # Genera el escenario
+        document.getElementById("combatUI").classList.remove('combatUI-inactive');
+        escribir("vs_title", personajeActual.name + " " + "vs" + " " + @enemy.name);
+        escribir("at1", personajeActual.ataques[0]);
+        escribir("at2", personajeActual.ataques[1]);
+        escribir("at3", personajeActual.ataques[2]);
+        escribir("at4", personajeActual.ataques[3]);
+        escribir("at5", personajeActual.ataques[4]);
+        combatHUD();
+
+        document.querySelectorAll('div#combatUI > visualUI > personaje > i#sprite > img')[0].src = personajeActual.data[0].sprite
+        document.querySelectorAll('div#combatUI > visualUI > enemigo > i#sprite > img')[0].src = enemy.data[0].sprite;
+
+        document.querySelectorAll('div#combatUI visualUI personajes div.UI-pokemonbox table td').classList.add('green');
+
     generate: () ->
-        
+
 
 ###
 ██████╗ ███████╗██████╗ ███████╗ ██████╗ ███╗   ██╗ █████╗      ██╗███████╗███████╗
@@ -105,5 +53,18 @@ class Mugiwara extends Character
 # Posiblemente haga clases separadas para cada uno pero de momento no.
 
 # Enemigos
-class Enemy extends Character
-    constructor: (@object, @ally = false, @banda) ->
+class Marine extends Character
+    constructor: (@object, @ally = false, @banda = 'Marina', @range = 'Capitán', random = true) ->
+        if random == true
+            switch range
+                when 'Capitán'
+                    temp = Math.random()
+                    @object = {
+                        HP: Math.floor(temp * 100)
+                        maxHP: Math.floor(temp * 100)
+                        MP: Math.floor(temp * 80)
+                        maxMP: Math.floor(temp * 80)
+                    }
+
+        else
+          # body...
