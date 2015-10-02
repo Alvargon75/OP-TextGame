@@ -10,7 +10,8 @@
 var Pelea;
 
 Pelea = (function() {
-  function Pelea(enemy1) {
+  function Pelea(character, enemy1) {
+    this.character = character != null ? character : personajeActual;
     this.enemy = enemy1;
     this.valores = {
       turnos: 0
@@ -25,7 +26,7 @@ Pelea = (function() {
     combatHUD();
     document.querySelectorAll('div#combatUI > visualUI > personaje > i#sprite > img')[0].src = personajeActual.data[0].sprite;
     document.querySelectorAll('div#combatUI > visualUI > enemigo > i#sprite > img')[0].src = enemy.data[0].sprite;
-    document.querySelectorAll('div#combatUI visualUI personajes div.UI-pokemonbox table td').classList.add('green');
+    document.querySelectorAll('div#combatUI visualUI personajes div.UI-pokemonbox table td').classList.add('green-PKMN');
   }
 
   Pelea.prototype.generate = function() {};
