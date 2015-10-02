@@ -15,12 +15,12 @@ var personajes = {
 		"ataquesCoste": [0, 2, 6, 11, 100],
 		"data": [
 			{
-				"sprite": "",
-				"artwork": ""
+				"sprite": "recursos/sprites/sanji.png",
+				"artwork": "recursos/img/artwork/sanji.png"
 			},
 			{
 				"sprite": "",
-				"artwork": ""
+				"artwork": "recursos/img/artwork/sanji.png"
 			}
 		]
 	},
@@ -39,13 +39,17 @@ var personajes = {
 		"ataquesValores": [5, 11, 13, 17, 27],
 		"ataquesCoste": [0, 1, 7, 11, 115],
 		"data": [
-			{
-				"sprite": "",
-				"artwork": ""
+			{ // Pre-timeskip
+				"sprite": "recursos/sprites/luffy_normal_2.png", // TODO: cambiarlo al de Guillermo
+				"artwork": "recursos/img/artwork/luffy.png"
 			},
-			{
+			{ // Post-Timeskip
 				"sprite": "",
-				"artwork": ""
+				"artwork": "recursos/img/artwork/luffy.png"
+			},
+			{ // Grado 2 Pre-timeskip
+				"sprite": "recursos/sprites/luffy_grado2.png",
+				"artwork": "recursos/img/artwork/luffy.png"
 			}
 		]
 	},
