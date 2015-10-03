@@ -48,8 +48,8 @@
                 <gear id="gear3" tag="">Mente en Blanco</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag="">Canción del León</atack></atack>
-                <atack id="atack2" tag="">Cañón de 72Libras</atack>
+                <atack id="atack1" tag="">Canción del León</atack>
+                <atack id="atack2" tag="">Cañón de 72 Libras</atack>
                 <atack id="atack3" tag="">Corte Diabólico del Bello Demonio del Insomnio de La Noche</atack>
                 <atack id="atack4" tag="">Corte Abrasador del Demonio</atack>
                 <atack id="atack5" tag="">Ashura Ichibuguin</atack>
