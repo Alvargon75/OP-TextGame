@@ -88,8 +88,8 @@ var combate = {
 			combatHUD();
 
 			//Todo lo visual va abajo
-			document.querySelectorAll('div#combatUI > visualUI > personaje > i#sprite > img')[0].src = personajeActual.data[0].sprite
-			document.querySelectorAll('div#combatUI > visualUI > enemigo > i#sprite > img')[0].src = enemy.data[0].sprite;
+			document.querySelector('div#combatUI > visualUI > personaje > i#sprite > img')[0].src = personajeActual.data[0].sprite
+			document.querySelector('div#combatUI > visualUI > enemigo > i#sprite > img')[0].src = enemy.data[0].sprite;
 		}
 	},
 	durante: {
@@ -212,31 +212,36 @@ $$ |  $$ |$$ |   \$  /   $$ |\$$$$$$$ |\$$$$$$$ |
 */
 
 var luchaAlv = function(){
-	var atacar = true;
-	var acertar = true;
-	var danoRound = ataquePrimeraPelea(5, 1);
-	var danoAlv = ataquePrimeraPelea(2, 1);
-	var danoTotal = 0;
+	if(test){
+		luchaAlvida = new Pelea(personajeActual, personajes.enemigos.alvida, 0);
+		luchaAlvida.inicio()
+	}else{
+		var atacar = true;
+		var acertar = true;
+		var danoRound = ataquePrimeraPelea(5, 1);
+		var danoAlv = ataquePrimeraPelea(2, 1);
+		var danoTotal = 0;
 
 	//Pelea
-	while(atacar){
-		escribir("a4", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-1")[0].childNodes[0].nodeValue);
-		danoTotal += danoRound;
-		luffyVida -= danoAlv;
-		if(danoTotal >= 100){ //Ganas
-			escribir("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-2")[0].childNodes[0].nodeValue);
-			mostrar("p0");
-			ocultar("d2p_a");
-			ocultar("d2p_b");
-			atacar = false;
-			luffyVida = 500;
-			checkHUD();
-		}else if(luffyVida <= 0){ //Pierdes
-			escribir("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-3")[0].childNodes[0].nodeValue);
-			atacar = false;
-			checkHUD();
-		}else{ //Continua
-			checkHUD();
+		while(atacar){
+			escribir("a4", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-1")[0].childNodes[0].nodeValue);
+			danoTotal += danoRound;
+			luffyVida -= danoAlv;
+			if(danoTotal >= 100){ //Ganas
+				escribir("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-2")[0].childNodes[0].nodeValue);
+				mostrar("p0");
+				ocultar("d2p_a");
+				ocultar("d2p_b");
+				atacar = false;
+				luffyVida = 500;
+				checkHUD();
+			}else if(luffyVida <= 0){ //Pierdes
+				escribir("b1", xmlhttp.responseXML.querySelectorAll("alvida fight > text#luchaAlv-3")[0].childNodes[0].nodeValue);
+				atacar = false;
+				checkHUD();
+			}else{ //Continua
+				checkHUD();
+			}
 		}
 	}
 }

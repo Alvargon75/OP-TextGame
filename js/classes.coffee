@@ -1,18 +1,10 @@
-###
- ██████╗ ██████╗ ███╗   ███╗██████╗  █████╗ ████████╗███████╗
-██╔════╝██╔═══██╗████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝██╔════╝
-██║     ██║   ██║██╔████╔██║██████╔╝███████║   ██║   █████╗
-██║     ██║   ██║██║╚██╔╝██║██╔══██╗██╔══██║   ██║   ██╔══╝
-╚██████╗╚██████╔╝██║ ╚═╝ ██║██████╔╝██║  ██║   ██║   ███████╗
- ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝
-###
 class Pelea
     # Esto crea una instancia para una pelea. Es lo básico para cualquier pelea.
     #
     # @args
     #  character - Qué personaje se enfrenta a `enemy`
     #  enemy - La persona contra la que se enfrenta `character`
-    constructor: (@character = personajeActual, @enemy, timeSkip) ->
+    constructor: (@character = personajeActual, @enemy, timeSkip = 0) ->
         # Define las propiedades de la Pelea
         @valores = {
             turnos: 0
@@ -20,22 +12,37 @@ class Pelea
 
         # Genera el escenario
         escribir("vs_title", personajeActual.name + " " + "vs" + " " + @enemy.name);
-        escribir("at1", personajeActual.ataques[0]);
-        escribir("at2", personajeActual.ataques[1]);
-        escribir("at3", personajeActual.ataques[2]);
-        escribir("at4", personajeActual.ataques[3]);
-        escribir("at5", personajeActual.ataques[4]);
-        document.querySelectorAll('div#combatUI > visualUI > personaje > div.UI-pokemonbox > h5').innerHTML = personajeActual.longName;
-        document.querySelectorAll('div#combatUI > visualUI > personaje > div.UI-pokemonbox > h5').innerHTML = @enemy.longName;
+        escribir("at1", @character.ataques[0]);
+        escribir("at2", @character.ataques[1]);
+        escribir("at3", @character.ataques[2]);
+        escribir("at4", @character.ataques[3]);
+        escribir("at5", @character.ataques[4]);
+        document.querySelectorAll('div#combatUI > visualUI > personaje > div.UI-pokemonbox > h5').innerHTML = @character.longName;
+        document.querySelectorAll('div#combatUI > visualUI > enemigo > div.UI-pokemonbox > h5').innerHTML = @enemy.longName;
         combatHUD();
 
         # Pone las imágenes de los personajes
-        document.querySelectorAll('div#combatUI > visualUI > personaje > i#sprite > img')[0].src = personajeActual.data[timeSkip].sprite
-        document.querySelectorAll('div#combatUI > visualUI > enemigo > i#sprite > img')[0].src = enemy.data[timeSkip].sprite;
+        document.querySelectorAll('div#combatUI > visualUI > personaje > i#sprite > img').src = @character.data[timeSkip].sprite
+        document.querySelectorAll('div#combatUI > visualUI > enemigo > i#sprite > img').src = @enemy.data[timeSkip].sprite;
 
         # Crea las barras de vida
-        document.querySelectorAll('div#combatUI visualUI personajes div.UI-pokemonbox table td').classList.add('green-PKMN');
+        document.querySelectorAll('div#combatUI visualUI personajes div.UI-pokemonbox table td').className ='green-PKMN';
 
     inicio: () ->
         document.getElementById("combatUI").classList.remove('combatUI-inactive')
         return
+
+    selfDestruct: () ->
+        # Podrías preguntarte, porque añadir un comando de autodestruccíon, yo digo, ¿por qué no?
+        deletable = true
+        try
+          delete this
+        catch error
+          console.error("The fight cannot be deleted.")
+
+        if deletable == true
+            delete this
+
+
+class Save
+    constructor: () ->
