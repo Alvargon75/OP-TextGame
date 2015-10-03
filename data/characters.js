@@ -880,7 +880,8 @@ var personajes = {
 					}
 				]
 			}
-		},
+		}
+	},
 		"skypea": {
 			"jaya": {
 				"bellamy": {
@@ -1530,5 +1531,4 @@ var personajes = {
 			}
 		}
 	}
-}
 }
