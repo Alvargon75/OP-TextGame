@@ -129,5 +129,45 @@
 		border: 2px solid black;
 		border-radius: 8px;
 		width: 15%;
+		min-width: 10%;
+		max-width: 20%;
+		z-index: 99;
+		background-color: whitesmoke;
+	}
+	#enemigo .UI-pokemonbox {
+		position: relative;
+		top: 21.5em;
+		left: 11em;
+	}
+	#personaje .UI-pokemonbox{
+		position: relative;
+		top: 7.1em;
+		left: 68em;
+	}
+	.UI-pokemonbox > h5 {
+		margin-bottom: 4px;
+	}
+	.UI-pokemonbox th {
+		font-family: Arial, sans-serif;
+	}
+	img#UI-en-sprite, img#UI-ay-sprite {
+		max-width: 25%;
+		min-width: 15%;
+		max-height: 550px;
+		min-height: 30% ;
+	}
+	img#UI-en-sprite {
+		-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+		margin-top: -6.5em;
+	}
+	img#UI-ay-sprite {
+		position: relative;
+		left: 72em;
+		bottom: 22em;
 	}
 }
