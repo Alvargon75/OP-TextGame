@@ -24,7 +24,7 @@ Pelea = (function() {
   }
 
   Pelea.prototype.inicio = function() {
-    document.getElementsByTagName("header").style.display = "none";
+    document.getElementsByTagName("header")[0].style.display = "none";
     document.getElementById("combatUI").classList.remove('combatUI-inactive');
   };
 
