@@ -12,23 +12,24 @@ class Pelea
 
         # Genera el escenario
         escribir("vs_title", personajeActual.name + " " + "vs" + " " + @enemy.name);
-        escribir("at1", @character.ataques[0]);
-        escribir("at2", @character.ataques[1]);
-        escribir("at3", @character.ataques[2]);
-        escribir("at4", @character.ataques[3]);
-        escribir("at5", @character.ataques[4]);
-        document.querySelectorAll('div#combatUI > visualUI > personaje > div.UI-pokemonbox > h5').innerHTML = @character.longName;
-        document.querySelectorAll('div#combatUI > visualUI > enemigo > div.UI-pokemonbox > h5').innerHTML = @enemy.longName;
+        escribir("at1", @character.ataques[0])
+        escribir("at2", @character.ataques[1])
+        escribir("at3", @character.ataques[2])
+        escribir("at4", @character.ataques[3])
+        escribir("at5", @character.ataques[4])
+        document.getElementById("UI-ay-name").innerHTML = @character.longName
+        document.getElementById("UI-en-name").innerHTML = @enemy.longName
         combatHUD();
 
         # Pone las imágenes de los personajes
-        document.querySelectorAll('div#combatUI > visualUI > personaje > i#sprite > img').src = @character.data[timeSkip].sprite
-        document.querySelectorAll('div#combatUI > visualUI > enemigo > i#sprite > img').src = @enemy.data[timeSkip].sprite;
+        document.getElementById("UI-ay-sprite").src = this.character.data[timeSkip].sprite
+        document.getElementById("UI-en-sprite").src = this.enemy.data[timeSkip].sprite;
 
         # Crea las barras de vida
-        document.querySelectorAll('div#combatUI visualUI personajes div.UI-pokemonbox table td').className ='green-PKMN';
+
 
     inicio: () ->
+        document.getElementsByTagName("header").style.display = "none"
         document.getElementById("combatUI").classList.remove('combatUI-inactive')
         return
 

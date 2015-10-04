@@ -40,7 +40,7 @@ var personajes = {
 		"ataquesCoste": [0, 1, 7, 11, 115],
 		"data": [
 			{ // Pre-timeskip
-				"sprite": "recursos/sprites/luffy_normal_2.png", // TODO: cambiarlo al de Guillermo
+				"sprite": "recursos/sprites/luffy_normal_prov.png", // TODO: cambiarlo al de Guillermo
 				"artwork": "recursos/img/artwork/luffy.png"
 			},
 			{ // Post-Timeskip
@@ -218,7 +218,7 @@ var personajes = {
 		"ataquesValores": [1, 4],
 		"data": [
 			{
-				"sprite": "",
+				"sprite": "recursos/sprites/alvida.png",
 				"artwork": ""
 			},
 			{

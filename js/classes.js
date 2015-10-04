@@ -16,15 +16,15 @@ Pelea = (function() {
     escribir("at3", this.character.ataques[2]);
     escribir("at4", this.character.ataques[3]);
     escribir("at5", this.character.ataques[4]);
-    document.querySelectorAll('div#combatUI > visualUI > personaje > div.UI-pokemonbox > h5').innerHTML = this.character.longName;
-    document.querySelectorAll('div#combatUI > visualUI > enemigo > div.UI-pokemonbox > h5').innerHTML = this.enemy.longName;
+    document.getElementById("UI-ay-name").innerHTML = this.character.longName;
+    document.getElementById("UI-en-name").innerHTML = this.enemy.longName;
     combatHUD();
-    document.querySelectorAll('div#combatUI > visualUI > personaje > i#sprite > img').src = this.character.data[timeSkip].sprite;
-    document.querySelectorAll('div#combatUI > visualUI > enemigo > i#sprite > img').src = this.enemy.data[timeSkip].sprite;
-    document.querySelectorAll('div#combatUI visualUI personajes div.UI-pokemonbox table td').className = 'green-PKMN';
+    document.getElementById("UI-ay-sprite").src = this.character.data[timeSkip].sprite;
+    document.getElementById("UI-en-sprite").src = this.enemy.data[timeSkip].sprite;
   }
 
   Pelea.prototype.inicio = function() {
+    document.getElementsByTagName("header").style.display = "none";
     document.getElementById("combatUI").classList.remove('combatUI-inactive');
   };
 

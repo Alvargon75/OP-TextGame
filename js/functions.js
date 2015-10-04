@@ -132,6 +132,7 @@ var randomString = function(length){
 	return char.join("");
 }
 
+
 var checkHUD = function(){
 	document.getElementById("vida").innerHTML = personajeActual.HP;
 	escribir("maxVida", personajeActual.maxHP);

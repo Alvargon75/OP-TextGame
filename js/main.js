@@ -35,10 +35,7 @@ El tema de los estados va por numeros:
  101 = Último Aliento
 
 */
-
-// Generic Villain
-//var names = [Luffy, Sanji, Zoro, Nami, Ussop, Robin, Franky, Chopper, GodMode];﻿
-
+﻿
 var mugiwaras = [personajes.aliados.Luffy, personajes.aliados.Zorro, personajes.aliados.Sanji, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Chopper, personajes.aliados.Robin, personajes.aliados.Franky];
 var personajeActual = mugiwaras[0];
 

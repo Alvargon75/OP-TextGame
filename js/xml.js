@@ -20,10 +20,10 @@ if(window.XMLHttpRequest){ //Modern Browsers
 
 console.log("Lang: " + language);
 
-if(language == "es-ES"){
+if(language == "es-ES" || "es"){
 	xmlhttp.open("GET", "data/locale/es-ES.xml", true);
 	xmlhttp.send();
-}else if(language == "en-US" || "en-GB" || "en-AU" || "en-NZ" || "en-CA" || "en-CB" || "en-IN" || "en-IE" || "en-JM" || "en-PH" || "en-ZA" || "en-TT"){
+}else if(language == "en-US" || "en-GB" || "en-AU" || "en-NZ" || "en-CA" || "en-CB" || "en-IN" || "en-IE" || "en-JM" || "en-PH" || "en-ZA" || "en-TT" || "en"){
 	xmlhttp.open("GET", "data/locale/en-US.xml", true);
 	xmlhttp.send();
 }else{
