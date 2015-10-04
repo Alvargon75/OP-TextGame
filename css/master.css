@@ -1,151 +1,133 @@
 /*Ordenador*/
 @media only screen and (min-width: 768px){
 /*CSS*/
-header{
-	width: 60%;
-	margin-top: -25px;
-	margin-right: auto;
-	margin-left: auto;
-}
-header h1 {
-	text-align: center;
-	font-size: 3.3em;
-}
-#text-box {
-	position: relative;
-	top: 15px;
-	margin-left: 20px;
-	height: 80%;
-}
-#controls {
+	header{
+		width: 60%;
+		margin-top: -25px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	header h1 {
+		text-align: center;
+		font-size: 3.3em;
+	}
+	#text-box {
+		position: relative;
+		top: 15px;
+		margin-left: 20px;
+		height: 80%;
+	}
+	#controls {
 
-}
-#controls button {
-	background-image: url(../recursos/img/icon.png);
-}
-#text-box p span {
-	font-size: 2em;
-	font-weight: bold;
-}
-#drch #stats {
-	margin-top: -15px;
-	padding-right: 30px;
-	background-color: white;
-	background-position: center;
-}
-#drch #stats ul {
-	list-style-type: none;
-}
-#izq {
-	float: left;
-	clear: left;
-	width: 60%;
-	height: 80%;
-	min-height: 400px;
-	background-color: whitesmoke;
-}
-#drch {
-	float: right;
-	clear: right;
-	width: 30%;
-	min-height: 400px;
-	max-height: 80%;
-}
-#ilustraciones img {
-	width: 256px;
-	height: 256px;
-}
-/*CHARACTER CHOOSER*/
-#cc_container {
-	position: absolute;
-	width: 99%;
-	height: 99%;
-	z-index: 9999;
-	background-color: rgba(0, 0, 0, 0.6);
-}
-.cc_inactive {
-	display:none;
-	width: 0;
-	height: 0;
-}
-#character_chooser {
-	clear: both;
-	margin: auto;
-	border: 3px solid black;
-	background-color: #FFF;
-}
-#character_chooser > div {
-	display: inline-block;
-}
-/*COMBAT UI*/
-#combatUI #header_cont h1 {
-	text-align: center;
-	font-size: 2.8em;
-	margin-top: -15px;
-}
-#combatUI footer {
-	position: absolute;
-	width: 80%;
-	height: 10%;
+	}
+	#controls button {
+		background-image: url(../recursos/img/icon.png);
+	}
+	#text-box p span {
+		font-size: 2em;
+		font-weight: bold;
+	}
+	#drch #stats {
+		margin-top: -15px;
+		padding-right: 30px;
+		background-color: white;
+		background-position: center;
+	}
+	#drch #stats ul {
+		list-style-type: none;
+	}
+	#izq {
+		float: left;
+		clear: left;
+		width: 60%;
+		height: 80%;
+		min-height: 400px;
+		background-color: whitesmoke;
+	}
+	#drch {
+		float: right;
+		clear: right;
+		width: 30%;
+		min-height: 400px;
+		max-height: 80%;
+	}
+	#ilustraciones img {
+		width: 256px;
+		height: 256px;
+	}
+	/*COMBAT UI*/
+	#combatUI #header_cont h1 {
+		text-align: center;
+		font-size: 2.8em;
+		margin-top: -15px;
+	}
+	#combatUI footer {
+		position: absolute;
+		width: 80%;
+		height: 10%;
 
-}
-#combatUI footer #ataques {
-	float: right;
-	clear: left;
-	position: relative;
-	top: 200px;
-	margin-right: 10px;
-}
-#combatUI footer ul {
-	float: left;
-	clear: right;
-	position: relative;
-	top: 300px;
-	border: 4px solid firebrick;
-	padding: 13px;
-	background-color: #fbf677;
-}
-#combatUI .combatUI-statlist {
-	list-style-type: none;
-}
-#combatUI #ataques button {
-	display: inline-block;
-	padding: 8px;
-	background-color: white;
-	margin: 4px;
-	min-width: 181px;
-}
-#combatUI #ataques #at1 {
-	border-top: 3px solid #d11141;
-	border-bottom: 3px solid #d11141;
-	border-left: 6px solid #d11141;
-	border-right: 6px solid #d11141;
-}
-#combatUI #ataques #at2 {
-	border-top: 3px solid #00b159;
-	border-bottom: 3px solid #00b159;
-	border-left: 6px solid #00b159;
-	border-right: 6px solid #00b159;
-}
-#combatUI #ataques #at3 {
-	border-top: 3px solid #00aedb;
-	border-bottom: 3px solid #00aedb;
-	border-left: 6px solid #00aedb;
-	border-right: 6px solid #00aedb;
-}
-#combatUI #ataques #at4 {
-	border-top: 3px solid #f37735;
-	border-bottom: 3px solid #f37735;
-	border-left: 6px solid #f37735;
-	border-right: 6px solid #f37735;
-}
-#combatUI #ataques #at5 {
-	border-right: 6px solid gold;
-	border-left: 6px solid gold;
-	border-top: 3px solid gold;
-	border-bottom: 3px solid gold;
-	background-color: #fbf677;
-}
+	}
+	#combatUI footer #ataques {
+		float: right;
+		clear: left;
+		position: relative;
+		top: 200px;
+		margin-right: 10px;
+	}
+	#combatUI footer ul {
+		float: left;
+		clear: right;
+		position: relative;
+		top: 300px;
+		border: 4px solid firebrick;
+		padding: 13px;
+		background-color: #fbf677;
+	}
+	#combatUI .combatUI-statlist {
+		list-style-type: none;
+	}
+	#combatUI #ataques button {
+		display: inline-block;
+		padding: 8px;
+		background-color: white;
+		margin: 4px;
+		min-width: 181px;
+	}
+	#combatUI #ataques #at1 {
+		border-top: 3px solid #d11141;
+		border-bottom: 3px solid #d11141;
+		border-left: 6px solid #d11141;
+		border-right: 6px solid #d11141;
+	}
+	#combatUI #ataques #at2 {
+		border-top: 3px solid #00b159;
+		border-bottom: 3px solid #00b159;
+		border-left: 6px solid #00b159;
+		border-right: 6px solid #00b159;
+	}
+	#combatUI #ataques #at3 {
+		border-top: 3px solid #00aedb;
+		border-bottom: 3px solid #00aedb;
+		border-left: 6px solid #00aedb;
+		border-right: 6px solid #00aedb;
+	}
+	#combatUI #ataques #at4 {
+		border-top: 3px solid #f37735;
+		border-bottom: 3px solid #f37735;
+		border-left: 6px solid #f37735;
+		border-right: 6px solid #f37735;
+	}
+	#combatUI #ataques #at5 {
+		border-right: 6px solid gold;
+		border-left: 6px solid gold;
+		border-top: 3px solid gold;
+		border-bottom: 3px solid gold;
+		background-color: #fbf677;
+	}
 
-
+	.UI-pokemonbox {
+		border: 2px solid black;
+		border-radius: 8px;
+		width: 15%;
+	}
 }
