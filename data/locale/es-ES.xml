@@ -80,74 +80,74 @@
                 <gear id="gear3" tag="">Climatizacion</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">Espejismo</atack>
+                <atack id="atack2" tag="">Bola de Trueno</atack>
+                <atack id="atack3" tag="">Tiempo del Tornado</atack>
+                <atack id="atack4" tag="">Estallido Ciclón</atack>
+                <atack id="atack5" tag="">Barra del León</atack>
             </atacks>
         </nami>
         <ussop>
             <longName tag="">Ussop el Tirador</longName>
             <MP tag="">Energía: </MP>
             <gears tag="">
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">Mentiroso</gear>
+                <gear id="gear2" tag="">Confiado</gear>
+                <gear id="gear3" tag="">Sogeking</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">Canica de Plomo</atack>
+                <atack id="atack2" tag="">Canica Ignifugua</atack>
+                <atack id="atack3" tag="">Canica Explosiva</atack>
+                <atack id="atack4" tag="">Canica Doble</atack>
+                <atack id="atack5" tag="">Canica Tiranosaurio</atack>
             </atacks>
         </ussop>
         <chopper>
             <longName tag="">Tony Tony Chopper</longName>
             <MP tag="">Energía: </MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">Medico</gear>
+                <gear id="gear2" tag="">Arm Point</gear>
+                <gear id="gear3" tag="">Monster Point</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">Heavy Gong</atack>
+                <atack id="atack2" tag="">Martillo cometa asesino</atack>
+                <atack id="atack3" tag="">Kung fu Point</atack>
+                <atack id="atack4" tag="">Columna de Flor de Cerezo</atack>
+                <atack id="atack5" tag="">Casco de Diamante</atack>
             </atacks>
         </chopper>
         <robin>
             <longName tag="">Nico Robin</longName>
             <MP tag="">Energía: </MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">Normal</gear>
+                <gear id="gear2" tag="">Arqueologa</gear>
+                <gear id="gear3" tag="">Niña Demonio</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
+                <atack id="atack1" tag="">Una Flor</atack>
+                <atack id="atack2" tag="">Veinte Flores</atack>
+                <atack id="atack3" tag="">Flor Cuerpo</atack>
+                <atack id="atack4" tag="">Manos Gigantes</atack>
             </atacks>
         </robin>
         <franky>
             <longName tag="">Cutty Flam</longName>
             <MP tag="">Cola: </MP>
             <gears>
-                <gear id="gear1" tag=""></gear>
-                <gear id="gear2" tag=""></gear>
-                <gear id="gear3" tag=""></gear>
+                <gear id="gear1" tag="">Humano</gear>
+                <gear id="gear2" tag="">Cybrog</gear>
+                <gear id="gear3" tag="">Super Cyborg</gear>
             </gears>
             <atacks>
-                <atack id="atack1" tag=""></atack>
-                <atack id="atack2" tag=""></atack>
-                <atack id="atack3" tag=""></atack>
-                <atack id="atack4" tag=""></atack>
-                <atack id="atack5" tag=""></atack>
+                <atack id="atack1" tag="">Aliento de Fuego</atack>
+                <atack id="atack2" tag="">Boxeo de Franky</atack>
+                <atack id="atack3" tag="">Fuego de Zurda:</atack>
+                <atack id="atack4" tag=""> Rayo Radical</atack>
+                <atack id="atack5" tag="">Golpe de viento</atack>
             </atacks>
         </franky>
     </characters>
