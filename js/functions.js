@@ -143,11 +143,3 @@ var checkHUD = function(){
 	document.getElementById("exp").innerHTML = expPoints;
 	console.log("HUD revisado");
 };
-
-var combatHUD = function(){
-	escribir("combatUI-vida", personajeActual.HP);
-	escribir("combatUI-maxVida", personajeActual.maxHP);
-	escribir("combatUI-MP", personajeActual.MP);
-	escribir("combatUI-maxMP", personajeActual.maxMP);
-	escribir("combatUI-nivelExp", nivelExp);
-}

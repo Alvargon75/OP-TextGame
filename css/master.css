@@ -1,6 +1,28 @@
 /*Ordenador*/
 @media only screen and (min-width: 768px){
 /*CSS*/
+	#introSCRN {
+		width: 100% !important;
+		height: 100% !important;
+		position: fixed;
+		background-color: white !important;;
+		z-index: 999;
+	}
+	#introSCRN img {
+		width: 40%;
+		height: 25%;
+		vertical-align: middle;
+		margin-top: 100px;
+	}
+
+	#introSCRN h4 {
+		font-size: 4em;
+		font-family: OnePiece;
+		color: #005eff;
+		vertical-align: middle;
+		text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	}
+
 	header{
 		width: 60%;
 		margin-top: -25px;
@@ -44,6 +66,12 @@
 		min-height: 400px;
 		background-color: whitesmoke;
 	}
+	#izq button {
+		margin-left: 1.4em;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+	
 	#drch {
 		float: right;
 		clear: right;
@@ -69,20 +97,12 @@
 	}
 	#combatUI footer #ataques {
 		float: right;
-		clear: left;
 		position: relative;
-		top: 200px;
-		margin-right: 10px;
+		width: 40%;
+		bottom: 570px;
+		left: 360px;
 	}
-	#combatUI footer ul {
-		float: left;
-		clear: right;
-		position: relative;
-		top: 300px;
-		border: 4px solid firebrick;
-		padding: 13px;
-		background-color: #fbf677;
-	}
+	
 	#combatUI .combatUI-statlist {
 		list-style-type: none;
 	}
@@ -91,7 +111,7 @@
 		padding: 8px;
 		background-color: white;
 		margin: 4px;
-		min-width: 181px;
+		width: 181px;
 	}
 	#combatUI #ataques #at1 {
 		border-top: 3px solid #d11141;
@@ -134,22 +154,46 @@
 		z-index: 99;
 		background-color: whitesmoke;
 	}
+	.UI-pokemonbox > h5{
+		font-family: Arial;
+		font-size: 1.2em;
+		position: relative;
+		bottom: 19px;
+		left: 7px;
+	}
 	#enemigo .UI-pokemonbox {
 		position: relative;
 		top: 21.5em;
-		left: 11em;
+		left: 68em;
 	}
 	#personaje .UI-pokemonbox{
 		position: relative;
 		top: 7.1em;
-		left: 68em;
+		left: 11em;
 	}
 	.UI-pokemonbox > h5 {
 		margin-bottom: 4px;
 	}
-	.UI-pokemonbox th {
+	.UI-pokemonbox > span  {
 		font-family: Arial, sans-serif;
+		position: relative;
+		margin-right: 1px;
+		bottom: 1em;
+		margin: 0;
 	}
+	.UI-pokemonbox span.greenPKMN{
+		position: relative;
+		bottom: 1em;
+		left: 6px;
+		height: 0.001px;
+		background-color: green;
+		margin-left: 0.2px;
+		padding-right: 1px;
+	}
+	.UI-pokemonbox span.redPKMN {
+		background-color: red !important;;
+	}
+	
 	img#UI-en-sprite, img#UI-ay-sprite {
 		max-width: 25%;
 		min-width: 15%;
@@ -157,17 +201,18 @@
 		min-height: 30% ;
 	}
 	img#UI-en-sprite {
+		margin-top: -6.5em;
+		position: relative;
+		left: 72em;
+	}
+	img#UI-ay-sprite {
 		-moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
-		margin-top: -6.5em;
-	}
-	img#UI-ay-sprite {
 		position: relative;
-		left: 72em;
 		bottom: 25em;
 	}
 }

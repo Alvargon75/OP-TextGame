@@ -19,11 +19,10 @@ class Pelea
         escribir("at5", @character.ataques[4])
         document.getElementById("UI-ay-name").innerHTML = @character.longName
         document.getElementById("UI-en-name").innerHTML = @enemy.longName
-        combatHUD();
 
         # Pone las imágenes de los personajes
         document.getElementById("UI-ay-sprite").src = this.character.data[timeSkip].sprite
-        document.getElementById("UI-en-sprite").src = this.enemy.data[timeSkip].sprite;
+        document.getElementById("UI-en-sprite").src = this.enemy.data[timeSkip].sprite
 
         # Crea las barras de vida
 
@@ -31,6 +30,42 @@ class Pelea
     inicio: () ->
         document.getElementsByTagName("header")[0].style.display = "none"
         document.getElementById("combatUI").classList.remove('combatUI-inactive')
+        return
+
+    atack: (AI, number) ->
+        if AI == false
+            temp = Math.random() + 1
+            dano = Math.floor(@character.ataquesValores[number] * temp)
+            @character.MP -= @character.ataquesCoste[number]
+            @enemy.HP -= dano
+        else if AI == true
+            # Generar el número
+            number = undefined
+            temp = Math.random() * 100
+            switch temp
+                when temp < 35
+                  number = 1
+                when temp < 60
+                  number = 2
+                when temp < 75
+                  number = 3
+                when temp < 90
+                  number = 4
+                when temp < 100
+                  number = 5
+
+            temp = Math.random() + 1
+            dano = Math.floor(@enemy.ataquesValores[number] * temp)
+            @enemy.MP -= @enemy.ataquesCoste[number]
+            @character.HP -= dano
+        else
+            console.error("Atack managed to be null, this should never happen.")
+
+        return
+
+    stop: () ->
+        document.getElementsByTagName("header")[0].style.display = "initial"
+        document.getElementById("combatUI").classList.add('combatUI-inactive')
         return
 
     selfDestruct: () ->
@@ -43,6 +78,8 @@ class Pelea
 
         if deletable == true
             delete this
+
+        return
 
 
 class Save

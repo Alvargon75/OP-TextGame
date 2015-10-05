@@ -39,6 +39,13 @@ El tema de los estados va por numeros:
 var mugiwaras = [personajes.aliados.Luffy, personajes.aliados.Zorro, personajes.aliados.Sanji, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Chopper, personajes.aliados.Robin, personajes.aliados.Franky];
 var personajeActual = mugiwaras[0];
 
+window.setTimeout(function(){
+	document.getElementById("introSCRN").classList.add('fadeOut');
+}, 5000)
+window.setTimeout(function(){
+	document.getElementById("introSCRN").classList.add('hidden');
+}, 10000)
+
 
 // START AND CLEAR
 
@@ -209,10 +216,9 @@ $$ |  $$ |$$ |   \$  /   $$ |\$$$$$$$ |\$$$$$$$ |
 */
 
 var luchaAlv = function(){
-	if(test){
-		luchaAlvida = new Pelea(personajeActual, personajes.enemigos.alvida, 0);
-		luchaAlvida.inicio()
-	}else{
+	luchaAlvida = new Pelea(personajeActual, personajes.enemigos.alvida, 0);
+	luchaAlvida.inicio()
+	/*
 		var atacar = true;
 		var acertar = true;
 		var danoRound = ataquePrimeraPelea(5, 1);
@@ -240,7 +246,7 @@ var luchaAlv = function(){
 				checkHUD();
 			}
 		}
-	}
+	}*/
 }
 
 var rendirseAlv = function(){
