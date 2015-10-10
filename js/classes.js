@@ -8,9 +8,30 @@ Pelea = (function() {
       timeSkip = 0;
     }
     this.valores = {
-      turnos: 0
+      turnos: 0,
+      modificadores: {
+        global: {
+          climate: "normal"
+        },
+        AI: {
+          ataque: 1,
+          booleans: {
+            lowHealth: false,
+            euforico: false,
+            nakamaMode: false
+          }
+        },
+        player: {
+          ataque: 1,
+          booleans: {
+            lowHealth: false,
+            euforico: false,
+            nakamaMode: false
+          }
+        }
+      }
     };
-    escribir("vs_title", personajeActual.name + " " + "vs" + " " + this.enemy.name);
+    escribir("vs_title", this.character.name + " " + "vs" + " " + this.enemy.name);
     escribir("at1", this.character.ataques[0]);
     escribir("at2", this.character.ataques[1]);
     escribir("at3", this.character.ataques[2]);
@@ -18,6 +39,10 @@ Pelea = (function() {
     escribir("at5", this.character.ataques[4]);
     document.getElementById("UI-ay-name").innerHTML = this.character.longName;
     document.getElementById("UI-en-name").innerHTML = this.enemy.longName;
+    document.getElementById("UI-ay-MPin").innerHTML = this.character.MP;
+    document.getElementById("UI-ay-MPout").innerHTML = "/" + this.character.maxMP;
+    document.getElementById("UI-en-MPin").innerHTML = this.enemy.MP;
+    document.getElementById("UI-en-MPout").innerHTML = "/" + this.enemy.maxMP;
     document.getElementById("UI-ay-sprite").src = this.character.data[timeSkip].sprite;
     document.getElementById("UI-en-sprite").src = this.enemy.data[timeSkip].sprite;
   }
@@ -30,12 +55,12 @@ Pelea = (function() {
   Pelea.prototype.atack = function(AI, number) {
     var dano, temp;
     if (AI === false) {
-      temp = Math.random() + 1;
+      temp = Math.random() + this.valores.modificadores.player.ataque;
       dano = Math.floor(this.character.ataquesValores[number] * temp);
       this.character.MP -= this.character.ataquesCoste[number];
       this.enemy.HP -= dano;
     } else if (AI === true) {
-      number = void 0;
+      number = null;
       temp = Math.random() * 100;
       switch (temp) {
         case temp < 35:
@@ -52,19 +77,43 @@ Pelea = (function() {
           break;
         case temp < 100:
           number = 5;
+          break;
+        case temp < 50 && this.valores.modificadores.AI.booleans.lowHealth:
+          number = 5;
       }
-      temp = Math.random() + 1;
+      temp = Math.random() + this.valores.modificadores.AI.ataque;
       dano = Math.floor(this.enemy.ataquesValores[number] * temp);
       this.enemy.MP -= this.enemy.ataquesCoste[number];
       this.character.HP -= dano;
     } else {
       console.error("Atack managed to be null, this should never happen.");
     }
+    this.valores.turnos++;
+  };
+
+  Pelea.prototype.update = function() {
+    document.getElementById("UI-ay-MPin").innerHTML = this.character.MP;
+    document.getElementById("UI-ay-MPout").innerHTML = "/" + this.character.maxMP;
+    document.getElementById("UI-en-MPin").innerHTML = this.enemy.MP;
+    document.getElementById("UI-en-MPout").innerHTML = "/" + this.enemy.maxMP;
+
+    /*
+     * Se usa para als barras de vida y MP
+    percentageAY = @character.maxHP / 100
+    percentageEN = @enemy.maxHP / 100
+    
+    nBarrasVidaAY = Math.round(@character.HP / percentageAY)
+    nBarrasVidaEN = Math.round(@enemy.HP / percentageEN)
+    console.log(nBarrasVidaEN + " - " + nBarrasVidaAY)
+    
+    fillBars(nBarrasVidaAY, nBarrasVidaEN)
+     */
   };
 
   Pelea.prototype.stop = function() {
     document.getElementsByTagName("header")[0].style.display = "initial";
     document.getElementById("combatUI").classList.add('combatUI-inactive');
+    window.clearInterval(timerID);
   };
 
   Pelea.prototype.selfDestruct = function() {

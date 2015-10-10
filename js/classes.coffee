@@ -8,10 +8,31 @@ class Pelea
         # Define las propiedades de la Pelea
         @valores = {
             turnos: 0
+            modificadores: {
+                global: {
+                    climate: "normal"
+                }
+                AI: {
+                    ataque: 1
+                    booleans: {
+                        lowHealth: false
+                        euforico: false
+                        nakamaMode: false
+                    }
+                }
+                player: {
+                    ataque: 1
+                    booleans: {
+                        lowHealth: false
+                        euforico: false
+                        nakamaMode: false
+                    }
+                }
+            }
         }
 
         # Genera el escenario
-        escribir("vs_title", personajeActual.name + " " + "vs" + " " + @enemy.name);
+        escribir("vs_title", @character.name + " " + "vs" + " " + @enemy.name);
         escribir("at1", @character.ataques[0])
         escribir("at2", @character.ataques[1])
         escribir("at3", @character.ataques[2])
@@ -19,12 +40,15 @@ class Pelea
         escribir("at5", @character.ataques[4])
         document.getElementById("UI-ay-name").innerHTML = @character.longName
         document.getElementById("UI-en-name").innerHTML = @enemy.longName
+        document.getElementById("UI-ay-MPin").innerHTML = @character.MP
+        document.getElementById("UI-ay-MPout").innerHTML = "/" + @character.maxMP
+        document.getElementById("UI-en-MPin").innerHTML = @enemy.MP
+        document.getElementById("UI-en-MPout").innerHTML = "/" + @enemy.maxMP
 
         # Pone las imágenes de los personajes
         document.getElementById("UI-ay-sprite").src = this.character.data[timeSkip].sprite
         document.getElementById("UI-en-sprite").src = this.enemy.data[timeSkip].sprite
 
-        # Crea las barras de vida
 
 
     inicio: () ->
@@ -34,15 +58,15 @@ class Pelea
 
     atack: (AI, number) ->
         if AI == false
-            temp = Math.random() + 1
+            temp = Math.random() + @valores.modificadores.player.ataque
             dano = Math.floor(@character.ataquesValores[number] * temp)
             @character.MP -= @character.ataquesCoste[number]
             @enemy.HP -= dano
         else if AI == true
             # Generar el número
-            number = undefined
+            number = null
             temp = Math.random() * 100
-            switch temp
+            switch temp # Esto es simple probabilidad.
                 when temp < 35
                   number = 1
                 when temp < 60
@@ -53,19 +77,41 @@ class Pelea
                   number = 4
                 when temp < 100
                   number = 5
-
-            temp = Math.random() + 1
+                when temp < 50 && @valores.modificadores.AI.booleans.lowHealth
+                  number = 5
+            temp = Math.random() + @valores.modificadores.AI.ataque
             dano = Math.floor(@enemy.ataquesValores[number] * temp)
             @enemy.MP -= @enemy.ataquesCoste[number]
             @character.HP -= dano
         else
             console.error("Atack managed to be null, this should never happen.")
 
+        @valores.turnos++
+        return
+
+    update: () ->
+        document.getElementById("UI-ay-MPin").innerHTML = @character.MP
+        document.getElementById("UI-ay-MPout").innerHTML = "/" + @character.maxMP
+        document.getElementById("UI-en-MPin").innerHTML = @enemy.MP
+        document.getElementById("UI-en-MPout").innerHTML = "/" + @enemy.maxMP
+        ###
+        # Se usa para als barras de vida y MP
+        percentageAY = @character.maxHP / 100
+        percentageEN = @enemy.maxHP / 100
+
+        nBarrasVidaAY = Math.round(@character.HP / percentageAY)
+        nBarrasVidaEN = Math.round(@enemy.HP / percentageEN)
+        console.log(nBarrasVidaEN + " - " + nBarrasVidaAY)
+
+        fillBars(nBarrasVidaAY, nBarrasVidaEN)
+        ###
         return
 
     stop: () ->
         document.getElementsByTagName("header")[0].style.display = "initial"
         document.getElementById("combatUI").classList.add('combatUI-inactive')
+        window.clearInterval(timerID)
+
         return
 
     selfDestruct: () ->

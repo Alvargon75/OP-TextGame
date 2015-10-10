@@ -1,3 +1,18 @@
+var timerID;
+
+var fillBars = function(nAY, nEN){
+	for(var i = 0; i < 201; i++){
+		document.getElementById("UI-ay-hp" + i).classList.add("redPKMN");
+		document.getElementById("UI-en-hp" + i).classList.add("redPKMN");
+	}
+	for(var i1 = 0; i1 < nAY; i1++){
+		document.getElementById("UI-ay-hp" + i1).classList.remove("redPKMN");
+	}
+	for(var i2 =0; i2 < nEN; i2++){
+		document.getElementById("UI-ay-hp" + i2).classList.remove("redPKMN");
+	}
+}
+
 var escribir = function(id,text){
 	document.getElementById(id).innerHTML = text;
 }

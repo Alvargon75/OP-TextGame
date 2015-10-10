@@ -1444,18 +1444,18 @@ var personajes = {
 				},
 				"shanksVSwhitebeard": {
 					"shanks": {
-					    "name": "shanks",
-					    "longName": "shanks",
+					    "name": "Shanks",
+					    "longName": "Shanks el Pelirrojo",
 						"HP": 900,
 						"maxHP": 900,
 						"MP": 500,
 						"maxMP": 500,
-						"ataques": [],
-						"ataquesCoste": [],
-						"ataquesValores": [],
+						"ataques": ["Por la piratería", "El Nuevo Mundo", "Haki del Rey", "Shanks, el Pelirrojo", "La Vieja era aún no ha termimado"],
+						"ataquesCoste": [2, 4, 5, 6,10],
+						"ataquesValores": [20, 42, 60, 0, 90],
 						"data": [
 							{
-								"sprite": "",
+								"sprite": "recursos/sprites/shanks.png",
 								"artwork": ""
 							},
 							{
@@ -1465,18 +1465,18 @@ var personajes = {
 						]
 					},
 					"barbaBlanca": {
-					    "name": "BarabaBlanca",
-					    "longName": "Barbablanca",
+					    "name": "Barba Blanca",
+					    "longName": 'Edward Newgate "Barba Blanca"',
 						"HP": 1200,
 						"maxHP": 1200,
 						"MP": 500,
 						"maxMP": 500,
-						"ataques": [],
-						"ataquesCoste": [],
-						"ataquesValores": [],
+						"ataques": ["Gurarara", "", "Moby Dick", "Ejército de un Hombre", "Cielo y Tierra"],
+						"ataquesCoste": [2, 4, 5, 6, 10],
+						"ataquesValores": [24, 42, 80, 90, 120],
 						"data": [
 							{
-								"sprite": "",
+								"sprite": "recursos/sprites/whitebeard_back_2.png",
 								"artwork": ""
 							},
 							{

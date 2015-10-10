@@ -71,7 +71,7 @@
 		border: 1px solid black;
 		border-radius: 5px;
 	}
-	
+
 	#drch {
 		float: right;
 		clear: right;
@@ -83,26 +83,26 @@
 		width: 256px;
 		height: 256px;
 	}
+	#visualUI {
+		height: 90%;
+		width: 100%;
+	}
 	/*COMBAT UI*/
 	#combatUI #header_cont h1 {
 		text-align: center;
 		font-size: 2.8em;
 		margin-top: -15px;
 	}
-	#combatUI footer {
-		position: absolute;
-		width: 80%;
-		height: 10%;
-
-	}
-	#combatUI footer #ataques {
+	
+	#combatUI #ataques {
 		float: right;
 		position: relative;
-		width: 40%;
-		bottom: 570px;
-		left: 360px;
+		min-width: 30%;
+		max-width: 35%;
+		bottom: 620px /*570px*/;
+		left: 7% /*360px*/;
 	}
-	
+
 	#combatUI .combatUI-statlist {
 		list-style-type: none;
 	}
@@ -112,6 +112,7 @@
 		background-color: white;
 		margin: 4px;
 		width: 181px;
+	}
 	}
 	#combatUI #ataques #at1 {
 		border-top: 3px solid #d11141;
@@ -163,12 +164,12 @@
 	}
 	#enemigo .UI-pokemonbox {
 		position: relative;
-		top: 21.5em;
-		left: 68em;
+		top: 21.5em /*68%*/ !important;;
+		left: 68% /*68 em*/;
 	}
 	#personaje .UI-pokemonbox{
 		position: relative;
-		top: 7.1em;
+		top: 0em;
 		left: 11em;
 	}
 	.UI-pokemonbox > h5 {
@@ -180,6 +181,10 @@
 		margin-right: 1px;
 		bottom: 1em;
 		margin: 0;
+	}
+	.UI-pokemonbox > span {
+		font-weight: bold;
+		margin-left: 4px;
 	}
 	.UI-pokemonbox span.greenPKMN{
 		position: relative;
@@ -193,7 +198,7 @@
 	.UI-pokemonbox span.redPKMN {
 		background-color: red !important;;
 	}
-	
+
 	img#UI-en-sprite, img#UI-ay-sprite {
 		max-width: 25%;
 		min-width: 15%;
@@ -203,16 +208,40 @@
 	img#UI-en-sprite {
 		margin-top: -6.5em;
 		position: relative;
-		left: 72em;
+		left: 72% /*72 em*/;
 	}
 	img#UI-ay-sprite {
-		-moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
 		position: relative;
-		bottom: 25em;
+		bottom: 30em /*70 %*/;
 	}
+	img#UI-ay-sprite[src="recursos/sprites/whitebeard_back_2.png"] {
+		
+	}
+	span.MP {
+		color: blue;
+	}	
+	#UI-ay-MP, #UI-en-MP {
+		display: block;
+		margin-left: 4px;
+		font-size: 0.8em;
+		font-weight: bold;
+	}
+
+  @media only screen and (max-width: 1400px){
+		#combatUI #ataques {
+		float: right;
+		position: relative;
+		width: 40%;
+		bottom: 410px /*570px*/;
+		left: -4% /*360px*/;
+	}
+		#visualUI #enemigo .UI-pokemonbox {
+			top: 14em !important;;
+		}
+		#personaje .UI-pokemonbox {
+			top: 9em;
+		}
+		img#UI-ay-sprite {
+			bottom: 16em;
+		}
 }
