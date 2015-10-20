@@ -2,11 +2,13 @@ var Pelea, Save;
 
 Pelea = (function() {
   function Pelea(character, enemy, timeSkip) {
+    var currentFight;
     this.character = character != null ? character : personajeActual;
     this.enemy = enemy;
     if (timeSkip == null) {
       timeSkip = 0;
     }
+    currentFight = this;
     this.valores = {
       turnos: 0,
       modificadores: {
@@ -111,9 +113,11 @@ Pelea = (function() {
   };
 
   Pelea.prototype.stop = function() {
+    var currentFight;
     document.getElementsByTagName("header")[0].style.display = "initial";
     document.getElementById("combatUI").classList.add('combatUI-inactive');
     window.clearInterval(timerID);
+    currentFight = null;
   };
 
   Pelea.prototype.selfDestruct = function() {

@@ -5,6 +5,9 @@ class Pelea
     #  character - Qué personaje se enfrenta a `enemy`
     #  enemy - La persona contra la que se enfrenta `character`
     constructor: (@character = personajeActual, @enemy, timeSkip = 0) ->
+        # Nada más poniendo una cosilla
+        currentFight = this
+
         # Define las propiedades de la Pelea
         @valores = {
             turnos: 0
@@ -111,6 +114,7 @@ class Pelea
         document.getElementsByTagName("header")[0].style.display = "initial"
         document.getElementById("combatUI").classList.add('combatUI-inactive')
         window.clearInterval(timerID)
+        currentFight = null
 
         return
 
