@@ -1,0 +1,84 @@
+/* VERSION MOVIL */
+@media only screen and (max-width: 768px){
+  header {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -28px;
+  }
+  header h1 {
+    text-align: center;
+    font-size: 2.8em;
+  }
+  #ilustraciones {
+    display: none;
+  }
+  #stats ul{
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  #stats {
+    background-color: #e2e2e2;
+    background-image: url(../recursos/img/jollyrogers/statsL.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 79%;
+    margin: 12px auto 30px auto;
+    padding: 10px 5px 25px 5px;
+  }
+  #stats h1 {
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  #izq button {
+    background: #fff;
+    border: 3px solid #cbcbcb;
+  }
+  #controls {
+    width: 80%;
+    margin: auto
+  }
+  .stats-sanji {
+      background-image: url(../recursos/img/jollyrogers/statsS.png)!important;
+  }
+  .stats-zoro {
+      background-image: url(../recursos/img/jollyrogers/statsZ.png)!important;
+  }
+  .stats-nami {
+      background-image: url(../recursos/img/jollyrogers/statsN.png)!important;
+  }
+  .stats-ussop {
+      background-image: url(../recursos/img/jollyrogers/statsU.png)!important;
+  }
+  .stats-robin {
+      background-image: url(../recursos/img/jollyrogers/statsR.png)!important;
+  }
+  .stats-franky {
+      background-image: url(../recursos/img/jollyrogers/statsF.png)!important;
+  }
+  .stats-chopper {
+      background-image: url(../recursos/img/jollyrogers/statsC.png)!important;
+  }
+  .text {
+    margin: 12px 10px;
+  }
+  #text-box span {
+    font-weight: bold;
+    font-size: 1.7em;
+    text-align: center;
+    display: block;
+  }
+  /* Combat UI */
+  #combatUI {
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+  }
+}

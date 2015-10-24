@@ -1,0 +1,247 @@
+/*Ordenador*/
+@media only screen and (min-width: 768px){
+/*CSS*/
+	#introSCRN {
+		width: 100% !important;
+		height: 100% !important;
+		position: fixed;
+		background-color: white !important;;
+		z-index: 999;
+	}
+	#introSCRN img {
+		width: 40%;
+		height: 25%;
+		vertical-align: middle;
+		margin-top: 100px;
+	}
+
+	#introSCRN h4 {
+		font-size: 4em;
+		font-family: OnePiece;
+		color: #005eff;
+		vertical-align: middle;
+		text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	}
+
+	header{
+		width: 60%;
+		margin-top: -25px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	header h1 {
+		text-align: center;
+		font-size: 3.3em;
+	}
+	#text-box {
+		position: relative;
+		top: 15px;
+		margin-left: 20px;
+		height: 80%;
+	}
+	#controls {
+
+	}
+	#controls button {
+		background-image: url(../recursos/img/icon.png);
+	}
+	#text-box p span {
+		font-size: 2em;
+		font-weight: bold;
+	}
+	#drch #stats {
+		margin-top: -15px;
+		padding-right: 30px;
+		background-color: white;
+		background-position: center;
+	}
+	#drch #stats ul {
+		list-style-type: none;
+	}
+	#izq {
+		float: left;
+		clear: left;
+		width: 60%;
+		height: 80%;
+		min-height: 400px;
+		background-color: whitesmoke;
+	}
+	#izq button {
+		margin-left: 1.4em;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+
+	#drch {
+		float: right;
+		clear: right;
+		width: 30%;
+		min-height: 400px;
+		max-height: 80%;
+	}
+	#ilustraciones img {
+		width: 256px;
+		height: 256px;
+	}
+	#visualUI {
+		height: 90%;
+		width: 100%;
+	}
+	/*COMBAT UI*/
+	#combatUI #header_cont h1 {
+		text-align: center;
+		font-size: 2.8em;
+		margin-top: -15px;
+	}
+	
+	#combatUI #ataques {
+		float: right;
+		position: relative;
+		min-width: 30%;
+		max-width: 35%;
+		bottom: 620px /*570px*/;
+		left: 7% /*360px*/;
+	}
+
+	#combatUI .combatUI-statlist {
+		list-style-type: none;
+	}
+	#combatUI #ataques button {
+		display: inline-block;
+		padding: 8px;
+		background-color: white;
+		margin: 4px;
+		width: 181px;
+	}
+	}
+	#combatUI #ataques #at1 {
+		border-top: 3px solid #d11141;
+		border-bottom: 3px solid #d11141;
+		border-left: 6px solid #d11141;
+		border-right: 6px solid #d11141;
+	}
+	#combatUI #ataques #at2 {
+		border-top: 3px solid #00b159;
+		border-bottom: 3px solid #00b159;
+		border-left: 6px solid #00b159;
+		border-right: 6px solid #00b159;
+	}
+	#combatUI #ataques #at3 {
+		border-top: 3px solid #00aedb;
+		border-bottom: 3px solid #00aedb;
+		border-left: 6px solid #00aedb;
+		border-right: 6px solid #00aedb;
+	}
+	#combatUI #ataques #at4 {
+		border-top: 3px solid #f37735;
+		border-bottom: 3px solid #f37735;
+		border-left: 6px solid #f37735;
+		border-right: 6px solid #f37735;
+	}
+	#combatUI #ataques #at5 {
+		border-right: 6px solid gold;
+		border-left: 6px solid gold;
+		border-top: 3px solid gold;
+		border-bottom: 3px solid gold;
+		background-color: #fbf677;
+	}
+
+	.UI-pokemonbox {
+		border: 2px solid black;
+		border-radius: 8px;
+		width: 15%;
+		min-width: 10%;
+		max-width: 20%;
+		z-index: 99;
+		background-color: whitesmoke;
+	}
+	.UI-pokemonbox > h5{
+		font-family: Arial;
+		font-size: 1.2em;
+		position: relative;
+		bottom: 19px;
+		left: 7px;
+	}
+	#enemigo .UI-pokemonbox {
+		position: relative;
+		top: 21.5em /*68%*/ !important;;
+		left: 68% /*68 em*/;
+	}
+	#personaje .UI-pokemonbox{
+		position: relative;
+		top: 0em;
+		left: 11em;
+	}
+	.UI-pokemonbox > h5 {
+		margin-bottom: 4px;
+	}
+	.UI-pokemonbox > span  {
+		font-family: Arial, sans-serif;
+		position: relative;
+		margin-right: 1px;
+		bottom: 1em;
+		margin: 0;
+	}
+	.UI-pokemonbox > span {
+		font-weight: bold;
+		margin-left: 4px;
+	}
+	.UI-pokemonbox span.greenPKMN{
+		position: relative;
+		bottom: 1em;
+		left: 6px;
+		height: 0.001px;
+		background-color: green;
+		margin-left: 0.2px;
+		padding-right: 1px;
+	}
+	.UI-pokemonbox span.redPKMN {
+		background-color: red !important;;
+	}
+
+	img#UI-en-sprite, img#UI-ay-sprite {
+		max-width: 25%;
+		min-width: 15%;
+		max-height: 550px;
+		min-height: 30% ;
+	}
+	img#UI-en-sprite {
+		margin-top: -6.5em;
+		position: relative;
+		left: 72% /*72 em*/;
+	}
+	img#UI-ay-sprite {
+		position: relative;
+		bottom: 30em /*70 %*/;
+	}
+	img#UI-ay-sprite[src="recursos/sprites/whitebeard_back_2.png"] {
+		
+	}
+	span.MP {
+		color: blue;
+	}	
+	#UI-ay-MP, #UI-en-MP {
+		display: block;
+		margin-left: 4px;
+		font-size: 0.8em;
+		font-weight: bold;
+	}
+
+  @media only screen and (max-width: 1400px){
+		#combatUI #ataques {
+		float: right;
+		position: relative;
+		width: 40%;
+		bottom: 410px /*570px*/;
+		left: -4% /*360px*/;
+	}
+		#visualUI #enemigo .UI-pokemonbox {
+			top: 14em !important;;
+		}
+		#personaje .UI-pokemonbox {
+			top: 9em;
+		}
+		img#UI-ay-sprite {
+			bottom: 16em;
+		}
+}

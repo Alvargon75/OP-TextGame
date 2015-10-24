@@ -1,0 +1,83 @@
+* {
+	font-family: Roboto, Robot, sans-serif;
+}
+@font-face {
+	font-family: Robot;
+	src: url(../recursos/fonts/robotoregular.ttf);
+}
+@font-face {
+	font-family: Robot;
+	src: url(../recursos/fonts/robotobold.ttf);
+	font-weight: bold;
+}
+@font-face {
+	font-family: Robot;
+	src: url(../recursos/fonts/robotoitalic.ttf);
+	font-style: italic;
+}
+@font-face {
+	font-family: OnePiece;
+	src: url(../recursos/fonts/onepiece.ttf);
+}
+.hidden {
+	display: none !important;
+}
+#combatUI {
+	width: 100% !important;
+	height: 100% !important;
+	position: fixed !important;
+	z-index: 999 !important;
+	background-color: #FFFFFF;
+}
+.combatUI-inactive{
+	display: none;
+	width: 0;
+	height: 0;
+}
+.green {
+	color: green;
+}
+.red {
+	color: red;
+}
+
+.red-PKMN {
+	background-color: red;
+	width: 1%;
+	height: 1%;
+}
+.azul {
+	color: darkblue;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	color: grey;
+}
+.text {
+  text-align: justify;
+}
+
+.fadeOut {
+	-webkit-animation-duration: 4s;
+    animation-duration: 4s;
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+	-webkit-animation-name: fadeOut;
+  	animation-name: fadeOut;
+}
+
+.fadeIn {
+	-webkit-animation-duration: 4s;
+    animation-duration: 4s;
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+  	animation-name: fadeIn;
+}

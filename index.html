@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Álvaro G. y Aksu E.">
+  <meta name="description" content="A little JS One Piece Game">
+  <link type="text/css" rel="stylesheet" href=".\css\universal.css">
+  <link type="text/css" rel="stylesheet" href=".\css\animations.css">
+  <link type="text/css" rel="stylesheet" href=".\css\master.css">
+  <link type="text/css" rel="stylesheet" href=".\css\movil.css">
+  <link rel="shortcut icon" href=".\recursos\img\icon.png" type="image/png">
+  <script src="data/characters.js"></script>
+  <script src="js/xml.js"></script>
+  <script src="js/json.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="js/main.js"></script>
+  <title>One Piece | JS Game</title>
+ </head>
+ <!--
+	Cosas que se copian a menudo:
+
+	<button type="button" id="" class="" onclick=""></button>
+	<button type="button" id="" class="hidden" onclick=""></button>
+	<p id=""></p>
+	<img id="" class="hidden" src=""></img>
+
+ -->
+ <body>
+  <div id="introSCRN">
+      <div class="fadeOut">
+         <center> <img src="recursos/img/header.png">
+          <h4>Text Game</h4></center>
+      </div>
+  </div>
+  <header><h1>One Piece</h1></header>
+   <div id="combatUI" class="combatUI-inactive">
+	<div id="header_cont">
+	 <h1 id="vs_title"></h1>
+	</div>
+	<div id="visualUI">
+	 <div id="enemigo">
+      <div class="UI-pokemonbox">
+        <h5 id="UI-en-name"></h5>
+        <span>HP</span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp001"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp002"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp003"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp004"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp005"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp006"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp007"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp008"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp009"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp010"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp011"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp012"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp013"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp014"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp015"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp016"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp017"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp018"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp019"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp020"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp021"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp022"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp023"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp024"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp025"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp026"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp027"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp028"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp029"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp030"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp031"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp032"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp033"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp034"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp035"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp036"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp037"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp038"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp039"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp040"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp041"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp042"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp043"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp044"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp045"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp046"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp047"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp048"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp049"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp050"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp051"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp052"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp053"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp054"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp055"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp056"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp057"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp058"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp059"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp060"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp061"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp062"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp063"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp064"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp065"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp066"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp067"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp068"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp069"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp070"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp071"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp072"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp073"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp074"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp075"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp076"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp077"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp078"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp079"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp080"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp081"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp082"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp083"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp084"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp085"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp086"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp087"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp088"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp089"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp090"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp091"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp092"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp093"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp094"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp095"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp096"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp097"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp098"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp099"></span>
+        <span class="lifeBar greenPKMN" id="UI-en-hp100"></span>
+        <span id="UI-en-MP">MP: <span id="UI-en-MPin" class="MP"></span><span id="UI-en-MPout" class="MP"></span></span>
+      </div>
+	  <i class="sprite">
+	   <img src="" id="UI-en-sprite"></img>
+      </i>
+	 </div>
+	 <div id="personaje">
+      <div class="UI-pokemonbox">
+          <h5 id="UI-ay-name"></h5>
+          <span>HP</span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp001"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp002"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp003"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp004"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp005"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp006"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp007"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp008"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp009"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp010"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp011"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp012"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp013"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp014"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp015"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp016"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp017"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp018"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp019"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp020"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp021"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp022"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp023"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp024"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp025"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp026"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp027"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp028"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp029"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp030"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp031"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp032"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp033"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp034"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp035"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp036"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp037"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp038"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp039"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp040"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp041"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp042"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp043"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp044"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp045"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp046"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp047"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp048"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp049"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp050"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp051"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp052"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp053"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp054"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp055"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp056"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp057"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp058"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp059"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp060"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp061"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp062"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp063"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp064"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp065"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp066"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp067"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp068"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp069"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp070"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp071"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp072"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp073"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp074"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp075"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp076"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp077"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp078"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp079"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp080"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp081"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp082"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp083"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp084"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp085"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp086"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp087"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp088"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp089"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp090"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp091"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp092"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp093"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp094"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp095"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp096"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp097"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp098"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp099"></span>
+          <span class="lifeBar greenPKMN" id="UI-ay-hp100"></span>
+          <span id="UI-ay-MP">MP: <span id="UI-ay-MPin" class="MP"></span><span id="UI-ay-MPout" class="MP"></span></span>
+      </div>
+	  <i class="sprite">
+		<img src="" id="UI-ay-sprite"></img>
+      </i>
+	 </div>
+     <div id="ataques" class="">
+    	  <button type="button" id="at1" onclick=""></button>
+    	  <button type="button" id="at2" onclick=""></button>
+    	  <button type="button" id="at3" onclick=""></button>
+    	  <button type="button" id="at4" onclick=""></button>
+    	  <button type="button" id="at5" class="hidden" onclick=""></button>
+     </div>
+	</div>
+    <footer>
+
+    </footer>
+   </div>
+  <div id="drch">
+   <div id="stats">
+    <h1 id="name"></h1>
+    <ul>
+	 <li class="stats_list">Vida: <span id="vida" class="green"></span><span class="green">/</span><span id="maxVida" class="green"></span></li>
+     <li class="stats_list">Energía: <span id="MP" class="azul"></span><span class="azul">/</span><span id="maxMP" class="azul"></span></li>
+	 <li class="stats_list">Grado: <span id="ataque" class="red"></span></li>
+	 <li class="stats_list">Nivel: <span id="nivel_exp"></span></li>
+	 <li class="stats_list">Experiencia: <span id="exp"></span></li>
+	</ul>
+   </div>
+   <div id="ilustraciones">
+	<img id="i_intro_luffy" class="" src="recursos/img/jollyrogers/logo.png">
+	<img id="i_intro_sanji" class="hidden" src="recursos/img/jollyrogers/sanji_jollyroger.png">
+	<img id="i_intro_zoro" class="hidden" src="recursos/img/jollyrogers/zoro_jollyroger.png">
+    <img id="i_intro_nami" class="hidden" src="recursos/img/jollyrogers/nami_jollyroger.png">
+    <img id="i_intro_ussop" class="hidden" src="recursos/img/jollyrogers/ussop_jollyroger.png">
+    <img id="i_intro_robin" class="hidden" src="recursos/img/jollyrogers/robin_jollyroger.png">
+    <img id="i_intro_franky" class="hidden" src="recursos/img/jollyrogers/franky_jollyroger.png">
+    <img id="i_intro_chopper" class="hidden" src="recursos/img/jollyrogers/chopper_jollyroger.png">
+   </div>
+  </div>
+  <div id="izq">
+   <div id="text-box">
+    <p class="text">Este juego está hecho por <a href="http://www.taringa.net/Alvargon75">Álvaro G.</a>
+	Pulsa "Inicio" para empezar</p>
+	<p id="intro" class="text"></p>
+	<p id="a1" class="text"></p>
+	<p id="a2" class="text"></p>
+	<p id="a3" class="text"></p>
+	<p id="a4" class="text"></p>
+	<p id="b1" class="text"></p>
+	<p id="b2" class="text"></p>
+	<p id="b3" class="text"></p>
+	<p id="b4" class="text"></p>
+	<p id="c1" class="text"></p>
+	<p id="c2" class="text"></p>
+	<p id="c3" class="text"></p>
+	<p id="fin" class="text"></p>
+   </div>
+   <div id="controls_container">
+    <div id="controls">
+	 <!-- Intro - Decisiones Importantes -->
+     <button type="button" id="inicio" class="" onclick="start()">Inicio</button>
+	 <button type="button" id="d1_a" class="hidden" onclick="pirata()">El Barco Pirata</button>
+	 <button type="button" id="d1_b" class="hidden" onclick="marine()">La Armada</button>
+	 <button type="button" id="d2m_a" class="hidden" onclick="alistarse()">Me Alisto</button>
+	 <button type="button" id="d2m_b" class="hidden" onclick="villa()">Llévame a esa villa</button>
+	 <button type="button" id="d2p_a" class="hidden" onclick="luchaAlv()">Luchar</button>
+	 <button type="button" id="d2p_b" class="hidden" onclick="rendirseAlv()">Morir</button>
+	 <!-- Marine -->
+	 <button type="button" id="m1_op" class="hidden" onclick="fullbodyContinua()">Continuar</button>
+	 <!-- Pirata -->
+     <button type="button" id="p0" class="hidden" onclick=""></button>
+     <button type="button" id="p1_a" class="hidden" onclick=""></button>
+     <button type="button" id="p1_b" class="hidden" onclick=""></button>
+    </div>
+   </div>
+  </div>
+  <div id="audio_container" class="hidden">
+   <audio>
+	<source src="recursos/music/the_strongest.mp3" type="audio/mpeg" id="music_strongest">
+   </audio>
+   <audio>
+	<source src="recursos/music/overtaken.mp3" type="audio/mpeg" id="music_overtaken">
+   </audio>
+  </div>
+ </body>
+</html>
