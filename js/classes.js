@@ -2,13 +2,11 @@ var Pelea, Save;
 
 Pelea = (function() {
   function Pelea(character, enemy, timeSkip) {
-    var currentFight;
     this.character = character != null ? character : personajeActual;
     this.enemy = enemy;
     if (timeSkip == null) {
       timeSkip = 0;
     }
-    currentFight = this;
     this.valores = {
       turnos: 0,
       modificadores: {
@@ -52,9 +50,26 @@ Pelea = (function() {
   Pelea.prototype.inicio = function() {
     document.getElementsByTagName("header")[0].style.display = "none";
     document.getElementById("combatUI").classList.remove('combatUI-inactive');
+    this.events.handlers = [
+      function() {
+        return this.attack(false, 0);
+      }, function() {
+        return this.attack(false, 1);
+      }, function() {
+        return this.attack(false, 2);
+      }, function() {
+        return this.attack(false, 3);
+      }, function() {
+        return this.attack(false, 4);
+      }
+    ];
+    this.events.buttons = [document.getElementById("at1"), document.getElementById("at2"), document.getElementById("at3"), document.getElementById("at4"), document.getElementById("at5")];
+    for(i = 0; i < buttons.length; i++){
+          buttons[i].addEventListener('click',this.events.handlers[i])
+        };
   };
 
-  Pelea.prototype.atack = function(AI, number) {
+  Pelea.prototype.attack = function(AI, number) {
     var dano, temp;
     if (AI === false) {
       temp = Math.random() + this.valores.modificadores.player.ataque;
@@ -113,11 +128,14 @@ Pelea = (function() {
   };
 
   Pelea.prototype.stop = function() {
-    var currentFight;
     document.getElementsByTagName("header")[0].style.display = "initial";
     document.getElementById("combatUI").classList.add('combatUI-inactive');
     window.clearInterval(timerID);
-    currentFight = null;
+    
+        for(var i = 0; i < buttonsID.length; i++){
+          buttons[i].removeEventListener('click', this.events.handlers[i])
+        }
+        ;
   };
 
   Pelea.prototype.selfDestruct = function() {
@@ -132,6 +150,10 @@ Pelea = (function() {
     if (deletable === true) {
       delete this;
     }
+  };
+
+  Pelea.prototype.test = function() {
+    return console.log(this);
   };
 
   return Pelea;
