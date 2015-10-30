@@ -5,9 +5,6 @@ class Pelea
     #  character - Qué personaje se enfrenta a `enemy`
     #  enemy - La persona contra la que se enfrenta `character`
     constructor: (@character = personajeActual, @enemy, timeSkip = 0) ->
-        # Nada más poniendo una cosilla
-        currentFight = this
-
         # Define las propiedades de la Pelea
         @valores = {
             turnos: 0
@@ -57,9 +54,31 @@ class Pelea
     inicio: () ->
         document.getElementsByTagName("header")[0].style.display = "none"
         document.getElementById("combatUI").classList.remove('combatUI-inactive')
+
+        @events.handlers = [
+          () -> this.attack(false, 0),
+          () -> this.attack(false, 1),
+          () -> this.attack(false, 2),
+          () -> this.attack(false, 3),
+          () -> this.attack(false, 4),
+        ]
+
+        @events.buttons = [
+          document.getElementById("at1"),
+          document.getElementById("at2"),
+          document.getElementById("at3"),
+          document.getElementById("at4"),
+          document.getElementById("at5")
+        ]
+
+
+        `for(i = 0; i < buttons.length; i++){
+          buttons[i].addEventListener('click',this.events.handlers[i])
+        }`
+
         return
 
-    atack: (AI, number) ->
+    attack: (AI, number) ->
         if AI == false
             temp = Math.random() + @valores.modificadores.player.ataque
             dano = Math.floor(@character.ataquesValores[number] * temp)
@@ -114,7 +133,12 @@ class Pelea
         document.getElementsByTagName("header")[0].style.display = "initial"
         document.getElementById("combatUI").classList.add('combatUI-inactive')
         window.clearInterval(timerID)
-        currentFight = null
+
+        `
+        for(var i = 0; i < buttonsID.length; i++){
+          buttons[i].removeEventListener('click', this.events.handlers[i])
+        }
+        `
 
         return
 
@@ -131,6 +155,8 @@ class Pelea
 
         return
 
+    test: () ->
+      console.log(this)
 
 class Save
     constructor: () ->
