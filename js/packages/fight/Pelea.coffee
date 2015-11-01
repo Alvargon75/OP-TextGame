@@ -79,16 +79,6 @@ class Pelea
 
 
 
-    inicio: () ->
-        document.getElementsByTagName("header")[0].style.display = "none"
-        document.getElementById("combatUI").classList.remove('combatUI-inactive')
-
-        `for(i = 0; i < 5; i++){
-          this.events.buttons[i].addEventListener('click',this.events.handlers[i])
-        }`
-
-        return
-
     attack: (AI, number) ->
         if AI == false
             temp = Math.random() + @valores.modificadores.player.ataque
@@ -120,6 +110,16 @@ class Pelea
             console.error("Atack managed to be null, this should never happen.")
 
         @valores.turnos++
+        return
+
+    inicio: () ->
+        document.getElementsByTagName("header")[0].style.display = "none"
+        document.getElementById("combatUI").classList.remove('combatUI-inactive')
+
+        `for(i = 0; i < 5; i++){
+          this.events.buttons[i].addEventListener('click',this.events.handlers[i])
+        }`
+
         return
 
     update: () ->

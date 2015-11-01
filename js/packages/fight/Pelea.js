@@ -79,14 +79,6 @@ Pelea = (function() {
     document.getElementById("UI-en-sprite").src = this.enemy.data[timeSkip].sprite;
   }
 
-  Pelea.prototype.inicio = function() {
-    document.getElementsByTagName("header")[0].style.display = "none";
-    document.getElementById("combatUI").classList.remove('combatUI-inactive');
-    for(i = 0; i < 5; i++){
-          this.events.buttons[i].addEventListener('click',this.events.handlers[i])
-        };
-  };
-
   Pelea.prototype.attack = function(AI, number) {
     var dano, temp;
     if (AI === false) {
@@ -124,6 +116,14 @@ Pelea = (function() {
       console.error("Atack managed to be null, this should never happen.");
     }
     this.valores.turnos++;
+  };
+
+  Pelea.prototype.inicio = function() {
+    document.getElementsByTagName("header")[0].style.display = "none";
+    document.getElementById("combatUI").classList.remove('combatUI-inactive');
+    for(i = 0; i < 5; i++){
+          this.events.buttons[i].addEventListener('click',this.events.handlers[i])
+        };
   };
 
   Pelea.prototype.update = function() {
