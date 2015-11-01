@@ -4,7 +4,7 @@ var jsonRequest = function(url, callback){
 	if(window.XMLHttpRequest){ // Not IE
 		jsonHttp = new XMLHttpRequest();
 	}else{ // IE 7
-		jsonHttp = ActiveXObject("Microsoft.XMLHTTP");
+		jsonHttp = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 
 	jsonHttp.open("GET", url, true);
