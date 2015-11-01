@@ -154,7 +154,7 @@ var fullbodyContinua = function(){
  */
 
 var luchaAlv = function(){
-	luchaAlvida = new Pelea(personajeActual, personajes.enemigos.alvida, 0);
+	var luchaAlvida = new Pelea(personajeActual, personajes.enemigos.alvida, 0);
 	luchaAlvida.inicio();
 };
 
