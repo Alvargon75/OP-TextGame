@@ -1,4 +1,4 @@
-var AJAX = function(url, callback){
+var jsonRequest = function(url, callback){
 	var jsonHttp;
 	
 	if(window.XMLHttpRequest){ // Not IE
@@ -9,12 +9,12 @@ var AJAX = function(url, callback){
 	
 	jsonHttp.open("GET", url, true);
 	
-	json.onreadystatechange = function(){
+	jsonHttp.onreadystatechange = function(){
 		if(jsonHttp.readyState == 4 && jsonHttp.status == 200){
 			var data = JSON.parse(jsonHttp.responseText);
 			callback && callback(data);
 		}
-	}
+	};
 	
 	jsonHttp.close();
-}
+};

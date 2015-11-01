@@ -32,7 +32,7 @@ if(language == "es-ES" || "es"){
 
 var readXML = function(css){
 	return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
-}
+};
 
 navigator.sayswho= (function(){
     var ua= navigator.userAgent, tem,
@@ -51,4 +51,4 @@ navigator.sayswho= (function(){
 })();
 // Mostrar toda la información recopilada
 
-console.info("Data: \n  Lang: " + language + "\n  Browser: " + navigator.sayswho + "\n  D");
+console.info("Data: \n  Lang: " + language + "\n  Browser: " + navigator.sayswho + "");

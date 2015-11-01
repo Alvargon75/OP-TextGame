@@ -11,23 +11,23 @@ var fillBars = function(nAY, nEN){
 	for(var i2 =0; i2 < nEN; i2++){
 		document.getElementById("UI-ay-hp" + i2).classList.remove("redPKMN");
 	}
-}
+};
 
 var escribir = function(id,text){
 	document.getElementById(id).innerHTML = text;
-}
+};
 
 var ocultar = function(id){
 	document.getElementById(id).classList.add('hidden');
-}
+};
 
 var mostrar = function(id){
 	document.getElementById(id).classList.remove('hidden');
-}
+};
 
 var randomizer = function(multi){
 	return Math.floor(Math.random() * multi);
-}
+};
 
 var checkArray = function(objeto, array){
 	for(var i = 0; i < array.length; i++){
@@ -37,11 +37,11 @@ var checkArray = function(objeto, array){
 	}
 
 	return false;
-}
+};
 
 var quoteRemover = function(string){
     return string.replace(/['"]+/g, '');
-}
+};
 
 var randomString = function(length){
 	var char = [];
@@ -145,7 +145,7 @@ var randomString = function(length){
 		char.push(RStemp);
 	}
 	return char.join("");
-}
+};
 
 
 var checkHUD = function(){

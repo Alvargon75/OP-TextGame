@@ -64,7 +64,7 @@ Pelea = (function() {
       }
     ];
     this.events.buttons = [document.getElementById("at1"), document.getElementById("at2"), document.getElementById("at3"), document.getElementById("at4"), document.getElementById("at5")];
-    for(i = 0; i < buttons.length; i++){
+    for(var i = 0; i < buttons.length; i++){
           buttons[i].addEventListener('click',this.events.handlers[i])
         };
   };

@@ -755,12 +755,10 @@ var personajes = {
 				"data": [
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					},
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					}
 				]
@@ -778,12 +776,10 @@ var personajes = {
 				"data": [
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					},
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					}
 				]
@@ -801,12 +797,10 @@ var personajes = {
 				"data": [
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					},
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					}
 				]
@@ -824,12 +818,10 @@ var personajes = {
 				"data": [
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					},
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					}
 				]
@@ -847,12 +839,10 @@ var personajes = {
 				"data": [
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					},
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					}
 				]
@@ -870,12 +860,10 @@ var personajes = {
 				"data": [
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					},
 					{
 						"sprite": "",
-						"artwork": "",
 						"artwork": ""
 					}
 				]
@@ -897,12 +885,10 @@ var personajes = {
 					"data": [
 						{
 							"sprite": "",
-							"artwork": "",
 							"artwork": ""
 						},
 						{
 							"sprite": "",
-							"artwork": "",
 							"artwork": ""
 						}
 					]
