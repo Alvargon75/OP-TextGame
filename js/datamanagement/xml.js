@@ -9,7 +9,15 @@
 */
 
 var xmlhttp;
-var language = window.navigator.userLanguage || window.navigator.language;
+var language;
+
+jsonRequest('config.json', function(response){
+    if(response.locale === 'detect'){
+        language = window.navigator.userLanguage || window.navigator.language;
+    }else{
+        language = response.locale;
+    }
+})
 
 
 if(window.XMLHttpRequest){ //Modern Browsers
@@ -51,4 +59,4 @@ navigator.sayswho= (function(){
 })();
 // Mostrar toda la información recopilada
 
-console.info("Data: \n  Lang: " + language + "\n  Browser: " + navigator.sayswho + "");
+console.info("Data: \n  Lang: " + language + "\n  Browser: " + navigator.sayswho + "\n  DevMode: ");
