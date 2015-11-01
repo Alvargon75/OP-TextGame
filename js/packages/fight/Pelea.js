@@ -1,6 +1,23 @@
-var Pelea, Save;
+
+/*
+  Esta es la clase principal de cualquier pelea.
+
+  @package fight
+  @author Álvaro G.
+  @date 01/11/2015
+ */
+var Pelea;
 
 Pelea = (function() {
+
+  /*
+   Esto crea una instancia para una pelea. Es lo básico para cualquier pelea.
+  
+   @args
+    character - Qué personaje se enfrenta a `enemy`
+    enemy - La persona contra la que se enfrenta `character`
+    timeSkip - influye solo en los sprites
+   */
   function Pelea(character, enemy, timeSkip) {
     this.character = character != null ? character : personajeActual;
     this.enemy = enemy;
@@ -31,6 +48,21 @@ Pelea = (function() {
         }
       }
     };
+    this.events = {};
+    this.events.handlers = [
+      function() {
+        return this.attack(false, 0);
+      }, function() {
+        return this.attack(false, 1);
+      }, function() {
+        return this.attack(false, 2);
+      }, function() {
+        return this.attack(false, 3);
+      }, function() {
+        return this.attack(false, 4);
+      }
+    ];
+    this.events.buttons = [document.getElementById("at1"), document.getElementById("at2"), document.getElementById("at3"), document.getElementById("at4"), document.getElementById("at5")];
     escribir("vs_title", this.character.name + " " + "vs" + " " + this.enemy.name);
     escribir("at1", this.character.ataques[0]);
     escribir("at2", this.character.ataques[1]);
@@ -50,22 +82,8 @@ Pelea = (function() {
   Pelea.prototype.inicio = function() {
     document.getElementsByTagName("header")[0].style.display = "none";
     document.getElementById("combatUI").classList.remove('combatUI-inactive');
-    this.events.handlers = [
-      function() {
-        return this.attack(false, 0);
-      }, function() {
-        return this.attack(false, 1);
-      }, function() {
-        return this.attack(false, 2);
-      }, function() {
-        return this.attack(false, 3);
-      }, function() {
-        return this.attack(false, 4);
-      }
-    ];
-    this.events.buttons = [document.getElementById("at1"), document.getElementById("at2"), document.getElementById("at3"), document.getElementById("at4"), document.getElementById("at5")];
-    for(var i = 0; i < buttons.length; i++){
-          buttons[i].addEventListener('click',this.events.handlers[i])
+    for(i = 0; i < 5; i++){
+          this.events.buttons[i].addEventListener('click',this.events.handlers[i])
         };
   };
 
@@ -157,12 +175,5 @@ Pelea = (function() {
   };
 
   return Pelea;
-
-})();
-
-Save = (function() {
-  function Save() {}
-
-  return Save;
 
 })();

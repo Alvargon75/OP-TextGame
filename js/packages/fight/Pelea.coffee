@@ -1,9 +1,19 @@
+###
+  Esta es la clase principal de cualquier pelea.
+
+  @package fight
+  @author Álvaro G.
+  @date 01/11/2015
+###
 class Pelea
-    # Esto crea una instancia para una pelea. Es lo básico para cualquier pelea.
-    #
-    # @args
-    #  character - Qué personaje se enfrenta a `enemy`
-    #  enemy - La persona contra la que se enfrenta `character`
+    ###
+     Esto crea una instancia para una pelea. Es lo básico para cualquier pelea.
+
+     @args
+      character - Qué personaje se enfrenta a `enemy`
+      enemy - La persona contra la que se enfrenta `character`
+      timeSkip - influye solo en los sprites
+    ###
     constructor: (@character = personajeActual, @enemy, timeSkip = 0) ->
         # Define las propiedades de la Pelea
         @valores = {
@@ -31,6 +41,24 @@ class Pelea
             }
         }
 
+        @events = {}
+
+        @events.handlers = [
+          () -> this.attack(false, 0),
+          () -> this.attack(false, 1),
+          () -> this.attack(false, 2),
+          () -> this.attack(false, 3),
+          () -> this.attack(false, 4),
+        ]
+
+        @events.buttons = [
+          document.getElementById("at1"),
+          document.getElementById("at2"),
+          document.getElementById("at3"),
+          document.getElementById("at4"),
+          document.getElementById("at5")
+        ]
+
         # Genera el escenario
         escribir("vs_title", @character.name + " " + "vs" + " " + @enemy.name);
         escribir("at1", @character.ataques[0])
@@ -55,25 +83,8 @@ class Pelea
         document.getElementsByTagName("header")[0].style.display = "none"
         document.getElementById("combatUI").classList.remove('combatUI-inactive')
 
-        @events.handlers = [
-          () -> this.attack(false, 0),
-          () -> this.attack(false, 1),
-          () -> this.attack(false, 2),
-          () -> this.attack(false, 3),
-          () -> this.attack(false, 4),
-        ]
-
-        @events.buttons = [
-          document.getElementById("at1"),
-          document.getElementById("at2"),
-          document.getElementById("at3"),
-          document.getElementById("at4"),
-          document.getElementById("at5")
-        ]
-
-
-        `for(i = 0; i < buttons.length; i++){
-          buttons[i].addEventListener('click',this.events.handlers[i])
+        `for(i = 0; i < 5; i++){
+          this.events.buttons[i].addEventListener('click',this.events.handlers[i])
         }`
 
         return
@@ -157,6 +168,3 @@ class Pelea
 
     test: () ->
       console.log(this)
-
-class Save
-    constructor: () ->
