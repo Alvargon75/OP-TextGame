@@ -9,15 +9,8 @@
 */
 
 var xmlhttp;
-var language;
-
-jsonRequest('config.json', function(response){
-    if(response.locale === 'detect'){
-        language = window.navigator.userLanguage || window.navigator.language;
-    }else{
-        language = response.locale;
-    }
-})
+var language = window.navigator.userLanguage || window.navigator.language;;
+var config;
 
 
 if(window.XMLHttpRequest){ //Modern Browsers

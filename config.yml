@@ -1,9 +1,0 @@
-config:
-    # Salta las animaciones y hace las cosas más rápidas y menos bonitas.
-    # Recomendado sólo para desarrolladores
-    devMode: false
-    # Especifíca el lenguaje del juego.
-    # Los valores son:
-    #  - detect Detecta el lenguaje de tu navegador y lo usa.
-    #  - código 
-    locale: detect
