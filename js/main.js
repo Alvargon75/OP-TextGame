@@ -36,14 +36,20 @@ var nivelExp = 1, expPoints = 1, gradoActual = 0;
 var mugiwaras = [personajes.aliados.Luffy, personajes.aliados.Zorro, personajes.aliados.Sanji, personajes.aliados.Nami, personajes.aliados.Ussop, personajes.aliados.Chopper, personajes.aliados.Robin, personajes.aliados.Franky];
 var personajeActual = mugiwaras[0];
 
-window.setTimeout(function(){
-	document.getElementById("introSCRN").classList.add('fadeOut');
-}, 5000);
-window.setTimeout(function(){
-	document.getElementById("introSCRN").classList.add('hidden');
-}, 10000);
+timerIDs.push(window.setTimeout(function(){
+	if(config.devMode == false){
+		window.setTimeout(function(){
+		document.getElementById("introSCRN").classList.add('fadeOut');
+		}, 5000);
+		window.setTimeout(function(){
+		document.getElementById("introSCRN").classList.add('hidden');
+		}, 10000);
+	}else{
+		document.getElementById("introSCRN").classList.add('hidden');
+	}
 
-
+	window.clearTimeout(timerIDs[2]);
+}, 60));
 // START AND CLEAR
 
 var start = function(){
