@@ -8,29 +8,34 @@
 
 */
 
-var xmlhttp;
-var language = window.navigator.userLanguage || window.navigator.language;;
-var config;
+var xmlhttp, timerIDs = [];
+
+timerIDs.push(window.setTimeout(function(){
+    if(window.XMLHttpRequest){ //Modern Browsers
+        xmlhttp = new XMLHttpRequest();
+    }else{ // IE
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    if(config.language == "detect"){
+        config.language = window.navigator.userLanguage || window.navigator.language;
+    }
 
 
-if(window.XMLHttpRequest){ //Modern Browsers
-    xmlhttp = new XMLHttpRequest();
-}else{ // IE
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-}
+    if(config.language == "es-ES" || "es"){
+	    xmlhttp.open("GET", "data/locale/es-ES.xml", true);
+	    xmlhttp.send();
+    }else if(language == "en-US" || "en-GB" || "en-AU" || "en-NZ" || "en-CA" || "en-CB" || "en-IN" || "en-IE" || "en-JM" || "en-PH" || "en-ZA" || "en-TT" || "en"){
+	    xmlhttp.open("GET", "data/locale/en-US.xml", true);
+	    xmlhttp.send();
+    }else{
+	    xmlhttp.open("GET", "data/locale/en-US.xml", true);
+	    xmlhttp.send();
+	    console.warn("We lack for support for your language. If you want to translate see docs/tranlations.md")
+    }
 
-if(language == "es-ES" || "es"){
-	xmlhttp.open("GET", "data/locale/es-ES.xml", true);
-	xmlhttp.send();
-}else if(language == "en-US" || "en-GB" || "en-AU" || "en-NZ" || "en-CA" || "en-CB" || "en-IN" || "en-IE" || "en-JM" || "en-PH" || "en-ZA" || "en-TT" || "en"){
-	xmlhttp.open("GET", "data/locale/en-US.xml", true);
-	xmlhttp.send();
-}else{
-	xmlhttp.open("GET", "data/locale/en-US.xml", true);
-	xmlhttp.send();
-	console.warn("We lack for support for your language. If you want to translate see docs/tranlations.md")
-}
-
+    window.clearTimeout(timerIDs[0]);
+}, 50));
 var readXML = function(css){
 	return xmlhttp.responseXML.querySelectorAll(css)[0].childNodes[0].nodeValue;
 };
@@ -52,4 +57,7 @@ navigator.sayswho= (function(){
 })();
 // Mostrar toda la información recopilada
 
-console.info("Data: \n  Lang: " + language + "\n  Browser: " + navigator.sayswho + "\n  DevMode: ");
+timerIDs.push(window.setTimeout(function(){
+    console.info("Data: \n  Lang: " + config.language + "\n  Browser: " + navigator.sayswho + "\n  DevMode: " + config.devMode);
+    window.clearTimeout(timerIDs[1]);
+}, 60));

@@ -21,6 +21,8 @@ var yamlRequest = function(url, callback){
 	ymlHttp.send();
 };
 
+var config;
+
 (function(){
 	var ymlHttp;
 
@@ -34,7 +36,7 @@ var yamlRequest = function(url, callback){
 
 	ymlHttp.onreadystatechange = function(){
 		if(ymlHttp.readyState == 4 && ymlHttp.status == 200){
-			window.config = yaml.load(ymlHttp.responseText);
+			config = yaml.load(ymlHttp.responseText);
 			console.warn("Error is supposed to happen.");
 		}
 	};

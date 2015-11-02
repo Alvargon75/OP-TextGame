@@ -1,5 +1,3 @@
-var timerID;
-
 var fillBars = function(nAY, nEN){
 	for(var i = 0; i < 201; i++){
 		document.getElementById("UI-ay-hp" + i).classList.add("redPKMN");

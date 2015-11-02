@@ -15,6 +15,7 @@
 # Some indicators (Javadoc style) are used. They are:
 #  - @value        The possible values.
 #  - @deprecating  This property won't be used.
+#
 #     ██╗██╗   ██╗███╗   ███╗██╗         ██████╗  ██████╗  ██████╗
 #    ██╔╝╚██╗ ██╔╝████╗ ████║██║         ██╔══██╗██╔═══██╗██╔════╝
 #   ██╔╝  ╚████╔╝ ██╔████╔██║██║         ██║  ██║██║   ██║██║
@@ -30,6 +31,7 @@
 # Skips animations.
 # Recommended for Devs.
 devMode: false
+
 # ESPAÑOL
 # Especifíca el lenguaje del juego.
 # @value detect         Detecta el lenguaje de tu navegador y lo usa.
@@ -39,4 +41,4 @@ devMode: false
 # Specifies the game's language.
 # @value detect        Detects the language
 # @value languagecode  Enter a valid language code like es-ES and en-US
-locale: detect
+language: detect
