@@ -47,7 +47,6 @@ window.setTimeout(function(){
 // START AND CLEAR
 
 var start = function(){
-	console.log("Game Started");
 	escribir("intro", xmlhttp.responseXML.querySelectorAll('inicio > intro')[0].childNodes[0].nodeValue);
 	ocultar("inicio");
 	mostrar("d1_a");

@@ -156,5 +156,4 @@ var checkHUD = function(){
 	document.getElementById("ataque").innerHTML = personajeActual.grados[gradoActual];
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
-	console.log("HUD revisado");
 };
