@@ -1,9 +1,42 @@
----
+# ██╗   ██╗███╗   ███╗██╗         ██████╗  ██████╗  ██████╗
+# ╚██╗ ██╔╝████╗ ████║██║         ██╔══██╗██╔═══██╗██╔════╝
+#  ╚████╔╝ ██╔████╔██║██║         ██║  ██║██║   ██║██║
+#   ╚██╔╝  ██║╚██╔╝██║██║         ██║  ██║██║   ██║██║
+#    ██║   ██║ ╚═╝ ██║███████╗    ██████╔╝╚██████╔╝╚██████╗
+#    ╚═╝   ╚═╝     ╚═╝╚══════╝    ╚═════╝  ╚═════╝  ╚═════╝
+# ESPAÑOL
+# Esto es un fichero de configuración. Cada entrada esta documentada.
+# Se usa unos indicadores con @ (estilo Javadoc) que son:
+#  - @value        Los posibles valores.
+#  - @deprecating  Esta propiedad dejara de usarse.
+#
+# ENGLISH
+# This is a configuration file, each entry is documented.
+# Some indicators (Javadoc style) are used. They are:
+#  - @value        The possible values.
+#  - @deprecating  This property won't be used.
+#     ██╗██╗   ██╗███╗   ███╗██╗         ██████╗  ██████╗  ██████╗
+#    ██╔╝╚██╗ ██╔╝████╗ ████║██║         ██╔══██╗██╔═══██╗██╔════╝
+#   ██╔╝  ╚████╔╝ ██╔████╔██║██║         ██║  ██║██║   ██║██║
+#  ██╔╝    ╚██╔╝  ██║╚██╔╝██║██║         ██║  ██║██║   ██║██║
+# ██╔╝      ██║   ██║ ╚═╝ ██║███████╗    ██████╔╝╚██████╔╝╚██████╗
+# ╚═╝       ╚═╝   ╚═╝     ╚═╝╚══════╝    ╚═════╝  ╚═════╝  ╚═════╝
+
+# ESPAÑOL
 # Salta las animaciones y hace las cosas más rápidas y menos bonitas.
-# Recomendado sólo para desarrolladores
+# Recomendado sólo para desarrolladores.
+#
+# ENGLISH
+# Skips animations.
+# Recommended for Devs.
 devMode: false
+# ESPAÑOL
 # Especifíca el lenguaje del juego.
-# Los valores son:
-#  - detect Detecta el lenguaje de tu navegador y lo usa.
-#  - código Código de País del Tipo es_ES, en_US
+# @value detect         Detecta el lenguaje de tu navegador y lo usa.
+# @value códigodeidioma Código de País del Tipo es-ES, en-US
+#
+# ENGLISH
+# Specifies the game's language.
+# @value detect        Detects the language
+# @value languagecode  Enter a valid language code like es-ES and en-US
 locale: detect
