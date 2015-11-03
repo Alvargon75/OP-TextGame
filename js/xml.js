@@ -21,17 +21,32 @@ timerIDs.push(window.setTimeout(function(){
         config.language = window.navigator.userLanguage || window.navigator.language;
     }
 
-
-    if(config.language == "es-ES" || "es"){
-	    xmlhttp.open("GET", "data/locale/es-ES.xml", true);
-	    xmlhttp.send();
-    }else if(language == "en-US" || "en-GB" || "en-AU" || "en-NZ" || "en-CA" || "en-CB" || "en-IN" || "en-IE" || "en-JM" || "en-PH" || "en-ZA" || "en-TT" || "en"){
-	    xmlhttp.open("GET", "data/locale/en-US.xml", true);
-	    xmlhttp.send();
-    }else{
-	    xmlhttp.open("GET", "data/locale/en-US.xml", true);
-	    xmlhttp.send();
-	    console.warn("We lack for support for your language. If you want to translate see docs/tranlations.md")
+    switch (config.language) {
+        case "es-ES":
+        case "es":
+            xmlhttp.open("GET", "data/locale/es-ES.xml", true);
+            xmlhttp.send();
+            break;
+        case "en":
+        case "en-US":
+        case "en-GB":
+        case "en-AU":
+        case "en-NZ":
+        case "en-CA":
+        case "en-CB":
+        case "en-IN":
+        case "en-IE":
+        case "en-JM":
+        case "en-PH":
+        case "en-ZA":
+        case "en-TT":
+            xmlhttp.open("GET", "data/locale/en-US.xml", true);
+            xmlhttp.send();
+            break;
+        default:
+            xmlhttp.open("GET", "data/locale/en-US.xml", true);
+            xmlhttp.send();
+            console.warn("We lack for support for your language. If you want to translate see docs/tranlations.md")
     }
 
     window.clearTimeout(timerIDs[0]);
