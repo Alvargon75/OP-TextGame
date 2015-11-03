@@ -42,3 +42,7 @@ devMode: false
 # @value detect        Detects the language
 # @value languagecode  Enter a valid language code like es-ES and en-US
 language: detect
+
+save:
+    enabled: true
+    mode: default # Not Implemented yet
