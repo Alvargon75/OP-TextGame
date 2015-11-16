@@ -213,7 +213,7 @@ var personajes = {
 		"maxHP": 20,
 		"MP": 18,
 		"maxMP": 18,
-		"ataques": ["Puñetazo", "Mazazo,Corte de Tiempo,Aplastamiento"],
+		"ataques": ["Puñetazo", "Mazazo","Corte de Tiempo","Aplastamiento"],
 		"ataquesCoste": [0, 3],
 		"ataquesValores": [1, 4],
 		"data": [
