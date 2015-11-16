@@ -272,11 +272,11 @@
       </i>
 	 </div>
      <div id="ataques" class="">
-    	  <button type="button" id="at1" onclick=""></button>
-    	  <button type="button" id="at2" onclick=""></button>
-    	  <button type="button" id="at3" onclick=""></button>
-    	  <button type="button" id="at4" onclick=""></button>
-    	  <button type="button" id="at5" class="hidden" onclick=""></button>
+    	  <button type="button" id="at1"></button>
+    	  <button type="button" id="at2"></button>
+    	  <button type="button" id="at3"></button>
+    	  <button type="button" id="at4"></button>
+    	  <button type="button" id="at5" class="hidden"></button>
      </div>
 	</div>
     <footer>
@@ -331,7 +331,7 @@
 	 <button type="button" id="d1_b" class="hidden" onclick="marine()">La Armada</button>
 	 <button type="button" id="d2m_a" class="hidden" onclick="alistarse()">Me Alisto</button>
 	 <button type="button" id="d2m_b" class="hidden" onclick="villa()">Llévame a esa villa</button>
-	 <button type="button" id="d2p_a" class="hidden" onclick="luchaAlv()">Luchar</button>
+	 <button type="button" id="d2p_a" class="hidden" onclick="window.luchaAlvida = new Pelea(personajeActual, personajes.enemigos.alvida, 0); luchaAlvida.inicio(); luchaAlvida.test();">Luchar</button>
 	 <button type="button" id="d2p_b" class="hidden" onclick="rendirseAlv()">Morir</button>
 	 <!-- Marine -->
 	 <button type="button" id="m1_op" class="hidden" onclick="fullbodyContinua()">Continuar</button>

@@ -48,21 +48,6 @@ Pelea = (function() {
         }
       }
     };
-    this.events = {};
-    this.events.handlers = [
-      function() {
-        return this.attack(false, 0);
-      }, function() {
-        return this.attack(false, 1);
-      }, function() {
-        return this.attack(false, 2);
-      }, function() {
-        return this.attack(false, 3);
-      }, function() {
-        return this.attack(false, 4);
-      }
-    ];
-    this.events.buttons = [document.getElementById("at1"), document.getElementById("at2"), document.getElementById("at3"), document.getElementById("at4"), document.getElementById("at5")];
     escribir("vs_title", this.character.name + " " + "vs" + " " + this.enemy.name);
     escribir("at1", this.character.ataques[0]);
     escribir("at2", this.character.ataques[1]);
@@ -119,10 +104,25 @@ Pelea = (function() {
   };
 
   Pelea.prototype.inicio = function() {
+    var buttons, handlers;
     document.getElementsByTagName("header")[0].style.display = "none";
     document.getElementById("combatUI").classList.remove('combatUI-inactive');
+    handlers = [
+      function() {
+        this.attack(false, 0);
+      }, function() {
+        this.attack(false, 1);
+      }, function() {
+        this.attack(false, 2);
+      }, function() {
+        this.attack(false, 3);
+      }, function() {
+        this.attack(false, 4);
+      }
+    ];
+    buttons = [document.getElementById("at1"), document.getElementById("at2"), document.getElementById("at3"), document.getElementById("at4"), document.getElementById("at5")];
     for(i = 0; i < 5; i++){
-          this.events.buttons[i].addEventListener('click',this.events.handlers[i])
+          buttons[i].addEventListener('click', handlers[i])
         };
   };
 

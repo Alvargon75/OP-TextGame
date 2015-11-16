@@ -158,10 +158,11 @@ var fullbodyContinua = function(){
  Alvida
  */
 
-var luchaAlv = function(){
+/*var luchaAlv = function(){
 	var luchaAlvida = new Pelea(personajeActual, personajes.enemigos.alvida, 0);
 	luchaAlvida.inicio();
-};
+	luchaAlvida.test();
+};*/
 
 var rendirseAlv = function(){
 	document.getElementById("d2p_a").classList.add('hidden');

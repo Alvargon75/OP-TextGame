@@ -41,24 +41,6 @@ class Pelea
             }
         }
 
-        @events = {}
-
-        @events.handlers = [
-          () -> this.attack(false, 0),
-          () -> this.attack(false, 1),
-          () -> this.attack(false, 2),
-          () -> this.attack(false, 3),
-          () -> this.attack(false, 4),
-        ]
-
-        @events.buttons = [
-          document.getElementById("at1"),
-          document.getElementById("at2"),
-          document.getElementById("at3"),
-          document.getElementById("at4"),
-          document.getElementById("at5")
-        ]
-
         # Genera el escenario
         escribir("vs_title", @character.name + " " + "vs" + " " + @enemy.name);
         escribir("at1", @character.ataques[0])
@@ -76,8 +58,6 @@ class Pelea
         # Pone las imágenes de los personajes
         document.getElementById("UI-ay-sprite").src = this.character.data[timeSkip].sprite
         document.getElementById("UI-en-sprite").src = this.enemy.data[timeSkip].sprite
-
-
 
     attack: (AI, number) ->
         if AI == false
@@ -116,8 +96,24 @@ class Pelea
         document.getElementsByTagName("header")[0].style.display = "none"
         document.getElementById("combatUI").classList.remove('combatUI-inactive')
 
+        handlers = [
+            () -> this.attack(false, 0); return,
+            () -> this.attack(false, 1); return,
+            () -> this.attack(false, 2); return,
+            () -> this.attack(false, 3); return,
+            () -> this.attack(false, 4); return,
+        ]
+
+        buttons = [
+            document.getElementById("at1")
+            document.getElementById("at2")
+            document.getElementById("at3")
+            document.getElementById("at4")
+            document.getElementById("at5")
+        ]
+
         `for(i = 0; i < 5; i++){
-          this.events.buttons[i].addEventListener('click',this.events.handlers[i])
+          buttons[i].addEventListener('click', handlers[i])
         }`
 
         return
