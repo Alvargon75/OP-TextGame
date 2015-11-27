@@ -1,0 +1,168 @@
+# This is the file where you need to add your things.
+# Substitute according to other locale file.
+sys:
+    localStorage:
+        error:
+        save:
+            -
+            -
+        deleteSave:
+            error:
+            state:
+        loadSave:
+            error:
+            state:
+
+GUI:
+    stats:
+        HP:
+
+characters:
+    # Monkey D. Luffy
+    luffy:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Roronoa Zoro
+    zoro:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Black Leg Sanji
+    sanji:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Nami
+    nami:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Ussop'n
+    ussop:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Chopper
+    chopper:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Nico Robin
+    robin:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Franky, the Cyborg
+    franky:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+
+# Arcs Strings
+arcs:
+    inicio:
+        intro:
+        marine:
+            intro_marine:
+            village:
+            enroll:
+                -
+                -
+                -
+                -
+                -
+                -
+            fullbody:
+        pirata:
+    # Alvida Arc
+    alvida:
+        fight:
+            -
+            -
+            -
+        surrender:
+
+    # Buggy Arc
+    buggy:
+        intro:
