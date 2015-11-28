@@ -1,0 +1,160 @@
+sys:
+    localStorage:
+        error:
+        save:
+            - Saving...
+            - Saving Complete
+        deleteSave:
+            error: "Error 404: Save not found."
+            state: Save deleted successfully
+        loadSave:
+            error: "Error 404: Save not found."
+            state: Save loaded succesfully.
+
+GUI:
+    stats:
+        HP: "Health:"
+
+characters:
+    # Monkey D. Luffy
+    luffy:
+        longName: Monkey D. Luffy
+        MP: "Energy:"
+        gears:
+            - Normal
+            - Gear Second
+            - Gear Third
+        attacks:
+            - Gomu Gomu no Pistol
+            - Gomu Gomu no Bazooka
+            - Gomu Gomu no Storm
+            - Gomu Gomu no Gatling Gun
+            - Gomu Gomu no Rifle
+
+    # Roronoa Zoro
+    zoro:
+        longName: Zoro Ronoa
+        MP: "Energy:"
+        gears: false
+        attacks:
+            - Sword Hid
+            - Santoryu
+            - Onigiri
+            - Tatsumaki
+            - Asura Ichibuguin
+
+    # Black Leg Sanji
+    sanji:
+        longName: Black Leg Sanji
+        MP: "Energy:"
+        gears: false
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Nami
+    nami:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Ussop'n
+    ussop:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Chopper
+    chopper:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Nico Robin
+    robin:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+    # Franky, the Cyborg
+    franky:
+        longName:
+        MP:
+        gears:
+            -
+            -
+            -
+        attacks:
+            -
+            -
+            -
+            -
+            -
+
+
+# Arcs Strings
+arcs:
+    inicio:
+        intro:
+        marine:
+            intro_marine:
+            village:
+            enroll:
+                -
+                -
+                -
+                -
+                -
+                -
+            fullbody:
+        pirata:
+    # Alvida Arc
+    alvida:
+        fight:
+            -
+            -
+            -
+        surrender:
+
+    # Buggy Arc
+    buggy:
+        intro:
