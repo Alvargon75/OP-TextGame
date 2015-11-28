@@ -162,4 +162,4 @@ arcs:
             <span>FIN</span>
     # Buggy Arc
     buggy:
-        intro: Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado" + " " + personajes.aliados.Zoro.longName # TODO: Cambiar esto a referencia
+        intro: Afortunadamente derrotaste a Alvida y conseguiste llegar a una isla cercana. Allí te enteras de que un famoso pirata llamado
