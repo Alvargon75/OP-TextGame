@@ -1,0 +1,148 @@
+sys:
+    localStorage:
+        error: Oyunu´nun bu bölümü kayit edilmedi
+        save:
+            - Kayit ediliyor...
+            -
+        deleteSave:
+            error: Hata 404 Silinmiyor
+            state:
+        loadSave:
+            error:
+            state:
+
+GUI:
+    stats:
+        HP:
+
+characters:
+    # Monkey D. Luffy
+    luffy:
+        longName:
+        MP:
+        gears:
+            - lastic insan
+            - 2ª lv
+            - 3ª lv
+        attacks:
+            - Gomu Gomu no pistolu
+            - guchlu vurus
+            - bazzoka
+            - benim adim luffy
+            - bitin sen
+
+    # Roronoa Zoro
+    zoro:
+        longName:
+        MP:
+        gears: false
+        attacks:
+            - kilicim
+            - 3 kilic
+            - seytan kesimleri
+            - ashura
+            - Tatsumaki
+
+    # Black Leg Sanji
+    sanji:
+        longName:
+        MP:
+        gears: false
+        attacks:
+            - siyah tekme
+            - ayak kaslarim
+            - guclu bir tekme
+            - ekmek yapalim
+            - seytan tekmesi
+
+    # Nami
+    nami:
+        longName:
+        MP:
+        gears: false
+        attacks:
+            - tekme
+            - soygun var
+            - Rain Tempo
+            - Mirage Tact
+            - Thunderbolt Tempo
+
+    # Ussop'n
+    ussop:
+        longName:
+        MP:
+        gears: false
+        attacks:
+            - atis
+            - patlaici misket
+            - atesli misket
+            - kayanin misketi
+            - usup´un arkadaslari
+
+    # Chopper
+    chopper:
+        longName:
+        MP:
+        gears:
+            - Brain Point
+            - Arm Point
+            - Monster Point
+        attacks:
+            - Scope
+            -
+            -
+            -
+            -
+
+    # Nico Robin
+    robin:
+        longName:
+        MP:
+        gears: false
+        attacks:
+            - 3 kol
+            - 5kol
+            - 10 cicek
+            - sonsusakadar cicek
+            - millon kadar cicke
+
+    # Franky, the Cyborg
+    franky:
+        longName:
+        MP:
+        gears: false
+        attacks:
+            - Weapons Left
+            - Strong Hammer
+            - ates puskur
+            - Coup de Vent
+            - SUUUUUUUUUUPER
+
+
+# Arcs Strings
+arcs:
+    inicio:
+        intro:
+        marine:
+            intro_marine:
+            village:
+            enroll:
+                -
+                -
+                -
+                -
+                -
+                -
+            fullbody:
+        pirata:
+    # Alvida Arc
+    alvida:
+        fight:
+            -
+            -
+            -
+        surrender:
+
+    # Buggy Arc
+    buggy:
+        intro:
