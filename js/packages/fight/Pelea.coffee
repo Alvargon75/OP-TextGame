@@ -95,7 +95,11 @@ class Pelea
     inicio: () ->
         document.getElementsByTagName("header")[0].style.display = "none"
         document.getElementById("combatUI").classList.remove('combatUI-inactive')
+        _asignEvents()
 
+        return
+
+    _asignEvents = () -> # Yes, men, this is a private method.
         handlers = [
             () -> this.attack(false, 0); return,
             () -> this.attack(false, 1); return,
@@ -113,10 +117,8 @@ class Pelea
         ]
 
         `for(i = 0; i < 5; i++){
-          buttons[i].addEventListener('click', handlers[i])
+          buttons[i].addEventListener('click', handlers[i].apply(this, [1]))
         }`
-
-        return
 
     update: () ->
         document.getElementById("UI-ay-MPin").innerHTML = @character.MP

@@ -18,6 +18,8 @@ Pelea = (function() {
     enemy - La persona contra la que se enfrenta `character`
     timeSkip - influye solo en los sprites
    */
+  var _asignEvents;
+
   function Pelea(character, enemy, timeSkip) {
     this.character = character != null ? character : personajeActual;
     this.enemy = enemy;
@@ -104,9 +106,13 @@ Pelea = (function() {
   };
 
   Pelea.prototype.inicio = function() {
-    var buttons, handlers;
     document.getElementsByTagName("header")[0].style.display = "none";
     document.getElementById("combatUI").classList.remove('combatUI-inactive');
+    _asignEvents();
+  };
+
+  _asignEvents = function() {
+    var buttons, handlers;
     handlers = [
       function() {
         this.attack(false, 0);
@@ -121,8 +127,8 @@ Pelea = (function() {
       }
     ];
     buttons = [document.getElementById("at1"), document.getElementById("at2"), document.getElementById("at3"), document.getElementById("at4"), document.getElementById("at5")];
-    for(i = 0; i < 5; i++){
-          buttons[i].addEventListener('click', handlers[i])
+    return for(i = 0; i < 5; i++){
+          buttons[i].addEventListener('click', handlers[i].apply(this, [1]))
         };
   };
 
