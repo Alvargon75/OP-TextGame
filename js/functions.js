@@ -155,3 +155,8 @@ var checkHUD = function(){
 	document.getElementById("nivel_exp").innerHTML = nivelExp;
 	document.getElementById("exp").innerHTML = expPoints;
 };
+
+var cloneAndReplace = function(oldEl){
+	var newEl = oldEl.cloneNode(true);
+	oldEl.parentNode.replaceChild(newEl, oldEl);
+};

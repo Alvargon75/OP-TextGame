@@ -128,7 +128,7 @@ Pelea = (function() {
     ];
     buttons = [document.getElementById("at1"), document.getElementById("at2"), document.getElementById("at3"), document.getElementById("at4"), document.getElementById("at5")];
     return for(i = 0; i < 5; i++){
-          buttons[i].addEventListener('click', handlers[i].apply(this, [1]))
+          buttons[i].addEventListener('click', handlers[i].apply(this))
         };
   };
 

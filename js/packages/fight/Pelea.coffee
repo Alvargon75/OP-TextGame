@@ -117,7 +117,7 @@ class Pelea
         ]
 
         `for(i = 0; i < 5; i++){
-          buttons[i].addEventListener('click', handlers[i].apply(this, [1]))
+          buttons[i].addEventListener('click', handlers[i].apply(this))
         }`
 
     update: () ->
