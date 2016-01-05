@@ -9,4 +9,5 @@
 
 ## Art
 
+* [tmlpBartleby](https://www.reddit.com/user/tmlpBartleby "A good person from Reddit")
 * [GuilleMetal20](http:// "El dibujante xD")
