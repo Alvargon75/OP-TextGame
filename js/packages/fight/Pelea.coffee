@@ -100,12 +100,14 @@ class Pelea
         return
 
     _asignEvents = () -> # Yes, men, this is a private method.
+        that = this
+    
         handlers = [
-            () -> this.attack(false, 0); return,
-            () -> this.attack(false, 1); return,
-            () -> this.attack(false, 2); return,
-            () -> this.attack(false, 3); return,
-            () -> this.attack(false, 4); return,
+            () -> that.attack(false, 0); return,
+            () -> that.attack(false, 1); return,
+            () -> that.attack(false, 2); return,
+            () -> that.attack(false, 3); return,
+            () -> that.attack(false, 4); return,
         ]
 
         buttons = [
@@ -117,7 +119,7 @@ class Pelea
         ]
 
         `for(i = 0; i < 5; i++){
-          buttons[i].addEventListener('click', handlers[i].apply(this))
+          buttons[i].addEventListener('click', handlers[i])
         }`
 
     update: () ->
